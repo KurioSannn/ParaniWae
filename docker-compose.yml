@@ -1,0 +1,106 @@
+# SILATARA — development environment (lokal per laptop; database TIDAK tersinkron antaranggota).
+# Jalankan: docker compose up --build   (atau: make up)
+name: silatara
+
+services:
+  db:
+    image: postgres:16.6-bookworm@sha256:557fea37a744d5f4c8faab304b0a90858b53ab119735a88c131fd19dab802f36
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-silatara}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-silatara_dev_password}
+      POSTGRES_DB: ${POSTGRES_DB:-silatara}
+    ports:
+      # Hanya loopback host; tidak terbuka ke jaringan Wi-Fi/LAN.
+      - "127.0.0.1:${DB_PORT:-5432}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./backups:/backups
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+    networks: [silatara]
+
+  backend:
+    build:
+      context: ./backend
+      target: dev
+      args:
+        UID: ${HOST_UID:-1000}
+        GID: ${HOST_GID:-1000}
+    restart: unless-stopped
+    environment:
+      APP_ENV: ${APP_ENV:-development}
+      POSTGRES_USER: ${POSTGRES_USER:-silatara}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-silatara_dev_password}
+      POSTGRES_DB: ${POSTGRES_DB:-silatara}
+      POSTGRES_HOST: db            # nama service Docker, bukan localhost
+      POSTGRES_PORT: 5432
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:3000,http://127.0.0.1:3000}
+      EXPOSE_DEMO_DATA: ${EXPOSE_DEMO_DATA:-true}
+      RUN_MIGRATIONS: ${RUN_MIGRATIONS:-true}
+      SEED_DEMO_DATA: ${SEED_DEMO_DATA:-true}
+      MAIL_PROVIDER: ${MAIL_PROVIDER:-dev_sink}      # dev_sink = email TIDAK dikirim, hanya disimpan di DB dev
+      PUBLIC_BASE_URL: ${PUBLIC_BASE_URL:-http://localhost:${FRONTEND_PORT:-3000}}
+      # KOSONG (aman): proxy rewrite Next.js TIDAK menimpa X-Forwarded-For secara tepercaya (terbukti: XFF palsu
+      # dari klien lolos). Di dev semua klien memakai IP container frontend sebagai kunci (batas global, tidak
+      # dapat dipalsukan). Isi hanya di belakang reverse proxy yang MENIMPA XFF (lihat docs/SECURITY_HYGIENE.md §4).
+      TRUSTED_PROXY_CIDRS: ${TRUSTED_PROXY_CIDRS:-}
+      TRUSTED_PROXY_HOPS: ${TRUSTED_PROXY_HOPS:-1}
+      DEMO_USER_PASSWORD: ${DEMO_USER_PASSWORD:-demo-sandi-12345}   # hanya dev
+      WATCHFILES_FORCE_POLLING: "true"   # hot reload andal di bind mount macOS/Windows
+    ports:
+      - "127.0.0.1:${BACKEND_PORT:-8000}:8000"
+    volumes:
+      - ./backend:/app
+      - media_data:/data/media   # file media/dokumen privat (tidak pernah disajikan statis)
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:8000/api/v1/health/ready"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+    networks: [silatara]
+
+  frontend:
+    build:
+      context: ./frontend
+      target: dev
+    restart: unless-stopped
+    environment:
+      INTERNAL_API_URL: http://backend:8000          # SSR di dalam jaringan Docker
+      NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-}  # kosong = same-origin lewat proxy Next (disarankan)
+      WATCHPACK_POLLING: "true"
+      ENABLE_SYNTHETIC_PRACTICE: "true"   # mode simulasi Practice Studio (?sim=1): HANYA dev; jangan set di produksi
+      NEXT_TELEMETRY_DISABLED: "1"
+    ports:
+      - "127.0.0.1:${FRONTEND_PORT:-3000}:3000"
+    volumes:
+      - ./frontend:/app
+      - frontend_node_modules:/app/node_modules   # dependency Linux, terpisah dari host
+      - frontend_next_cache:/app/.next
+    depends_on:
+      backend:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:3000/"]
+      interval: 10s
+      timeout: 5s
+      retries: 15
+      start_period: 40s
+    networks: [silatara]
+
+volumes:
+  pgdata:
+  media_data:
+  frontend_node_modules:
+  frontend_next_cache:
+
+networks:
+  silatara:

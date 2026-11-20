@@ -1,0 +1,85 @@
+# Stack E2E TERISOLASI: project "silatara-e2e", DB di tmpfs (hilang saat berhenti), tanpa port host,
+# tanpa volume bernama. TIDAK menyentuh stack/volume pengembangan (project "silatara").
+# Dipakai oleh: make e2e  (scripts/e2e.sh)
+name: silatara-e2e
+
+services:
+  db:
+    image: postgres:16.6-bookworm@sha256:557fea37a744d5f4c8faab304b0a90858b53ab119735a88c131fd19dab802f36
+    environment: { POSTGRES_USER: e2e, POSTGRES_PASSWORD: e2e_password_only, POSTGRES_DB: silatara_e2e }
+    tmpfs: [/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U e2e -d silatara_e2e"]
+      interval: 3s
+      timeout: 5s
+      retries: 20
+    networks: [e2e]
+
+  backend:
+    build: { context: ./backend, target: dev }
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+    environment:
+      APP_ENV: development
+      POSTGRES_USER: e2e
+      POSTGRES_PASSWORD: e2e_password_only
+      POSTGRES_DB: silatara_e2e
+      POSTGRES_HOST: db
+      CORS_ORIGINS: http://frontend:3000
+      SEED_DEMO_DATA: "true"
+      EXPOSE_DEMO_DATA: "true"
+      MAIL_PROVIDER: dev_sink
+      PUBLIC_BASE_URL: http://frontend:3000
+      TRUSTED_PROXY_CIDRS: ""   # aman: tidak ada proxy tepercaya (lihat SECURITY_HYGIENE §4)
+      DEMO_USER_PASSWORD: demo-sandi-12345
+      RL_REGISTER_IP: "[200,3600]"
+      RL_RESET_IP: "[200,3600]"
+      RL_LOGIN_IP: "[500,900]"
+      RL_VERIFY_IP: "[1000,3600]"
+      RL_RESEND_EMAIL: "[100,3600]"
+    volumes: ["./backend:/app:ro"]
+    depends_on: { db: { condition: service_healthy } }
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:8000/api/v1/health/ready"]
+      interval: 3s
+      timeout: 5s
+      retries: 30
+      start_period: 10s
+    networks: [e2e]
+
+  frontend:
+    build: { context: ./frontend, target: prod }   # build produksi: menguji artefak yang sebenarnya
+    environment: { INTERNAL_API_URL: "http://backend:8000", ENABLE_SYNTHETIC_PRACTICE: "true" }  # hanya stack uji; produksi tidak menyetel
+    depends_on: { backend: { condition: service_healthy } }
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://localhost:3000/').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 3s
+      timeout: 5s
+      retries: 30
+      start_period: 5s
+    networks: [e2e]
+
+  browser:
+    profiles: [browser]
+    image: mcr.microsoft.com/playwright:v1.65.1-noble@sha256:1507cbfc550a63a6b7396791ca4f00df17beb56342d2447b3f106c306f525579
+    working_dir: /work
+    init: true
+    ipc: host
+    # Browser berbagi network namespace dengan frontend -> origin http://localhost:3000 adalah SECURE CONTEXT
+    # (sama seperti dev nyata). INSECURE_BASE_URL dipakai khusus untuk menguji pesan konteks tidak aman.
+    network_mode: "service:frontend"
+    environment:
+      BASE_URL: http://localhost:3000
+      INSECURE_BASE_URL: http://frontend:3000
+      CI: "1"
+      PW_ARGS: ${PW_ARGS:-}
+      RUN_BENCH: ${RUN_BENCH:-}
+      BENCH_FRAMES: ${BENCH_FRAMES:-}
+      BENCH_REPEATS: ${BENCH_REPEATS:-}
+    volumes:
+      - ./e2e-browser:/work
+      - ./artifacts:/work/artifacts
+    depends_on: { frontend: { condition: service_healthy } }
+    command: ["sh", "-c", "npm ci --no-audit --no-fund && npx playwright test $$PW_ARGS"]
+
+networks:
+  e2e:
