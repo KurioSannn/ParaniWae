@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+/* Token dari DESIGN.md (palet kerja; uji kontras dengan foto asli sebelum final). */
+@theme {
+  --color-ink-950: #17231f;
+  --color-forest-900: #1e3b32;
+  --color-forest-700: #315c4d;
+  --color-sage-500: #78917f;
+  --color-parchment-100: #f6f2e9;
+  --color-paper-50: #fcfbf7;
+  --color-bronze-500: #b9854f; /* dekoratif/ikon/garis; JANGAN untuk teks kecil (kontras 2,9:1) */
+  --color-bronze-700: #85592a; /* teks aksen: 5,4:1 di parchment, 5,9:1 di paper */
+  --color-clay-600: #a95743;
+  --color-slate-600: #52605a;
+  --color-line-200: #e4e1d8;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", serif;
+}
+
+html { background: var(--color-parchment-100); color: var(--color-ink-950); }
+body { font-family: var(--font-sans); line-height: 1.6; }
+:focus-visible { outline: 3px solid var(--color-bronze-500); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
