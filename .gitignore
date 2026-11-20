@@ -1,0 +1,55 @@
+# Secrets & env
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*.json
+
+# Dependencies & build
+node_modules/
+.next/
+out/
+dist/
+build/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+*.tsbuildinfo
+next-env.d.ts
+
+# Data lokal (database, cadangan, media mentah)
+backups/*
+!backups/.gitkeep
+*.sql.gz
+pgdata/
+*.log
+# Jangan pernah commit video/foto mentah pengguna atau materi budaya tanpa izin tercatat
+*.mp4
+*.mov
+*.webm
+
+# OS/editor
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+.claude/settings.local.json
+
+# Dokumen administrasi/identitas peserta di root (mis. KTP, surat pernyataan): jangan di-commit
+/Lampiran*.docx
+
+# Aset MediaPipe (diunduh/di-copy oleh skrip; bukan sumber)
+frontend/public/mediapipe/models/*.task
+frontend/public/mediapipe/wasm/
+frontend/public/mediapipe/worker/
+
+# Hasil uji browser (screenshot, laporan, trace) dan dependensi runner e2e
+artifacts/
+e2e-browser/node_modules/
