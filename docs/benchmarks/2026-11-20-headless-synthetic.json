@@ -1,0 +1,403 @@
+{
+  "environment": {
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/159.0.8154.6 Safari/537.36",
+    "hardwareConcurrency": 8,
+    "deviceMemoryGB": 8,
+    "crossOriginIsolated": false,
+    "library": "@mediapipe/tasks-vision@1.2.3",
+    "models": {
+      "pose": "pose_landmarker_lite.task",
+      "hand": "hand_landmarker.task"
+    },
+    "config": {
+      "minIntervalMs": 66,
+      "maxInFlight": 1,
+      "maxFrameAgeMs": 500,
+      "maxFrameWidth": null,
+      "maxPeople": 2,
+      "hands": true,
+      "delegate": "auto",
+      "pauseWhenHidden": true,
+      "initTimeoutMs": 60000
+    },
+    "video": {
+      "width": 640,
+      "height": 480
+    },
+    "source": {
+      "label": "fake_device_0",
+      "synthetic": true
+    },
+    "framesPerRun": 40,
+    "repeats": 3,
+    "startedAt": "2026-11-19T16:57:02.299Z"
+  },
+  "runs": [
+    {
+      "engine": "main-thread-baseline",
+      "run": 1,
+      "initMs": 1616.300000000745,
+      "workerStartupMs": null,
+      "durationMs": 50808.59999999963,
+      "submitted": 40,
+      "processed": 40,
+      "droppedBackpressure": null,
+      "droppedByWorker": null,
+      "latency": {
+        "n": 40,
+        "mean": 1257.3225000001025,
+        "median": 632.25,
+        "p95": 1027.199999999255,
+        "max": 24181.299999998882
+      },
+      "inference": {
+        "n": 40,
+        "mean": 1257.3225000001025,
+        "median": 632.25,
+        "p95": 1027.199999999255,
+        "max": 24181.299999998882
+      },
+      "posesDetectedFrames": 0,
+      "handsDetectedFrames": 0,
+      "responsiveness": {
+        "loopLag": {
+          "n": 34,
+          "p95Ms": 1292.7999999988824,
+          "maxMs": 1431.5999999996275
+        },
+        "frames": 40,
+        "meanGapMs": 1269.1129999999998,
+        "p95GapMs": 1033.2999999999993,
+        "maxGapMs": 24199.02,
+        "longTasks": {
+          "count": 39,
+          "totalMs": 49387,
+          "supported": true
+        }
+      },
+      "mainHeapMB": {
+        "before": 9.5367431640625,
+        "after": 9.5367431640625
+      },
+      "error": null
+    },
+    {
+      "engine": "worker",
+      "run": 1,
+      "initMs": 2337.699999999255,
+      "workerStartupMs": 333.09999999962747,
+      "durationMs": 53931.59999999963,
+      "submitted": 45,
+      "processed": 40,
+      "droppedBackpressure": 966,
+      "droppedByWorker": 1,
+      "latency": {
+        "n": 40,
+        "mean": 750.230000000028,
+        "median": 634.7999999998137,
+        "p95": 1155.5,
+        "max": 1815.300000000745
+      },
+      "inference": {
+        "n": 40,
+        "mean": 749.4750000001862,
+        "median": 634.5499999998137,
+        "p95": 1154.6000000014901,
+        "max": 1811.5
+      },
+      "posesDetectedFrames": 0,
+      "handsDetectedFrames": 0,
+      "responsiveness": {
+        "loopLag": {
+          "n": 4840,
+          "p95Ms": 3.400000000372529,
+          "maxMs": 267.19999999925494
+        },
+        "frames": 3080,
+        "meanGapMs": 17.51012987012987,
+        "p95GapMs": 16.80000000000291,
+        "maxGapMs": 250,
+        "longTasks": {
+          "count": 1,
+          "totalMs": 82,
+          "supported": true
+        }
+      },
+      "mainHeapMB": {
+        "before": 9.5367431640625,
+        "after": 9.5367431640625
+      },
+      "error": null
+    },
+    {
+      "engine": "worker",
+      "run": 2,
+      "initMs": 1379.0999999996275,
+      "workerStartupMs": 121.19999999925494,
+      "durationMs": 54804.10000000149,
+      "submitted": 45,
+      "processed": 40,
+      "droppedBackpressure": 987,
+      "droppedByWorker": 1,
+      "latency": {
+        "n": 40,
+        "mean": 765.7750000000931,
+        "median": 669.4500000001863,
+        "p95": 1220.199999999255,
+        "max": 1621.2999999988824
+      },
+      "inference": {
+        "n": 40,
+        "mean": 764.7424999998417,
+        "median": 669.0999999996275,
+        "p95": 1219.5,
+        "max": 1612.8999999985099
+      },
+      "posesDetectedFrames": 0,
+      "handsDetectedFrames": 0,
+      "responsiveness": {
+        "loopLag": {
+          "n": 4927,
+          "p95Ms": 3.599999999627471,
+          "maxMs": 93.40000000037253
+        },
+        "frames": 3091,
+        "meanGapMs": 17.728178582982853,
+        "p95GapMs": 16.800000000017462,
+        "maxGapMs": 183.39999999999418,
+        "longTasks": {
+          "count": 1,
+          "totalMs": 64,
+          "supported": true
+        }
+      },
+      "mainHeapMB": {
+        "before": 9.5367431640625,
+        "after": 9.5367431640625
+      },
+      "error": null
+    },
+    {
+      "engine": "main-thread-baseline",
+      "run": 2,
+      "initMs": 1819.699999999255,
+      "workerStartupMs": null,
+      "durationMs": 67858.80000000075,
+      "submitted": 40,
+      "processed": 40,
+      "droppedBackpressure": null,
+      "droppedByWorker": null,
+      "latency": {
+        "n": 40,
+        "mean": 1650.3149999999907,
+        "median": 675.9500000001863,
+        "p95": 1287.4000000003725,
+        "max": 36583.5
+      },
+      "inference": {
+        "n": 40,
+        "mean": 1650.3149999999907,
+        "median": 675.9500000001863,
+        "p95": 1287.4000000003725,
+        "max": 36583.5
+      },
+      "posesDetectedFrames": 0,
+      "handsDetectedFrames": 0,
+      "responsiveness": {
+        "loopLag": {
+          "n": 32,
+          "p95Ms": 1893.199999999255,
+          "maxMs": 2405.2000000011176
+        },
+        "frames": 40,
+        "meanGapMs": 1696.1825000000003,
+        "p95GapMs": 1866.6000000000058,
+        "maxGapMs": 36648.5,
+        "longTasks": {
+          "count": 41,
+          "totalMs": 66185,
+          "supported": true
+        }
+      },
+      "mainHeapMB": {
+        "before": 9.5367431640625,
+        "after": 9.5367431640625
+      },
+      "error": null
+    },
+    {
+      "engine": "main-thread-baseline",
+      "run": 3,
+      "initMs": 2311.199999999255,
+      "workerStartupMs": null,
+      "durationMs": 52976.5,
+      "submitted": 40,
+      "processed": 40,
+      "droppedBackpressure": null,
+      "droppedByWorker": null,
+      "latency": {
+        "n": 40,
+        "mean": 1301.1875,
+        "median": 632.1500000003725,
+        "p95": 1195.5,
+        "max": 23628.300000000745
+      },
+      "inference": {
+        "n": 40,
+        "mean": 1301.1875,
+        "median": 632.1500000003725,
+        "p95": 1195.5,
+        "max": 23628.300000000745
+      },
+      "posesDetectedFrames": 0,
+      "handsDetectedFrames": 0,
+      "responsiveness": {
+        "loopLag": {
+          "n": 33,
+          "p95Ms": 1414.7000000011176,
+          "maxMs": 1792.6000000014901
+        },
+        "frames": 40,
+        "meanGapMs": 1323.6974499999997,
+        "p95GapMs": 1283.2999999999884,
+        "maxGapMs": 23648.997999999992,
+        "longTasks": {
+          "count": 41,
+          "totalMs": 52270,
+          "supported": true
+        }
+      },
+      "mainHeapMB": {
+        "before": 9.5367431640625,
+        "after": 9.5367431640625
+      },
+      "error": null
+    },
+    {
+      "engine": "worker",
+      "run": 3,
+      "initMs": 2845.4000000003725,
+      "workerStartupMs": 69.30000000074506,
+      "durationMs": 61203.20000000112,
+      "submitted": 45,
+      "processed": 40,
+      "droppedBackpressure": 985,
+      "droppedByWorker": 1,
+      "latency": {
+        "n": 40,
+        "mean": 822.9675000000746,
+        "median": 668.4500000001863,
+        "p95": 1553.9000000003725,
+        "max": 2351.4000000003725
+      },
+      "inference": {
+        "n": 40,
+        "mean": 821.2299999999814,
+        "median": 668.0499999998137,
+        "p95": 1551.8999999985099,
+        "max": 2345.89999999851
+      },
+      "posesDetectedFrames": 0,
+      "handsDetectedFrames": 0,
+      "responsiveness": {
+        "loopLag": {
+          "n": 4880,
+          "p95Ms": 4.5,
+          "maxMs": 5735.300000000745
+        },
+        "frames": 3022,
+        "meanGapMs": 20.167933818663133,
+        "p95GapMs": 33.29999999998836,
+        "maxGapMs": 5616.5,
+        "longTasks": {
+          "count": 0,
+          "totalMs": 0,
+          "supported": true
+        }
+      },
+      "mainHeapMB": {
+        "before": 9.5367431640625,
+        "after": 9.5367431640625
+      },
+      "error": null
+    }
+  ],
+  "summary": [
+    {
+      "engine": "main-thread-baseline",
+      "runs": 3,
+      "okRuns": 3,
+      "medianOfRuns": {
+        "initMs": 1819.699999999255,
+        "workerStartupMs": null,
+        "latencyMedianMs": 632.25,
+        "latencyMeanMs": 1301.1875,
+        "latencyP95Ms": 1195.5,
+        "processed": 40,
+        "droppedBackpressure": null,
+        "maxUiGapMs": 24199.02,
+        "p95UiGapMs": 1283.2999999999884,
+        "maxLoopLagMs": 1792.6000000014901,
+        "p95LoopLagMs": 1414.7000000011176,
+        "longTasks": 41,
+        "longTaskTotalMs": 52270
+      }
+    },
+    {
+      "engine": "worker",
+      "runs": 3,
+      "okRuns": 3,
+      "medianOfRuns": {
+        "initMs": 2337.699999999255,
+        "workerStartupMs": 121.19999999925494,
+        "latencyMedianMs": 668.4500000001863,
+        "latencyMeanMs": 765.7750000000931,
+        "latencyP95Ms": 1220.199999999255,
+        "processed": 40,
+        "droppedBackpressure": 985,
+        "maxUiGapMs": 250,
+        "p95UiGapMs": 16.800000000017462,
+        "maxLoopLagMs": 267.19999999925494,
+        "p95LoopLagMs": 3.599999999627471,
+        "longTasks": 1,
+        "longTaskTotalMs": 64
+      }
+    }
+  ],
+  "disclaimer": "Pengukuran jalur komputasi di perangkat ini; bukan akurasi, bukan FPS produk.",
+  "mediapipeLibraryWarningsByPhase": [
+    {
+      "phase": "main-thread-baseline",
+      "text": "Wgl_context.cc:1136] OpenGL error checking is disabled"
+    },
+    {
+      "phase": "main-thread-baseline",
+      "text": "Wlandmark_projection_calculator.cc:81] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX."
+    },
+    {
+      "phase": "main-thread-baseline",
+      "text": "[.WebGL-0x340189fa00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "phase": "main-thread-baseline",
+      "text": "[.WebGL-0x3404b64400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "phase": "main-thread-baseline",
+      "text": "[.WebGL-0x3404b64400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+    },
+    {
+      "phase": "worker",
+      "text": "Wgl_context.cc:1136] OpenGL error checking is disabled"
+    },
+    {
+      "phase": "worker",
+      "text": "Wlandmark_projection_calculator.cc:81] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX."
+    }
+  ],
+  "runner": {
+    "browser": "Chromium 159.0.8154.6",
+    "harness": "Playwright, headless, container Linux (Docker Desktop)",
+    "note": "Sumber SINTETIS (kamera palsu Chromium): memvalidasi jalur komputasi; BUKAN deteksi/benchmark pose manusia; BUKAN FPS produk."
+  }
+}
