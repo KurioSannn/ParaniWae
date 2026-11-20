@@ -1,0 +1,9 @@
+# Pembaruan otomatis: SHA action, digest image, dependensi. Setiap PR melewati CI penuh (termasuk Trivy + E2E).
+version: 2
+updates:
+  - { package-ecosystem: github-actions, directory: "/", schedule: { interval: weekly } }
+  - { package-ecosystem: docker, directory: "/backend", schedule: { interval: weekly } }
+  - { package-ecosystem: docker, directory: "/frontend", schedule: { interval: weekly } }
+  - { package-ecosystem: npm, directory: "/frontend", schedule: { interval: weekly } }
+  - { package-ecosystem: npm, directory: "/e2e-browser", schedule: { interval: weekly } }
+  - { package-ecosystem: pip, directory: "/backend", schedule: { interval: weekly } }
