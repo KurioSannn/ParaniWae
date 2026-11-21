@@ -36,7 +36,7 @@ export function formatMinutes(min: number | null | undefined): string | null {
 
 export function formatDate(iso: string | null | undefined): string {
   if (!iso) return "—";
-  return new Date(iso).toLocaleDateString("id-ID", { day: "numeric", month: "long", year: "numeric" });
+  return new Date(iso).toLocaleDateString("id-ID", { day: "numeric", month: "long", year: "numeric", timeZone: "Asia/Jakarta" });
 }
 
 /** Pisahkan teks menjadi paragraf (teks polos; tidak ada HTML yang dirender). */
@@ -57,7 +57,7 @@ export function formatClock(ms: number): string {
 }
 export function formatDateTime(iso: string | null | undefined): string {
   if (!iso) return "—";
-  return new Date(iso).toLocaleString("id-ID", { day: "numeric", month: "long", year: "numeric", hour: "2-digit", minute: "2-digit" });
+  return new Date(iso).toLocaleString("id-ID", { day: "numeric", month: "long", year: "numeric", hour: "2-digit", minute: "2-digit", timeZone: "Asia/Jakarta" });
 }
 export const PRACTICE_STATUS_LABEL: Record<string, string> = {
   in_progress: "Berjalan", completed: "Selesai", abandoned: "Dihentikan sebelum selesai", error: "Berakhir karena masalah teknis",
@@ -112,3 +112,14 @@ export function formatBytes(n: number): string {
   if (n < 1024 * 1024) return `${(n / 1024).toFixed(0)} KB`;
   return `${(n / 1024 / 1024).toFixed(1)} MB`;
 }
+
+export const PROGRAM_STATUS_LABEL: Record<string, string> = {
+  draft: "Draf", pending_approval: "Menunggu persetujuan", approved: "Disetujui", active: "Berjalan", completed: "Selesai", cancelled: "Dibatalkan", archived: "Diarsipkan",
+};
+export const PROGRAM_ACTION_LABEL: Record<string, string> = {
+  submit: "Ajukan untuk disetujui", approve: "Setujui program", reject: "Tolak (kembalikan ke draf)", activate: "Aktifkan program", complete: "Tandai selesai", cancel: "Batalkan", archive: "Arsipkan",
+};
+export const COHORT_STATUS_LABEL: Record<string, string> = { draft: "Draf", open: "Terbuka untuk undangan", closed: "Ditutup", completed: "Selesai" };
+export const INVITE_STATUS_LABEL: Record<string, string> = { pending: "Menunggu", accepted: "Diterima", revoked: "Dicabut", expired: "Kedaluwarsa" };
+export const SURVEY_KIND_LABEL: Record<string, string> = { baseline: "Survei awal (baseline)", endline: "Survei akhir (endline)", feedback_learner: "Umpan balik peserta", feedback_instructor: "Umpan balik instruktur" };
+export function formatPct(v: number | null | undefined): string { return v === null || v === undefined ? "—" : `${Math.round(v * 100)}%`; }

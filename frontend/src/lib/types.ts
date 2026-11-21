@@ -13,11 +13,14 @@ export interface Provenance {
   status: ContentStatus; is_demo: boolean; partner_verified: boolean; verification_label: string;
   source_citation: string | null; source_url: string | null;
   approved_by_name: string | null; approved_at: string | null;
+  /** ADR-0008: source_backed | official_curriculum | partner_restricted */
+  content_basis?: ContentBasis | null; attribution?: string | null;
 }
+export type ContentBasis = "source_backed" | "official_curriculum" | "partner_restricted";
 
 export interface TraditionSummary {
   id: string; slug: string; name: string; local_name: string | null; region: string | null;
-  public_summary: string | null; provenance: Provenance;
+  public_summary: string | null; content_basis?: ContentBasis; provenance: Provenance;
 }
 export interface PartnerSummary {
   id: string; slug: string; name: string; partner_type: string; region: string | null;
@@ -32,7 +35,7 @@ export interface MovementSummary {
   assessment_enabled: boolean; tradition_slug: string | null; tradition_name?: string | null;
   partner_slug?: string | null; partner_name?: string | null; partner_verified?: boolean;
   level?: Level | null; safety_category?: SafetyCategory | null; version_no?: number | null;
-  provenance: Provenance;
+  content_basis?: ContentBasis; provenance: Provenance;
 }
 export interface MovementOut extends MovementSummary {
   description: string | null; safety_notes: string | null; document?: PublicDocument | null;
@@ -40,7 +43,7 @@ export interface MovementOut extends MovementSummary {
 export interface CourseSummary {
   id: string; slug: string; title: string; summary: string | null; level: string;
   estimated_minutes: number | null; tradition_slug: string | null; tradition_name: string | null;
-  partner_slug: string | null; partner_name: string | null; lesson_count: number; provenance: Provenance;
+  partner_slug: string | null; partner_name: string | null; lesson_count: number; content_basis?: ContentBasis; provenance: Provenance;
 }
 export interface LessonRef {
   id: string; slug: string; title: string; order_index: number; estimated_minutes: number | null;
@@ -225,4 +228,61 @@ export interface StudioDashboard {
   counts: { movements: number; documents_by_status: Record<string, number>; published_movements: number; media_awaiting_consent: number; lessons_linked: number };
   tradition_coverage: { tradition_id: string; tradition_name: string | null; total: number; published: number }[];
   recent_activity: { action: string; actor: string | null; detail: Record<string, unknown> | null; entity_type: string; entity_id: string; created_at: string }[];
+}
+
+// ============ Pilot & Impact Studio (docs/PILOT_STUDIO_CONTRACT.md) ============
+export type ProgramStatus = "draft" | "pending_approval" | "approved" | "active" | "completed" | "cancelled" | "archived";
+export type ProgramAction = "submit" | "approve" | "reject" | "activate" | "complete" | "cancel" | "archive";
+export interface CohortSessionOut { id: string; title: string; starts_at: string; ends_at: string | null; location_note: string | null }
+export interface CohortOut {
+  id: string; program_id: string; name: string; course_id: string; course_title: string | null; instructor_user_id: string | null;
+  instructor: string | null; status: "draft" | "open" | "closed" | "completed"; start_date: string | null; end_date: string | null;
+  capacity: number; member_count: number; sessions: CohortSessionOut[];
+}
+export interface AnnouncementOut { id: string; title: string; body: string; cohort_id: string | null; author: string | null; created_at: string }
+export interface ProgramRow {
+  id: string; name: string; partner_id: string; partner_name: string | null; partner_verified: boolean; status: ProgramStatus; status_label: string;
+  is_demo: boolean; start_date: string | null; end_date: string | null; capacity: number; responsible: string | null; official: boolean;
+  official_note: string; updated_at: string; cohort_count: number; member_count: number;
+}
+export interface ProgramDetail extends ProgramRow {
+  objective: string | null; description: string | null; responsible_user_id: string | null; default_course_id: string | null; review_note: string | null;
+  approved_by: string | null; approved_at: string | null; approval_evidence_ref: string | null; allowed_actions: ProgramAction[]; submit_missing: string[];
+  cohorts: CohortOut[]; announcements: AnnouncementOut[]; retention_days: number; anonymized_at: string | null;
+}
+export interface InvitationOut { id: string; email: string | null; status: "pending" | "accepted" | "revoked" | "expired"; expires_at: string; accepted_at: string | null; revoked_at: string | null; created_at: string; token?: string; token_note?: string }
+export interface CohortManage extends CohortOut {
+  program: ProgramRow; members: { user_id: string; name: string; email: string; status: string; joined_at: string }[]; invitations: InvitationOut[];
+}
+export interface InvitePreview {
+  status: InvitationOut["status"]; program_name: string; cohort_name: string; partner_name: string; is_demo: boolean; program_status: ProgramStatus;
+  program_status_label: string; start_date: string | null; end_date: string | null; expires_at: string; email_bound: boolean; joinable: boolean;
+}
+export interface SurveyQuestion { id: string; type: "single_choice" | "rating" | "open_text"; text: string; required: boolean; options?: string[] | null; scale_min?: number; scale_max?: number; min_label?: string | null; max_label?: string | null }
+export interface SurveyOut { id: string; program_id: string; kind: string; title: string; status: "draft" | "open" | "closed"; questions: SurveyQuestion[]; instrument_note: string; responses: number | null; answered?: boolean }
+export interface PortalMembership { cohort_id: string; cohort_name: string; program_id: string; program_name: string; program_status: ProgramStatus; program_status_label: string; is_demo: boolean; course_slug: string | null; course_title: string | null; joined_at: string; progress: { completed: number; total: number; percent: number } | null }
+export interface Portal { memberships: PortalMembership[]; pending_surveys: SurveyOut[] }
+export interface MyCohort extends CohortOut {
+  program_name: string; program_objective: string | null; program_status_label: string; is_demo: boolean; partner_name: string; course_slug: string | null;
+  lessons: { id: string; slug: string; title: string; module: string; completed: boolean }[]; progress: { completed: number; total: number; percent: number } | null;
+  practice: { completed_sessions: number; active_minutes: number }; announcements: AnnouncementOut[]; consents: { research_aggregate: boolean; publication_quote: boolean };
+  surveys: SurveyOut[]; policy_version: string;
+}
+export interface UsageCohort {
+  cohort_id: string; cohort_name: string; active_members: number; lessons_total: number; suppressed: boolean; completion_rate: number | null; lessons_completed: number | null;
+  active_participants: number | null; active_rate?: number | null; note?: string;
+  practice: { sessions: number; by_status: Record<string, number>; active_minutes: number; sessions_per_active_participant: number | null } | null;
+}
+export interface SurveyQuestionStat { id: string; text: string; type: string; answered: number; distribution?: Record<string, number>; mean?: number | null }
+export interface SurveyStat { survey_id: string; kind: string; title: string; status: string; responses: number; eligible: number; response_rate: number | null; instrument_note: string; suppressed: boolean; note?: string; questions: SurveyQuestionStat[] }
+export interface ProgramAnalytics {
+  program: { id: string; name: string; status: string; is_demo: boolean }; filters: Record<string, string | null>; min_respondents: number; disclaimer: string; generated_at: string;
+  enrollment: { cohorts: { cohort_id: string; cohort_name: string; capacity: number; active: number; withdrawn: number; removed: number; status: string }[]; invitations: Record<string, number>; active_total: number; capacity_total: number };
+  usage: { cohorts: UsageCohort[]; retention: { cohort_id: string; suppressed: boolean; weeks: { week: number; active: number; rate: number }[] }[] };
+  surveys: SurveyStat[]; consent: { members: number; research_aggregate: number | null; publication_quote: number | null };
+}
+export interface CohortDashboard {
+  cohort: CohortOut; program: { id: string; name: string; status: string }; disclaimer: string; thresholds: { no_start_days: number; inactive_days: number };
+  summary: { members: number; not_started: number; needs_attention: number; lessons_total: number; completed_all: number };
+  participants: { user_id: string; name: string; joined_at: string; started: boolean; last_activity_at: string | null; lessons_completed: number; lessons_total: number; completion: number | null; practice_sessions: number; practice_minutes: number; needs_attention: boolean; attention_reasons: string[]; surveys_pending: number }[];
 }

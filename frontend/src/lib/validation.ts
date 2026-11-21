@@ -23,7 +23,7 @@ export function validateRegister(v: {
   return e;
 }
 
-const NEXT_ALLOWED_PREFIXES = ["/app", "/academy", "/heritage", "/community", "/status"];
+const NEXT_ALLOWED_PREFIXES = ["/app", "/academy", "/heritage", "/community", "/status", "/undangan"];
 
 /**
  * Tujuan redirect pasca-login yang aman (anti open-redirect).

@@ -16,6 +16,11 @@ describe("validateLogin", () => {
   });
 });
 describe("safeNext (anti open-redirect)", () => {
+  it("mengizinkan kembali ke halaman undangan pilot (path + token), menolak host asing", () => {
+    expect(safeNext("/undangan?token=abc123")).toBe("/undangan?token=abc123");
+    expect(safeNext("/undangan/../evil")).toBe("/app");
+    expect(safeNext("//evil.example/undangan")).toBe("/app");
+  });
   it.each([
     ["//evil.com"], ["https://evil.com"], ["/\\evil"], [""], [null], ["javascript:alert(1)"], ["/%2F/evil.com"],
     ["/%5Cevil.com"], ["/app\n/evil"], ["/app\t"], ["/ app"], ["///evil.com"], ["/\\/evil.com"], ["/masuk"],
