@@ -1,23 +1,485 @@
 @import "tailwindcss";
 
-/* Token dari DESIGN.md (palet kerja; uji kontras dengan foto asli sebelum final). */
+/* Design Tokens - Modern Clean Figma Tech Theme with Authentic Nusantara Maroon, Chocolate & Orange Palette */
 @theme {
-  --color-ink-950: #17231f;
-  --color-forest-900: #1e3b32;
-  --color-forest-700: #315c4d;
-  --color-sage-500: #78917f;
-  --color-parchment-100: #f6f2e9;
-  --color-paper-50: #fcfbf7;
-  --color-bronze-500: #b9854f; /* dekoratif/ikon/garis; JANGAN untuk teks kecil (kontras 2,9:1) */
-  --color-bronze-700: #85592a; /* teks aksen: 5,4:1 di parchment, 5,9:1 di paper */
-  --color-clay-600: #a95743;
-  --color-slate-600: #52605a;
-  --color-line-200: #e4e1d8;
-  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", serif;
+  --color-slate-950: #020617;
+  --color-slate-900: #0f172a;
+  --color-slate-800: #1e293b;
+  --color-slate-700: #334155;
+  --color-slate-600: #475569;
+  --color-slate-500: #64748b;
+  --color-slate-400: #94a3b8;
+  --color-slate-300: #cbd5e1;
+  --color-slate-200: #e2e8f0;
+  --color-slate-100: #f1f5f9;
+  --color-slate-50: #f8fafc;
+
+  /* Royal Maroon / Dark Crimson Red (Replaces old dark forest green) */
+  --color-forest-950: #1a0505;
+  --color-forest-900: #2e0909;
+  --color-forest-800: #4a120b;
+  --color-forest-700: #6d1b11;
+  --color-forest-600: #8f2317;
+
+  /* Warm Chocolate / Bronze Brown */
+  --color-chocolate-950: #1f0d06;
+  --color-chocolate-900: #381a0e;
+  --color-chocolate-800: #4a2211;
+  --color-chocolate-700: #6a3419;
+  --color-chocolate-600: #8a4522;
+
+  /* Radiant Orange / Warm Amber (Replaces old emerald) */
+  --color-emerald-500: #ea580c;
+  --color-emerald-400: #f97316;
+  --color-emerald-300: #fb923c;
+  --color-emerald-200: #fed7aa;
+  --color-emerald-100: #ffedd5;
+  --color-emerald-50: #fff7ed;
+
+  /* Compatibility Aliases */
+  --color-ink-950: #0f172a;
+  --color-paper-50: #ffffff;
+  --color-line-200: #e2e8f0;
+  --color-surface-muted: #f8fafc;
+  --color-bronze-500: #ea580c;
+  --color-bronze-700: #9a3412;
+  --color-clay-600: #c2410c;
+
+
+  /* Alias palet baru untuk komponen yang sudah ada */
+  --color-parchment-100: #fff6ee;
+  --color-sage-500: #78716c;
+  --color-obsidian-950: #1a0505;
+  --color-obsidian-900: #2e0909;
+  --color-ember-500: #ea580c;
+  --color-ember-700: #9a3412;
+  --color-gold-400: #fbbf24;
+  --font-sans: var(--font-plus-jakarta), system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: var(--font-plus-jakarta), system-ui, sans-serif;  /* judul halaman memakai sans tebal seperti landing; Cinzel hanya untuk aksen merek */
+  --font-cinzel: var(--font-cinzel-face), serif;
 }
 
-html { background: var(--color-parchment-100); color: var(--color-ink-950); }
-body { font-family: var(--font-sans); line-height: 1.6; }
-:focus-visible { outline: 3px solid var(--color-bronze-500); outline-offset: 2px; }
-@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+/* Martial Arts & Silat Perguruan Prestigious Display Font */
+.font-silat {
+  font-family: var(--font-cinzel-deco), var(--font-cinzel-face), serif;
+  letter-spacing: 0.12em;
+}
+
+.font-perguruan {
+  font-family: var(--font-cinzel-face), serif;
+  letter-spacing: 0.14em;
+  font-weight: 800;
+}
+
+html {
+  background: #f8fafc;
+  color: #0f172a;
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  background-color: #f8fafc;
+  color: #0f172a;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-emerald-500);
+  outline-offset: 2px;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+/* =========================================================================
+   SILATARA ATMOSPHERIC CLOUD ANIMATIONS (Awan Padepokan & Kabut Silat)
+   Distinct, visible, continuous drifting and billowing cloud movements
+   ========================================================================= */
+@keyframes cloudFloatDynamicLeft {
+  0% {
+    transform: translateX(-140px) translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateX(150px) translateY(-14px) scale(1.06);
+  }
+  100% {
+    transform: translateX(-140px) translateY(0px) scale(1);
+  }
+}
+
+@keyframes cloudFloatDynamicRight {
+  0% {
+    transform: translateX(140px) translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateX(-150px) translateY(-16px) scale(1.08);
+  }
+  100% {
+    transform: translateX(140px) translateY(0px) scale(1);
+  }
+}
+
+@keyframes cloudSwayWide {
+  0% {
+    transform: translateX(-110px) translateY(0px);
+  }
+  50% {
+    transform: translateX(120px) translateY(-12px);
+  }
+  100% {
+    transform: translateX(-110px) translateY(0px);
+  }
+}
+
+@keyframes cloudBob {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-15px) scale(1.04);
+  }
+}
+
+.animate-cloud-drift-1 {
+  animation: cloudFloatDynamicLeft 12s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+  will-change: transform;
+}
+
+.animate-cloud-drift-2 {
+  animation: cloudFloatDynamicRight 14s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+  will-change: transform;
+}
+
+.animate-cloud-drift-3 {
+  animation: cloudSwayWide 16s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-cloud-mist {
+  animation: cloudBob 8s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* =========================================================================
+   ATMOSPHERIC BREEZE, WIND & SOARING BIRDS (Angin Sejuk & Burung Walet/Elang)
+   ========================================================================= */
+@keyframes windFlow {
+  0% {
+    transform: translateX(-100px) scaleX(0.7);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.55;
+  }
+  70% {
+    opacity: 0.55;
+  }
+  100% {
+    transform: translateX(200px) scaleX(1.1);
+    opacity: 0;
+  }
+}
+
+@keyframes birdFlight1 {
+  0% {
+    transform: translateX(-80px) translateY(12px) scale(0.85);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.75;
+  }
+  50% {
+    transform: translateX(360px) translateY(-8px) scale(0.95);
+  }
+  85% {
+    opacity: 0.75;
+  }
+  100% {
+    transform: translateX(800px) translateY(8px) scale(0.85);
+    opacity: 0;
+  }
+}
+
+@keyframes birdFlight2 {
+  0% {
+    transform: translateX(-120px) translateY(-6px) scale(0.7);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.65;
+  }
+  60% {
+    transform: translateX(320px) translateY(10px) scale(0.8);
+  }
+  85% {
+    opacity: 0.65;
+  }
+  100% {
+    transform: translateX(750px) translateY(-5px) scale(0.7);
+    opacity: 0;
+  }
+}
+
+@keyframes birdWingBeat {
+  0%, 100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.72) translateY(-1px);
+  }
+}
+
+.animate-wind-flow-1 {
+  animation: windFlow 8s ease-in-out infinite;
+}
+
+.animate-wind-flow-2 {
+  animation: windFlow 11s ease-in-out infinite -4s;
+}
+
+.animate-bird-glide-1 {
+  animation: birdFlight1 20s cubic-bezier(0.35, 0, 0.25, 1) infinite;
+  will-change: transform;
+}
+
+.animate-bird-glide-2 {
+  animation: birdFlight2 26s cubic-bezier(0.35, 0, 0.25, 1) infinite -8s;
+  will-change: transform;
+}
+
+.animate-wing-beat {
+  animation: birdWingBeat 2.2s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* =========================================================================
+   INDONESIAN CULTURAL ARTS CHARACTER ANIMATIONS (Kesenian Daerah Flanks)
+   ========================================================================= */
+@keyframes kesenianFloatLeft {
+  0%, 100% {
+    transform: translateY(0px) rotate(-1.5deg) scale(1);
+  }
+  50% {
+    transform: translateY(-12px) rotate(1deg) scale(1.02);
+  }
+}
+
+@keyframes kesenianFloatRight {
+  0%, 100% {
+    transform: translateY(0px) rotate(1.5deg) scale(1);
+  }
+  50% {
+    transform: translateY(-14px) rotate(-1deg) scale(1.02);
+  }
+}
+
+.animate-kesenian-left {
+  animation: kesenianFloatLeft 5.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-kesenian-right {
+  animation: kesenianFloatRight 6.5s ease-in-out infinite -3s;
+  will-change: transform;
+}
+
+/* =========================================================================
+   HOME HERO DUEL WARRIORS SUBTLE IDLE MARTIAL MOVEMENT (GERAK TIPIS)
+   ========================================================================= */
+@keyframes warriorBreatheLeft {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-4px) translateX(2px) rotate(0.5deg) scale(1.008);
+  }
+  50% {
+    transform: translateY(-8px) translateX(1px) rotate(0.9deg) scale(1.015);
+  }
+  75% {
+    transform: translateY(-4px) translateX(-2px) rotate(0.3deg) scale(1.008);
+  }
+}
+
+@keyframes warriorBreatheRight {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-4px) translateX(-2px) rotate(-0.5deg) scale(1.008);
+  }
+  50% {
+    transform: translateY(-8px) translateX(-1px) rotate(-0.9deg) scale(1.015);
+  }
+  75% {
+    transform: translateY(-4px) translateX(2px) rotate(-0.3deg) scale(1.008);
+  }
+}
+
+.animate-hero-warrior-left {
+  animation: warriorBreatheLeft 6s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-hero-warrior-right {
+  animation: warriorBreatheRight 6.8s ease-in-out infinite -3.4s;
+  will-change: transform;
+}
+
+/* =========================================================================
+   ANIMATED VECTOR GRASS (RUMPUT TRADISI COREL DENGAN GOYANGAN TIPIS)
+   ========================================================================= */
+@keyframes grassSwaySlow {
+  0%, 100% {
+    transform: rotate(0deg) skewX(0deg);
+  }
+  50% {
+    transform: rotate(2deg) skewX(1.8deg);
+  }
+}
+
+@keyframes grassSwayFast {
+  0%, 100% {
+    transform: rotate(0deg) skewX(0deg);
+  }
+  50% {
+    transform: rotate(-2.5deg) skewX(-2deg);
+  }
+}
+
+@keyframes grassWavePulse {
+  0%, 100% {
+    transform: scaleY(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scaleY(1.05) translateY(-2px);
+    opacity: 1;
+  }
+}
+
+.animate-grass-sway-slow {
+  animation: grassSwaySlow 5.5s ease-in-out infinite;
+  transform-origin: bottom center;
+  will-change: transform;
+}
+
+.animate-grass-sway-fast {
+  animation: grassSwayFast 4.2s ease-in-out infinite -1.8s;
+  transform-origin: bottom center;
+  will-change: transform;
+}
+
+.animate-grass-wave {
+  animation: grassWavePulse 4.8s ease-in-out infinite -2.4s;
+  transform-origin: bottom center;
+  will-change: transform, opacity;
+}
+
+/* =========================================================================
+   UNIVERSAL SCROLL REVEAL & INTERACTIVE CARD ELEVATION ACROSS ALL PAGES
+   ========================================================================= */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px) scale(0.98);
+  transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+body[data-scroll-dir="up"] .scroll-reveal:not(.is-revealed) {
+  transform: translateY(-24px) scale(0.98);
+}
+
+.scroll-reveal.is-revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Cascade delays for cards in a grid */
+.stagger-1 { transition-delay: 50ms; }
+.stagger-2 { transition-delay: 110ms; }
+.stagger-3 { transition-delay: 170ms; }
+.stagger-4 { transition-delay: 230ms; }
+.stagger-5 { transition-delay: 290ms; }
+.stagger-6 { transition-delay: 350ms; }
+
+/* Interactive Card Elevation & Subtle Warm Glow */
+.card-interactive {
+  transition: transform 0.35s cubic-bezier(0.2, 0, 0, 1),
+              box-shadow 0.35s cubic-bezier(0.2, 0, 0, 1),
+              border-color 0.3s ease;
+}
+
+.card-interactive:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -12px rgba(234, 88, 12, 0.15), 0 8px 16px -6px rgba(0, 0, 0, 0.04);
+}
+
+/* Page Open Entrance Animation */
+@keyframes pageFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-page-entrance {
+  animation: pageFadeInUp 0.55s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+
+/* ============================ Gaya aplikasi (di atas desain landing) ============================ */
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+.font-serif { font-weight: 800; letter-spacing: -0.015em; }
+/* Tombol primer di seluruh aplikasi mengikuti gradien landing (maroon -> oranye) */
+a.bg-forest-700, button.bg-forest-700 { background-image: linear-gradient(90deg, #4a0d0d, #7c1d1d 55%, #c2410c); color: #fff; }
+a.bg-forest-700:hover, button.bg-forest-700:hover, a.hover\:bg-forest-900:hover, button.hover\:bg-forest-900:hover { background-image: linear-gradient(90deg, #3a0808, #6d1b11 55%, #9a3412); }
+button:disabled.bg-forest-700 { background-image: none; background-color: #94a3b8; }
+body { overflow-x: clip; }
+.full-bleed { margin-inline: calc(50% - 50vw); width: 100vw; }
+@keyframes brand-breathe { 0%,100% { opacity: .55; transform: scale(1); } 50% { opacity: 1; transform: scale(1.04); } }
+.brand-breathe { animation: brand-breathe 1.8s ease-in-out infinite; }
+
+/* ---------- Peta direktori (penanda bentuk + huruf; warna bukan satu-satunya pembeda) ---------- */
+.sil-pin {
+  display: inline-grid; place-items: center; width: 28px; height: 28px; background: var(--pin, #6d1b11); color: #ffffff; font: 700 12px/1 ui-sans-serif, system-ui, sans-serif;
+  border: 2px solid #ffffff; box-shadow: 0 1px 4px rgb(23 35 31 / 0.35);
+  border-radius: 9999px;
+}
+.sil-pin--drop { border-radius: 9999px 9999px 9999px 2px; transform: rotate(-45deg); }
+.sil-pin--drop > b { display: inline-block; transform: rotate(45deg); font-weight: 700; }
+.sil-pin--sm { width: 18px; height: 18px; font-size: 10px; border-width: 1.5px; }
+.sil-pin--area { background: #ffffff; color: var(--pin, #6d1b11); border: 2px dashed var(--pin, #6d1b11); }
+.sil-pin--group { width: 32px; height: 32px; font-size: 13px; }
+.sil-cluster {
+  display: grid; place-items: center; border-radius: 9999px; background: rgb(109 27 17 / 0.9); color: #ffffff;
+  font: 700 13px/1 ui-sans-serif, system-ui, sans-serif; border: 3px solid rgb(255 255 255 / 0.95); box-shadow: 0 1px 6px rgb(23 35 31 / 0.35);
+}
+.sil-popup .leaflet-popup-content { margin: 12px 14px; font: 13px/1.45 ui-sans-serif, system-ui, sans-serif; color: #0f172a; max-height: 320px; overflow-y: auto; }
+.sil-pop h3 { font-weight: 600; font-size: 14px; margin: 0 0 2px; }
+.sil-pop p { margin: 2px 0; }
+.sil-pop__meta, .sil-pop__src { color: #475569; font-size: 12px; }
+.sil-pop__group { font-weight: 600; margin-bottom: 6px !important; }
+.sil-pop__item + .sil-pop__item { border-top: 1px solid #e2e8f0; margin-top: 8px; padding-top: 8px; }
+.sil-pop__actions a { color: #6d1b11; text-decoration: underline; }
+.leaflet-container { font-family: ui-sans-serif, system-ui, sans-serif; background: #fff6ee; }
+.leaflet-container a.leaflet-popup-close-button { width: 28px; height: 28px; font-size: 20px; }
