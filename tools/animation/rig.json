@@ -1,0 +1,50 @@
+{
+  "rig_id": "silatara-instruktur-2d",
+  "version": 1,
+  "description": "Rig 2D karakter instruksional SILATARA (bukan maskot). Segmen kaku bersarang dengan pivot sendi; kaki diselesaikan dengan IK dua-ruas sehingga telapak tetap menapak.",
+  "units": "px (viewBox)",
+  "canvas": {"width": 360, "height": 440, "ground_y": 404, "margin": 6},
+  "segments": {
+    "torso": 106,
+    "neck": 11,
+    "head_r": 21,
+    "upper_arm": 56,
+    "forearm": 50,
+    "hand_r": 8,
+    "thigh": 84,
+    "shin": 82,
+    "ankle_h": 8,
+    "foot_len": 30
+  },
+  "offsets": {
+    "front": {"hip": 16, "shoulder": 31, "shoulder_drop": 9},
+    "side": {"hip": 0, "shoulder": 0, "shoulder_drop": 9}
+  },
+  "joints": ["pelvis(root)", "hip.L", "knee.L", "ankle.L", "hip.R", "knee.R", "ankle.R", "torso", "neck", "shoulder.L", "elbow.L", "wrist.L", "shoulder.R", "elbow.R", "wrist.R"],
+  "conventions": {
+    "pelvis": "[x, drop] — x absolut (px); drop = turun dari tinggi berdiri (px, positif = lebih rendah)",
+    "feet": "{L|R: [x, lift]} — x absolut pergelangan kaki; lift = tinggi di atas posisi menapak (px)",
+    "torso": "derajat condong; positif = ke +x (ke depan pada tampilan samping, ke kanan layar pada tampilan depan)",
+    "head": "derajat terhadap torso",
+    "arms": "{L|R: [bahu, siku]} derajat. Tampilan depan: bahu = abduksi menjauhi garis tengah, siku = lipatan ke arah garis tengah. Tampilan samping: bahu = fleksi ke depan, siku = lipatan ke depan/atas",
+    "foot_pitch": "tampilan samping; derajat, positif = tumit naik (jinjit)",
+    "foot_turn": "tampilan depan; derajat putar keluar telapak (ilustratif)",
+    "gaze": "tampilan depan; -1 (kiri layar) .. 1 (kanan layar); arah pandang ilustratif",
+    "front_view_sides": "Tampilan depan: karakter menghadap penonton, sehingga sisi KANAN karakter tampak di KIRI layar.",
+    "side_view_sides": "Tampilan samping: karakter menghadap ke kanan layar; sisi KIRI karakter adalah sisi dekat (digambar di depan)."
+  },
+  "palette": {
+    "background": "#FCFBF7",
+    "ground": "#E4E1D8",
+    "cloth": "#1E3B32",
+    "cloth_far": "#78917F",
+    "outline": "#17231F",
+    "skin": "#C9A27E",
+    "skin_far": "#A98A6C",
+    "sash": "#B9854F",
+    "accent": "#85592A",
+    "caption": "#17231F",
+    "caption_muted": "#52605A"
+  },
+  "costume_note": "Pakaian ilustratif generik (baju & celana gelap, sabuk polos). Tidak memakai emblem, warna sabuk tingkatan, atau atribut perguruan mana pun."
+}
