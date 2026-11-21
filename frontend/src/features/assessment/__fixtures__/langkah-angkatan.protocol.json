@@ -1,0 +1,180 @@
+{
+ "schema": "silatara.assessment-protocol/v1",
+ "protocol_id": "ap.psdp.langkah-angkatan",
+ "movement_id": "mv.psdp.langkah-angkatan",
+ "protocol_version": "1.0.0",
+ "status": "active",
+ "calibration": "editorial_v1_belum_dikalibrasi_instruktur",
+ "title": "Langkah angkatan (angkatan tinggi & rendah)",
+ "summary": "Mengukur tinggi angkatan paha dan tekukan lutut pada angkatan tinggi, tinggi angkatan rendah, kestabilan, dan kelengkapan fase.",
+ "reference_id": "ref.mv.psdp.langkah-angkatan.3d.v1",
+ "reference_animation_id": "anim.psdp.langkah-angkatan.3d.v1",
+ "required_view": "side",
+ "required_landmarks": [
+  0,
+  11,
+  12,
+  23,
+  24,
+  25,
+  26,
+  27,
+  28,
+  31,
+  32
+ ],
+ "min_visibility": 0.55,
+ "body_positioning": [
+  "Posisikan sisi tubuh menghadap kamera (tampak samping).",
+  "Seluruh tubuh dari kepala sampai telapak kaki terlihat; mundur 2–3 meter dari kamera.",
+  "Lakukan di lantai rata yang tidak licin dengan ruang kosong di depan Anda."
+ ],
+ "phases": [
+  {
+   "keyframe": "kf-1",
+   "label": "Berdiri siap",
+   "required": false
+  },
+  {
+   "keyframe": "kf-2",
+   "label": "Angkatan tinggi",
+   "required": true
+  },
+  {
+   "keyframe": "kf-3",
+   "label": "Kaki diletakkan",
+   "required": true
+  },
+  {
+   "keyframe": "kf-4",
+   "label": "Angkatan rendah",
+   "required": true
+  }
+ ],
+ "phase_completion_weight": 15,
+ "criteria": [
+  {
+   "id": "high_thigh",
+   "label": "Tinggi angkatan paha (angkatan tinggi)",
+   "feature": "thigh_elevation",
+   "side": "lifting",
+   "phase_keyframe": "kf-2",
+   "aggregate": "max",
+   "target": 90,
+   "tolerance": 10,
+   "falloff": 45,
+   "weight": 30,
+   "min_confidence": 0.5,
+   "unit": "deg",
+   "rationale": "Angkatan tinggi: paha diangkat hingga datar (sejajar lantai), yaitu ±90° dari posisi menggantung.",
+   "basis": "source",
+   "source_ids": [
+    "src.nugroho.2005",
+    "src.herdiana.2008"
+   ],
+   "locator": "Nugroho hlm. 155; Herdiana hlm. 19",
+   "feedback": {
+    "below": "Pengangkatan kaki masih lebih rendah daripada panduan: paha belum mendatar. Angkat lutut lebih tinggi sampai paha sejajar lantai sebelum memindahkan berat badan ke depan.",
+    "above": "Paha terangkat melewati posisi datar. Cukup angkat sampai paha sejajar lantai.",
+    "ok": "Paha terangkat sampai datar sesuai panduan."
+   }
+  },
+  {
+   "id": "high_knee",
+   "label": "Tekukan lutut (angkatan tinggi)",
+   "feature": "knee_angle",
+   "side": "lifting",
+   "phase_keyframe": "kf-2",
+   "aggregate": "median",
+   "target": 90,
+   "tolerance": 12,
+   "falloff": 45,
+   "weight": 20,
+   "min_confidence": 0.5,
+   "unit": "deg",
+   "rationale": "Angkatan tinggi: lutut membentuk siku-siku (90°).",
+   "basis": "source",
+   "source_ids": [
+    "src.nugroho.2005",
+    "src.herdiana.2008"
+   ],
+   "locator": "Nugroho hlm. 155; Herdiana hlm. 19",
+   "feedback": {
+    "below": "Lutut kaki yang diangkat terlalu ditekuk. Buka sedikit hingga tungkai bawah tegak lurus terhadap paha (siku-siku).",
+    "above": "Lutut kaki yang diangkat belum membentuk siku-siku. Tekuk lutut sehingga tungkai bawah menggantung tegak.",
+    "ok": "Lutut membentuk siku-siku sesuai panduan."
+   }
+  },
+  {
+   "id": "low_lift",
+   "label": "Angkatan rendah",
+   "feature": "thigh_elevation",
+   "side": "lifting",
+   "phase_keyframe": "kf-4",
+   "aggregate": "max",
+   "tolerance": 5,
+   "falloff": 25,
+   "weight": 20,
+   "min_confidence": 0.5,
+   "unit": "deg",
+   "rationale": "Angkatan rendah: 'lutut kira-kira 30°'. Sumber tidak menyebut titik ukurnya; v1 mengukur sudut angkat paha dengan rentang 20–45° (jelas lebih rendah daripada angkatan tinggi yang datar). Lihat interpretation_notes.",
+   "basis": "source_interpreted",
+   "source_ids": [
+    "src.nugroho.2005",
+    "src.herdiana.2008"
+   ],
+   "locator": "Nugroho hlm. 155; Herdiana hlm. 19",
+   "feedback": {
+    "below": "Pada angkatan rendah, kaki belum terangkat jelas. Angkat lutut sedikit (sekitar 30°) sampai telapak lepas dari lantai.",
+    "above": "Angkatan rendah terlalu tinggi. Angkat kaki lebih rendah daripada angkatan tinggi; paha jangan sampai mendatar.",
+    "ok": "Angkatan rendah sesuai panduan."
+   },
+   "target_range": [
+    20,
+    45
+   ]
+  },
+  {
+   "id": "stability",
+   "label": "Kestabilan saat menahan angkatan tinggi",
+   "feature": "hip_sway",
+   "side": "both_mean",
+   "phase_keyframe": "kf-2",
+   "aggregate": "std",
+   "target": 0,
+   "tolerance": 0.02,
+   "falloff": 0.06,
+   "weight": 15,
+   "min_confidence": 0.5,
+   "unit": "ratio",
+   "rationale": "Kriteria teknis: tinggi pinggul tidak naik-turun selama menahan angkatan (simpangan baku dinormalkan panjang tungkai). Sumber tidak memberi angka; mengukur posisi tidak stabil.",
+   "basis": "technical",
+   "source_ids": [],
+   "feedback": {
+    "below": "Posisi stabil.",
+    "above": "Badan masih bergoyang saat menahan angkatan. Tahan sejenak dengan kaki tumpu kokoh sebelum melangkah.",
+    "ok": "Posisi stabil saat menahan angkatan."
+   }
+  }
+ ],
+ "alignment_features": [
+  "thigh_elevation",
+  "knee_flexion",
+  "step_length"
+ ],
+ "confidence_requirements": {
+  "min_valid_frame_ratio": 0.6,
+  "min_frames": 30,
+  "max_unmeasured_weight_ratio": 0.4
+ },
+ "scoring_formula": "total = round( (Σ skor_kriteria×bobot + skor_fase×bobot_fase) / (Σ bobot kriteria terukur + bobot_fase) ); skor_kriteria = 100 di dalam toleransi, turun linier hingga 0 pada toleransi+falloff; skor_fase = % fase wajib yang terdeteksi.",
+ "interpretation_notes": [
+  "Sumber menulis 'angkatan rendah: lutut kira-kira 30°' tanpa menyebut titik ukur. Protokol v1 mengukur sudut angkat paha (rentang 20–45°); tafsir 'tekukan lutut 30°' tetap terbuka dan perlu dikonfirmasi pelatih. Klip referensi 3D v1: paha ±34°, tekukan lutut ±53°.",
+  "Tempo tidak disebut sumber, sehingga tidak dinilai; rasio tempo hanya ditampilkan sebagai informasi."
+ ],
+ "source_ids": [
+  "src.nugroho.2005",
+  "src.herdiana.2008"
+ ],
+ "disclaimer": "Skor menunjukkan kesesuaian dengan panduan gerak SILATARA yang disusun dari sumber, bukan penilaian resmi perguruan. Mintalah pelatih memeriksa teknik Anda."
+}

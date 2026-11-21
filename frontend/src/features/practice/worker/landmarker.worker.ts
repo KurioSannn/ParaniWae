@@ -19,7 +19,7 @@ interface Ctx {
 const ctx = self as unknown as Ctx;
 
 type Detector<R> = { detectForVideo(src: ImageBitmap, ts: number): R; close(): void };
-let pose: Detector<{ landmarks: never[][] }> | null = null;
+let pose: Detector<{ landmarks: never[][]; worldLandmarks?: never[][] }> | null = null;
 let hand: Detector<{ landmarks: never[][]; handedness: never[][] }> | null = null;
 let state: "idle" | "loading" | "ready" | "paused" | "disposed" = "idle";
 let lastTs = -1;

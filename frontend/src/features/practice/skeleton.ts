@@ -50,13 +50,44 @@ export interface SkeletonOptions {
   dimOthers?: boolean;
 }
 
-const BONE = "#B9854F", BONE_OUTLINE = "rgba(23,35,31,0.65)", JOINT = "#FCFBF7", HAND = "#9FB7A6";
+const OUTLINE = "rgba(23,35,31,0.75)", JOINT = "#FCFBF7", CENTER = "#FCFBF7";
+/** Kiri/kanan tubuh dibedakan (bukan satu-satunya pembeda: titik sendi tetap putih). Kontras tinggi di atas video. */
+const SIDE_COLOR = { L: "#7FD1AE", R: "#F0B64A" } as const;
+/** Warna per jari (ibu jari → kelingking) agar ruas & sendi jari mudah dibedakan. */
+export const FINGER_COLORS = ["#F0B64A", "#7FD1AE", "#9FC5FF", "#E8793A", "#D9A6FF"] as const;
+const LEFT_IDX = new Set([1, 2, 3, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31]);
+const RIGHT_IDX = new Set([4, 5, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32]);
 const visible = (l: Landmark | undefined, min: number) => !!l && Number.isFinite(l.x) && Number.isFinite(l.y) && (l.visibility ?? 0) >= min;
+
+function boneColor(a: number, b: number): string {
+  if (LEFT_IDX.has(a) && LEFT_IDX.has(b)) return SIDE_COLOR.L;
+  if (RIGHT_IDX.has(a) && RIGHT_IDX.has(b)) return SIDE_COLOR.R;
+  return CENTER;
+}
 
 /** Ukuran garis/titik mengikuti sisi terpendek agar proporsional di semua resolusi. */
 export function strokeScale(size: Size): { bone: number; joint: number } {
   const m = Math.min(size.width, size.height);
-  return { bone: Math.max(2, m / 150), joint: Math.max(3, m / 110) };
+  return { bone: Math.max(3, m / 110), joint: Math.max(3.5, m / 95) };
+}
+
+/** Perataan tampilan (EMA) per landmark. Hanya untuk visual; pengukuran memakai data mentah. */
+export class LandmarkSmoother {
+  private prev: Map<string, { x: number; y: number }> = new Map();
+  constructor(private alpha = 0.55) {}
+  smooth(frame: LandmarkFrame): LandmarkFrame {
+    const out: LandmarkFrame = { meta: frame.meta, poses: [], hands: [] };
+    const f = (key: string, l: Landmark): Landmark => {
+      const p = this.prev.get(key);
+      const x = p ? p.x + (l.x - p.x) * this.alpha : l.x, y = p ? p.y + (l.y - p.y) * this.alpha : l.y;
+      this.prev.set(key, { x, y });
+      return { ...l, x, y };
+    };
+    frame.poses.forEach((po, i) => out.poses.push({ ...po, landmarks: po.landmarks.map((l, j) => f(`p${i}:${j}`, l)) }));
+    frame.hands.forEach((h, i) => out.hands.push({ ...h, landmarks: h.landmarks.map((l, j) => f(`h${h.handedness}${i}:${j}`, l)) }));
+    return out;
+  }
+  reset() { this.prev.clear(); }
 }
 
 export function drawSkeleton(ctx: DrawCtx, frame: LandmarkFrame, size: Size, opts: SkeletonOptions = {}): { points: number; bones: number } {
@@ -72,10 +103,11 @@ export function drawSkeleton(ctx: DrawCtx, frame: LandmarkFrame, size: Size, opt
     for (const [a, b] of POSE_BODY_CONNECTIONS) {
       if (!lm[a] || !lm[b] || !visible(lm[a], min) || !visible(lm[b], min)) continue;
       const pa = P(a), pb = P(b);
-      ctx.globalAlpha = alpha;
-      ctx.strokeStyle = BONE_OUTLINE; ctx.lineWidth = bone + 2;
+      // kejelasan garis mengikuti visibility terendah dari kedua ujung
+      ctx.globalAlpha = alpha * Math.max(0.55, Math.min(lm[a].visibility ?? 0, lm[b].visibility ?? 0));
+      ctx.strokeStyle = OUTLINE; ctx.lineWidth = bone + 2.5;
       ctx.beginPath(); ctx.moveTo(pa.x, pa.y); ctx.lineTo(pb.x, pb.y); ctx.stroke();
-      ctx.strokeStyle = BONE; ctx.lineWidth = bone;
+      ctx.strokeStyle = boneColor(a, b); ctx.lineWidth = bone;
       ctx.beginPath(); ctx.moveTo(pa.x, pa.y); ctx.lineTo(pb.x, pb.y); ctx.stroke();
       bones += 1;
     }
@@ -83,9 +115,10 @@ export function drawSkeleton(ctx: DrawCtx, frame: LandmarkFrame, size: Size, opt
       const l = lm[i];
       if (!l || !Number.isFinite(l.x) || !Number.isFinite(l.y)) continue;
       const p = P(i);
-      ctx.globalAlpha = alpha * ((l.visibility ?? 0) >= min ? 1 : 0.45);
-      ctx.beginPath(); ctx.arc(p.x, p.y, joint + 1, 0, Math.PI * 2); ctx.fillStyle = BONE_OUTLINE; ctx.fill();
-      ctx.beginPath(); ctx.arc(p.x, p.y, joint, 0, Math.PI * 2); ctx.fillStyle = (l.visibility ?? 0) >= min ? JOINT : "rgba(252,251,247,0.35)"; ctx.fill();
+      const seen = (l.visibility ?? 0) >= min;
+      ctx.globalAlpha = alpha * (seen ? 1 : 0.4);
+      ctx.beginPath(); ctx.arc(p.x, p.y, joint + 1.5, 0, Math.PI * 2); ctx.fillStyle = OUTLINE; ctx.fill();
+      ctx.beginPath(); ctx.arc(p.x, p.y, joint, 0, Math.PI * 2); ctx.fillStyle = seen ? JOINT : "rgba(252,251,247,0.35)"; ctx.fill();
       points += 1;
     }
   });
@@ -96,22 +129,29 @@ export function drawSkeleton(ctx: DrawCtx, frame: LandmarkFrame, size: Size, opt
   return { points, bones };
 }
 
+/** Kerangka tangan 21 titik: telapak netral, tiap jari berwarna sendiri, semua sendi ditandai. */
 function drawHand(ctx: DrawCtx, h: HandDetection, size: Size, opts: SkeletonOptions, bone: number): number {
-  ctx.globalAlpha = 0.9;
-  ctx.strokeStyle = HAND; ctx.lineWidth = Math.max(1.5, bone * 0.6);
+  const w = Math.max(2, bone * 0.7);
+  const fingerOf = (a: number, b: number) => (a === 0 || [5, 9, 13, 17].includes(a) && [9, 13, 17].includes(b) ? -1 : Math.floor((Math.max(a, b) - 1) / 4));
+  ctx.globalAlpha = Math.max(0.6, Math.min(1, h.score || 1));
   for (const [a, b] of HAND_CONNECTIONS) {
     const la = h.landmarks[a], lb = h.landmarks[b];
     if (!la || !lb) continue;
     const pa = projectLandmark(la, size, opts), pb = projectLandmark(lb, size, opts);
+    const fi = fingerOf(a, b);
+    ctx.strokeStyle = OUTLINE; ctx.lineWidth = w + 2;
+    ctx.beginPath(); ctx.moveTo(pa.x, pa.y); ctx.lineTo(pb.x, pb.y); ctx.stroke();
+    ctx.strokeStyle = fi < 0 ? JOINT : FINGER_COLORS[fi]; ctx.lineWidth = w;
     ctx.beginPath(); ctx.moveTo(pa.x, pa.y); ctx.lineTo(pb.x, pb.y); ctx.stroke();
   }
   let n = 0;
-  ctx.fillStyle = JOINT;
-  for (const l of h.landmarks) {
+  h.landmarks.forEach((l, i) => {
     const p = projectLandmark(l, size, opts);
-    ctx.beginPath(); ctx.arc(p.x, p.y, Math.max(2, bone * 0.8), 0, Math.PI * 2); ctx.fill();
+    const r = Math.max(2.2, bone * (i === 0 ? 0.9 : i % 4 === 0 ? 0.75 : 0.6));
+    ctx.beginPath(); ctx.arc(p.x, p.y, r + 1, 0, Math.PI * 2); ctx.fillStyle = OUTLINE; ctx.fill();
+    ctx.beginPath(); ctx.arc(p.x, p.y, r, 0, Math.PI * 2); ctx.fillStyle = i === 0 ? JOINT : FINGER_COLORS[Math.floor((i - 1) / 4)]; ctx.fill();
     n += 1;
-  }
+  });
   return n;
 }
 

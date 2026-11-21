@@ -1,7 +1,7 @@
 import type { HandDetection, Landmark, LandmarkFrame } from "@/features/practice/landmarks";
 
 type RawLm = { x: number; y: number; z: number; visibility?: number; presence?: number };
-type RawPose = { landmarks: RawLm[][] };
+type RawPose = { landmarks: RawLm[][]; worldLandmarks?: RawLm[][] };
 type RawHand = { landmarks: RawLm[][]; handedness: { categoryName: string; score: number }[][] };
 
 const plain = (l: RawLm): Landmark => ({ x: l.x, y: l.y, z: l.z, visibility: l.visibility, presence: l.presence });
@@ -21,5 +21,11 @@ export function toLandmarkFrame(
       });
     });
   }
-  return { meta, poses: pose.landmarks.map((l) => ({ landmarks: l.map(plain) })), hands };
+  return {
+    meta, hands,
+    poses: pose.landmarks.map((l, i) => {
+      const w = pose.worldLandmarks?.[i];
+      return w ? { landmarks: l.map(plain), world: w.map(plain) } : { landmarks: l.map(plain) };
+    }),
+  };
 }

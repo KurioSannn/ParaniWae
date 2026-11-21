@@ -12,7 +12,11 @@ export interface Landmark {
   presence?: number;
 }
 
-export interface PoseDetection { landmarks: Landmark[] }
+export interface PoseDetection {
+  landmarks: Landmark[];
+  /** World landmarks MediaPipe (meter, asal di tengah pinggul). Opsional; hanya dipakai di perangkat, tidak disimpan. */
+  world?: Landmark[];
+}
 
 export interface HandDetection {
   handedness: "Left" | "Right" | "Unknown";
