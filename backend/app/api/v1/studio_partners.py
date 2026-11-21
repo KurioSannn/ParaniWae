@@ -130,6 +130,8 @@ def upload_document(
 @router.get("/partner-documents/{doc_id}/file", summary="Unduh dokumen persetujuan (manager/kurator/admin)")
 def download_document(doc_id: str, ctx: AuthContext = Depends(Studio), db: Session = Depends(get_db)):
     d = ps.get_document(db, ctx.user, doc_id)
+    if d.scan_status in {"pending", "infected", "error"}:
+        raise ApiError(423, "QUARANTINED", "Dokumen masih di karantina atau tidak lolos pemindaian.")
     path = storage.path_for(d.storage_key)
     if not path.exists():
         raise ApiError(404, "NOT_FOUND", "File tidak ditemukan.")

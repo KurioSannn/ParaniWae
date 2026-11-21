@@ -1,12 +1,14 @@
 from datetime import timedelta
 
 from fastapi import APIRouter, Depends, Request, Response
+from pydantic import BaseModel, ConfigDict, Field
 from sqlalchemy import select
 from sqlalchemy.orm import Session as DbSession
 
 from app.api.deps import AuthContext, auth_required
 from app.core.config import get_settings
 from app.core.db import get_db
+from app.core.errors import ApiError
 from app.core.netinfo import client_ip
 from app.core.security import hash_password
 from app.models import User
@@ -122,6 +124,52 @@ def login(body: LoginIn, request: Request, response: Response, db: DbSession = D
     user = svc.authenticate(db, body.email, body.password, _rid(request))
     token, row = svc.create_session(db, user)  # sesi baru setiap login (anti-fixation)
     audit.record(db, actor=user, action="user.login", entity_type="user",
+                 entity_id=user.id, request_id=_rid(request))
+    db.commit()
+    _set_cookies(response, token, row.csrf_token)
+    return {"user": user, "csrf_token": row.csrf_token}
+
+
+#: Akun demo yang boleh dipakai login sekali klik (di-seed oleh `app.cli seed-demo`; semua berlabel [DEMO]).
+DEMO_ACCOUNTS = {
+    "pelajar": ("demo-pelajar@silatara.test", "Pelajar", "Belajar kelas, latihan kamera, progres"),
+    "instruktur": ("demo-instruktur@silatara.test", "Instruktur", "Studio mitra, dokumentasi gerakan, pilot"),
+    "kurator": ("demo-kurator@silatara.test", "Kurator", "Tinjau & terbitkan konten budaya"),
+    "admin": ("demo-admin@silatara.test", "Admin", "Pengguna, operasional, semua studio"),
+}
+
+
+def _demo_guard() -> None:
+    if not get_settings().demo_login_active:
+        raise ApiError(404, "NOT_FOUND", "Tidak ditemukan.")
+
+
+@router.get("/demo-accounts", summary="Daftar akun demo login sekali klik (hanya pengembangan)")
+def demo_accounts(db: DbSession = Depends(get_db)):
+    _demo_guard()
+    present = set(db.scalars(select(User.email).where(User.email.in_([v[0] for v in DEMO_ACCOUNTS.values()]),
+                                                       User.status == "active")))
+    return [{"key": k, "label": label, "description": desc, "email": email}
+            for k, (email, label, desc) in DEMO_ACCOUNTS.items() if email in present]
+
+
+class DemoLoginIn(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    key: str = Field(min_length=1, max_length=20)
+
+
+@router.post("/demo-login", response_model=AuthOut, summary="Login sekali klik akun demo (hanya pengembangan)")
+def demo_login(body: DemoLoginIn, request: Request, response: Response, db: DbSession = Depends(get_db)):
+    _demo_guard()
+    ratelimit.hit(db, "login:ip", client_ip(request), get_settings().rl_login_ip)
+    acc = DEMO_ACCOUNTS.get(body.key)
+    user = db.scalar(select(User).where(User.email == acc[0])) if acc else None
+    if user is None or user.status != "active":
+        raise ApiError(404, "NOT_FOUND", "Akun demo tidak tersedia. Jalankan `make seed` terlebih dahulu.")
+    if user.email_verified_at is None:
+        user.email_verified_at = now()
+    token, row = svc.create_session(db, user)
+    audit.record(db, actor=user, action="user.demo_login", entity_type="user",
                  entity_id=user.id, request_id=_rid(request))
     db.commit()
     _set_cookies(response, token, row.csrf_token)

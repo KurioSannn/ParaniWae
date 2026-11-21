@@ -158,8 +158,72 @@ def seed_demo(db: Session) -> dict[str, int]:
                 c["users"] = c.get("users", 0) + 1
         db.flush()
         _seed_studio(db, c, ta, tb, pa, pb, ia, m1)
+        _seed_pilot(db, c, pa)
     db.commit()
     return c
+
+
+def _seed_pilot(db, c, pa):
+    """Program pilot DEMO: 6 peserta fiktif dengan aktivitas contoh (cukup untuk melampaui ambang privasi). Bukan data nyata."""
+    from datetime import timedelta
+
+    from app.models import (
+        CohortMember,
+        CohortSession,
+        Enrollment,
+        LessonProgress,
+        PilotAnnouncement,
+        PilotCohort,
+        PilotProgram,
+        PilotSurvey,
+        PracticeSession,
+        SurveyResponse,
+    )
+    from app.services import pilot as pilot_svc
+
+    ins = db.scalar(select(User).where(User.email == "demo-instruktur@silatara.test"))
+    course = db.scalar(select(Course).where(Course.slug == "demo-kurikulum-a"))
+    if not (ins and course) or db.scalar(select(PilotProgram.id).where(PilotProgram.name == "[DEMO] Program Pilot Contoh")):
+        return
+    now = datetime.now(UTC)
+    prog = PilotProgram(partner_id=pa.id, name="[DEMO] Program Pilot Contoh", objective="[DEMO] Contoh tujuan program untuk uji tampilan.",
+                        description=DEMO_NOTE, responsible_user_id=ins.id, default_course_id=course.id, start_date=(now - timedelta(days=21)).date(),
+                        end_date=(now + timedelta(days=60)).date(), capacity=40, status="active", is_demo=True, created_by_user_id=ins.id)
+    db.add(prog)
+    db.flush()
+    cohort = PilotCohort(program_id=prog.id, name="[DEMO] Cohort A", course_id=course.id, instructor_user_id=ins.id, capacity=30,
+                         start_date=prog.start_date, end_date=prog.end_date, status="open")
+    db.add(cohort)
+    db.flush()
+    db.add(CohortSession(cohort_id=cohort.id, title="[DEMO] Pertemuan perkenalan", starts_at=now + timedelta(days=3), location_note="[DEMO] Lokasi contoh"))
+    lessons = list(db.scalars(select(Lesson).where(Lesson.course_id == course.id).order_by(Lesson.order_index)))
+    pw = hash_password(os.environ.get("DEMO_USER_PASSWORD", "demo-sandi-12345"))
+    questions = [{"required": True, "scale_min": 1, "scale_max": 5, "options": None, "min_label": None, "max_label": None, **q} for q in pilot_svc.TEMPLATES["baseline"][1]]
+    survey = PilotSurvey(program_id=prog.id, kind="baseline", title="[DEMO] " + pilot_svc.TEMPLATES["baseline"][0], status="open", questions=questions)
+    db.add(survey)
+    db.flush()
+    for i in range(1, 7):
+        email = f"demo-peserta-{i}@silatara.test"
+        u = db.scalar(select(User).where(User.email == email))
+        if not u:
+            u = User(email=email, display_name=f"[DEMO] Peserta {i}", role="learner", email_verified_at=now, password_hash=pw)
+            db.add(u)
+            db.flush()
+        enr = Enrollment(user_id=u.id, course_id=course.id, status="active", enrolled_at=now - timedelta(days=14))
+        db.add(enr)
+        db.flush()
+        db.add(CohortMember(cohort_id=cohort.id, program_id=prog.id, user_id=u.id, joined_at=now - timedelta(days=14), enrollment_id=enr.id))
+        for lesson in lessons[: max(0, 4 - i)]:  # peserta 1 menyelesaikan 3 pelajaran, ... peserta 4+ belum mulai
+            db.add(LessonProgress(user_id=u.id, enrollment_id=enr.id, course_id=course.id, lesson_id=lesson.id, status="completed",
+                                  started_at=now - timedelta(days=10), completed_at=now - timedelta(days=9)))
+        if i <= 3 and lessons:
+            db.add(PracticeSession(user_id=u.id, lesson_id=lessons[0].id, status="completed", started_at=now - timedelta(days=5, minutes=6),
+                                   ended_at=now - timedelta(days=5), active_duration_ms=240_000 + i * 20_000, paused_duration_ms=0, model_version="[DEMO]"))
+        db.add(SurveyResponse(survey_id=survey.id, cohort_id=cohort.id, user_id=u.id, submitted_at=now - timedelta(days=13), answers={
+            "pengalaman": ["Belum pernah", "Beberapa kali", "Sekitar sekali seminggu"][i % 3], "percaya_diri": 2 + (i % 4),
+            "akses_instruktur": ["Cukup sulit", "Cukup mudah"][i % 2]}) if i <= 5 else PilotAnnouncement(program_id=prog.id, title="[DEMO] Selamat datang", body=DEMO_NOTE, author_user_id=ins.id))
+    c["pilot_programs"] = c.get("pilot_programs", 0) + 1
+    db.flush()
 
 
 def _demo_doc(db, c, mv, version_no, status, author, phases=(), **kw):
