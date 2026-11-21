@@ -63,9 +63,48 @@ class Settings(BaseSettings):
     media_max_image_mb: int = 10
     partner_doc_max_mb: int = 10
 
+    # Pemindai malware (ClamAV via clamd). `disabled` = TIDAK ada pemindaian: berkas ditandai `not_scanned`, tidak pernah publik.
+    scan_provider: str = "disabled"  # disabled | clamav
+    scan_host: str = "clamav"
+    scan_port: int = 3310
+    scan_timeout_s: int = 60
+
+    # Koneksi DB & observabilitas load test
+    db_pool_size: int = 10
+    db_max_overflow: int = 20
+    db_pool_timeout_s: int = 30
+    debug_query_stats: bool = False
+
+    # Outbox notifikasi (lihat docs/PILOT_OPERATIONS_RUNBOOK.md)
+    outbox_batch_size: int = 20
+    outbox_lease_seconds: int = 120
+    outbox_max_attempts: int = 6
+    outbox_backoff_base_s: int = 30
+    outbox_backoff_cap_s: int = 3600
+    outbox_undeliverable_max_hours: int = 72
+    outbox_purge_sent_days: int = 30
+    outbox_purge_dead_days: int = 180
+    smtp_timeout_s: int = 15
+    retention_auto_enabled: bool = True
+    retention_interval_hours: int = 24
+    media_purge_enabled: bool = True
+
+    # Pilot & retensi
+    pilot_min_respondents: int = 5
+    pilot_retention_days: int = 365
+    pilot_policy_version: str = "2026-11"
+    worker_interval_s: int = 60
+
     # Hanya dibaca untuk guard produksi (nilai tidak dipakai langsung di sini)
     demo_user_password: str | None = None
     seed_demo_data: bool = False
+    # Login demo sekali klik (tanpa kata sandi) untuk akun [DEMO] yang di-seed. HANYA pengembangan/presentasi lokal;
+    # selalu mati di produksi (lihat demo_login_active + production_problems).
+    demo_login_enabled: bool = False
+    # Basis pengetahuan publik dari berkas content/ & research/ (ADR-0008: public-first). Matikan hanya bila berkas
+    # tidak tersedia di lingkungan tersebut.
+    research_preview_enabled: bool = True
+    research_repo_dir: str = "/repo"
 
     # Data DEMO hanya boleh tampil di API saat true (default: hanya di development).
     expose_demo_data: bool = Field(default=True)
@@ -96,10 +135,8 @@ class Settings(BaseSettings):
             return bool(self.smtp_host and self.mail_from)
         return False
 
-    def validate_runtime(self) -> None:
-        """Gagal cepat (fail closed) untuk konfigurasi tidak aman di produksi."""
-        if not self.is_production:
-            return
+    def production_problems(self) -> list[str]:
+        """Pelanggaran konfigurasi yang TIDAK boleh ada di produksi (dievaluasi tanpa memandang APP_ENV; dipakai doctor)."""
         problems = []
         if not self.use_secure_cookies:
             problems.append("COOKIE_SECURE harus true di produksi")
@@ -113,6 +150,23 @@ class Settings(BaseSettings):
             problems.append("DEMO_USER_PASSWORD tidak boleh diset di produksi (kredensial demo)")
         if self.seed_demo_data:
             problems.append("SEED_DEMO_DATA tidak boleh true di produksi")
+        if self.demo_login_enabled:
+            problems.append("DEMO_LOGIN_ENABLED tidak boleh true di produksi (login tanpa kata sandi)")
+        if self.scan_provider != "clamav":
+            problems.append("SCAN_PROVIDER harus clamav di produksi (berkas unggahan wajib dipindai)")
+        return sorted(set(problems), key=problems.index)
+
+    @property
+    def demo_login_active(self) -> bool:
+        """Login demo hanya aktif bila diizinkan eksplisit dan BUKAN produksi. Tidak bergantung pada EXPOSE_DEMO_DATA:
+        akun uji boleh dipakai di dev walau konten contoh disembunyikan dari halaman publik (ADR-0008)."""
+        return self.demo_login_enabled and not self.is_production
+
+    def validate_runtime(self) -> None:
+        """Gagal cepat (fail closed) untuk konfigurasi tidak aman di produksi."""
+        if not self.is_production:
+            return
+        problems = self.production_problems()
         if problems:
             raise RuntimeError("Konfigurasi produksi tidak aman: " + "; ".join(problems))
 
