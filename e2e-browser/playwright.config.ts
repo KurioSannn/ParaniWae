@@ -15,7 +15,7 @@ export default defineConfig({
   outputDir: "artifacts/test-results",
   use: { baseURL: BASE, locale: "id-ID", trace: "retain-on-failure", screenshot: "only-on-failure" },
   projects: [
-    { name: "app", testMatch: /(auth|learning|visual|studio)\.spec\.ts/ },
+    { name: "app", testMatch: /(auth|learning|visual|studio|landing|pilot|ops)\.spec\.ts/ },
     { name: "camera-fake", testMatch: /(camera(-benchmark|-roi)?|practice)\.spec\.ts/, use: { launchOptions: { args: [FAKE_DEVICE, FAKE_UI] }, permissions: ["camera"] } },
     { name: "camera-denied", testMatch: /camera-denied\.spec\.ts/, use: { launchOptions: { args: [FAKE_DEVICE] } } },
     { name: "camera-insecure", testMatch: /camera-insecure\.spec\.ts/, use: { baseURL: process.env.INSECURE_BASE_URL ?? "http://frontend:3000" } },

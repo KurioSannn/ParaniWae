@@ -291,7 +291,7 @@ test("Media referensi: deklarasi wajib, privat secara default, verifikasi izin, 
   await expect(page.getByText(/Model: mediapipe-tasks-vision/)).toBeVisible();
   // cabut izin -> video tidak lagi dapat dibuka
   expect((await api(page, "patch", `/studio/media/${m.id}`, { consent_status: "revoked" })).status).toBe(200);
-  expect((await page.request.get(m.url)).status()).toBe(200); // staf masih dapat membuka untuk pemeriksaan
+  expect((await page.request.get(m.url)).status()).toBe(404); // izin dicabut: tertutup untuk SEMUA (sprint 8: fail-closed, termasuk staf)
 });
 
 test("tangkapan layar Studio (untuk dokumentasi/laporan)", async ({ page }) => {
