@@ -131,7 +131,7 @@ class LessonLinkIn(_In):
 # ---------- media ----------
 class MediaPatch(_In):
     title: Short | None = None
-    access_level: Literal["private", "reviewers", "public"] | None = None
+    access_level: Literal["private", "reviewers", "pilot_cohort", "public"] | None = None
     consent_status: Literal["verified", "rejected", "revoked"] | None = None
     permission_evidence_ref: Annotated[str, Field(max_length=2000)] | None = None
     retention_until: date | None = None

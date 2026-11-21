@@ -60,6 +60,8 @@ class CourseIn(_Source):
     level: Literal["beginner", "intermediate", "advanced"] = "beginner"
     estimated_minutes: Annotated[int, Field(ge=1, le=100000)] | None = None
     safety_notes: Text | None = None
+    # public = katalog publik; pilot_private = hanya peserta cohort program pilot yang sah (lihat PRIVATE_PILOT_ACCESS.md)
+    distribution_scope: Literal["public", "pilot_private"] = "public"
 
 
 class LessonIn(_Source):

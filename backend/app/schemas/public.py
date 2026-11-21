@@ -18,6 +18,9 @@ class Provenance(BaseModel):
     source_url: str | None = None
     approved_by_name: str | None = None
     approved_at: datetime | None = None
+    # ADR-0008: source_backed | official_curriculum | partner_restricted; `attribution` diisi untuk pengetahuan redaksi
+    content_basis: str | None = None
+    attribution: str | None = None
 
 
 class _Base(BaseModel):
@@ -31,6 +34,7 @@ class TraditionSummary(_Base):
     local_name: str | None
     region: str | None
     public_summary: str | None
+    content_basis: str = "official_curriculum"
     provenance: Provenance
 
 
@@ -70,6 +74,7 @@ class MovementSummary(_Base):
     level: str | None = None
     safety_category: str | None = None
     version_no: int | None = None
+    content_basis: str = "official_curriculum"
     provenance: Provenance
 
 
@@ -86,11 +91,13 @@ class CourseSummary(_Base):
     summary: str | None
     level: str
     estimated_minutes: int | None
+    distribution_scope: str = "public"  # public | pilot_private (privat hanya tampil bagi yang berhak)
     tradition_slug: str | None = None
     tradition_name: str | None = None
     partner_slug: str | None = None
     partner_name: str | None = None
     lesson_count: int = 0
+    content_basis: str = "official_curriculum"
     provenance: Provenance
 
 
