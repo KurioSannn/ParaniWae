@@ -22,10 +22,10 @@ export function Card({ children, className = "" }: { children: React.ReactNode; 
 
 /** Penanda keabsahan konten. Tidak pernah menyiratkan persetujuan mitra tanpa bukti. */
 export function ProvenanceBadge({ p }: { p: Provenance }) {
-  const Icon = p.is_demo ? FlaskConical : p.partner_verified ? BadgeCheck : Hourglass;
+  const Icon = p.is_demo ? FlaskConical : p.partner_verified || p.content_basis === "source_backed" ? BadgeCheck : Hourglass;
   const tone = p.is_demo
     ? "bg-bronze-500/15 text-ink-950"
-    : p.partner_verified ? "bg-forest-700/10 text-forest-900" : "bg-line-200 text-slate-600";
+    : p.partner_verified || p.content_basis === "source_backed" ? "bg-forest-700/10 text-forest-900" : "bg-line-200 text-slate-600";
   return (
     <span className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-medium ${tone}`}>
       <Icon aria-hidden className="h-3.5 w-3.5" />
@@ -45,18 +45,20 @@ export function StatusBadge({ status }: { status: ContentStatus }) {
 }
 
 export function SourceBox({ p }: { p: Provenance }) {
+  const editorial = p.content_basis === "source_backed";
   return (
-    <aside aria-label="Sumber dan verifikasi" className="rounded-xl border border-line-200 bg-parchment-100 p-4 text-sm">
+    <aside aria-label="Sumber" className="rounded-xl border border-line-200 bg-parchment-100 p-4 text-sm">
       <div className="mb-2"><ProvenanceBadge p={p} /></div>
       <dl className="space-y-1 text-slate-600">
-        <div><dt className="inline font-medium text-ink-950">Sumber: </dt>
-          <dd className="inline">{p.source_citation ?? "Belum dicantumkan."}
+        {p.source_citation && <div><dt className="inline font-medium text-ink-950">Sumber: </dt>
+          <dd className="inline whitespace-pre-line">{p.source_citation}
             {p.source_url && <> (<a className="underline" href={p.source_url} rel="noopener noreferrer nofollow" target="_blank">tautan</a>)</>}
-          </dd></div>
-        {p.approved_by_name && <div><dt className="inline font-medium text-ink-950">Disetujui oleh: </dt><dd className="inline">{p.approved_by_name}</dd></div>}
+          </dd></div>}
+        {editorial && <div><dt className="inline font-medium text-ink-950">Disusun oleh: </dt><dd className="inline">{p.attribution ?? "Redaksi SILATARA"}</dd></div>}
+        {!editorial && p.approved_by_name && <div><dt className="inline font-medium text-ink-950">Disetujui oleh: </dt><dd className="inline">{p.approved_by_name}</dd></div>}
       </dl>
-      {!p.partner_verified && (
-        <p className="mt-2 text-slate-600">Materi ini belum dinyatakan resmi oleh mitra budaya.</p>
+      {!editorial && !p.partner_verified && !p.is_demo && (
+        <p className="mt-2 text-slate-600">Dokumentasi ini disusun bersama perguruan dan sedang menunggu konfirmasi pengurusnya.</p>
       )}
     </aside>
   );
