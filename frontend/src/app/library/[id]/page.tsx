@@ -5,15 +5,38 @@ import { ErrorState, SourceBox } from "@/components/ui";
 import { apiGet } from "@/lib/api";
 import { formatDate, LEVEL_LABEL, SAFETY_LABEL } from "@/lib/format";
 import type { MovementOut, PublicVersion } from "@/lib/types";
+import type { MovementDetail } from "@/lib/research";
+import { MovementArticle } from "@/components/knowledge/MovementArticle";
+import { clipFor, type CharacterManifest } from "@/lib/character";
+
+const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
+  if (!UUID_RE.test(id)) {
+    const k = await apiGet<MovementDetail>(`/research/movements/${encodeURIComponent(id)}`);
+    return k.ok
+      ? { title: `${k.data.names.primary} — Pustaka Gerakan`, description: k.data.cultural.purpose.text.slice(0, 160), alternates: { canonical: `/library/${id}` } }
+      : { title: "Gerakan tidak ditemukan" };
+  }
   const r = await apiGet<MovementOut>(`/movements/${id}`);
-  return { title: r.ok ? `${r.data.name_id} — Pustaka Gerakan SILATARA` : "Gerakan — SILATARA" };
+  return { title: r.ok ? `${r.data.name_id} — Pustaka Gerakan` : "Gerakan", alternates: { canonical: `/library/${id}` } };
 }
 
+/** `/library/<slug>` = artikel pengetahuan (basis sumber); `/library/<uuid>` = dokumentasi resmi mitra dari Studio. */
 export default async function LibraryDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
+  if (!UUID_RE.test(id)) {
+    const [k, ch, pr] = await Promise.all([
+      apiGet<MovementDetail>(`/research/movements/${encodeURIComponent(id)}`),
+      apiGet<CharacterManifest>("/research/character"),
+      apiGet<{ items: { movement_id: string; status: string }[] }>("/research/assessment/protocols"),
+    ]);
+    if (!k.ok) return k.status === 404 ? notFound() : <ErrorState message={k.error} retryHref={`/library/${id}`} />;
+    const clip = clipFor(ch.ok ? ch.data : null, k.data.id);
+    const practice = pr.ok && pr.data.items.some((p) => p.movement_id === k.data.id && p.status === "active");
+    return <MovementArticle m={k.data} clip={clip} practice={practice} />;
+  }
   const [r, v] = await Promise.all([apiGet<MovementOut>(`/movements/${id}`), apiGet<PublicVersion[]>(`/movements/${id}/versions`)]);
   if (!r.ok) return r.status === 404 ? notFound() : <ErrorState message={r.error} retryHref={`/library/${id}`} />;
   const m = r.data;
@@ -39,7 +62,7 @@ export default async function LibraryDetailPage({ params }: { params: Promise<{ 
               <li key={x.version_no}><span className="font-medium">Versi {x.version_no}</span>{x.is_current && <span className="ml-2 rounded-full bg-forest-700/10 px-2 py-0.5 text-xs">tayang</span>}
                 <span className="block text-xs text-slate-600">{formatDate(x.published_at)}{x.status === "archived" ? " · diarsipkan" : ""}</span>
                 {x.changelog && <span className="block text-slate-600">{x.changelog}</span>}</li>))}</ol></section>)}
-        <p className="text-xs text-slate-600">Penilaian gerakan oleh AI {m.assessment_enabled ? "tersedia" : "belum tersedia"} untuk gerakan ini. Selalu belajar bersama instruktur; SILATARA adalah alat bantu, bukan pengganti guru.</p>
+        <p className="text-xs text-slate-600">{m.assessment_enabled ? "Gerakan ini dapat dilatih di Practice Studio dengan umpan balik kamera. " : ""}Belajarlah bersama instruktur; SILATARA adalah pendamping latihan, bukan pengganti guru.</p>
       </aside>
     </div>
   );

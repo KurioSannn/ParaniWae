@@ -1,14 +1,26 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CheckCircle2, Circle } from "lucide-react";
-import { Card, ErrorState, PageHeader, ProgressBar, SourceBox } from "@/components/ui";
+import { Card, ErrorState, PageHeader, ProgressBar } from "@/components/ui";
 import { EnrollButton } from "@/components/EnrollButton";
 import { formatMinutes, LEVEL_LABEL } from "@/lib/format";
 import { getCurrentUser, sGet } from "@/lib/server-api";
 import type { CourseDetail } from "@/lib/types";
+import { apiGet } from "@/lib/api";
+import type { CourseDetailK } from "@/lib/research";
+import { KnowledgeCourse } from "@/components/knowledge/KnowledgeCourse";
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const k = await apiGet<CourseDetailK>(`/research/courses/${encodeURIComponent(slug)}`);
+  if (k.ok) return { title: `${k.data.title} — Akademi`, description: k.data.summary.slice(0, 160), alternates: { canonical: `/academy/courses/${slug}` } };
+  return { title: "Kurikulum — Akademi", alternates: { canonical: `/academy/courses/${slug}` } };
+}
 
 export default async function CoursePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+  const k = await apiGet<CourseDetailK>(`/research/courses/${encodeURIComponent(slug)}`);
+  if (k.ok) return <KnowledgeCourse c={k.data} />;
   const [r, user] = await Promise.all([sGet<CourseDetail>(`/courses/${encodeURIComponent(slug)}`), getCurrentUser()]);
   if (!r.ok) return r.status === 404 ? notFound() : <ErrorState message={r.error} retryHref={`/academy/courses/${slug}`} />;
   const c = r.data;
@@ -31,21 +43,18 @@ export default async function CoursePage({ params }: { params: Promise<{ slug: s
                   {m.lessons.map((l) => (
                     <li key={l.id} className="flex items-center gap-3 px-4 py-3">
                       {l.completed ? <CheckCircle2 aria-label="Selesai" className="h-5 w-5 text-forest-700" /> : <Circle aria-hidden className="h-5 w-5 text-line-200" />}
-                      {user ? <Link className="flex-1 hover:underline" href={`/app/courses/${c.slug}/lessons/${l.slug}`}>{l.title}</Link> : <span className="flex-1">{l.title}</span>}
+                      <Link className="flex-1 hover:underline" href={`/academy/courses/${c.slug}/lessons/${l.slug}`}>{l.title}</Link>
                       {formatMinutes(l.estimated_minutes) && <span className="text-sm text-slate-600">{formatMinutes(l.estimated_minutes)}</span>}
                     </li>))}
                 </ol></div>))}
-            {!user && <p className="text-sm text-slate-600">Masuk untuk membuka isi pelajaran.</p>}
           </section>
         </div>
         <div className="space-y-4">
           <EnrollButton slug={c.slug} enrolled={enrolled} loggedIn={!!user} />
           <Card className="text-sm text-slate-600">
             {c.tradition_name && <p>Tradisi: <Link className="underline" href={`/heritage/${c.tradition_slug}`}>{c.tradition_name}</Link></p>}
-            {c.partner_name && <p>Mitra: <Link className="underline" href={`/community/${c.partner_slug}`}>{c.partner_name}</Link></p>}
             {c.instructor && <p>Instruktur: {c.instructor.name}</p>}
           </Card>
-          <SourceBox p={c.provenance} />
         </div>
       </div>
     </>

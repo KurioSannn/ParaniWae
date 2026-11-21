@@ -1,45 +1,82 @@
 import Link from "next/link";
-import { BadgeCheck } from "lucide-react";
-import { Card, EmptyState, ErrorState, PageHeader, Pagination, ProvenanceBadge, SearchForm } from "@/components/ui";
-import { apiGet, qs } from "@/lib/api";
-import { LEVEL_LABEL, SAFETY_LABEL } from "@/lib/format";
-import type { MovementSummary, Page, PartnerSummary, TraditionSummary } from "@/lib/types";
+import { PageHeader } from "@/components/ui";
+import { MovementCard } from "@/components/knowledge/Bits";
+import { apiGet } from "@/lib/api";
+import type { MovementItem, TraditionItem } from "@/lib/research";
+import { LEVEL_ID } from "@/lib/research";
 
-export const metadata = { title: "Pustaka Gerakan — SILATARA", description: "Dokumentasi gerakan yang disusun dan ditinjau bersama instruktur dan mitra." };
-type SP = { q?: string; tradition?: string; partner?: string; level?: string; safety_category?: string; partner_verified?: string; page?: string };
+export const metadata = {
+  title: "Pustaka Gerakan",
+  description: "Kenali gerakan pencak silat dari sikap dasar hingga pola langkah: posisi tubuh, urutan fase, panduan latihan, dan peraga 3D.",
+  alternates: { canonical: "/library" },
+};
+type SP = { q?: string; tradisi?: string; kategori?: string; tingkat?: string; animasi?: string };
+type KList = { categories: Record<string, string>; items: MovementItem[] };
 
 export default async function LibraryPage({ searchParams }: { searchParams: Promise<SP> }) {
   const sp = await searchParams;
-  const [r, tr, pa] = await Promise.all([
-    apiGet<Page<MovementSummary>>(`/movements${qs({ ...sp, page_size: 12 })}`),
-    apiGet<Page<TraditionSummary>>("/traditions?page_size=100"),
-    apiGet<Page<PartnerSummary>>("/partners?page_size=100"),
+  const [k, tr] = await Promise.all([
+    apiGet<KList>("/research/movements"),
+    apiGet<TraditionItem[]>("/research/traditions"),
   ]);
+  const q = (sp.q ?? "").trim().toLowerCase();
+  const items = (k.ok ? k.data.items : []).filter((m) =>
+    (!q || m.name.toLowerCase().includes(q) || m.aliases.some((a) => a.toLowerCase().includes(q)))
+    && (!sp.tradisi || m.tradition_slug === sp.tradisi)
+    && (!sp.kategori || m.category === sp.kategori)
+    && (!sp.tingkat || m.level === sp.tingkat)
+    && (sp.animasi !== "1" || m.animation.status === "generated"));
+  const categories = k.ok ? k.data.categories : {};
+  const groups = Object.entries(categories).map(([key, label]) => ({ key, label, items: items.filter((m) => m.category === key) })).filter((g) => g.items.length);
+  const sel = "rounded-xl border border-line-200 bg-paper-50 px-3 py-2.5 text-sm";
+  const total = k.ok ? k.data.items.length : 0;
+
   return (
     <>
-      <PageHeader eyebrow="Pustaka" title="Pustaka Gerakan"
-        description="Hanya dokumentasi yang sudah ditinjau dan diterbitkan yang tampil di sini, lengkap dengan sumber, instruktur penyusun, dan status verifikasinya. Kategori keselamatan adalah klasifikasi administratif, bukan sertifikasi." />
-      <SearchForm action="/library" values={sp} placeholder="Nama gerakan"
-        filters={[
-          { name: "tradition", label: "Tradisi", options: tr.ok ? tr.data.items.map((t) => ({ value: t.slug, label: t.name })) : [] },
-          { name: "partner", label: "Perguruan", options: pa.ok ? pa.data.items.map((p) => ({ value: p.slug, label: p.name })) : [] },
-          { name: "level", label: "Tingkat", options: Object.entries(LEVEL_LABEL).map(([value, label]) => ({ value, label })) },
-          { name: "safety_category", label: "Kategori keselamatan", options: Object.entries(SAFETY_LABEL).map(([value, label]) => ({ value, label })) },
-          { name: "partner_verified", label: "Verifikasi mitra", options: [{ value: "true", label: "Mitra terverifikasi" }, { value: "false", label: "Belum/contoh" }] },
-        ]} />
-      {!r.ok ? <ErrorState message={r.error} retryHref="/library" />
-        : r.data.items.length === 0 ? <EmptyState title="Belum ada gerakan terbit">Gerakan muncul di sini setelah didokumentasikan instruktur, ditinjau, dan diterbitkan admin.</EmptyState>
-        : <>
-          <ul className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">{r.data.items.map((m) => (
-            <li key={m.id}><Card className="h-full">
-              <h2 className="font-serif text-xl text-forest-900"><Link className="underline-offset-2 hover:underline" href={`/library/${m.id}`}>{m.name_id}</Link></h2>
-              {m.name_local && <p className="text-sm text-slate-600">{m.name_local}</p>}
-              <p className="mt-2 text-sm text-slate-600">{m.tradition_name}{m.partner_name ? ` · ${m.partner_name}` : ""}</p>
-              <p className="mt-1 text-sm">{m.level ? LEVEL_LABEL[m.level] : ""}{m.level && m.safety_category ? " · " : ""}{m.safety_category ? SAFETY_LABEL[m.safety_category] : ""}</p>
-              <div className="mt-3 flex flex-wrap items-center gap-2"><ProvenanceBadge p={m.provenance} />
-                {m.partner_verified && <span className="inline-flex items-center gap-1 text-xs text-forest-900"><BadgeCheck aria-hidden className="h-3.5 w-3.5" />Mitra terverifikasi</span>}</div>
-            </Card></li>))}</ul>
-          <Pagination page={r.data} basePath="/library" params={sp} /></>}
+      <PageHeader eyebrow="Pustaka Gerakan" title="Kenali setiap gerakan"
+        description="Dari sikap tegak dan kuda-kuda hingga sikap pasang dan pola langkah. Setiap gerakan diuraikan fase demi fase: posisi tubuh, arah gerak, hal yang perlu diperhatikan, panduan latihan, dan rujukannya. Sebagian besar dilengkapi animasi yang bisa Anda jeda dan perlambat." />
+
+      <form action="/library" method="get" role="search" aria-label="Cari & saring gerakan" className="mb-8 grid gap-3 rounded-2xl border border-line-200 bg-paper-50 p-4 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr_auto]">
+        <label className="sr-only" htmlFor="q">Nama gerakan</label>
+        <input id="q" name="q" defaultValue={sp.q} placeholder="Cari nama gerakan, mis. kuda-kuda" className={sel} />
+        <label className="sr-only" htmlFor="tradisi">Tradisi</label>
+        <select id="tradisi" name="tradisi" defaultValue={sp.tradisi ?? ""} className={sel}>
+          <option value="">Semua tradisi</option>
+          {tr.ok && tr.data.filter((t) => t.movement_count > 0).map((t) => <option key={t.slug} value={t.slug}>{t.name}</option>)}
+        </select>
+        <label className="sr-only" htmlFor="kategori">Kategori</label>
+        <select id="kategori" name="kategori" defaultValue={sp.kategori ?? ""} className={sel}>
+          <option value="">Semua kategori</option>
+          {Object.entries(categories).map(([v, l]) => <option key={v} value={v}>{l}</option>)}
+        </select>
+        <label className="sr-only" htmlFor="tingkat">Tingkat</label>
+        <select id="tingkat" name="tingkat" defaultValue={sp.tingkat ?? ""} className={sel}>
+          <option value="">Semua tingkat</option>
+          {Object.entries(LEVEL_ID).map(([v, l]) => <option key={v} value={v}>{l}</option>)}
+        </select>
+        <div className="flex items-center gap-3 sm:col-span-2 lg:col-span-1">
+          <label className="flex items-center gap-2 text-sm"><input type="checkbox" name="animasi" value="1" defaultChecked={sp.animasi === "1"} />Beranimasi</label>
+          <button className="rounded-xl bg-forest-700 px-4 py-2.5 text-sm font-medium text-paper-50 hover:bg-forest-900">Terapkan</button>
+        </div>
+      </form>
+
+      <p className="mb-6 text-sm text-slate-600" aria-live="polite">
+        Menampilkan {items.length} dari {total} gerakan.
+        {(sp.q || sp.tradisi || sp.kategori || sp.tingkat || sp.animasi) && <> <Link className="underline" href="/library">Hapus saringan</Link></>}
+      </p>
+
+      {groups.map((g) => (
+        <section key={g.key} aria-labelledby={`cat-${g.key}`} className="mb-12">
+          <h2 id={`cat-${g.key}`} className="mb-4 font-serif text-2xl text-forest-900">{g.label}</h2>
+          <ul className="grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-4">
+            {g.items.map((m) => <li key={m.slug}><MovementCard m={m} /></li>)}
+          </ul>
+        </section>
+      ))}
+
+      {items.length === 0 && (
+        <p className="rounded-2xl border border-line-200 bg-paper-50 p-6 text-slate-600">Tidak ada gerakan yang cocok dengan saringan ini. <Link className="underline" href="/library">Lihat semua gerakan</Link>.</p>
+      )}
     </>
   );
 }
