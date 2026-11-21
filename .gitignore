@@ -53,3 +53,16 @@ frontend/public/mediapipe/worker/
 # Hasil uji browser (screenshot, laporan, trace) dan dependensi runner e2e
 artifacts/
 e2e-browser/node_modules/
+
+# Kunci API & cache mentah Google Places (tidak boleh masuk git)
+secrets/
+research/pencak-silat/directory/raw/places/
+
+# Paket aset pihak ketiga berukuran besar (lisensi dicatat di THIRD_PARTY_ASSETS.md)
+reference-materials/third-party/*.zip
+*.zip
+/silatara/
+/WhatsApp Image*
+
+# Paket pendaftaran BUDAYA GO! (memuat data pribadi & tanda tangan; JANGAN di-commit)
+submission/
