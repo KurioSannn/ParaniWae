@@ -10,7 +10,18 @@ ignore = ["B008"]
 
 [tool.ruff.lint.per-file-ignores]
 "app/seed.py" = ["E501"]  # teks demo panjang
-"tests/*" = ["E501"]
+"tests/*" = ["E501", "F811"]  # F811: fixture pytest diimpor lintas berkas
+# teks pesan/komentar berbahasa Indonesia panjang pada modul Studio/Pilot/ops
+"app/{cli,worker,ops_cli}.py" = ["E501"]
+"app/core/config.py" = ["E501"]
+"app/models/{pilot,studio}.py" = ["E501"]
+"app/services/{pilot,pilot_analytics,notify,scanner,partner_studio,movement_studio,media,outbox,ops,retention,progress,visibility,access,movement_public,backup_check,jobs}.py" = ["E501"]
+"app/core/{logging,errors,cache_headers,config,query_stats}.py" = ["E501"]
+"app/services/practice.py" = ["E501"]
+"app/{content_import,services/research,directory_import,services/directory,services/assessment,services/assets3d}.py" = ["E501"]
+"app/models/{directory,assessment}.py" = ["E501"]
+"app/api/v1/{directory,assessments}.py" = ["E501"]  # komposisi teks konten berbahasa Indonesia
+"app/{api/v1/academy,schemas/manage}.py" = ["E501"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
