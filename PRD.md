@@ -278,3 +278,13 @@ A release candidate is acceptable only if:
 - Rights/consent gaps for videos, music, movement knowledge, and oral history.
 - Overbuilding too many modules before validating the first learning loop.
 - Eligibility mismatch with BUDAYA GO! 2026's 31 March 2026 product-availability cutoff.
+
+## Addendum 2026-11-21: public-first knowledge (owner directive; source of truth: `CLAUDE.md`)
+- **Public pages** (`/heritage`, `/library`, `/academy`, `/community`, `/heritage/referensi`) show source-backed
+  knowledge without login: traditions and regional terms, exploration across 38 provinces, 43 documented movements
+  (23 animated, with pause and speed controls), 2 courses / 16 lessons with quizzes, and the source ledger.
+- **Login** only for enrollment, progress, practice history, Practice Studio, Studio/administration, and private pilots.
+- **Content basis**: `source_backed` (editorial review), `official_curriculum` (partner confirmation),
+  `partner_restricted` (owner access). Acceptance: anonymous users can read every item of public knowledge; no
+  `[DEMO]`/development narration on public pages; no broken internal links (link checker).
+

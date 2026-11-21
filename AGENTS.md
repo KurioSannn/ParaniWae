@@ -3,7 +3,7 @@
 This file provides cross-agent guidance. Claude Code-specific persistent instructions are in `CLAUDE.md`; specialist subagents are under `.claude/agents/`.
 
 ## Shared mission
-Build SILATARA as a culturally grounded learning and preservation product. Technology must serve a partner-approved learning objective and must not override the knowledge holder's authority.
+Build SILATARA as a public-first, culturally grounded platform for pencak silat knowledge, learning, and preservation. Source-backed general knowledge is open to everyone; a school's official or restricted material stays under that school's authority. Technology must not override the knowledge holder's authority (see `CLAUDE.md` product rules and ADR-0008).
 
 ## Required roles
 
@@ -41,7 +41,8 @@ Build SILATARA as a culturally grounded learning and preservation product. Techn
 - Delegate independent research, code review, accessibility audit, or test planning to specialist agents when the task is large enough.
 - Do not delegate overlapping edits to multiple agents in the same files/feature branch.
 - The primary agent integrates all findings and resolves conflicts.
-- Cultural-domain reviewer can block publication of unvalidated material; QA can block a release if safety/privacy/camera states are missing.
+- Cultural-domain reviewer can block publication of material whose sources do not support its claims, or of a school's official material without its confirmation; QA can block a release if safety/privacy/camera states are missing.
+- Content work integrates into the existing main pages (`/heritage`, `/library`, `/academy`, `/community`). Never create a parallel research microsite or show development disclaimers to visitors.
 
 ## Evidence labels
 Every major requirement/result must be classified as one of:
@@ -56,8 +57,8 @@ Never change a hypothesis or target into an achieved result without evidence.
 
 ## Cultural and data stewardship
 - Preserve community attribution and consent.
-- Respect restricted/sacred material; public access is not the default.
-- Record partner-approved access scope: public, community-only, restricted.
+- Source-backed general knowledge is public by default (`content_basis=source_backed`). Restricted/sacred material and a school's member-only material are never public (`partner_restricted`).
+- Record access scope and content basis for every item; a school's official claims (`official_curriculum`) require its confirmation.
 - Avoid scraping/rehosting content without rights.
 - Do not infer that one partner can authorize all styles or regional traditions.
 

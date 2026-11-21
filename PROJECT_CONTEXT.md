@@ -150,6 +150,14 @@ Therefore, do not claim that MediaPipe, pose estimation, joint-angle analysis, s
 
 Make it easier for the next generation to discover, understand, and safely learn pencak silat while preserving the knowledge and livelihoods of its cultural practitioners.
 
+### Product direction update (2026-11-21, owner directive, supersedes the partner-first MVP framing below)
+SILATARA is now **public-first**. Source-backed general knowledge (traditions, the national map across 38 provinces,
+movements documented from academic and official sources, a public learning curriculum) is integrated into the main
+pages and readable without login. A school's official material still requires that school's confirmation, and
+private pilot programs stay protected. Camera assessment remains limited to instructor-approved rubrics. See
+`CLAUDE.md` and `docs/adr/0008-public-first-knowledge.md`. The "one partner, 8-12 movements" scope below still applies
+to **AI assessment**, not to public knowledge pages.
+
 ### MVP strategy
 
 Start with one credible partner school/style, not a pan-Indonesian catalogue. Co-design an approved beginner curriculum of approximately 8-12 movements. Build one end-to-end user journey: discover a tradition -> learn a movement -> watch an instructor reference -> practice with a camera -> receive explainable feedback -> track progress -> find a verified partner class.

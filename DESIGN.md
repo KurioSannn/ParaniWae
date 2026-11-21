@@ -286,3 +286,21 @@ Every archive/community page must define loading, empty, error, unverified, rest
 ## 11. UI quality bar
 
 Reject a screen if it looks like a generic generated dashboard, has arbitrary gradients, decorative charts with no meaning, fake data presented as real, or unlicensed martial arts imagery. Every element must support cultural understanding, learning, practice, trust, or community connection.
+
+
+## 12. Identitas maskot (sprint 7)
+- **Simbol brand tunggal** = maskot pesilat poligon (`Faceted Pencak Silat Warrior.png` di root; salinan kerja `frontend/brand-source/`). Turunan dibuat otomatis oleh `frontend/scripts/build-brand-assets.mjs` (latar hitam → alpha, potongan persegi kepala+lengan untuk ikon). Karakter tidak digambar ulang. Komponen `Brand.tsx` adalah satu-satunya sumber simbol di navbar, footer, sidebar, auth, dan loading.
+- **Hero gelap (obsidian)** dengan maskot besar sebagai fokus, tanpa lingkaran/badge — keputusan eksplisit pemilik produk. Ini **mengesampingkan** larangan "black-and-red poster" di §2 hanya untuk hero/CTA/Practice Studio: kontras diredam (obsidian hijau-tua, bukan hitam murni), tipografi serif tenang, aksen emas; seluruh area aplikasi tetap hangat-terang.
+- Token tambahan: `obsidian-950 #0f1512`, `obsidian-900 #151d19`, `ember-500 #e8793a`, `ember-700 #a8341e`, `gold-400 #f0b64a`. Warna maskot tidak diubah.
+
+## Public copy policy (2026-11-21)
+- Write like a cultural/educational editorial publication, in Bahasa Indonesia, for people: warm, clear, not marketing SaaS, not AI jargon.
+- Never show visitors development status, seed/test data, placeholders, approval workflow states, or "belum tersedia" as the main message.
+  When information is missing, say it naturally ("Tidak dirinci dalam sumber; tanyakan kepada pelatih").
+- References appear as a compact editorial "Rujukan" section (author, year, title, page), not as admin badges.
+- Animations show on the page with Jeda/Putar and 0,5×/1×/1,5× controls, and respect `prefers-reduced-motion` (start paused).
+
+
+
+## Pembaruan visual 2026-11-21 (desain dari UI designer)
+Identitas visual mengikuti landing page dari desainer: **logo resmi** (`public/brand/silatara-logo-full.png`), palet maroon (`forest-*` = #2e0909–#8f2317), cokelat (`chocolate-*`), dan oranye (`emerald-*` = #ea580c…); font **Plus Jakarta Sans** (isi & judul) dan **Cinzel** (aksen merek), di-host sendiri lewat `next/font`; tombol primer bergradien maroon→oranye; kartu `rounded-3xl`; ilustrasi pendekar, awan, dan motif kawung/tumpal (`public/landing`, `AtmosphericClouds`, `SilatMotifs`). Teks aksen kecil memakai `bronze-700` (#9a3412, kontras ≥7:1). Konten landing ditulis ulang dari fitur nyata: **tanpa** testimoni, tier mitra, sertifikat, atau klaim akreditasi. Halaman publik **tidak menampilkan rujukan/halaman kutipan** maupun urusan mitra (API publik membersihkannya lewat `scrub`).
