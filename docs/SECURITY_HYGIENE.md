@@ -20,6 +20,9 @@ File `Lampiran 3–8 …docx` (surat pernyataan, **bukti KTP peserta**) berada d
 ## 4. Konfigurasi proxy tepercaya (rate limit per-IP)
 `X-Forwarded-For` hanya dipercaya bila peer langsung ada di `TRUSTED_PROXY_CIDRS`; IP klien = entri ke-`TRUSTED_PROXY_HOPS` dari kanan. Contoh: di belakang satu load balancer → `TRUSTED_PROXY_CIDRS=<CIDR LB>`, `TRUSTED_PROXY_HOPS=1`; CDN + LB → hops=2. **Kosongkan** bila backend langsung terbuka ke internet. Verifikasi dengan permintaan ber-XFF palsu dan pastikan rate limit tetap per klien sebenarnya. **Jangan menganggap proxy Next.js tepercaya**: terbukti ia tidak menimpa XFF, sehingga XFF palsu lolos (sudah diperbaiki dengan default kosong; probe regresi ada di `backend/tests/e2e_flow.py`). Di dev, semua klien berbagi satu kunci (IP container frontend) → batas per-IP bersifat global; ini aman tetapi bukan per-klien.
 
+## 4b. Log & cache (Sprint 8)
+Log API/worker = JSON satu baris di stdout dengan `request_id`/`job_id`. **Query string tidak pernah dicatat** (tautan undangan memuat `?token=`; access log uvicorn dimatikan `--no-access-log` dan diganti access log sendiri dengan template rute). Filter redaksi menyamarkan token, sandi, cookie, `Authorization`, email, dan string 40+ karakter; kunci ekstra bernama `password|token|secret|cookie|authorization|landmark|body|answers|note` dimasking. Respons ber-sesi `Cache-Control: private, no-store`; semua `/api/v1` `Vary: Cookie`. Isi outbox yang sudah terkirim diredaksi (menyimpan tautan undangan). Cadangan: lihat PILOT_OPERATIONS_RUNBOOK §5 (terenkripsi; kunci di luar repo).
+
 ## 5. Rahasia
 `.env` tidak di-commit; `.env.example` hanya berisi placeholder. Secret produksi di secret manager. Jangan menaruh secret di `NEXT_PUBLIC_*` atau artefak CI. Artefak CI (screenshot/laporan) hanya memuat data demo dan kredensial uji efemeral; trace Playwright (hanya saat gagal) dapat memuat sandi uji itu.
 

@@ -11,6 +11,14 @@ Host (laptop)            Jaringan Docker "silatara"
 - Urutan start: `db` healthy → `backend` (jalankan `alembic upgrade head`, seed DEMO, lalu uvicorn) healthy → `frontend`.
 - Healthcheck: db `pg_isready`; backend `GET /api/v1/health/ready` (cek koneksi DB + migrasi); frontend `GET /`.
 
+## Layanan tambahan (Sprint 7–8)
+| Service | Profil | Fungsi |
+|---|---|---|
+| `worker` | default | outbox, pemindaian, purge media, retensi (healthcheck heartbeat) |
+| `clamav` | `scanner` | ClamAV (≈1 GB RAM); aktifkan `SCAN_PROVIDER=clamav` |
+| `mailpit` | `mail` | mail sink SMTP lokal untuk uji pengiriman nyata (bukan produksi) |
+Uji beban: `make loadtest` (DB scratch `silatara_load`, server kedua port 8099 di dalam container; tidak menyentuh DB dev).
+
 ## Volume
 | Volume | Isi | Hapus oleh |
 |---|---|---|

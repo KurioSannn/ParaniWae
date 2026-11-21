@@ -103,6 +103,49 @@ Sesi + CSRF; pagination `{items,page,page_size,total,total_pages}`; non-anggota 
 
 Publik tambahan: `GET /api/v1/movements` kini menerima `partner, level, safety_category, partner_verified`; `GET /api/v1/movements/{id}` memuat `document` (versi tayang: fase, sumber, media publik, penyusun); `GET /api/v1/movements/{id}/versions` = riwayat versi publik (changelog). **Dihapus:** jenis `movements` dari `/manage/*`; `PartnerIn` tidak lagi menerima `verification_status`/`public_listing_consent` (verifikasi hanya lewat Partner Workspace).
 
+### pilot & impact (kontrak: [PILOT_STUDIO_CONTRACT](PILOT_STUDIO_CONTRACT.md))
+
+Sesi + CSRF. Non-anggota mitra → 404. Pelajar hanya `/me/*`, pratinjau/penerimaan undangan, dan pengisian survei.
+
+| Method | Path | Ringkasan |
+|---|---|---|
+| GET/POST | `/api/v1/pilot/programs` | Daftar / buat program (draf) |
+| GET/PATCH | `/api/v1/pilot/programs/{id}` | Detail / ubah (draf) |
+| POST | `/api/v1/pilot/programs/{id}/transition` | `submit,approve,reject,activate,complete,cancel,archive` |
+| POST | `/api/v1/pilot/programs/{id}/cohorts` | Buat cohort |
+| GET/PATCH | `/api/v1/pilot/cohorts/{id}` | Detail (peserta, undangan) / ubah |
+| POST | `/api/v1/pilot/cohorts/{id}/status` | `open,closed,completed` |
+| PUT | `/api/v1/pilot/cohorts/{id}/sessions` | Ganti jadwal |
+| DELETE | `/api/v1/pilot/cohorts/{id}/members/{user_id}` | Keluarkan peserta |
+| POST | `/api/v1/pilot/cohorts/{id}/invitations` | Buat undangan (token sekali) |
+| DELETE | `/api/v1/pilot/invitations/{id}` | Cabut undangan |
+| GET | `/api/v1/pilot/invitations/preview?token=` | Pratinjau publik (tanpa data pribadi; rate-limited) |
+| POST | `/api/v1/pilot/invitations/accept` | Terima (`operational_ack` wajib; consent opsional) |
+| GET | `/api/v1/pilot/me/portal`, `/me/cohorts/{id}`, `/me/surveys` | Learner Pilot Portal |
+| DELETE | `/api/v1/pilot/me/cohorts/{id}` | Keluar cohort |
+| PUT | `/api/v1/pilot/me/programs/{id}/consents` | Ubah persetujuan opsional |
+| GET/POST | `/api/v1/pilot/programs/{id}/announcements` | Pengumuman (+ antrean outbox) |
+| GET/POST | `/api/v1/pilot/programs/{id}/surveys[/templates]` | Survei / dari templat draf |
+| POST | `/api/v1/pilot/surveys/{id}/transition` · `/responses` | Buka/tutup · kirim jawaban |
+| GET/POST | `/api/v1/pilot/cohorts/{id}/notes` | Catatan instruktur (terpisah dari analytics) |
+| GET | `/api/v1/pilot/programs/{id}/analytics?cohort_id&from&to` | Analytics (usage, retensi, survei, consent) |
+| GET | `/api/v1/pilot/cohorts/{id}/dashboard` | Instructor Cohort Dashboard |
+| GET | `/api/v1/pilot/programs/{id}/report.csv` | Ekspor CSV agregat tanpa identitas (PDF: cetak dari peramban; tidak ada pustaka PDF) |
+
+Media/dokumen: respons memuat `scan_status`; berkas `pending|infected|error` tidak dapat diakses siapa pun (404 media, 423 dokumen mitra); `not_scanned` hanya internal; publik wajib `clean`.
+
+### operasional (admin, hanya-baca) & health
+
+| Method | Path | Ringkasan |
+|---|---|---|
+| GET | `/api/v1/health` | Liveness (tanpa env/konfigurasi) |
+| GET | `/api/v1/health/ready` | Readiness: DB (503 bila mati), `media_storage`, `migration_revision` |
+| GET | `/api/v1/admin/ops/status` | DB, migrasi, media, scanner, worker, outbox, email, retensi (tanpa secret/path) |
+| GET | `/api/v1/admin/ops/doctor?target=` | Kesiapan deployment: BLOCKER/WARNING/INFO |
+| GET | `/api/v1/admin/ops/outbox?status=` | Ringkasan + daftar outbox untuk investigasi (email dimasker, tanpa isi) |
+
+CLI: `python -m app.cli doctor|outbox-status|outbox-list|outbox-requeue|outbox-purge|media-purge|pilot-anonymize|retention-report|worker|worker-once|verify-media`. Perubahan kontrak untuk frontend: [BACKEND_API_HANDOFF](BACKEND_API_HANDOFF.md).
+
 ### admin
 
 | Method | Path | Ringkasan |
@@ -128,3 +171,24 @@ Publik tambahan: `GET /api/v1/movements` kini menerima `partner, level, safety_c
 | GET | `/api/v1/me/practice-summary` | Ringkasan & tren latihan saya |
 
 Total: 47 operasi.
+
+## Pembaruan 2026-11-21: public-first (ADR-0008)
+
+| Endpoint | Akses | Catatan |
+|---|---|---|
+| `GET /api/v1/courses/{slug}/lessons/{lesson}` | **publik** untuk kursus publik; login menambah `enrolled`/`lesson_status` | sebelumnya wajib login; kursus privat tetap 404 |
+| `GET /api/v1/research/summary` · `coverage` · `entities` · `sources` · `inventory` | publik | basis pengetahuan (berkas `content/` & `research/`) |
+| `GET /api/v1/research/traditions` · `traditions/{slug}` | publik | tradisi beserta gerakan, kursus, dan entitas terkait |
+| `GET /api/v1/research/movements` · `movements/{slug}` · `movements/{slug}/{animation.svg,thumbnail.svg}` | publik | SVG: `Content-Security-Policy: default-src 'none'`, `nosniff` |
+| `GET /api/v1/research/courses/{slug}` · `curricula` · `curricula/{course}/{lesson}` | publik | struktur kursus dan isi pelajaran |
+| `GET /api/v1/auth/demo-accounts` · `POST /api/v1/auth/demo-login` | hanya pengembangan (`DEMO_LOGIN_ENABLED`) | 404 di produksi |
+
+Respons publik kini memuat `content_basis` dan `provenance.attribution` ("Redaksi SILATARA" untuk `source_backed`).
+Untuk konten `source_backed`, `partner_name` dikosongkan.
+
+
+
+## Sprint 10
+- `/api/v1/directory/*`: `places`, `list`, `places/{slug}`, `facets`, `stats`, `heritage-areas`, `submissions` (POST publik; GET & `{id}/review` kurator/admin). Lihat `NATIONAL_DIRECTORY_CONTRACT.md`.
+- `/api/v1/research/character`, `/character/model.glb`, `/character/reference/{movement_id}`, `/assessment/protocols[/{movement_id}]` (publik, baca saja).
+- `/api/v1/assessments` (POST/GET, login) dan `DELETE /assessments/{id}`: ringkasan skor latihan; lihat `MOVEMENT_ASSESSMENT_CONTRACT.md`.
