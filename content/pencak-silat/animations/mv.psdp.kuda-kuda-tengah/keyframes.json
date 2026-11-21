@@ -1,0 +1,151 @@
+{
+  "schema": "silatara.keyframes/v1",
+  "animation_id": "anim.psdp.kuda-kuda-tengah.v1",
+  "movement_id": "mv.psdp.kuda-kuda-tengah",
+  "animation_status": "generated",
+  "title": "Kuda-kuda tengah",
+  "description": "Tampak depan: dari sikap tegak 2, kaki dikangkangkan, lalu kedua lutut ditekuk sedikit segaris dengan ibu jari kaki; badan tegak, pandangan ke depan, berat di tengah.",
+  "view": "front",
+  "source_ids": [
+    "src.nugroho.2005"
+  ],
+  "keyframes": [
+    {
+      "id": "kf-1",
+      "phase_id": "mv.psdp.kuda-kuda-tengah#p1",
+      "label": "Sikap tegak 2",
+      "caption": "Kepalan di pinggang",
+      "pose": {
+        "pelvis": [
+          180,
+          0
+        ],
+        "feet": {
+          "L": [
+            187,
+            0
+          ],
+          "R": [
+            173,
+            0
+          ]
+        },
+        "foot_turn": {
+          "L": 45,
+          "R": 45
+        },
+        "arms": {
+          "L": [
+            30,
+            72
+          ],
+          "R": [
+            30,
+            72
+          ]
+        },
+        "hands": {
+          "L": "fist",
+          "R": "fist"
+        }
+      }
+    },
+    {
+      "id": "kf-2",
+      "phase_id": "mv.psdp.kuda-kuda-tengah#p2",
+      "label": "Kaki dikangkangkan",
+      "caption": "Kaki terbuka ke samping",
+      "pose": {
+        "pelvis": [
+          180,
+          3
+        ],
+        "feet": {
+          "L": [
+            226,
+            0
+          ],
+          "R": [
+            134,
+            0
+          ]
+        },
+        "foot_turn": {
+          "L": 25,
+          "R": 25
+        },
+        "arms": {
+          "L": [
+            30,
+            72
+          ],
+          "R": [
+            30,
+            72
+          ]
+        },
+        "hands": {
+          "L": "fist",
+          "R": "fist"
+        }
+      }
+    },
+    {
+      "id": "kf-3",
+      "phase_id": "mv.psdp.kuda-kuda-tengah#p3",
+      "label": "Kuda-kuda tengah",
+      "caption": "Lutut sedikit ditekuk · berat di tengah",
+      "pose": {
+        "pelvis": [
+          180,
+          18
+        ],
+        "feet": {
+          "L": [
+            226,
+            0
+          ],
+          "R": [
+            134,
+            0
+          ]
+        },
+        "foot_turn": {
+          "L": 25,
+          "R": 25
+        },
+        "arms": {
+          "L": [
+            30,
+            72
+          ],
+          "R": [
+            30,
+            72
+          ]
+        },
+        "hands": {
+          "L": "fist",
+          "R": "fist"
+        }
+      }
+    }
+  ],
+  "sequence": [
+    {
+      "pose": "kf-1",
+      "hold_ms": 900
+    },
+    {
+      "pose": "kf-2",
+      "move_ms": 800,
+      "hold_ms": 500
+    },
+    {
+      "pose": "kf-3",
+      "move_ms": 800,
+      "hold_ms": 2000
+    }
+  ],
+  "return_ms": 1200
+}

@@ -1,0 +1,11 @@
+{
+  "schema": "silatara.keyframes/v1",
+  "animation_id": "anim.psdp.elak-atas.v1",
+  "movement_id": "mv.psdp.elak-atas",
+  "animation_status": "needs_reference",
+  "title": "Elak Atas",
+  "needs": "Gerak melompat; tidak dianimasikan sampai teknik pendaratan aman dikonfirmasi instruktur.",
+  "source_ids": [
+    "src.herdiana.2008"
+  ]
+}

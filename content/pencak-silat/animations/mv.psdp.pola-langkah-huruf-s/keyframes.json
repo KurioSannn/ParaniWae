@@ -1,0 +1,12 @@
+{
+  "schema": "silatara.keyframes/v1",
+  "animation_id": "anim.psdp.pola-langkah-huruf-s.v1",
+  "movement_id": "mv.psdp.pola-langkah-huruf-s",
+  "animation_status": "needs_reference",
+  "title": "Pola Langkah Huruf S",
+  "needs": "Diagram huruf S perlu disalin ulang dari sumber cetak atau dari instruktur.",
+  "source_ids": [
+    "src.herdiana.2008",
+    "src.nugroho.2005"
+  ]
+}

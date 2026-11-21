@@ -1,0 +1,116 @@
+{
+  "schema": "silatara.keyframes/v1",
+  "animation_id": "anim.psdp.sikap-istirahat.v1",
+  "movement_id": "mv.psdp.sikap-istirahat",
+  "animation_status": "generated",
+  "title": "Sikap istirahat",
+  "description": "Tampak depan: dari sikap tegak, kaki kiri dipindah ke samping dan tangan disilangkan di depan badan (tangan kanan memegang pergelangan kiri).",
+  "view": "front",
+  "source_ids": [
+    "src.herdiana.2008"
+  ],
+  "keyframes": [
+    {
+      "id": "kf-1",
+      "phase_id": "mv.psdp.sikap-istirahat#p1",
+      "label": "Sikap tegak",
+      "caption": "Berdiri tegak",
+      "pose": {
+        "pelvis": [
+          180,
+          0
+        ],
+        "feet": {
+          "L": [
+            187,
+            0
+          ],
+          "R": [
+            173,
+            0
+          ]
+        },
+        "foot_turn": {
+          "L": 45,
+          "R": 45
+        },
+        "arms": {
+          "L": [
+            6,
+            0
+          ],
+          "R": [
+            6,
+            0
+          ]
+        },
+        "hands": {
+          "L": "open",
+          "R": "open"
+        }
+      }
+    },
+    {
+      "id": "kf-2",
+      "phase_id": "mv.psdp.sikap-istirahat#p2",
+      "label": "Sikap istirahat",
+      "caption": "Kaki dibuka ke samping, tangan bersilang di depan",
+      "pose": {
+        "pelvis": [
+          194,
+          0
+        ],
+        "feet": {
+          "L": [
+            219,
+            0
+          ],
+          "R": [
+            173,
+            0
+          ]
+        },
+        "foot_turn": {
+          "L": 30,
+          "R": 30
+        },
+        "arms": {
+          "L": [
+            -4,
+            52
+          ],
+          "R": [
+            -4,
+            46
+          ]
+        },
+        "hands": {
+          "L": "open",
+          "R": "open"
+        }
+      },
+      "arrow": {
+        "from": [
+          196,
+          418
+        ],
+        "to": [
+          228,
+          418
+        ]
+      }
+    }
+  ],
+  "sequence": [
+    {
+      "pose": "kf-1",
+      "hold_ms": 1200
+    },
+    {
+      "pose": "kf-2",
+      "move_ms": 900,
+      "hold_ms": 2000
+    }
+  ],
+  "return_ms": 900
+}

@@ -1,0 +1,5866 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-21T07:46:18Z",
+    "timestamp_areas_base": "2026-11-21T06:04:44Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 700645238,
+  "lat": 1.1407750,
+  "lon": 103.9490316,
+  "tags": {
+    "name": "Pantai Bukit Harimau",
+    "place": "locality"
+  }
+},
+{
+  "type": "node",
+  "id": 700645384,
+  "lat": 1.1439080,
+  "lon": 103.9471890,
+  "tags": {
+    "name": "Villa Bukit Harimau"
+  }
+},
+{
+  "type": "node",
+  "id": 700645385,
+  "lat": 1.1411400,
+  "lon": 103.9441140,
+  "tags": {
+    "name": "Villa Bukit Harimau 2"
+  }
+},
+{
+  "type": "node",
+  "id": 931544742,
+  "lat": -3.5013890,
+  "lon": 123.0127780,
+  "tags": {
+    "gns:dsg": "ISL",
+    "name": "Silatang",
+    "note": "GNS database update - Sept 20, 2010",
+    "place": "island",
+    "source": "NGA-GNS"
+  }
+},
+{
+  "type": "node",
+  "id": 1070187386,
+  "lat": 0.8666670,
+  "lon": 113.1833330,
+  "tags": {
+    "gns:dsg": "MT",
+    "name": "Bukit Silat",
+    "natural": "peak",
+    "note": "Modify date: 1994-01-29",
+    "source": "NGA-GNS"
+  }
+},
+{
+  "type": "node",
+  "id": 1070188110,
+  "lat": -3.3239000,
+  "lon": 119.1206000,
+  "tags": {
+    "gns:dsg": "HLL",
+    "name": "Buttu Silatu",
+    "natural": "peak",
+    "note": "Modify date: 2009-09-01",
+    "source": "NGA-GNS"
+  }
+},
+{
+  "type": "node",
+  "id": 1308344994,
+  "lat": -0.3844443,
+  "lon": 100.5682486,
+  "tags": {
+    "admin_level": "7",
+    "name": "Kumango",
+    "place": "village",
+    "ref": "13.04.08.2009",
+    "ref:ID:BPS": "1305100008",
+    "wikidata": "Q13545124"
+  }
+},
+{
+  "type": "node",
+  "id": 1308619856,
+  "lat": -2.2788214,
+  "lon": 110.9478542,
+  "tags": {
+    "admin_level": "7",
+    "name": "Silat",
+    "place": "village",
+    "ref": "61.04.03.2005",
+    "wikidata": "Q26235446"
+  }
+},
+{
+  "type": "node",
+  "id": 1308623859,
+  "lat": 0.8428324,
+  "lon": 114.0647871,
+  "tags": {
+    "name": "Naha Silat",
+    "place": "village",
+    "ref": "64.11.04.2009",
+    "wikidata": "Q12698681"
+  }
+},
+{
+  "type": "node",
+  "id": 1308642796,
+  "lat": -7.6489346,
+  "lon": 108.5658082,
+  "tags": {
+    "name": "Cikalong",
+    "place": "village"
+  }
+},
+{
+  "type": "node",
+  "id": 1308655866,
+  "lat": -6.8127414,
+  "lon": 107.1646007,
+  "tags": {
+    "admin_level": "7",
+    "name": "Sabandar",
+    "place": "village",
+    "ref": "32.03.07.2010",
+    "wikidata": "Q11030731"
+  }
+},
+{
+  "type": "node",
+  "id": 1308661852,
+  "lat": -7.1140750,
+  "lon": 107.5573693,
+  "tags": {
+    "name": "Cikalong",
+    "place": "village"
+  }
+},
+{
+  "type": "node",
+  "id": 1308670007,
+  "lat": -6.7390784,
+  "lon": 107.4247940,
+  "tags": {
+    "name": "Cikalong",
+    "place": "village"
+  }
+},
+{
+  "type": "node",
+  "id": 1308671486,
+  "lat": -6.2649195,
+  "lon": 107.5536957,
+  "tags": {
+    "name": "Cikalong",
+    "place": "village"
+  }
+},
+{
+  "type": "node",
+  "id": 1308682799,
+  "lat": -6.7378990,
+  "lon": 105.6890754,
+  "tags": {
+    "admin_level": "7",
+    "name": "Cikalong",
+    "place": "village",
+    "ref": "36.01.27.2009",
+    "wikidata": "Q12478893"
+  }
+},
+{
+  "type": "node",
+  "id": 1308707275,
+  "lat": -7.7656985,
+  "lon": 108.1724649,
+  "tags": {
+    "name": "Cikalong",
+    "place": "town"
+  }
+},
+{
+  "type": "node",
+  "id": 1308711607,
+  "lat": -6.3662053,
+  "lon": 107.5413060,
+  "tags": {
+    "admin_level": "7",
+    "name": "Cikalongsari",
+    "place": "village",
+    "ref": "32.15.14.2004",
+    "wikidata": "Q12478897"
+  }
+},
+{
+  "type": "node",
+  "id": 1308727093,
+  "lat": -6.8251141,
+  "lon": 108.2820875,
+  "tags": {
+    "name": "Cikalong",
+    "place": "village"
+  }
+},
+{
+  "type": "node",
+  "id": 1699892532,
+  "lat": -5.7406793,
+  "lon": 106.6029714,
+  "tags": {
+    "amenity": "community_centre",
+    "name": "Sanggar Pencak Silat"
+  }
+},
+{
+  "type": "node",
+  "id": 1895221712,
+  "lat": -1.2479167,
+  "lon": 101.7193611,
+  "tags": {
+    "boundary": "marker",
+    "name": "TK Simpang Kera Sakti",
+    "note": "1°14'52.500\"LS 101°43'09.700\"BT",
+    "ref": "TK Simp. Kera Sakti",
+    "source": "Permendagri No. 66 Tahun 2022"
+  }
+},
+{
+  "type": "node",
+  "id": 1969681814,
+  "lat": -5.1682897,
+  "lon": 119.4363904,
+  "tags": {
+    "amenity": "community_centre",
+    "name": "Posko Harimau SAR UNM"
+  }
+},
+{
+  "type": "node",
+  "id": 2007444544,
+  "lat": -6.6097614,
+  "lon": 106.8051984,
+  "tags": {
+    "leisure": "sports_centre",
+    "name": "Silat Bogor",
+    "sport": "silat"
+  }
+},
+{
+  "type": "node",
+  "id": 2581969909,
+  "lat": -7.6871563,
+  "lon": 109.1722459,
+  "tags": {
+    "name": "PADEPOKAN AMPEL GADING JAMBE 7",
+    "tourism": "picnic_site"
+  }
+},
+{
+  "type": "node",
+  "id": 2581969910,
+  "lat": -7.6850763,
+  "lon": 109.1706205,
+  "tags": {
+    "name": "PADEPOKAN DAMMA AGUNG SEJATI",
+    "tourism": "picnic_site"
+  }
+},
+{
+  "type": "node",
+  "id": 2581969912,
+  "lat": -7.6852425,
+  "lon": 109.1745524,
+  "tags": {
+    "name": "PINTU GERBANG PADEPOKAN SANG HYANG JATI JAMBE LIMA",
+    "tourism": "picnic_site"
+  }
+},
+{
+  "type": "node",
+  "id": 2611148927,
+  "lat": 2.2952500,
+  "lon": 97.4094547,
+  "tags": {
+    "name": "Syahbandar Pulau Banyak",
+    "office": "government"
+  }
+},
+{
+  "type": "node",
+  "id": 2678339177,
+  "lat": -8.5355632,
+  "lon": 116.1059275,
+  "tags": {
+    "amenity": "place_of_worship",
+    "name": "Mesjid Silaturohman",
+    "religion": "muslim",
+    "source": "survey",
+    "source:date": "2013-12-20"
+  }
+},
+{
+  "type": "node",
+  "id": 2690662766,
+  "lat": -8.6016393,
+  "lon": 116.1498923,
+  "tags": {
+    "amenity": "community_centre",
+    "name": "Gedung Pedepokan Silat Provinsi NTB",
+    "short_name": "Gedung Pedepokan Silat Provinsi NTB",
+    "source": "survey",
+    "survey:date": "2013-12-10"
+  }
+},
+{
+  "type": "node",
+  "id": 3239302269,
+  "lat": -4.1903000,
+  "lon": 121.6017000,
+  "tags": {
+    "name": "Silek",
+    "place": "village",
+    "source": "GNS"
+  }
+},
+{
+  "type": "node",
+  "id": 3489056186,
+  "lat": 3.5816256,
+  "lon": 98.6817042,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "asian",
+    "name": "Mie Ayam Kumango"
+  }
+},
+{
+  "type": "node",
+  "id": 3582939223,
+  "lat": -7.8304550,
+  "lon": 110.3321958,
+  "tags": {
+    "amenity": "arts_centre",
+    "name": "Padepokan Bagong Kusudihardjo"
+  }
+},
+{
+  "type": "node",
+  "id": 4180607990,
+  "lat": -8.6721089,
+  "lon": 115.1987319,
+  "tags": {
+    "addr:city": "West Denpasar",
+    "addr:postcode": "80119",
+    "addr:street": "Jalan Gunung Kalimutu",
+    "building": "residential",
+    "name": "Padepokan Kalimutu"
+  }
+},
+{
+  "type": "node",
+  "id": 4299949160,
+  "lat": -0.9378754,
+  "lon": 100.3574165,
+  "tags": {
+    "email": "sarangharimau@gmail.com",
+    "internet_access": "wlan",
+    "name": "Sarang harimau",
+    "opening_hours": "Mo-Su 10:00-22:00",
+    "phone": "+62 75-1840187",
+    "shop": "outdoor"
+  }
+},
+{
+  "type": "node",
+  "id": 5298388723,
+  "lat": -0.3930750,
+  "lon": 100.5592656,
+  "tags": {
+    "name": "Kumango Selatan",
+    "place": "hamlet",
+    "ref:ID:BPS": "1305100008",
+    "ref:ID:kemendagri": "13.04.08.2009"
+  }
+},
+{
+  "type": "node",
+  "id": 5298391367,
+  "lat": -0.3861742,
+  "lon": 100.5684141,
+  "tags": {
+    "name": "Kumango Utara",
+    "place": "hamlet",
+    "ref:ID:BPS": "1305100008",
+    "ref:ID:kemendagri": "13.04.08.2009"
+  }
+},
+{
+  "type": "node",
+  "id": 5574016177,
+  "lat": -2.0631126,
+  "lon": 105.7573570,
+  "tags": {
+    "addr:city": "Bangka",
+    "addr:street": "Kotawaringin",
+    "amenity": "grave_yard",
+    "denomination": "sunni",
+    "name": "Keramat Raja Alam Harimau Garang",
+    "religion": "muslim"
+  }
+},
+{
+  "type": "node",
+  "id": 5988386774,
+  "lat": -7.6816424,
+  "lon": 109.6596132,
+  "tags": {
+    "addr:city": "Kebumen",
+    "addr:street": "Jalan Pemuda",
+    "building": "yes",
+    "leisure": "sports_centre",
+    "name": "GOR Gembira Kebumen",
+    "sport": "Basketball;Badminton;Fitness;Pencak_Silat;Taekwondo;Karate"
+  }
+},
+{
+  "type": "node",
+  "id": 6021287227,
+  "lat": -7.3045469,
+  "lon": 107.9083673,
+  "tags": {
+    "name": "Kp. Cikalong"
+  }
+},
+{
+  "type": "node",
+  "id": 6204068091,
+  "lat": 2.4868245,
+  "lon": 96.3703429,
+  "tags": {
+    "addr:city": "Simeulue",
+    "addr:postcode": "23891",
+    "addr:street": "Letkol Ali Hasan",
+    "name": "Padepokan I Am Jhon",
+    "tourism": "guest_house"
+  }
+},
+{
+  "type": "node",
+  "id": 6371785516,
+  "lat": -6.9270418,
+  "lon": 107.1430190,
+  "tags": {
+    "amenity": "school",
+    "name": "Padepokan Bela Diri Sanggar Kramat"
+  }
+},
+{
+  "type": "node",
+  "id": 6400698096,
+  "lat": -6.1023686,
+  "lon": 106.8016760,
+  "tags": {
+    "name": "Kantor Kesyahbandaran dan Otoritas Pelabuhan Muara Baru",
+    "office": "government",
+    "phone": "+622198209489"
+  }
+},
+{
+  "type": "node",
+  "id": 6749469571,
+  "lat": 3.7193444,
+  "lon": 96.8123710,
+  "tags": {
+    "amenity": "townhall",
+    "name": "Kantor Syahbandar"
+  }
+},
+{
+  "type": "node",
+  "id": 6775561549,
+  "lat": -6.7508977,
+  "lon": 106.7329907,
+  "tags": {
+    "historic": "monument",
+    "name": "Padepokan Eyang santri"
+  }
+},
+{
+  "type": "node",
+  "id": 7124266785,
+  "lat": -6.9625282,
+  "lon": 107.6248288,
+  "tags": {
+    "name": "Kantor HIPSI Jabar",
+    "office": "government"
+  }
+},
+{
+  "type": "node",
+  "id": 7142150585,
+  "lat": -0.3149556,
+  "lon": 117.1012403,
+  "tags": {
+    "amenity": "community_centre",
+    "name": "Padepokan Pulasari"
+  }
+},
+{
+  "type": "node",
+  "id": 7710993085,
+  "lat": -7.6474589,
+  "lon": 111.5152048,
+  "tags": {
+    "alt_name": "Terate",
+    "name": "Padepokan",
+    "office": "ngo"
+  }
+},
+{
+  "type": "node",
+  "id": 8081797950,
+  "lat": -8.1894875,
+  "lon": 114.8309818,
+  "tags": {
+    "name": "Kantor Kesyahbandaran dan Otoritas Pelabuhan",
+    "name:en": "Port Authority Office",
+    "office": "company"
+  }
+},
+{
+  "type": "node",
+  "id": 8151416102,
+  "lat": -7.2948173,
+  "lon": 112.7350844,
+  "tags": {
+    "name": "Harimau Putih",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "node",
+  "id": 8151416103,
+  "lat": -7.2944928,
+  "lon": 112.7354813,
+  "tags": {
+    "name": "Harimau Benggala",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "node",
+  "id": 8154755307,
+  "lat": -7.2971343,
+  "lon": 112.7371882,
+  "tags": {
+    "name": "Harimau Sumatera",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "node",
+  "id": 8244411785,
+  "lat": -6.1152262,
+  "lon": 106.7838793,
+  "tags": {
+    "description": "Klinik Tapak Suci",
+    "healthcare": "alternative",
+    "name": "Tapak Suci"
+  }
+},
+{
+  "type": "node",
+  "id": 8928462570,
+  "lat": -3.4685479,
+  "lon": 102.5180190,
+  "tags": {
+    "amenity": "place_of_worship",
+    "name": "Masjid Silaturi",
+    "religion": "muslim"
+  }
+},
+{
+  "type": "node",
+  "id": 9757282081,
+  "lat": -6.8617011,
+  "lon": 107.6178847,
+  "tags": {
+    "addr:city": "Bandung",
+    "addr:full": "Jalan Dago Pojok",
+    "amenity": "training",
+    "name": "Training Center Pencak Silat Indonesia",
+    "opening_hours": "Mo-Fr 07:00-17:00",
+    "source": "S2City_POI_2022",
+    "training": "Pencak Silat",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 9789555908,
+  "lat": -7.4726429,
+  "lon": 110.2065055,
+  "tags": {
+    "amenity": "school",
+    "name": "Padepokan Ngaji Roso"
+  }
+},
+{
+  "type": "node",
+  "id": 9887491997,
+  "lat": -4.0306212,
+  "lon": 122.4643808,
+  "tags": {
+    "name": "Padepokan Persaudaraan Setia Hati Terate Cabang Kendari",
+    "office": "association"
+  }
+},
+{
+  "type": "node",
+  "id": 9998829717,
+  "lat": -8.8413237,
+  "lon": 120.8560959,
+  "tags": {
+    "name": "Watch Pentjak Silat practice on sunday morning 11 - 12",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "node",
+  "id": 10075010120,
+  "lat": -6.3635995,
+  "lon": 106.8638488,
+  "tags": {
+    "addr:city": "Depok",
+    "addr:postcode": "16452",
+    "addr:street": "Jalan Bulak Permai III",
+    "amenity": "dojo",
+    "name": "PSHT RAYON SUWUNG",
+    "opening_hours": "24/7",
+    "sport": "multi"
+  }
+},
+{
+  "type": "node",
+  "id": 10591394952,
+  "lat": -6.1542126,
+  "lon": 106.8189145,
+  "tags": {
+    "capacity:ambulance": "2",
+    "emergency": "ambulance_station",
+    "name": "AMBULANCE 24 JAM_YAYASAN ARMADA SILATURAHMI",
+    "phone": "+62 813 9945 5352"
+  }
+},
+{
+  "type": "node",
+  "id": 10738688200,
+  "lat": 0.0602936,
+  "lon": 110.9324607,
+  "tags": {
+    "amenity": "place_of_worship",
+    "name": "Masjid Silaturrahman",
+    "religion": "muslim"
+  }
+},
+{
+  "type": "node",
+  "id": 10978621906,
+  "lat": -6.9860234,
+  "lon": 109.9477601,
+  "tags": {
+    "name": "Silatri",
+    "place": "hamlet"
+  }
+},
+{
+  "type": "node",
+  "id": 11457579546,
+  "lat": -6.6290899,
+  "lon": 106.9068452,
+  "tags": {
+    "name": "Padepokan Garuda Yaksa",
+    "tourism": "motel"
+  }
+},
+{
+  "type": "node",
+  "id": 12026338570,
+  "lat": -6.2534857,
+  "lon": 106.7911455,
+  "tags": {
+    "bus": "yes",
+    "gtfs:stop_id": "B01304P",
+    "highway": "bus_stop",
+    "name": "Jalan KRI Harimau",
+    "network": "Transjakarta",
+    "network:wikidata": "Q1671143",
+    "public_transport": "platform",
+    "route_ref": "JAK.93;S21"
+  }
+},
+{
+  "type": "node",
+  "id": 12029431523,
+  "lat": -6.2534752,
+  "lon": 106.7910927,
+  "tags": {
+    "bus": "yes",
+    "name": "Jalan KRI Harimau",
+    "public_transport": "stop_position"
+  }
+},
+{
+  "type": "node",
+  "id": 12200834698,
+  "lat": 1.0667806,
+  "lon": 100.2119925,
+  "tags": {
+    "admin_level": "7",
+    "name": "Sungai Kumango",
+    "official_name": "Desa Sungai Kumango",
+    "official_name:en": "Village of Sungai Kumango",
+    "place": "village",
+    "ref": "14.06.04.2007",
+    "ref:ID:BPS": "1407050002",
+    "wikidata": "Q13544905",
+    "wikipedia": "id:Sungai Kumango, Tambusai, Rokan Hulu"
+  }
+},
+{
+  "type": "node",
+  "id": 12400941195,
+  "lat": -6.7133126,
+  "lon": 107.2150384,
+  "tags": {
+    "name": "Cikalongkulon",
+    "place": "town"
+  }
+},
+{
+  "type": "node",
+  "id": 12495406028,
+  "lat": -7.4595815,
+  "lon": 108.0516529,
+  "tags": {
+    "name": "Cikalong",
+    "place": "village"
+  }
+},
+{
+  "type": "node",
+  "id": 12570485639,
+  "lat": -7.6957411,
+  "lon": 111.2407664,
+  "tags": {
+    "amenity": "dojo",
+    "name": "Padepokan PSHT Ngelo"
+  }
+},
+{
+  "type": "node",
+  "id": 12852305099,
+  "lat": 0.9195271,
+  "lon": 108.9659281,
+  "tags": {
+    "name": "Kantor Kesyahbandaran dan Otoritas Pelabuhan Sintete Wilayah Kerja Singkawang",
+    "office": "government"
+  }
+},
+{
+  "type": "node",
+  "id": 12909807371,
+  "lat": -1.7342278,
+  "lon": 103.1819034,
+  "tags": {
+    "addr:city": "Batang Hari",
+    "addr:district": "Muara Bulian",
+    "addr:housename": "Desa simpang terusan",
+    "addr:neighbourhood": "rt 11",
+    "addr:province": "Jambi",
+    "addr:street": "lintas sumatera",
+    "addr:unit": "5",
+    "name": "psht cabang batang hari nic 149",
+    "opening_hours": "Mo-Su 07:00-07:00",
+    "operator": "sh terate",
+    "shop": "sports"
+  }
+},
+{
+  "type": "node",
+  "id": 12922454774,
+  "lat": -7.2864095,
+  "lon": 110.3091640,
+  "tags": {
+    "addr:city": "Temanggung",
+    "addr:district": "Pringsurat",
+    "addr:housename": "GOR SUTODRONO",
+    "addr:postcode": "56272",
+    "addr:province": "Jawa Tengah",
+    "addr:street": "pingi - sumowono",
+    "addr:subdistrict": "Wonokerso",
+    "leisure": "sports_centre",
+    "name": "GOR Sutodrono",
+    "sport": "volleyball;badminton;pencak_silat"
+  }
+},
+{
+  "type": "node",
+  "id": 12944018760,
+  "lat": -8.6919659,
+  "lon": 115.2186138,
+  "tags": {
+    "amenity": "place_of_worship",
+    "name": "Klenteng Dewa Harimau",
+    "religion": "chinese_folk"
+  }
+},
+{
+  "type": "node",
+  "id": 13182865306,
+  "lat": -6.5041607,
+  "lon": 106.5060066,
+  "tags": {
+    "name": "Cikalong",
+    "place": "hamlet"
+  }
+},
+{
+  "type": "node",
+  "id": 13343192892,
+  "lat": 1.8837997,
+  "lon": 99.3328643,
+  "tags": {
+    "name": "Silatom Jae",
+    "place": "village"
+  }
+},
+{
+  "type": "node",
+  "id": 13351388776,
+  "lat": 2.4546073,
+  "lon": 98.0020380,
+  "tags": {
+    "admin_level": "7",
+    "name": "Silatong",
+    "place": "village",
+    "ref": "11.10.02.2008",
+    "wikidata": "Q12514766"
+  }
+},
+{
+  "type": "node",
+  "id": 13351573201,
+  "lat": 4.8070490,
+  "lon": 97.8421710,
+  "tags": {
+    "admin_level": "7",
+    "name": "Bandrong",
+    "place": "village",
+    "ref": "11.03.07.2016",
+    "wikidata": "Q12474146"
+  }
+},
+{
+  "type": "node",
+  "id": 13355377782,
+  "lat": -6.7400679,
+  "lon": 106.8846562,
+  "tags": {
+    "admin_level": "7",
+    "name": "Cimande",
+    "place": "village",
+    "postal_code": "16730",
+    "ref": "32.01.27.2007",
+    "ref:kemendagri": "32.01.27.2007",
+    "wikidata": "Q12479025",
+    "wikipedia": "id:Cimande, Caringin, Bogor"
+  }
+},
+{
+  "type": "node",
+  "id": 13355377783,
+  "lat": -6.6989351,
+  "lon": 106.8251079,
+  "tags": {
+    "admin_level": "7",
+    "name": "Cimande Hilir",
+    "place": "village",
+    "postal_code": "16730",
+    "ref": "32.01.27.2002",
+    "ref:kemendagri": "32.01.27.2002",
+    "wikidata": "Q12479024",
+    "wikipedia": "id:Cimande Hilir, Caringin, Bogor"
+  }
+},
+{
+  "type": "node",
+  "id": 13403417394,
+  "lat": -0.5541948,
+  "lon": 102.9592062,
+  "tags": {
+    "addr:city": "DANAU PULAU INDAH",
+    "addr:district": "DANAU PULAI INDAH",
+    "addr:housename": "MDTA WASILATUL JANNAH",
+    "addr:postcode": "29261",
+    "addr:province": "RIAU",
+    "addr:street": "Jalan Lintas Enok - Kempas",
+    "addr:subdistrict": "KEMPAS",
+    "amenity": "school",
+    "education": "school",
+    "grades": "1-10",
+    "name": "MDTA WASILATUL JANNAH",
+    "operator": "-",
+    "operator:type": "public",
+    "religion": "muslim"
+  }
+},
+{
+  "type": "node",
+  "id": 13438936924,
+  "lat": -6.7256000,
+  "lon": 106.8595000,
+  "tags": {
+    "addr:city": "Bogor",
+    "addr:district": "Caringin",
+    "addr:subdistrict": "Cimande",
+    "amenity": "school",
+    "education": "school",
+    "name": "SMPS Islam Cimande",
+    "operator": "Swasta",
+    "ref": "20231065",
+    "source": "Disdik Jabar 2025"
+  }
+},
+{
+  "type": "node",
+  "id": 13438938166,
+  "lat": -6.7109000,
+  "lon": 106.8384000,
+  "tags": {
+    "addr:city": "Bogor",
+    "addr:district": "Caringin",
+    "addr:subdistrict": "Lemah Duhur",
+    "amenity": "school",
+    "education": "school",
+    "name": "SD Negeri Cimande 01",
+    "operator": "Negeri",
+    "ref": "20201757",
+    "source": "Disdik Jabar 2025"
+  }
+},
+{
+  "type": "node",
+  "id": 13438938167,
+  "lat": -6.7248000,
+  "lon": 106.8460000,
+  "tags": {
+    "addr:city": "Bogor",
+    "addr:district": "Caringin",
+    "addr:subdistrict": "Lemah Duhur",
+    "amenity": "school",
+    "education": "school",
+    "name": "SD Negeri Cimande 02",
+    "operator": "Negeri",
+    "ref": "20201758",
+    "source": "Disdik Jabar 2025"
+  }
+},
+{
+  "type": "node",
+  "id": 13438938169,
+  "lat": -6.7337000,
+  "lon": 106.8658000,
+  "tags": {
+    "addr:city": "Bogor",
+    "addr:district": "Caringin",
+    "addr:subdistrict": "Lemah Duhur",
+    "amenity": "school",
+    "education": "school",
+    "name": "SD Negeri Cimande 03",
+    "operator": "Negeri",
+    "ref": "20201759",
+    "source": "Disdik Jabar 2025"
+  }
+},
+{
+  "type": "node",
+  "id": 13438938170,
+  "lat": -6.7111000,
+  "lon": 106.8384000,
+  "tags": {
+    "addr:city": "Bogor",
+    "addr:district": "Caringin",
+    "addr:subdistrict": "Lemah Duhur",
+    "amenity": "school",
+    "education": "school",
+    "name": "SD Negeri Cimande 04",
+    "operator": "Negeri",
+    "ref": "20230477",
+    "source": "Disdik Jabar 2025"
+  }
+},
+{
+  "type": "node",
+  "id": 13438938173,
+  "lat": -6.7041000,
+  "lon": 106.8349000,
+  "tags": {
+    "addr:city": "Bogor",
+    "addr:district": "Caringin",
+    "addr:subdistrict": "Lemah Duhur",
+    "amenity": "school",
+    "education": "school",
+    "name": "SMP Islam Terpadu Annur Cimande",
+    "operator": "Swasta",
+    "ref": "69969918",
+    "source": "Disdik Jabar 2025"
+  }
+},
+{
+  "type": "node",
+  "id": 13438938178,
+  "lat": -6.7094000,
+  "lon": 106.8379000,
+  "tags": {
+    "addr:city": "Bogor",
+    "addr:district": "Caringin",
+    "addr:subdistrict": "Lemah Duhur",
+    "amenity": "school",
+    "education": "school",
+    "name": "SMPS IT Nurushibyan Cimande",
+    "operator": "Swasta",
+    "ref": "20253271",
+    "source": "Disdik Jabar 2025"
+  }
+},
+{
+  "type": "node",
+  "id": 13447343114,
+  "lat": -6.8070907,
+  "lon": 105.5125772,
+  "tags": {
+    "addr:city": "Pandeglang",
+    "addr:district": "Sumur",
+    "addr:neighbourhood": "04",
+    "addr:postcode": "42283",
+    "addr:province": "Banten",
+    "addr:street": "Cikaung Girang",
+    "addr:subdistrict": "Ujungjaya",
+    "amenity": "arts_centre",
+    "name": "Padepokan Sangiang Maung Ujung Kulon"
+  }
+},
+{
+  "type": "node",
+  "id": 13596216725,
+  "lat": 3.4756381,
+  "lon": 98.6980807,
+  "tags": {
+    "addr:city": "Deli Tua",
+    "addr:housename": "Kera Sakti",
+    "addr:neighbourhood": "Bar Deli",
+    "addr:province": "Sumatera Utara",
+    "addr:street": "Gang Tras",
+    "addr:subdistrict": "Deli Tua",
+    "addr:unit": "Klenteng",
+    "amenity": "place_of_worship",
+    "name": "Klenteng Kera Sakti",
+    "religion": "buddhist"
+  }
+},
+{
+  "type": "node",
+  "id": 13851278017,
+  "lat": -7.1802096,
+  "lon": 112.5893136,
+  "tags": {
+    "amenity": "social_centre",
+    "name": "PADEPOKAN PSHT RAYON TERENG GRESIK"
+  }
+},
+{
+  "type": "node",
+  "id": 14117089407,
+  "lat": -6.7343280,
+  "lon": 107.4391404,
+  "tags": {
+    "name": "Cikalongwetan",
+    "place": "town",
+    "wikidata": "Q1575289",
+    "wikipedia": "en:Cikalongwetan"
+  }
+},
+{
+  "type": "way",
+  "id": 29977452,
+  "center": {
+    "lat": -6.2534994,
+    "lon": 106.7915521
+  },
+  "tags": {
+    "access": "private",
+    "highway": "residential",
+    "lanes": "1",
+    "motorcycle": "yes",
+    "name": "Jalan KRI Harimau",
+    "oneway": "no",
+    "source": "HOT_InAWARESurvey_2017",
+    "surface": "asphalt",
+    "width": "3"
+  }
+},
+{
+  "type": "way",
+  "id": 96566703,
+  "center": {
+    "lat": -8.6101154,
+    "lon": 120.4693973
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Harimau"
+  }
+},
+{
+  "type": "way",
+  "id": 142570096,
+  "center": {
+    "lat": -6.5973670,
+    "lon": 106.7734674
+  },
+  "tags": {
+    "access": "destination",
+    "highway": "residential",
+    "name": "Jalan Harimau"
+  }
+},
+{
+  "type": "way",
+  "id": 155112761,
+  "center": {
+    "lat": -6.1630188,
+    "lon": 106.8002789
+  },
+  "tags": {
+    "highway": "living_street",
+    "lanes": "1",
+    "motorcar": "no",
+    "motorcycle": "yes",
+    "name": "Gang Silaturahmi",
+    "oneway": "no",
+    "smoothness": "intermediate",
+    "source": "HOT_InAWARESurvey_2017",
+    "surface": "asphalt",
+    "width": "1.3"
+  }
+},
+{
+  "type": "way",
+  "id": 155112767,
+  "center": {
+    "lat": -6.1629652,
+    "lon": 106.7995890
+  },
+  "tags": {
+    "highway": "living_street",
+    "lanes": "1",
+    "motorcar": "no",
+    "motorcycle": "yes",
+    "name": "Gang Silaturahmi",
+    "oneway": "no",
+    "smoothness": "intermediate",
+    "source": "HOT_InAWARESurvey_2017",
+    "surface": "asphalt",
+    "width": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 157513638,
+  "center": {
+    "lat": -6.1274924,
+    "lon": 106.8090842
+  },
+  "tags": {
+    "alt_name": "De Uitkijk",
+    "building": "tower",
+    "man_made": "tower",
+    "name": "Menara Syahbandar",
+    "old_name": "De Uitkijk",
+    "wikidata": "Q12498003",
+    "wikimedia_commons": "Category:Menara Syahbandar",
+    "wikipedia": "nl:De Uitkijk"
+  }
+},
+{
+  "type": "way",
+  "id": 160409015,
+  "center": {
+    "lat": 3.5877614,
+    "lon": 98.6793246
+  },
+  "tags": {
+    "highway": "service",
+    "lanes": "1",
+    "name": "Kumango",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 160409023,
+  "center": {
+    "lat": 3.5806347,
+    "lon": 98.6821794
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Syahbandar"
+  }
+},
+{
+  "type": "way",
+  "id": 160418690,
+  "center": {
+    "lat": 3.5715663,
+    "lon": 98.6942502
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Pencak"
+  }
+},
+{
+  "type": "way",
+  "id": 171184588,
+  "center": {
+    "lat": -8.5437445,
+    "lon": 116.0891671
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Pengurus Pencak Silat Asad Lobar",
+    "source": "survey",
+    "source:date": "2013-12-20",
+    "sport": "gymnastics"
+  }
+},
+{
+  "type": "way",
+  "id": 186594018,
+  "center": {
+    "lat": -5.1930454,
+    "lon": 119.4434825
+  },
+  "tags": {
+    "access:roof": "ada",
+    "addr:full": "Jl. Sultan hasanuddin",
+    "amenity": "place_of_worship",
+    "building": "yes",
+    "building:levels": "2",
+    "building:roof": "Beton",
+    "building:structure": "Tembok beton bertulang",
+    "building:walls": "Bata",
+    "capacity:persons": "500",
+    "name": "Mesjid Silaturahmi",
+    "religion": "muslim"
+  }
+},
+{
+  "type": "way",
+  "id": 190808560,
+  "center": {
+    "lat": -5.1542148,
+    "lon": 119.4235020
+  },
+  "tags": {
+    "highway": "living_street",
+    "name": "Jalan Harimau",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 192009720,
+  "center": {
+    "lat": -6.1728966,
+    "lon": 106.7337715
+  },
+  "tags": {
+    "highway": "residential",
+    "lanes": "1",
+    "motorcycle": "yes",
+    "name": "Jalan Merpati Putih",
+    "oneway": "no",
+    "smoothness": "good",
+    "source": "HOT_InAWARESurvey_2017",
+    "surface": "asphalt",
+    "width": "2.5"
+  }
+},
+{
+  "type": "way",
+  "id": 202939554,
+  "center": {
+    "lat": -6.5228532,
+    "lon": 110.7590025
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan PP Amtsilati",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 205943353,
+  "center": {
+    "lat": -6.3435750,
+    "lon": 107.5494607
+  },
+  "tags": {
+    "highway": "primary",
+    "name": "Jalan Raya Cikalong - Cilamaya",
+    "oneway": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 211354060,
+  "center": {
+    "lat": -6.1213316,
+    "lon": 106.8104593
+  },
+  "tags": {
+    "access:roof": "no",
+    "addr:city": "DKI Jakarta",
+    "addr:full": "Jalan Raya Baruna No 2",
+    "admin_level": "5",
+    "backup_generator": "no",
+    "building": "government_office",
+    "building:condition": "good",
+    "building:floor": "ceramics",
+    "building:levels": "1",
+    "building:roof": "tile",
+    "building:structure": "confined_masonry",
+    "building:walls": "concrete",
+    "capacity:persons": "100-250",
+    "name": "Kantor Kesyahbandaran dan Otoritas Pelabuhan Kelas III Sunda Kelapa",
+    "office": "government",
+    "source": "HOT_InAWARESurvey_2017"
+  }
+},
+{
+  "type": "way",
+  "id": 222134185,
+  "center": {
+    "lat": -6.7464161,
+    "lon": 108.5668406
+  },
+  "tags": {
+    "name": "Sungai Cikalong",
+    "waterway": "river"
+  }
+},
+{
+  "type": "way",
+  "id": 222772741,
+  "center": {
+    "lat": -4.0028759,
+    "lon": 119.6221004
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Dirjen Perhubungan Laut Kantor Kesyahbandaran Parepare",
+    "office": "government"
+  }
+},
+{
+  "type": "way",
+  "id": 224680667,
+  "center": {
+    "lat": -2.6821246,
+    "lon": 111.6333996
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Harimau"
+  }
+},
+{
+  "type": "way",
+  "id": 224680671,
+  "center": {
+    "lat": -2.6822407,
+    "lon": 111.6329600
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Harimau",
+    "source": "bing"
+  }
+},
+{
+  "type": "way",
+  "id": 239946454,
+  "center": {
+    "lat": -7.1244382,
+    "lon": 107.5433728
+  },
+  "tags": {
+    "name": "Kolam Tando Harian PLTA Cikalong",
+    "natural": "water",
+    "water": "reservoir"
+  }
+},
+{
+  "type": "way",
+  "id": 254226799,
+  "center": {
+    "lat": -3.9087568,
+    "lon": 119.7449762
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Harimau"
+  }
+},
+{
+  "type": "way",
+  "id": 258861962,
+  "center": {
+    "lat": -6.2960729,
+    "lon": 106.8836454
+  },
+  "tags": {
+    "area": "yes",
+    "name": "Padepokan Pencaksilat Indonesia",
+    "tourism": "museum"
+  }
+},
+{
+  "type": "way",
+  "id": 263187269,
+  "center": {
+    "lat": -8.5825412,
+    "lon": 116.1118163
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Harimau",
+    "oneway": "yes",
+    "source": "survey",
+    "surface": "asphalt",
+    "survey:date": "2013-12-10"
+  }
+},
+{
+  "type": "way",
+  "id": 278207454,
+  "center": {
+    "lat": -5.1932737,
+    "lon": 119.4435729
+  },
+  "tags": {
+    "amenity": "place_of_worship",
+    "building": "mosque",
+    "building:levels": "2",
+    "name": "Masjid Silaturrahum",
+    "religion": "muslim"
+  }
+},
+{
+  "type": "way",
+  "id": 280240918,
+  "center": {
+    "lat": -7.1142053,
+    "lon": 107.5515282
+  },
+  "tags": {
+    "location": "outdoor",
+    "name": "Gardu Induk Cikalong",
+    "operator": "Perusahaan Listrik Negara",
+    "operator:short": "PLN",
+    "operator:wikidata": "Q4201636",
+    "power": "substation",
+    "substation": "transmission",
+    "voltage": "70000"
+  }
+},
+{
+  "type": "way",
+  "id": 283551642,
+  "center": {
+    "lat": -0.0524494,
+    "lon": 109.3539036
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Silat"
+  }
+},
+{
+  "type": "way",
+  "id": 283551864,
+  "center": {
+    "lat": -0.0544042,
+    "lon": 109.3528803
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Silat Baru"
+  }
+},
+{
+  "type": "way",
+  "id": 286720845,
+  "center": {
+    "lat": -3.5623102,
+    "lon": 119.7747729
+  },
+  "tags": {
+    "building": "yes",
+    "historic": "monument",
+    "name": "Monumen Harimau Indonesia"
+  }
+},
+{
+  "type": "way",
+  "id": 288587832,
+  "center": {
+    "lat": 3.5645673,
+    "lon": 98.7006437
+  },
+  "tags": {
+    "amenity": "place_of_worship",
+    "building": "yes",
+    "name": "Masjid Silaturahim",
+    "religion": "muslim"
+  }
+},
+{
+  "type": "way",
+  "id": 291577826,
+  "center": {
+    "lat": -6.2306644,
+    "lon": 106.8694234
+  },
+  "tags": {
+    "amenity": "place_of_worship",
+    "building": "mosque",
+    "evacuation_center": "no",
+    "flood_prone": "no",
+    "name": "Mushala Silaturahmi",
+    "religion": "muslim"
+  }
+},
+{
+  "type": "way",
+  "id": 306190143,
+  "center": {
+    "lat": 0.4908832,
+    "lon": 101.4677157
+  },
+  "tags": {
+    "highway": "residential",
+    "maxspeed:type": "ID:urban",
+    "name": "Jalan Merpati Putih"
+  }
+},
+{
+  "type": "way",
+  "id": 306190243,
+  "center": {
+    "lat": 0.4900064,
+    "lon": 101.4696676
+  },
+  "tags": {
+    "highway": "tertiary",
+    "maxspeed:type": "ID:urban",
+    "name": "Jalan Merpati Putih"
+  }
+},
+{
+  "type": "way",
+  "id": 306470845,
+  "center": {
+    "lat": -5.3966446,
+    "lon": 105.2567739
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Harimau"
+  }
+},
+{
+  "type": "way",
+  "id": 306536030,
+  "center": {
+    "lat": 0.4509204,
+    "lon": 101.4490175
+  },
+  "tags": {
+    "highway": "living_street",
+    "motorcycle": "yes",
+    "name": "Gang Harimau Ular"
+  }
+},
+{
+  "type": "way",
+  "id": 314515124,
+  "center": {
+    "lat": 1.3782329,
+    "lon": 102.1476245
+  },
+  "tags": {
+    "leisure": "marina",
+    "name": "Kantor Syahbandar"
+  }
+},
+{
+  "type": "way",
+  "id": 316649319,
+  "center": {
+    "lat": 3.5888921,
+    "lon": 98.6954517
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Harimau"
+  }
+},
+{
+  "type": "way",
+  "id": 316846580,
+  "center": {
+    "lat": -6.9932890,
+    "lon": 110.4451543
+  },
+  "tags": {
+    "highway": "residential",
+    "lanes": "1",
+    "motorcycle": "yes",
+    "name": "Jalan Padepokan Ganesha II",
+    "oneway": "no",
+    "smoothness": "good",
+    "source": "HOT_InAWARESurvey_2018",
+    "surface": "paving_stones",
+    "width": "4"
+  }
+},
+{
+  "type": "way",
+  "id": 316846591,
+  "center": {
+    "lat": -6.9923870,
+    "lon": 110.4453726
+  },
+  "tags": {
+    "highway": "residential",
+    "lanes": "1",
+    "motorcycle": "yes",
+    "name": "Jalan Padepokan Ganesha II",
+    "oneway": "no",
+    "smoothness": "good",
+    "source": "HOT_InAWARESurvey_2018",
+    "surface": "paving_stones",
+    "width": "4"
+  }
+},
+{
+  "type": "way",
+  "id": 316846599,
+  "center": {
+    "lat": -6.9930768,
+    "lon": 110.4459597
+  },
+  "tags": {
+    "highway": "residential",
+    "lanes": "1",
+    "motorcycle": "yes",
+    "name": "Jalan Padepokan Ganesha I",
+    "oneway": "no",
+    "smoothness": "intermediate",
+    "source": "HOT_InAWARESurvey_2018",
+    "surface": "paving_stones",
+    "width": "4"
+  }
+},
+{
+  "type": "way",
+  "id": 316846606,
+  "center": {
+    "lat": -6.9937230,
+    "lon": 110.4455193
+  },
+  "tags": {
+    "highway": "residential",
+    "lanes": "1",
+    "motorcycle": "yes",
+    "name": "Jalan Padepokan Ganesha I",
+    "oneway": "no",
+    "smoothness": "intermediate",
+    "source": "HOT_InAWARESurvey_2018",
+    "surface": "paving_stones",
+    "width": "4"
+  }
+},
+{
+  "type": "way",
+  "id": 316846613,
+  "center": {
+    "lat": -6.9926499,
+    "lon": 110.4452937
+  },
+  "tags": {
+    "highway": "residential",
+    "lanes": "1",
+    "motorcycle": "yes",
+    "name": "Jalan Padepokan Ganesha II",
+    "oneway": "no",
+    "smoothness": "good",
+    "source": "HOT_InAWARESurvey_2018",
+    "surface": "paving_stones",
+    "width": "4"
+  }
+},
+{
+  "type": "way",
+  "id": 316846632,
+  "center": {
+    "lat": -6.9931241,
+    "lon": 110.4462636
+  },
+  "tags": {
+    "highway": "residential",
+    "lanes": "1",
+    "motorcycle": "yes",
+    "name": "Jalan Padepokan Ganesha I",
+    "oneway": "no",
+    "smoothness": "intermediate",
+    "source": "HOT_InAWARESurvey_2018",
+    "surface": "paving_stones",
+    "width": "4"
+  }
+},
+{
+  "type": "way",
+  "id": 316846639,
+  "center": {
+    "lat": -6.9927918,
+    "lon": 110.4460337
+  },
+  "tags": {
+    "highway": "residential",
+    "lanes": "1",
+    "motorcycle": "yes",
+    "name": "Jalan Padepokan Ganesha I",
+    "oneway": "no",
+    "smoothness": "intermediate",
+    "source": "HOT_InAWARESurvey_2018",
+    "surface": "paving_stones",
+    "width": "4"
+  }
+},
+{
+  "type": "way",
+  "id": 316846696,
+  "center": {
+    "lat": -6.9928056,
+    "lon": 110.4448819
+  },
+  "tags": {
+    "highway": "unclassified",
+    "lanes": "1",
+    "motorcycle": "yes",
+    "name": "Jalan Padepokan Ganesha II",
+    "oneway": "yes",
+    "smoothness": "good",
+    "source": "HOT_InAWARESurvey_2018",
+    "surface": "paving_stones",
+    "width": "4"
+  }
+},
+{
+  "type": "way",
+  "id": 316846738,
+  "center": {
+    "lat": -6.9933095,
+    "lon": 110.4456105
+  },
+  "tags": {
+    "highway": "residential",
+    "lanes": "1",
+    "motorcycle": "yes",
+    "name": "Jalan Padepokan Ganesha I",
+    "oneway": "no",
+    "smoothness": "intermediate",
+    "source": "HOT_InAWARESurvey_2018",
+    "surface": "paving_stones",
+    "width": "4"
+  }
+},
+{
+  "type": "way",
+  "id": 318933660,
+  "center": {
+    "lat": -6.8923058,
+    "lon": 107.6078705
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Harimau"
+  }
+},
+{
+  "type": "way",
+  "id": 325850623,
+  "center": {
+    "lat": 3.5930515,
+    "lon": 98.7126760
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Gang Silaturahmi",
+    "surface": "paved"
+  }
+},
+{
+  "type": "way",
+  "id": 328115920,
+  "center": {
+    "lat": -7.7122964,
+    "lon": 113.9853938
+  },
+  "tags": {
+    "M:hazard_prone": "yes",
+    "access:roof": "no",
+    "addr:full": "Sumberkolak",
+    "building": "yes",
+    "building:condition": "good",
+    "building:levels": "1",
+    "building:roof": "tile",
+    "building:structure": "reinforced_masonry",
+    "building:walls": "brick",
+    "capacity:persons": "100",
+    "name": "PADEPOKAN DARUL ULUM",
+    "water_supply": "running_water"
+  }
+},
+{
+  "type": "way",
+  "id": 334730942,
+  "center": {
+    "lat": -6.9929615,
+    "lon": 110.4464581
+  },
+  "tags": {
+    "highway": "residential",
+    "lanes": "1",
+    "motorcycle": "yes",
+    "name": "Jalan Padepokan Ganesha I",
+    "oneway": "no",
+    "smoothness": "intermediate",
+    "source": "HOT_InAWARESurvey_2018",
+    "surface": "paving_stones",
+    "width": "4"
+  }
+},
+{
+  "type": "way",
+  "id": 339116478,
+  "center": {
+    "lat": 3.7397174,
+    "lon": 96.8316815
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Gelanggang Silat Kala Jengking"
+  }
+},
+{
+  "type": "way",
+  "id": 345051509,
+  "center": {
+    "lat": -6.5237307,
+    "lon": 110.7608747
+  },
+  "tags": {
+    "addr:city": "Jepara",
+    "addr:street": "Bangsri",
+    "landuse": "residential",
+    "name": "Pon. Pes. Amtsilati DARUL FALAH Jepara"
+  }
+},
+{
+  "type": "way",
+  "id": 345051512,
+  "center": {
+    "lat": -6.5228919,
+    "lon": 110.7603684
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Pon. Pes. Amtsilati Putera"
+  }
+},
+{
+  "type": "way",
+  "id": 345051514,
+  "center": {
+    "lat": -6.5231683,
+    "lon": 110.7615215
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Pon. Pes. Amtsilati"
+  }
+},
+{
+  "type": "way",
+  "id": 345051516,
+  "center": {
+    "lat": -6.5234581,
+    "lon": 110.7620050
+  },
+  "tags": {
+    "building": "residential",
+    "name": "Ruang Tamu PP Amtsilati"
+  }
+},
+{
+  "type": "way",
+  "id": 345051519,
+  "center": {
+    "lat": -6.5230830,
+    "lon": 110.7615978
+  },
+  "tags": {
+    "building": "residential",
+    "name": "Ruang Tamu PP Amtsilati"
+  }
+},
+{
+  "type": "way",
+  "id": 345051521,
+  "center": {
+    "lat": -6.5232804,
+    "lon": 110.7612136
+  },
+  "tags": {
+    "building": "residential",
+    "name": "Kantor Puteri PP. Amtsilati"
+  }
+},
+{
+  "type": "way",
+  "id": 374388274,
+  "center": {
+    "lat": -1.2711070,
+    "lon": 116.8086763
+  },
+  "tags": {
+    "addr:full": "Jl. Yos Sudarso",
+    "admin_level": "5",
+    "building": "yes",
+    "building:levels": "2",
+    "name": "Kesyahbandaran dan Otoritas Pelabuhan kelas 1 Balikpapan",
+    "office": "government",
+    "website": "https://hubla.dephub.go.id/unit/upt/kesyahbandaran-dan-otoritas-pelabuhan.aspx"
+  }
+},
+{
+  "type": "way",
+  "id": 386052644,
+  "center": {
+    "lat": 5.5522804,
+    "lon": 95.3099848
+  },
+  "tags": {
+    "access:roof": "yes",
+    "addr:full": "jalan tanggul",
+    "amenity": "place_of_worship",
+    "building": "mosque",
+    "building:condition": "good",
+    "building:levels": "1",
+    "building:material": "concrete",
+    "building:roof": "tin",
+    "building:structure": "confined_masonry",
+    "capacity:persons": "50-100",
+    "name": "Meunasah Babul Silaturahmi",
+    "religion": "muslim",
+    "source": "survey"
+  }
+},
+{
+  "type": "way",
+  "id": 391348428,
+  "center": {
+    "lat": -6.2865947,
+    "lon": 107.0177034
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Harimau 1",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 391348439,
+  "center": {
+    "lat": -6.2856136,
+    "lon": 107.0177064
+  },
+  "tags": {
+    "highway": "living_street",
+    "motorcycle": "yes",
+    "name": "Jalan Harimau 2",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 391348441,
+  "center": {
+    "lat": -6.2854594,
+    "lon": 107.0179845
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Harimau",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 391350197,
+  "center": {
+    "lat": -6.2873648,
+    "lon": 107.0167887
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Harimau 9",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 404323120,
+  "center": {
+    "lat": -5.3962724,
+    "lon": 105.3205423
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Gang Harimau",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 410208686,
+  "center": {
+    "lat": -3.3387632,
+    "lon": 128.9208227
+  },
+  "tags": {
+    "building": "yes",
+    "name": "syahbandar",
+    "office": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 419686634,
+  "center": {
+    "lat": -6.7131313,
+    "lon": 107.2151419
+  },
+  "tags": {
+    "landuse": "residential",
+    "name": "Cikalong Kulon"
+  }
+},
+{
+  "type": "way",
+  "id": 422552791,
+  "center": {
+    "lat": -2.6751972,
+    "lon": 111.6302455
+  },
+  "tags": {
+    "addr:street": "Jl. Pangeran Antasari",
+    "building": "yes",
+    "name": "kANTOR SYAHBANDAR",
+    "office": "government"
+  }
+},
+{
+  "type": "way",
+  "id": 435246434,
+  "center": {
+    "lat": -3.9906636,
+    "lon": 119.8141833
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Harimau"
+  }
+},
+{
+  "type": "way",
+  "id": 476528967,
+  "center": {
+    "lat": -6.5944796,
+    "lon": 110.6625494
+  },
+  "tags": {
+    "building": "office",
+    "building:levels": "1",
+    "building:roof": "tile",
+    "building:structure": "unreinforced_masonry",
+    "capacity": "200",
+    "leisure": "sports_centre",
+    "name": "Kantor IPSI Cabang Jepara",
+    "office": "ngo",
+    "sport": "Gedung IPSI Jepara"
+  }
+},
+{
+  "type": "way",
+  "id": 479492350,
+  "center": {
+    "lat": -6.2249481,
+    "lon": 106.6800366
+  },
+  "tags": {
+    "access": "permissive",
+    "highway": "living_street",
+    "motorcycle": "yes",
+    "name": "Jalan Merpati Putih"
+  }
+},
+{
+  "type": "way",
+  "id": 485030835,
+  "center": {
+    "lat": -8.1739141,
+    "lon": 112.5510082
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Padepokan"
+  }
+},
+{
+  "type": "way",
+  "id": 485282128,
+  "center": {
+    "lat": 0.4202377,
+    "lon": 101.4041186
+  },
+  "tags": {
+    "landuse": "residential",
+    "name": "Perumahan Pagar Nusalima"
+  }
+},
+{
+  "type": "way",
+  "id": 491032210,
+  "center": {
+    "lat": -6.6304241,
+    "lon": 110.7307140
+  },
+  "tags": {
+    "building": "yes",
+    "building:levels": "2",
+    "name": "R. SILAT&TEATER",
+    "school:type_idn": "sma"
+  }
+},
+{
+  "type": "way",
+  "id": 493633517,
+  "center": {
+    "lat": -6.1977596,
+    "lon": 106.7898915
+  },
+  "tags": {
+    "highway": "living_street",
+    "lanes": "1",
+    "motorcar": "no",
+    "motorcycle": "yes",
+    "name": "Gang Silaturahmi",
+    "oneway": "no",
+    "smoothness": "good",
+    "source": "survey",
+    "surface": "asphalt",
+    "width": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 496041101,
+  "center": {
+    "lat": -6.1628424,
+    "lon": 106.7996735
+  },
+  "tags": {
+    "addr:city": "DKI Jakarta",
+    "addr:full": "Jalan Silaturrahim",
+    "amenity": "place_of_worship",
+    "building": "mosque",
+    "building:condition": "good",
+    "building:floor": "ceramics",
+    "building:levels": "2",
+    "building:roof": "concrete",
+    "building:structure": "confined_masonry",
+    "building:walls": "brick",
+    "capacity:persons": "100-250",
+    "name": "Masjid Silaturrahim",
+    "religion": "muslim",
+    "source": "HOT_InAWARESurvey_2017"
+  }
+},
+{
+  "type": "way",
+  "id": 496617076,
+  "center": {
+    "lat": -6.8129143,
+    "lon": 107.1622607
+  },
+  "tags": {
+    "alt_name": "Jl. Desa Sabandar",
+    "highway": "residential",
+    "name": "Jalan Desa Sabandar"
+  }
+},
+{
+  "type": "way",
+  "id": 501468140,
+  "center": {
+    "lat": -6.3638749,
+    "lon": 106.8749417
+  },
+  "tags": {
+    "alt_name": "Jalan Merpati Putih II",
+    "highway": "residential",
+    "name": "Jalan Merpati Putih 2",
+    "source": "HOT_InAWARESurvey_2017"
+  }
+},
+{
+  "type": "way",
+  "id": 502448105,
+  "center": {
+    "lat": -6.3641410,
+    "lon": 106.8758402
+  },
+  "tags": {
+    "alt_name": "Jalan Merpati Putih IV",
+    "highway": "residential",
+    "name": "Jalan Merpati Putih 4",
+    "source": "HOT_InAWARESurvey_2017"
+  }
+},
+{
+  "type": "way",
+  "id": 502448107,
+  "center": {
+    "lat": -6.3644983,
+    "lon": 106.8755982
+  },
+  "tags": {
+    "alt_name": "Jalan Merpati Putih VI",
+    "highway": "residential",
+    "name": "Jalan Merpati Putih 6",
+    "source": "HOT_InAWARESurvey_2017"
+  }
+},
+{
+  "type": "way",
+  "id": 506939009,
+  "center": {
+    "lat": -6.3368564,
+    "lon": 106.8503464
+  },
+  "tags": {
+    "access:roof": "yes",
+    "addr:city": "DKI Jakarta",
+    "addr:full": "Jalan Manunggal Bakti",
+    "amenity": "place_of_worship",
+    "backup_generator": "no",
+    "building": "mosque",
+    "building:condition": "good",
+    "building:floor": "ceramics",
+    "building:levels": "2",
+    "building:roof": "tile",
+    "building:structure": "confined_masonry",
+    "building:walls": "brick",
+    "capacity:persons": "100-250",
+    "name": "Masjid Manunggal Silaturahim",
+    "religion": "muslim",
+    "source": "HOT_InAWARESurvey_2017"
+  }
+},
+{
+  "type": "way",
+  "id": 507133332,
+  "center": {
+    "lat": -6.3500155,
+    "lon": 106.8916694
+  },
+  "tags": {
+    "highway": "living_street",
+    "lanes": "1",
+    "motorcycle": "yes",
+    "name": "Jalan Harimau Jawa",
+    "oneway": "no",
+    "smoothness": "good",
+    "source": "HOT_InAWARESurvey_2017",
+    "surface": "asphalt",
+    "width": "2"
+  }
+},
+{
+  "type": "way",
+  "id": 507133357,
+  "center": {
+    "lat": -6.3459330,
+    "lon": 106.8909654
+  },
+  "tags": {
+    "highway": "living_street",
+    "lanes": "1",
+    "motorcar": "no",
+    "motorcycle": "yes",
+    "name": "Gang Harimau Jawa II",
+    "oneway": "no",
+    "smoothness": "good",
+    "source": "HOT_InAWARESurvey_2017",
+    "surface": "asphalt",
+    "width": "0.5"
+  }
+},
+{
+  "type": "way",
+  "id": 507133360,
+  "center": {
+    "lat": -6.3473085,
+    "lon": 106.8909595
+  },
+  "tags": {
+    "highway": "living_street",
+    "lanes": "1",
+    "motorcar": "yes",
+    "motorcycle": "yes",
+    "name": "Jalan Harimau Jawa",
+    "oneway": "no",
+    "smoothness": "good",
+    "source": "HOT_InAWARESurvey_2017",
+    "surface": "asphalt",
+    "width": "1.8"
+  }
+},
+{
+  "type": "way",
+  "id": 507133457,
+  "center": {
+    "lat": -6.3462416,
+    "lon": 106.8914534
+  },
+  "tags": {
+    "highway": "living_street",
+    "lanes": "1",
+    "motorcar": "no",
+    "motorcycle": "yes",
+    "name": "Gang Harimau Jawa I",
+    "oneway": "no",
+    "smoothness": "good",
+    "source": "HOT_InAWARESurvey_2017",
+    "surface": "asphalt",
+    "width": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 507133458,
+  "center": {
+    "lat": -6.3455673,
+    "lon": 106.8910096
+  },
+  "tags": {
+    "highway": "living_street",
+    "lanes": "1",
+    "motorcar": "no",
+    "motorcycle": "yes",
+    "name": "Gang Harimau Jawa III",
+    "oneway": "no",
+    "smoothness": "good",
+    "source": "HOT_InAWARESurvey_2017",
+    "surface": "concrete",
+    "width": "0.5"
+  }
+},
+{
+  "type": "way",
+  "id": 507133493,
+  "center": {
+    "lat": -6.3517237,
+    "lon": 106.8925427
+  },
+  "tags": {
+    "highway": "living_street",
+    "lanes": "1",
+    "motorcar": "no",
+    "motorcycle": "yes",
+    "name": "Gang Harimau Jawa II",
+    "oneway": "no",
+    "smoothness": "good",
+    "source": "HOT_InAWARESurvey_2017",
+    "surface": "asphalt",
+    "width": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 509343499,
+  "center": {
+    "lat": -6.3111316,
+    "lon": 106.9077262
+  },
+  "tags": {
+    "air_conditioning": "yes",
+    "amenity": "place_of_worship",
+    "building": "mosque",
+    "name": "Masjid Jami Silaturahim",
+    "opening_hours": "Mo-Su 04:00-20:00",
+    "religion": "muslim",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "way",
+  "id": 509751064,
+  "center": {
+    "lat": -6.3330766,
+    "lon": 106.9011430
+  },
+  "tags": {
+    "access:roof": "no",
+    "addr:city": "DKI Jakarta",
+    "addr:full": "Gang Umi",
+    "amenity": "place_of_worship",
+    "backup_generator": "no",
+    "building": "mosque",
+    "building:condition": "good",
+    "building:floor": "ceramics",
+    "building:levels": "1",
+    "building:roof": "concrete",
+    "building:structure": "confined_masonry",
+    "building:walls": "brick",
+    "capacity:persons": "50-100",
+    "name": "Masjid Silaturrahim",
+    "religion": "muslim",
+    "source": "HOT_InAWARESurvey_2017"
+  }
+},
+{
+  "type": "way",
+  "id": 511893862,
+  "center": {
+    "lat": -7.8086868,
+    "lon": 110.3946816
+  },
+  "tags": {
+    "attraction": "animal",
+    "name": "Harimau",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "way",
+  "id": 511916064,
+  "center": {
+    "lat": -6.5771919,
+    "lon": 107.7775143
+  },
+  "tags": {
+    "access": "permissive",
+    "alt_name": "Jl. Silat",
+    "highway": "residential",
+    "name": "Jalan Silat"
+  }
+},
+{
+  "type": "way",
+  "id": 514383590,
+  "center": {
+    "lat": -6.3372430,
+    "lon": 106.8534917
+  },
+  "tags": {
+    "highway": "living_street",
+    "lanes": "1",
+    "motorcar": "no",
+    "motorcycle": "yes",
+    "name": "Gang Bandrong",
+    "oneway": "no",
+    "smoothness": "intermediate",
+    "source": "HOT_InAWARESurvey_2017",
+    "surface": "asphalt",
+    "width": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 518765641,
+  "center": {
+    "lat": -6.9678048,
+    "lon": 110.4244262
+  },
+  "tags": {
+    "building": "yes",
+    "historic:civilization": "modern",
+    "man_made": "tower",
+    "name": "Syahbandar \"Indië Uitkijkpost\" Tower",
+    "name:id": "Menara Syahbandar",
+    "name:nl": "Indië Uitkijkpost",
+    "tower:construction": "brick"
+  }
+},
+{
+  "type": "way",
+  "id": 521169008,
+  "center": {
+    "lat": -6.1013838,
+    "lon": 106.9187094
+  },
+  "tags": {
+    "access:roof": "no",
+    "addr:city": "DKI Jakarta",
+    "addr:full": "Jalan Raya Pelabuhan Kalibaru No. 1 Kelurahan Kalibaru, Kecamatan Cilincing, Jakarta Utara 14140",
+    "backup_generator": "no",
+    "building": "government_office",
+    "building:condition": "good",
+    "building:floor": "ceramics",
+    "building:levels": "2",
+    "building:roof": "tile",
+    "building:structure": "confined_masonry",
+    "building:walls": "brick",
+    "capacity:persons": "50-100",
+    "name": "Kantor Kesyahbandaran dan Otoritas Pelabuhan Kalibaru",
+    "office": "government",
+    "source": "HOT_InAWARESurvey_2017"
+  }
+},
+{
+  "type": "way",
+  "id": 521740229,
+  "center": {
+    "lat": -5.3969167,
+    "lon": 105.3204320
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Gang Harimau",
+    "oneway": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 522047657,
+  "center": {
+    "lat": -6.1080420,
+    "lon": 106.8806314
+  },
+  "tags": {
+    "access:roof": "yes",
+    "addr:city": "DKI Jakarta",
+    "addr:full": "Jl. Padamarang No.4, Tj. Priok, Kec. Tj. Priok, Jkt Utara, Daerah Khusus Ibukota Jakarta 14310",
+    "addr:housename": "KSOP Utama Tanjung Priok",
+    "addr:housenumber": "4",
+    "backup_generator": "yes",
+    "building": "government_office",
+    "building:condition": "good",
+    "building:floor": "ceramics",
+    "building:levels": "4",
+    "building:roof": "concrete",
+    "building:structure": "confined_masonry",
+    "building:walls": "concrete",
+    "capacity:persons": "250-500",
+    "government": "transportation",
+    "name": "Kantor Kesyahbandaran dan Otoritas Pelabuhan Utama Tanjung Priok",
+    "office": "government",
+    "opening_hours": "Mo-Fr 08:00-16:00",
+    "phone": "+6285186696047",
+    "source": "HOT_InAWARESurvey_2017",
+    "website": "https://maritimhub.kemenhub.go.id/site/ksop-tanjungpriok"
+  }
+},
+{
+  "type": "way",
+  "id": 524557243,
+  "center": {
+    "lat": -6.1063387,
+    "lon": 106.7748212
+  },
+  "tags": {
+    "access:roof": "no",
+    "addr:city": "DKI Jakarta",
+    "backup_generator": "no",
+    "building": "government_office",
+    "building:floor": "ceramics",
+    "building:levels": "3",
+    "building:roof": "tin",
+    "building:structure": "confined_masonry",
+    "building:walls": "brick",
+    "capacity:persons": "100-250",
+    "name": "Kementerian Perhubungan Dirjen Perhubungan Laut Kantor Kesyahbandaran & Otoritas Pelabuhan Muara Angke",
+    "office": "government",
+    "source": "HOT_InAWARESurvey_2017"
+  }
+},
+{
+  "type": "way",
+  "id": 525308306,
+  "center": {
+    "lat": -5.6537676,
+    "lon": 106.5670472
+  },
+  "tags": {
+    "access:roof": "no",
+    "addr:city": "DKI Jakarta",
+    "addr:full": "Jalan Dermaga Utara",
+    "admin_level": "7",
+    "backup_generator": "no",
+    "building": "government_office",
+    "building:condition": "good",
+    "building:floor": "ceramics",
+    "building:levels": "1",
+    "building:roof": "asbestos",
+    "building:structure": "confined_masonry",
+    "building:walls": "brick",
+    "capacity:persons": "100-250",
+    "evacuation_center": "no",
+    "name": "Kantor Kesyahbandaran dan Otoritas Pelabuhan Kelas V",
+    "office": "government",
+    "source": "HOT_InAWARESurvey_2017"
+  }
+},
+{
+  "type": "way",
+  "id": 529958681,
+  "center": {
+    "lat": -7.7827234,
+    "lon": 110.3564400
+  },
+  "tags": {
+    "amenity": "school",
+    "building": "yes",
+    "name": "Padepokan KHA Dahlan"
+  }
+},
+{
+  "type": "way",
+  "id": 534582387,
+  "center": {
+    "lat": 0.5173572,
+    "lon": 101.4283383
+  },
+  "tags": {
+    "description": "Lapangan TVRI",
+    "leisure": "pitch",
+    "sport": "martial_arts",
+    "surface": "grass"
+  }
+},
+{
+  "type": "way",
+  "id": 540693854,
+  "center": {
+    "lat": -6.7441453,
+    "lon": 108.5550212
+  },
+  "tags": {
+    "layer": "-1",
+    "name": "Sungai Cikalong",
+    "waterway": "river"
+  }
+},
+{
+  "type": "way",
+  "id": 541013831,
+  "center": {
+    "lat": -7.6562626,
+    "lon": 108.5740972
+  },
+  "tags": {
+    "highway": "unclassified",
+    "name": "Jalan Cikalong SIdamulih",
+    "smoothness": "intermediate",
+    "surface": "asphalt",
+    "width": "3"
+  }
+},
+{
+  "type": "way",
+  "id": 541357950,
+  "center": {
+    "lat": 0.8825657,
+    "lon": 104.4499333
+  },
+  "tags": {
+    "highway": "service",
+    "name": "Jalan Syahbandar Abdullah",
+    "oneway": "yes",
+    "short_name": "Jl. Syahbandar Abdullah"
+  }
+},
+{
+  "type": "way",
+  "id": 541357954,
+  "center": {
+    "lat": 0.8825966,
+    "lon": 104.4500537
+  },
+  "tags": {
+    "highway": "service",
+    "name": "Jalan Syahbandar Abdullah",
+    "oneway": "yes",
+    "short_name": "Jl. Syahbandar Abdullah"
+  }
+},
+{
+  "type": "way",
+  "id": 547177156,
+  "center": {
+    "lat": -7.7986834,
+    "lon": 108.2681100
+  },
+  "tags": {
+    "access:roof": "no",
+    "addr:full": "Kampung Bantarpari RT 1 RW 1",
+    "building": "yes",
+    "building:levels": "1",
+    "building:roof": "tile",
+    "building:structure": "plastered",
+    "building:walls": "brick",
+    "capacity": "200",
+    "name": "SMK N 1 Cikalong",
+    "school:type_idn": "sma"
+  }
+},
+{
+  "type": "way",
+  "id": 547199150,
+  "center": {
+    "lat": -7.7498184,
+    "lon": 108.1788308
+  },
+  "tags": {
+    "highway": "secondary",
+    "name": "Jalan Raya Cikalong"
+  }
+},
+{
+  "type": "way",
+  "id": 548591239,
+  "center": {
+    "lat": -6.1757863,
+    "lon": 107.1877640
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Harimau"
+  }
+},
+{
+  "type": "way",
+  "id": 553892005,
+  "center": {
+    "lat": -6.9176813,
+    "lon": 107.6756270
+  },
+  "tags": {
+    "highway": "residential",
+    "lanes": "1",
+    "name": "Jalan Pencak Silat",
+    "name:en": "Pencak Silat Alley",
+    "oneway": "no",
+    "smoothness": "good",
+    "surface": "asphalt",
+    "width": "3"
+  }
+},
+{
+  "type": "way",
+  "id": 553892007,
+  "center": {
+    "lat": -6.9182535,
+    "lon": 107.6764699
+  },
+  "tags": {
+    "highway": "residential",
+    "lanes": "1",
+    "name": "Jalan Pencak Silat",
+    "name:en": "Pencak Silat Alley",
+    "oneway": "no",
+    "smoothness": "good",
+    "surface": "asphalt",
+    "width": "3"
+  }
+},
+{
+  "type": "way",
+  "id": 555023814,
+  "center": {
+    "lat": -6.9197997,
+    "lon": 107.7029358
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Padepokan III"
+  }
+},
+{
+  "type": "way",
+  "id": 555359054,
+  "center": {
+    "lat": 3.5825397,
+    "lon": 98.7376274
+  },
+  "tags": {
+    "highway": "living_street",
+    "motorcycle": "yes",
+    "name": "Gang Silaturrahim"
+  }
+},
+{
+  "type": "way",
+  "id": 557186210,
+  "center": {
+    "lat": 0.1308968,
+    "lon": 117.4856534
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Toko Padepokan Tani Terbaru",
+    "shop": "hardware"
+  }
+},
+{
+  "type": "way",
+  "id": 561395648,
+  "center": {
+    "lat": -8.8000748,
+    "lon": 115.2215009
+  },
+  "tags": {
+    "building": "yes",
+    "leisure": "sports_centre",
+    "name": "Merpati Putih Cabang Badung Benoa",
+    "sport": "kickboxing"
+  }
+},
+{
+  "type": "way",
+  "id": 561409548,
+  "center": {
+    "lat": -7.4803658,
+    "lon": 108.2312198
+  },
+  "tags": {
+    "highway": "tertiary",
+    "name": "Jalan Raya Papayan Cikalong"
+  }
+},
+{
+  "type": "way",
+  "id": 562649392,
+  "center": {
+    "lat": -6.3646524,
+    "lon": 106.8763333
+  },
+  "tags": {
+    "alt_name": "Jalan Merpati Puthi",
+    "highway": "residential",
+    "name": "Jalan Merpati Putih"
+  }
+},
+{
+  "type": "way",
+  "id": 562713211,
+  "center": {
+    "lat": -6.9929291,
+    "lon": 110.4452373
+  },
+  "tags": {
+    "highway": "residential",
+    "lanes": "1",
+    "motorcycle": "yes",
+    "name": "Jalan Padepokan Ganesha II",
+    "oneway": "no",
+    "smoothness": "good",
+    "source": "HOT_InAWARESurvey_2018",
+    "surface": "paving_stones",
+    "width": "4"
+  }
+},
+{
+  "type": "way",
+  "id": 563529771,
+  "center": {
+    "lat": -6.3635960,
+    "lon": 106.8750159
+  },
+  "tags": {
+    "alt_name": "Jalan Merpati Putih I",
+    "highway": "residential",
+    "name": "Jalan Merpati Putih 1",
+    "source": "HOT_InAWARESurvey_2017"
+  }
+},
+{
+  "type": "way",
+  "id": 571620063,
+  "center": {
+    "lat": -6.9530801,
+    "lon": 110.4185688
+  },
+  "tags": {
+    "addr:city": "Semarang",
+    "addr:full": "Jalan Yos Sudarso No. 30",
+    "name": "Kantor Kesyahbandaran dan Otoritas Pelabuhan Kelas I Tanjung Emas",
+    "office": "government",
+    "source": "HOT_InAWARESurvey_2018"
+  }
+},
+{
+  "type": "way",
+  "id": 573640846,
+  "center": {
+    "lat": 0.9345722,
+    "lon": 109.0067945
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Satria Muda"
+  }
+},
+{
+  "type": "way",
+  "id": 575487170,
+  "center": {
+    "lat": -7.3477920,
+    "lon": 108.2202557
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Harimau III"
+  }
+},
+{
+  "type": "way",
+  "id": 577038414,
+  "center": {
+    "lat": -7.0459603,
+    "lon": 110.3928140
+  },
+  "tags": {
+    "access:roof": "no",
+    "addr:city": "Semarang",
+    "addr:full": "Jalan Taman Siswa",
+    "amenity": "place_of_worship",
+    "backup_generator": "no",
+    "building": "mosque",
+    "building:condition": "good",
+    "building:floor": "ceramics",
+    "building:levels": "1",
+    "building:material": "brick",
+    "building:roof": "tile",
+    "building:structure": "confined_masonry",
+    "capacity:persons": "<50",
+    "evacuation_center": "no",
+    "name": "Musala Wasilatul Huda",
+    "religion": "muslim",
+    "source": "HOT_InAWARESurvey_2018"
+  }
+},
+{
+  "type": "way",
+  "id": 577715888,
+  "center": {
+    "lat": 3.2859161,
+    "lon": 117.5938475
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Kantor Kesyahbandaran dan Otoritas Pelabuhan Kelas III Tarakan",
+    "office": "government"
+  }
+},
+{
+  "type": "way",
+  "id": 582132003,
+  "center": {
+    "lat": 0.3434047,
+    "lon": 111.7907498
+  },
+  "tags": {
+    "building": "yes",
+    "government": "administrative",
+    "name": "Kantor Kecamatan Silat Hilir",
+    "office": "government",
+    "short_name": "Kantor Camat Silat Hilir"
+  }
+},
+{
+  "type": "way",
+  "id": 582416306,
+  "center": {
+    "lat": 0.2597470,
+    "lon": 112.0000401
+  },
+  "tags": {
+    "name": "Sungai Silat",
+    "name:en": "Silat River",
+    "waterway": "river"
+  }
+},
+{
+  "type": "way",
+  "id": 586478969,
+  "center": {
+    "lat": -8.0009334,
+    "lon": 112.6225220
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Janti Barat Padepokan"
+  }
+},
+{
+  "type": "way",
+  "id": 586478973,
+  "center": {
+    "lat": -8.0006270,
+    "lon": 112.6219868
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Jati Barat Padepokan II"
+  }
+},
+{
+  "type": "way",
+  "id": 587960212,
+  "center": {
+    "lat": -6.7290816,
+    "lon": 107.4458825
+  },
+  "tags": {
+    "access": "yes",
+    "bicycle": "yes",
+    "foot": "yes",
+    "highway": "trunk",
+    "name": "Jalan Raya Cikalong Wetan",
+    "oneway": "no",
+    "ref": "10",
+    "source": "Yahoo hires / Bing",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 587964463,
+  "center": {
+    "lat": -6.7393892,
+    "lon": 107.4412400
+  },
+  "tags": {
+    "access": "yes",
+    "bicycle": "yes",
+    "foot": "yes",
+    "highway": "trunk",
+    "name": "Jalan Cikalong",
+    "oneway": "no",
+    "ref": "10",
+    "source": "Yahoo hires / Bing"
+  }
+},
+{
+  "type": "way",
+  "id": 591946250,
+  "center": {
+    "lat": -8.6562707,
+    "lon": 115.1953060
+  },
+  "tags": {
+    "highway": "living_street",
+    "motorcycle": "yes",
+    "name": "Jalan Merpati Gang Merpati Putih",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "way",
+  "id": 595854999,
+  "center": {
+    "lat": -8.6328796,
+    "lon": 116.5420211
+  },
+  "tags": {
+    "amenity": "place_of_worship",
+    "building": "mosque",
+    "denomination": "sunni",
+    "name": "Masjid Silaturrahim Dames",
+    "religion": "muslim"
+  }
+},
+{
+  "type": "way",
+  "id": 595945692,
+  "center": {
+    "lat": -3.7703957,
+    "lon": 104.1671086
+  },
+  "tags": {
+    "addr:postcode": "31173",
+    "addr:street": "Jl. A. Yani",
+    "building": "yes",
+    "building:levels": "1",
+    "name": "Padepokan IKSPI KS Cabang Lubai"
+  }
+},
+{
+  "type": "way",
+  "id": 607543808,
+  "center": {
+    "lat": -7.3255539,
+    "lon": 108.0833616
+  },
+  "tags": {
+    "addr:full": "Jl. Kencana No.9 Kab. Tasikmalaya",
+    "building": "public",
+    "name": "Aula Padepokan Lebak Galunggung"
+  }
+},
+{
+  "type": "way",
+  "id": 608808142,
+  "center": {
+    "lat": -7.7705554,
+    "lon": 108.1782876
+  },
+  "tags": {
+    "building": "yes",
+    "name": "SDN 2 Cikalong",
+    "school:type_idn": "sd"
+  }
+},
+{
+  "type": "way",
+  "id": 608808144,
+  "center": {
+    "lat": -7.7701383,
+    "lon": 108.1783524
+  },
+  "tags": {
+    "addr:full": "Jl.Raya Cikalong no.70",
+    "amenity": "school",
+    "name": "SMP N 1 Cikalong",
+    "school:type_idn": "smp"
+  }
+},
+{
+  "type": "way",
+  "id": 608812994,
+  "center": {
+    "lat": -7.7811946,
+    "lon": 108.1844733
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Kantor BPPP Cikalong"
+  }
+},
+{
+  "type": "way",
+  "id": 608860784,
+  "center": {
+    "lat": -7.8063459,
+    "lon": 108.2803837
+  },
+  "tags": {
+    "amenity": "school",
+    "name": "SMPN 2 Cikalong",
+    "school:type_idn": "smp"
+  }
+},
+{
+  "type": "way",
+  "id": 609168787,
+  "center": {
+    "lat": -7.7631031,
+    "lon": 108.1746997
+  },
+  "tags": {
+    "addr:full": "Kampung Cilutung RT 3 RW 1",
+    "amenity": "bank",
+    "building": "yes",
+    "name": "UPK Cikalong"
+  }
+},
+{
+  "type": "way",
+  "id": 609168789,
+  "center": {
+    "lat": -7.7627321,
+    "lon": 108.1744708
+  },
+  "tags": {
+    "addr:full": "Kampung Cilutung RT 3 RW 1",
+    "building": "yes",
+    "name": "UPTD Pendidikan Kecamatan Cikalong"
+  }
+},
+{
+  "type": "way",
+  "id": 609168790,
+  "center": {
+    "lat": -7.7625493,
+    "lon": 108.1750251
+  },
+  "tags": {
+    "addr:full": "Kampung Cikalong RT 1",
+    "building": "yes",
+    "name": "Koperasi Unit Desa Cikalong"
+  }
+},
+{
+  "type": "way",
+  "id": 609168793,
+  "center": {
+    "lat": -7.7628530,
+    "lon": 108.1736254
+  },
+  "tags": {
+    "addr:full": "Kampung Cilutung RT 3 RW 1",
+    "admin_level": "6",
+    "building": "yes",
+    "name": "Kantor Kecamatan Cikalong"
+  }
+},
+{
+  "type": "way",
+  "id": 609168796,
+  "center": {
+    "lat": -7.7643117,
+    "lon": 108.1730571
+  },
+  "tags": {
+    "addr:full": "Kampung Cilutung RT 3 RW 1",
+    "amenity": "marketplace",
+    "building": "yes",
+    "name": "Pasar Cikalong"
+  }
+},
+{
+  "type": "way",
+  "id": 609168798,
+  "center": {
+    "lat": -7.7656530,
+    "lon": 108.1732938
+  },
+  "tags": {
+    "addr:full": "Kampung Cilutung RT 3 RW 1",
+    "building": "public",
+    "name": "Aula Desa Cikalong"
+  }
+},
+{
+  "type": "way",
+  "id": 609168806,
+  "center": {
+    "lat": -7.7657978,
+    "lon": 108.1735894
+  },
+  "tags": {
+    "addr:full": "Kampung Cilutung RT 3 RW 1",
+    "amenity": "bus_station",
+    "building": "yes",
+    "name": "Terminal Cikalong"
+  }
+},
+{
+  "type": "way",
+  "id": 609168814,
+  "center": {
+    "lat": -7.7660248,
+    "lon": 108.1724908
+  },
+  "tags": {
+    "access:roof": "no",
+    "addr:full": "Dusun Cilutung RT 02 RW 01",
+    "amenity": "clinic",
+    "building": "yes",
+    "building:levels": "1",
+    "building:roof": "tile",
+    "building:structure": "reinforced_masonry",
+    "building:walls": "brick",
+    "name": "Puskesmas Kecamatan Cikalong"
+  }
+},
+{
+  "type": "way",
+  "id": 609168816,
+  "center": {
+    "lat": -7.7661393,
+    "lon": 108.1727091
+  },
+  "tags": {
+    "access:roof": "no",
+    "addr:full": "Dusun Cilutung RT 02 RW 01",
+    "building": "yes",
+    "building:levels": "1",
+    "building:roof": "tile",
+    "building:structure": "reinforced_masonry",
+    "building:walls": "brick",
+    "name": "SD N 1 Cikalong",
+    "school:type_idn": "sd"
+  }
+},
+{
+  "type": "way",
+  "id": 611109555,
+  "center": {
+    "lat": -3.0368778,
+    "lon": 104.7514713
+  },
+  "tags": {
+    "amenity": "place_of_worship",
+    "building": "yes",
+    "name": "Masjid Silaturrahmi",
+    "religion": "muslim"
+  }
+},
+{
+  "type": "way",
+  "id": 613706990,
+  "center": {
+    "lat": -7.8595973,
+    "lon": 110.4093142
+  },
+  "tags": {
+    "addr:city": "Bantul",
+    "addr:street": "Jalan Samas",
+    "building": "yes",
+    "museum": "history",
+    "name": "Museum Padepokan Sumber Karahayon",
+    "operator": "Yayasan Keluarga Hondodento",
+    "operator:type": "private",
+    "tactile_paving": "no",
+    "tourism": "museum",
+    "wheelchair": "no",
+    "wikidata": "Q97308863",
+    "wikimedia_commons": "Category:Museum Padepokan Sumber Karahayon",
+    "wikipedia": "id:Museum Padepokan Sumber Karahayon"
+  }
+},
+{
+  "type": "way",
+  "id": 618446397,
+  "center": {
+    "lat": -6.7367702,
+    "lon": 107.3994878
+  },
+  "tags": {
+    "highway": "primary",
+    "lanes": "2",
+    "maxspeed": "40",
+    "name": "Jalan Raya Cikalong Wetan-Cipeundeuy",
+    "ref": "395"
+  }
+},
+{
+  "type": "way",
+  "id": 624301639,
+  "center": {
+    "lat": 5.5469028,
+    "lon": 95.3092630
+  },
+  "tags": {
+    "access:roof": "no",
+    "addr:full": "jl. Punge Blangcut",
+    "admin_level": "4",
+    "building": "government_office",
+    "building:condition": "good",
+    "building:levels": "1",
+    "building:material": "concrete",
+    "building:roof": "tin",
+    "building:structure": "confined_masonry",
+    "capacity:persons": "50-100",
+    "name": "Kantor Syahbandar dan KPLP Aceh",
+    "office": "government",
+    "source": "survey"
+  }
+},
+{
+  "type": "way",
+  "id": 626144681,
+  "center": {
+    "lat": -2.1340396,
+    "lon": 106.0947041
+  },
+  "tags": {
+    "amenity": "place_of_worship",
+    "building": "yes",
+    "name": "Masjid Silaturahmi",
+    "religion": "muslim"
+  }
+},
+{
+  "type": "way",
+  "id": 630697614,
+  "center": {
+    "lat": -7.9324440,
+    "lon": 112.6539540
+  },
+  "tags": {
+    "building": "yes",
+    "leisure": "sports_centre",
+    "name": "GOR Teluk Etna",
+    "sport": "pencak_silat;badminton"
+  }
+},
+{
+  "type": "way",
+  "id": 633530069,
+  "center": {
+    "lat": -6.9433367,
+    "lon": 107.6390068
+  },
+  "tags": {
+    "addr:city": "Bandung",
+    "addr:postcode": "40275",
+    "addr:street": "Jl. H. Basuki III, Binong, Kec. Batununggal, Kota Bandung, Jawa Barat 40275",
+    "amenity": "community_centre",
+    "building": "yes",
+    "name": "Gedung Padepokan Panglipur"
+  }
+},
+{
+  "type": "way",
+  "id": 635851092,
+  "center": {
+    "lat": -6.7488283,
+    "lon": 107.4451930
+  },
+  "tags": {
+    "addr:full": "KP WARUNGDOMBA RT01 RW03",
+    "amenity": "clinic",
+    "building": "yes",
+    "building:levels": "2",
+    "building:roof": "tile",
+    "building:walls": "brick",
+    "capacity": "500",
+    "name": "PUSKESMAS CIKALONGWETAN"
+  }
+},
+{
+  "type": "way",
+  "id": 636220109,
+  "center": {
+    "lat": 3.6975796,
+    "lon": 98.6426860
+  },
+  "tags": {
+    "addr:full": "Jalan Marelan V Lingk. III Kel. Terjun Kec. Medan Marelan",
+    "amenity": "place_of_worship",
+    "building": "mosque",
+    "denomination": "sunni",
+    "name": "Masjid Silaturahmi",
+    "ref": "01.6.02.26.12.000022",
+    "religion": "muslim"
+  }
+},
+{
+  "type": "way",
+  "id": 636471389,
+  "center": {
+    "lat": 3.5460497,
+    "lon": 98.6647612
+  },
+  "tags": {
+    "amenity": "place_of_worship",
+    "building": "yes",
+    "denomination": "sunni",
+    "name": "Masjid Silaturrahim",
+    "religion": "muslim"
+  }
+},
+{
+  "type": "way",
+  "id": 648029492,
+  "center": {
+    "lat": -1.6386628,
+    "lon": 103.6035756
+  },
+  "tags": {
+    "amenity": "place_of_worship",
+    "building": "mosque",
+    "name": "Masjid Silaturrahmi",
+    "religion": "muslim"
+  }
+},
+{
+  "type": "way",
+  "id": 661535068,
+  "center": {
+    "lat": 0.6483816,
+    "lon": 101.6237374
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Datuk Syahbandar"
+  }
+},
+{
+  "type": "way",
+  "id": 662018765,
+  "center": {
+    "lat": 0.6494216,
+    "lon": 101.6243695
+  },
+  "tags": {
+    "bridge": "yes",
+    "highway": "residential",
+    "layer": "1",
+    "name": "Jalan Datuk Syahbandar"
+  }
+},
+{
+  "type": "way",
+  "id": 662018766,
+  "center": {
+    "lat": 0.6498471,
+    "lon": 101.6242237
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Datuk Syahbandar"
+  }
+},
+{
+  "type": "way",
+  "id": 681553298,
+  "center": {
+    "lat": -6.9194797,
+    "lon": 107.7026340
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Padepokan I"
+  }
+},
+{
+  "type": "way",
+  "id": 684084863,
+  "center": {
+    "lat": -8.1744046,
+    "lon": 112.5513510
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Padepokan"
+  }
+},
+{
+  "type": "way",
+  "id": 691113858,
+  "center": {
+    "lat": -6.5253368,
+    "lon": 110.7580101
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan PP Amtsilati",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 691560696,
+  "center": {
+    "lat": -7.6578485,
+    "lon": 108.9030654
+  },
+  "tags": {
+    "access:roof": "no",
+    "addr:full": "Jl. Legokdompo RT 01 RW 04",
+    "amenity": "place_of_worship",
+    "building": "yes",
+    "building:levels": "1",
+    "building:roof": "tile",
+    "building:structure": "reinforced_masonry",
+    "building:walls": "brick",
+    "capacity": "70",
+    "name": "Mushola Wasilatul Huda",
+    "religion": "muslim"
+  }
+},
+{
+  "type": "way",
+  "id": 691560908,
+  "center": {
+    "lat": -7.6558561,
+    "lon": 108.9113680
+  },
+  "tags": {
+    "access:roof": "no",
+    "addr:full": "Jl. Karangsalam RT 02 RW 04",
+    "amenity": "place_of_worship",
+    "building": "yes",
+    "building:levels": "1",
+    "building:roof": "tile",
+    "building:structure": "reinforced_masonry",
+    "building:walls": "brick",
+    "capacity": "100",
+    "name": "Mushola Wasilatul Iman",
+    "religion": "muslim"
+  }
+},
+{
+  "type": "way",
+  "id": 696282701,
+  "center": {
+    "lat": -7.6489066,
+    "lon": 108.5660082
+  },
+  "tags": {
+    "addr:full": "Jalan Raya Cikalong-Sidamulih",
+    "admin_level": "7",
+    "building": "yes",
+    "building:levels": "2",
+    "name": "Kantor Desa Cikalong/Aula Desa"
+  }
+},
+{
+  "type": "way",
+  "id": 696282716,
+  "center": {
+    "lat": -7.6499849,
+    "lon": 108.5649710
+  },
+  "tags": {
+    "addr:full": "Jalan Raya Cikalong-Sidamulih",
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "Pustu Desa Cikalong"
+  }
+},
+{
+  "type": "way",
+  "id": 696299314,
+  "center": {
+    "lat": -7.6534496,
+    "lon": 108.5643544
+  },
+  "tags": {
+    "addr:full": "Jalan Raya Cikalong-Sidamulih",
+    "building": "yes",
+    "name": "SDN 1 Cikalong",
+    "school:type_idn": "sd"
+  }
+},
+{
+  "type": "way",
+  "id": 696321649,
+  "center": {
+    "lat": -7.6492795,
+    "lon": 108.5742290
+  },
+  "tags": {
+    "addr:full": "Dusun Citembong RT 01 RW01",
+    "building": "yes",
+    "name": "SDN 2 Cikalong",
+    "school:type_idn": "sd"
+  }
+},
+{
+  "type": "way",
+  "id": 696321650,
+  "center": {
+    "lat": -7.6493846,
+    "lon": 108.5741039
+  },
+  "tags": {
+    "addr:full": "Dusun Citembong RT 01 RW01",
+    "building": "yes",
+    "name": "SDN 2 Cikalong",
+    "school:type_idn": "sd"
+  }
+},
+{
+  "type": "way",
+  "id": 696321651,
+  "center": {
+    "lat": -7.6495466,
+    "lon": 108.5741421
+  },
+  "tags": {
+    "addr:full": "Dusun Citembong RT 01 RW01",
+    "building": "yes",
+    "name": "SDN 2 Cikalong",
+    "school:type_idn": "sd"
+  }
+},
+{
+  "type": "way",
+  "id": 698297801,
+  "center": {
+    "lat": 3.5674145,
+    "lon": 98.7070155
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Gang Silaturrahim",
+    "source": "Yahoo hires"
+  }
+},
+{
+  "type": "way",
+  "id": 700981680,
+  "center": {
+    "lat": -7.0872988,
+    "lon": 108.6207464
+  },
+  "tags": {
+    "landuse": "village_green",
+    "name": "RT 007 Blok Cikalong"
+  }
+},
+{
+  "type": "way",
+  "id": 703249097,
+  "center": {
+    "lat": -7.6424921,
+    "lon": 108.5789913
+  },
+  "tags": {
+    "admin_level": "8",
+    "boundary": "administrative",
+    "name": "Dusun Citembong Desa Cikalong"
+  }
+},
+{
+  "type": "way",
+  "id": 703249099,
+  "center": {
+    "lat": -7.6516350,
+    "lon": 108.5633406
+  },
+  "tags": {
+    "admin_level": "8",
+    "boundary": "administrative",
+    "name": "Dusun Cimanggu Desa Cikalong"
+  }
+},
+{
+  "type": "way",
+  "id": 704529573,
+  "center": {
+    "lat": -8.6106343,
+    "lon": 120.4682107
+  },
+  "tags": {
+    "highway": "residential",
+    "import": "yes",
+    "name": "Jalan Harimau 1",
+    "source": "digitalglobe"
+  }
+},
+{
+  "type": "way",
+  "id": 710853292,
+  "center": {
+    "lat": -7.5169055,
+    "lon": 108.2704920
+  },
+  "tags": {
+    "highway": "secondary",
+    "name": "Jalan Raya Papayan Cikalong"
+  }
+},
+{
+  "type": "way",
+  "id": 711647264,
+  "center": {
+    "lat": -6.7347889,
+    "lon": 107.4377463
+  },
+  "tags": {
+    "highway": "primary",
+    "name": "Jalan Raya Cikalong Wetan-Cipeundeuy",
+    "ref": "395"
+  }
+},
+{
+  "type": "way",
+  "id": 711647265,
+  "center": {
+    "lat": -6.7346915,
+    "lon": 107.4373004
+  },
+  "tags": {
+    "highway": "primary",
+    "name": "Jalan Raya Cikalong Wetan-Cipeundeuy",
+    "ref": "395"
+  }
+},
+{
+  "type": "way",
+  "id": 713282069,
+  "center": {
+    "lat": -6.3461654,
+    "lon": 106.8910891
+  },
+  "tags": {
+    "highway": "living_street",
+    "lanes": "1",
+    "motorcycle": "yes",
+    "name": "Gang Harimau Jawa I",
+    "oneway": "no",
+    "smoothness": "good",
+    "source": "HOT_InAWARESurvey_2017",
+    "surface": "asphalt",
+    "width": "0.75"
+  }
+},
+{
+  "type": "way",
+  "id": 715630926,
+  "center": {
+    "lat": -6.2888611,
+    "lon": 107.0159437
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Harimau 1",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 715630929,
+  "center": {
+    "lat": -6.2858502,
+    "lon": 107.0185462
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Harimau",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 716004732,
+  "center": {
+    "lat": -6.2882974,
+    "lon": 107.0166445
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Harimau 1",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 723954953,
+  "center": {
+    "lat": -6.3642738,
+    "lon": 106.8761873
+  },
+  "tags": {
+    "alt_name": "Jalan Merpati Puthi",
+    "highway": "residential",
+    "name": "Jalan Merpati Putih",
+    "source": "HOT_InAWARESurvey_2017"
+  }
+},
+{
+  "type": "way",
+  "id": 723954955,
+  "center": {
+    "lat": -6.3638670,
+    "lon": 106.8758686
+  },
+  "tags": {
+    "alt_name": "Jalan Merpati Puthi",
+    "highway": "residential",
+    "name": "Jalan Merpati Putih",
+    "source": "HOT_InAWARESurvey_2017"
+  }
+},
+{
+  "type": "way",
+  "id": 729238881,
+  "center": {
+    "lat": -0.5243458,
+    "lon": 101.5329435
+  },
+  "tags": {
+    "leisure": "sports_centre",
+    "name": "Sport Centre Kuantan Singingi",
+    "sport": "basketball;silat;martial_arts"
+  }
+},
+{
+  "type": "way",
+  "id": 732246473,
+  "center": {
+    "lat": -8.1121930,
+    "lon": 112.1700313
+  },
+  "tags": {
+    "highway": "living_street",
+    "import": "yes",
+    "name": "Jalan Gili Silat",
+    "source": "digitalglobe"
+  }
+},
+{
+  "type": "way",
+  "id": 732246474,
+  "center": {
+    "lat": -8.1121846,
+    "lon": 112.1699773
+  },
+  "tags": {
+    "bridge": "yes",
+    "highway": "living_street",
+    "import": "yes",
+    "layer": "1",
+    "name": "Jalan Gili Silat",
+    "source": "digitalglobe"
+  }
+},
+{
+  "type": "way",
+  "id": 734020746,
+  "center": {
+    "lat": -6.7320651,
+    "lon": 107.4417568
+  },
+  "tags": {
+    "access": "yes",
+    "bicycle": "yes",
+    "foot": "yes",
+    "highway": "trunk",
+    "name": "Jalan Raya Cikalong Wetan",
+    "oneway": "no",
+    "ref": "10",
+    "source": "Yahoo hires / Bing",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 738412565,
+  "center": {
+    "lat": -6.7339349,
+    "lon": 107.4328075
+  },
+  "tags": {
+    "amenity": "townhall",
+    "building": "yes",
+    "government": "administrative",
+    "name": "Kantor Desa Cikalong",
+    "office": "government"
+  }
+},
+{
+  "type": "way",
+  "id": 745531939,
+  "center": {
+    "lat": -7.6012807,
+    "lon": 110.9547740
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Harimau"
+  }
+},
+{
+  "type": "way",
+  "id": 776542501,
+  "center": {
+    "lat": -3.9072032,
+    "lon": 119.7456078
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Harimau"
+  }
+},
+{
+  "type": "way",
+  "id": 784100754,
+  "center": {
+    "lat": -6.3092226,
+    "lon": 106.8218816
+  },
+  "tags": {
+    "attraction": "animal",
+    "name": "Harimau Sumatra",
+    "operator": "Ragunan Zoo"
+  }
+},
+{
+  "type": "way",
+  "id": 787473319,
+  "center": {
+    "lat": -7.6433214,
+    "lon": 108.5985125
+  },
+  "tags": {
+    "highway": "unclassified",
+    "name": "Jalan Cikalong SIdamulih",
+    "smoothness": "intermediate",
+    "surface": "asphalt",
+    "width": "3"
+  }
+},
+{
+  "type": "way",
+  "id": 787473320,
+  "center": {
+    "lat": -7.6421132,
+    "lon": 108.5877138
+  },
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "name": "Jalan Cikalong SIdamulih",
+    "smoothness": "intermediate",
+    "surface": "asphalt",
+    "width": "3"
+  }
+},
+{
+  "type": "way",
+  "id": 799596164,
+  "center": {
+    "lat": -8.1733956,
+    "lon": 112.5495365
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Padepokan"
+  }
+},
+{
+  "type": "way",
+  "id": 800386886,
+  "center": {
+    "lat": -7.5062974,
+    "lon": 108.2628366
+  },
+  "tags": {
+    "highway": "tertiary",
+    "name": "Jalan Raya Papayan Cikalong"
+  }
+},
+{
+  "type": "way",
+  "id": 800386887,
+  "center": {
+    "lat": -7.5091068,
+    "lon": 108.2677598
+  },
+  "tags": {
+    "highway": "tertiary",
+    "name": "Jalan Raya Papayan Cikalong"
+  }
+},
+{
+  "type": "way",
+  "id": 800389323,
+  "center": {
+    "lat": -7.5077775,
+    "lon": 108.2658293
+  },
+  "tags": {
+    "highway": "tertiary",
+    "name": "Jalan Raya Papayan Cikalong"
+  }
+},
+{
+  "type": "way",
+  "id": 813142310,
+  "center": {
+    "lat": -5.3269893,
+    "lon": 105.1692733
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Silaturrahmi"
+  }
+},
+{
+  "type": "way",
+  "id": 814864713,
+  "center": {
+    "lat": -6.9927738,
+    "lon": 110.4448099
+  },
+  "tags": {
+    "highway": "unclassified",
+    "lanes": "1",
+    "motorcycle": "yes",
+    "name": "Jalan Padepokan Ganesha II",
+    "oneway": "yes",
+    "smoothness": "good",
+    "surface": "paving_stones",
+    "width": "4"
+  }
+},
+{
+  "type": "way",
+  "id": 815560464,
+  "center": {
+    "lat": -6.2178464,
+    "lon": 106.6925940
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Merpati Putih"
+  }
+},
+{
+  "type": "way",
+  "id": 822091499,
+  "center": {
+    "lat": -6.3457572,
+    "lon": 106.8911389
+  },
+  "tags": {
+    "highway": "living_street",
+    "lanes": "1",
+    "motorcar": "no",
+    "motorcycle": "yes",
+    "name": "Gang Harimau Jawa III",
+    "oneway": "no",
+    "smoothness": "good",
+    "source": "HOT_InAWARESurvey_2017",
+    "surface": "concrete",
+    "width": "0.5"
+  }
+},
+{
+  "type": "way",
+  "id": 822761997,
+  "center": {
+    "lat": -7.6475510,
+    "lon": 108.6102367
+  },
+  "tags": {
+    "highway": "tertiary",
+    "name": "Jalan Cikalong SIdamulih",
+    "smoothness": "intermediate",
+    "surface": "asphalt",
+    "width": "3"
+  }
+},
+{
+  "type": "way",
+  "id": 828608642,
+  "center": {
+    "lat": -3.9792359,
+    "lon": 122.6114778
+  },
+  "tags": {
+    "addr:city": "Kendari",
+    "addr:housenumber": "Bungkutoko",
+    "addr:street": "Jl Pelabuhan No 1",
+    "building": "yes",
+    "government": "administrative",
+    "name": "Kesyahbandaran dan Otoritas Pelabuhan Kendari",
+    "office": "government"
+  }
+},
+{
+  "type": "way",
+  "id": 834928695,
+  "center": {
+    "lat": -5.6326831,
+    "lon": 119.8499440
+  },
+  "tags": {
+    "building": "yes",
+    "government": "transportation",
+    "name": "Kantor Syahbandar Pelabuhan Jeneponto",
+    "office": "government"
+  }
+},
+{
+  "type": "way",
+  "id": 836953628,
+  "center": {
+    "lat": -6.3648815,
+    "lon": 106.8763847
+  },
+  "tags": {
+    "alt_name": "Jalan Merpati Puthi",
+    "highway": "service",
+    "name": "Jalan Merpati Putih",
+    "service": "driveway"
+  }
+},
+{
+  "type": "way",
+  "id": 862360017,
+  "center": {
+    "lat": -7.6036542,
+    "lon": 111.0700960
+  },
+  "tags": {
+    "historic": "monument",
+    "name": "Monument PSHT"
+  }
+},
+{
+  "type": "way",
+  "id": 889152749,
+  "center": {
+    "lat": -6.6787660,
+    "lon": 106.8471313
+  },
+  "tags": {
+    "highway": "living_street",
+    "motorcar": "no",
+    "motorcycle": "yes",
+    "name": "Cimande"
+  }
+},
+{
+  "type": "way",
+  "id": 895880084,
+  "center": {
+    "lat": -6.9432055,
+    "lon": 107.6390325
+  },
+  "tags": {
+    "addr:city": "Bandung",
+    "addr:postcode": "40275",
+    "addr:street": "Jl. H. Basuki III, Binong, Kec. Batununggal, Kota Bandung, Jawa Barat 40275",
+    "amenity": "community_centre",
+    "building": "yes",
+    "name": "Gedung Padepokan Panglipur"
+  }
+},
+{
+  "type": "way",
+  "id": 897616052,
+  "center": {
+    "lat": -3.9660637,
+    "lon": 122.5517861
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Harimau"
+  }
+},
+{
+  "type": "way",
+  "id": 909467045,
+  "center": {
+    "lat": -6.8863426,
+    "lon": 107.5640858
+  },
+  "tags": {
+    "access": "no",
+    "bicycle": "yes",
+    "foot": "yes",
+    "highway": "living_street",
+    "horse": "no",
+    "motor_vehicle": "permissive",
+    "motorcar": "no",
+    "motorcycle": "yes",
+    "name": "Gang Bapak Haji Sabandar"
+  }
+},
+{
+  "type": "way",
+  "id": 914675143,
+  "center": {
+    "lat": -0.0521729,
+    "lon": 109.3545186
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Silat"
+  }
+},
+{
+  "type": "way",
+  "id": 918597337,
+  "center": {
+    "lat": 3.6207876,
+    "lon": 98.6682167
+  },
+  "tags": {
+    "highway": "living_street",
+    "name": "Gang Cikalong"
+  }
+},
+{
+  "type": "way",
+  "id": 957760940,
+  "center": {
+    "lat": 3.5673865,
+    "lon": 98.7079030
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Gang Silaturrahim",
+    "source": "Yahoo hires"
+  }
+},
+{
+  "type": "way",
+  "id": 958457867,
+  "center": {
+    "lat": -6.1691101,
+    "lon": 106.8326553
+  },
+  "tags": {
+    "highway": "steps",
+    "name": "Terowongan Silaturahmi",
+    "note": "to be opened on 17 August 2021"
+  }
+},
+{
+  "type": "way",
+  "id": 958457868,
+  "center": {
+    "lat": -6.1692190,
+    "lon": 106.8326493
+  },
+  "tags": {
+    "highway": "footway",
+    "name": "Terowongan Silaturahmi",
+    "note": "to be opened on 17 August 2021"
+  }
+},
+{
+  "type": "way",
+  "id": 958457869,
+  "center": {
+    "lat": -6.1690537,
+    "lon": 106.8323231
+  },
+  "tags": {
+    "highway": "steps",
+    "name": "Terowongan Silaturahmi",
+    "note": "to be opened on 17 August 2021"
+  }
+},
+{
+  "type": "way",
+  "id": 958457870,
+  "center": {
+    "lat": -6.1690418,
+    "lon": 106.8322363
+  },
+  "tags": {
+    "highway": "footway",
+    "name": "Terowongan Silaturahmi",
+    "note": "to be opened on 17 August 2021"
+  }
+},
+{
+  "type": "way",
+  "id": 958457872,
+  "center": {
+    "lat": -6.1691354,
+    "lon": 106.8323988
+  },
+  "tags": {
+    "highway": "footway",
+    "layer": "-1",
+    "lit": "yes",
+    "name": "Terowongan Silaturahmi",
+    "note": "to be opened on 17 August 2021",
+    "tunnel": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 959685472,
+  "center": {
+    "lat": -6.9200840,
+    "lon": 107.7029376
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Padepokan IV"
+  }
+},
+{
+  "type": "way",
+  "id": 959685473,
+  "center": {
+    "lat": -6.9195918,
+    "lon": 107.7028988
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Padepokan III"
+  }
+},
+{
+  "type": "way",
+  "id": 970665489,
+  "center": {
+    "lat": -6.3644557,
+    "lon": 106.8756431
+  },
+  "tags": {
+    "alt_name": "Jalan Merpati Putih V",
+    "highway": "residential",
+    "name": "Jalan Merpati Putih 5",
+    "source": "HOT_InAWARESurvey_2017"
+  }
+},
+{
+  "type": "way",
+  "id": 980530241,
+  "center": {
+    "lat": -6.3517789,
+    "lon": 106.8924358
+  },
+  "tags": {
+    "highway": "living_street",
+    "lanes": "1",
+    "motorcar": "no",
+    "motorcycle": "yes",
+    "name": "Gang Harimau Jawa II",
+    "oneway": "no",
+    "smoothness": "intermediate",
+    "source": "HOT_InAWARESurvey_2017",
+    "surface": "concrete",
+    "width": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 1000539426,
+  "center": {
+    "lat": -8.1121268,
+    "lon": 112.1695797
+  },
+  "tags": {
+    "highway": "living_street",
+    "import": "yes",
+    "name": "Jalan Gili Silat",
+    "source": "digitalglobe"
+  }
+},
+{
+  "type": "way",
+  "id": 1005979911,
+  "center": {
+    "lat": -6.8868006,
+    "lon": 112.0484827
+  },
+  "tags": {
+    "artwork_type": "statue",
+    "name": "Patung Harimau",
+    "tourism": "artwork"
+  }
+},
+{
+  "type": "way",
+  "id": 1022227316,
+  "center": {
+    "lat": -2.9746984,
+    "lon": 104.7409690
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Pencak Silat"
+  }
+},
+{
+  "type": "way",
+  "id": 1024774379,
+  "center": {
+    "lat": -7.5438287,
+    "lon": 111.6517014
+  },
+  "tags": {
+    "name": "Gedung Padepokan Madiun Kampung Pesilat",
+    "office": "government"
+  }
+},
+{
+  "type": "way",
+  "id": 1026108489,
+  "center": {
+    "lat": -6.2320031,
+    "lon": 106.6031846
+  },
+  "tags": {
+    "dist:black": "563",
+    "dist:blue": "507",
+    "dist:gold": "563",
+    "dist:red": "445",
+    "dist:white": "482",
+    "golf": "hole",
+    "handicap": "3",
+    "name": "Harimau",
+    "par": "5",
+    "ref": "9"
+  }
+},
+{
+  "type": "way",
+  "id": 1026344398,
+  "center": {
+    "lat": -5.3280785,
+    "lon": 105.1693110
+  },
+  "tags": {
+    "highway": "unclassified",
+    "motor_vehicle": "no",
+    "name": "Jalan Silaturrahmi"
+  }
+},
+{
+  "type": "way",
+  "id": 1032505389,
+  "center": {
+    "lat": -6.3457458,
+    "lon": 106.8906640
+  },
+  "tags": {
+    "highway": "living_street",
+    "lanes": "1",
+    "motorcar": "no",
+    "motorcycle": "yes",
+    "name": "Gang Harimau Jawa III",
+    "oneway": "no",
+    "smoothness": "good",
+    "source": "HOT_InAWARESurvey_2017",
+    "surface": "concrete",
+    "width": "0.5"
+  }
+},
+{
+  "type": "way",
+  "id": 1032505390,
+  "center": {
+    "lat": -6.3460130,
+    "lon": 106.8906761
+  },
+  "tags": {
+    "highway": "living_street",
+    "lanes": "1",
+    "motorcar": "no",
+    "motorcycle": "yes",
+    "name": "Gang Harimau Jawa II",
+    "oneway": "no",
+    "smoothness": "good",
+    "source": "HOT_InAWARESurvey_2017",
+    "surface": "asphalt",
+    "width": "0.5"
+  }
+},
+{
+  "type": "way",
+  "id": 1032505392,
+  "center": {
+    "lat": -6.3456265,
+    "lon": 106.8908129
+  },
+  "tags": {
+    "highway": "living_street",
+    "lanes": "1",
+    "motorcar": "no",
+    "motorcycle": "yes",
+    "name": "Gang Harimau Jawa III",
+    "oneway": "no",
+    "smoothness": "good",
+    "source": "HOT_InAWARESurvey_2017",
+    "surface": "concrete",
+    "width": "0.5"
+  }
+},
+{
+  "type": "way",
+  "id": 1032505393,
+  "center": {
+    "lat": -6.3458249,
+    "lon": 106.8907524
+  },
+  "tags": {
+    "highway": "living_street",
+    "lanes": "1",
+    "motorcar": "no",
+    "motorcycle": "yes",
+    "name": "Gang Harimau Jawa II",
+    "oneway": "no",
+    "smoothness": "good",
+    "source": "HOT_InAWARESurvey_2017",
+    "surface": "asphalt",
+    "width": "0.5"
+  }
+},
+{
+  "type": "way",
+  "id": 1040098590,
+  "center": {
+    "lat": -8.5537305,
+    "lon": 116.1417881
+  },
+  "tags": {
+    "admin_level": "7",
+    "building": "yes",
+    "name": "Padepokan Ketapang"
+  }
+},
+{
+  "type": "way",
+  "id": 1040098591,
+  "center": {
+    "lat": -8.5537890,
+    "lon": 116.1418581
+  },
+  "tags": {
+    "admin_level": "7",
+    "building": "yes",
+    "name": "Padepokan Ketapang"
+  }
+},
+{
+  "type": "way",
+  "id": 1040098592,
+  "center": {
+    "lat": -8.5538300,
+    "lon": 116.1418179
+  },
+  "tags": {
+    "admin_level": "7",
+    "building": "yes",
+    "name": "Padepokan Ketapang"
+  }
+},
+{
+  "type": "way",
+  "id": 1040098593,
+  "center": {
+    "lat": -8.5537702,
+    "lon": 116.1417574
+  },
+  "tags": {
+    "admin_level": "7",
+    "building": "yes",
+    "name": "Padepokan Ketapang"
+  }
+},
+{
+  "type": "way",
+  "id": 1040098594,
+  "center": {
+    "lat": -8.5538269,
+    "lon": 116.1417385
+  },
+  "tags": {
+    "admin_level": "7",
+    "building": "yes",
+    "name": "Padepokan Ketapang"
+  }
+},
+{
+  "type": "way",
+  "id": 1040098595,
+  "center": {
+    "lat": -8.5537816,
+    "lon": 116.1416866
+  },
+  "tags": {
+    "admin_level": "7",
+    "building": "yes",
+    "name": "Padepokan Ketapang"
+  }
+},
+{
+  "type": "way",
+  "id": 1040104536,
+  "center": {
+    "lat": 0.8582945,
+    "lon": 104.6094556
+  },
+  "tags": {
+    "landuse": "harbour",
+    "name": "Kantor Kesyahbandaran dan Otoritas Pelabuhan Kelas III Kijang",
+    "operator": "Kementerian Perhubungan"
+  }
+},
+{
+  "type": "way",
+  "id": 1041009046,
+  "center": {
+    "lat": -6.9933715,
+    "lon": 110.4458605
+  },
+  "tags": {
+    "highway": "residential",
+    "lanes": "1",
+    "motorcycle": "yes",
+    "name": "Jalan Padepokan Ganesha I",
+    "oneway": "no",
+    "smoothness": "intermediate",
+    "source": "HOT_InAWARESurvey_2018",
+    "surface": "paving_stones",
+    "width": "4"
+  }
+},
+{
+  "type": "way",
+  "id": 1049816427,
+  "center": {
+    "lat": -7.4785835,
+    "lon": 112.4190850
+  },
+  "tags": {
+    "amenity": "place_of_worship",
+    "building": "yes",
+    "name": "Masjid Pagar Nusa",
+    "religion": "muslim"
+  }
+},
+{
+  "type": "way",
+  "id": 1072262152,
+  "center": {
+    "lat": -7.5132387,
+    "lon": 111.0293918
+  },
+  "tags": {
+    "building": "yes",
+    "name": "PSHT SUB. TEGAL GEDE MOJODOYONG",
+    "school:type_idn": "sd"
+  }
+},
+{
+  "type": "way",
+  "id": 1101789993,
+  "center": {
+    "lat": -6.3635051,
+    "lon": 106.8751564
+  },
+  "tags": {
+    "alt_name": "Jalan Merpati Puthi",
+    "highway": "residential",
+    "name": "Jalan Merpati Putih",
+    "source": "HOT_InAWARESurvey_2017"
+  }
+},
+{
+  "type": "way",
+  "id": 1110045313,
+  "center": {
+    "lat": -6.9178844,
+    "lon": 107.6758157
+  },
+  "tags": {
+    "highway": "residential",
+    "lanes": "1",
+    "name": "Jalan Pencak Silat",
+    "name:en": "Pencak Silat Alley",
+    "oneway": "no",
+    "smoothness": "good",
+    "surface": "asphalt",
+    "width": "3"
+  }
+},
+{
+  "type": "way",
+  "id": 1113108829,
+  "center": {
+    "lat": -6.1691227,
+    "lon": 106.8323575
+  },
+  "tags": {
+    "highway": "steps",
+    "layer": "-1",
+    "name": "Terowongan Silaturahmi",
+    "note": "to be opened on 17 August 2021",
+    "tunnel": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1147970926,
+  "center": {
+    "lat": -7.3322977,
+    "lon": 109.2386655
+  },
+  "tags": {
+    "amenity": "place_of_worship",
+    "name": "Padepokan Ashta Brata",
+    "religion": "buddhist"
+  }
+},
+{
+  "type": "way",
+  "id": 1150322867,
+  "center": {
+    "lat": -0.9069252,
+    "lon": 100.4107405
+  },
+  "tags": {
+    "addr:city": "Kota Padang",
+    "addr:district": "Kec. Kuranji",
+    "addr:postcode": "25156",
+    "addr:province": "Sumatera Barat",
+    "addr:street": "Jl. Tampat Durian",
+    "addr:subdistrict": "Korong Gadang",
+    "amenity": "dojo",
+    "building": "yes",
+    "name": "Paguruan Silek Kuciang Lia"
+  }
+},
+{
+  "type": "way",
+  "id": 1153142247,
+  "center": {
+    "lat": -5.3945282,
+    "lon": 105.2567928
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Harimau"
+  }
+},
+{
+  "type": "way",
+  "id": 1173014473,
+  "center": {
+    "lat": -7.1088931,
+    "lon": 111.9608142
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Sekretariat PSHT Ranting Soko"
+  }
+},
+{
+  "type": "way",
+  "id": 1180471112,
+  "center": {
+    "lat": -6.3372783,
+    "lon": 106.8537027
+  },
+  "tags": {
+    "bridge": "yes",
+    "highway": "living_street",
+    "lanes": "1",
+    "layer": "1",
+    "motorcar": "no",
+    "motorcycle": "yes",
+    "name": "Gang Bandrong",
+    "oneway": "no",
+    "smoothness": "intermediate",
+    "source": "HOT_InAWARESurvey_2017",
+    "surface": "asphalt",
+    "width": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 1180471113,
+  "center": {
+    "lat": -6.3372817,
+    "lon": 106.8537861
+  },
+  "tags": {
+    "highway": "living_street",
+    "lanes": "1",
+    "motorcar": "no",
+    "motorcycle": "yes",
+    "name": "Gang Bandrong",
+    "oneway": "no",
+    "smoothness": "intermediate",
+    "source": "HOT_InAWARESurvey_2017",
+    "surface": "asphalt",
+    "width": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 1181643709,
+  "center": {
+    "lat": -7.2706747,
+    "lon": 111.9325923
+  },
+  "tags": {
+    "building": "yes",
+    "name": "padepokan pp.darul Quran",
+    "school:type_idn": "sd"
+  }
+},
+{
+  "type": "way",
+  "id": 1181643751,
+  "center": {
+    "lat": -7.3499948,
+    "lon": 111.9112538
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Sekertariat PSHT kedungsari",
+    "office": "association"
+  }
+},
+{
+  "type": "way",
+  "id": 1181645017,
+  "center": {
+    "lat": -7.2707719,
+    "lon": 111.9324861
+  },
+  "tags": {
+    "building": "yes",
+    "name": "padepokan pp.darul Quran",
+    "school:type_idn": "sd"
+  }
+},
+{
+  "type": "way",
+  "id": 1181655940,
+  "center": {
+    "lat": -7.3250497,
+    "lon": 111.9206643
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Prasasti Tugu Pagar Nusa Pandantoyo",
+    "tourism": "museum"
+  }
+},
+{
+  "type": "way",
+  "id": 1181655941,
+  "center": {
+    "lat": -7.3249260,
+    "lon": 111.9206764
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Prasasti Tugu Pagar Nusa Pandantoyo",
+    "tourism": "museum"
+  }
+},
+{
+  "type": "way",
+  "id": 1181655942,
+  "center": {
+    "lat": -7.3247956,
+    "lon": 111.9206817
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Prasasti Tugu Pagar Nusa Pandantoyo",
+    "tourism": "museum"
+  }
+},
+{
+  "type": "way",
+  "id": 1181663007,
+  "center": {
+    "lat": -7.3388798,
+    "lon": 111.9240310
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Sekertariat Psht Temayang",
+    "office": "ngo"
+  }
+},
+{
+  "type": "way",
+  "id": 1181992606,
+  "center": {
+    "lat": -8.1735868,
+    "lon": 112.5500803
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Padepokan"
+  }
+},
+{
+  "type": "way",
+  "id": 1181992607,
+  "center": {
+    "lat": -8.1737473,
+    "lon": 112.5505230
+  },
+  "tags": {
+    "bridge": "yes",
+    "highway": "residential",
+    "layer": "1",
+    "name": "Jalan Padepokan"
+  }
+},
+{
+  "type": "way",
+  "id": 1190236884,
+  "center": {
+    "lat": -7.8108561,
+    "lon": 110.2868208
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Gang Padepokan"
+  }
+},
+{
+  "type": "way",
+  "id": 1191061001,
+  "center": {
+    "lat": -7.3249007,
+    "lon": 111.9206749
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Prasasti Tugu Pagar Nusa Pandantoyo",
+    "tourism": "museum"
+  }
+},
+{
+  "type": "way",
+  "id": 1197753152,
+  "center": {
+    "lat": -6.9243676,
+    "lon": 107.7687242
+  },
+  "tags": {
+    "leisure": "pitch",
+    "name": "GOR Pencak Silat"
+  }
+},
+{
+  "type": "way",
+  "id": 1211121965,
+  "center": {
+    "lat": -6.2247198,
+    "lon": 106.6799235
+  },
+  "tags": {
+    "highway": "living_street",
+    "name": "Jalan Merpati Putih"
+  }
+},
+{
+  "type": "way",
+  "id": 1212981185,
+  "center": {
+    "lat": -6.3339722,
+    "lon": 107.3382244
+  },
+  "tags": {
+    "industrial": "textile",
+    "landuse": "industrial",
+    "name": "PT. Buana Harimau Textile"
+  }
+},
+{
+  "type": "way",
+  "id": 1218565639,
+  "center": {
+    "lat": -6.1185263,
+    "lon": 106.8290960
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Kantor Syahbandar Marina Ancol"
+  }
+},
+{
+  "type": "way",
+  "id": 1222527797,
+  "center": {
+    "lat": -6.9117508,
+    "lon": 107.6759513
+  },
+  "tags": {
+    "building": "sports_centre",
+    "name": "Padepokan Pencaksilat",
+    "sport": "silat"
+  }
+},
+{
+  "type": "way",
+  "id": 1232246145,
+  "center": {
+    "lat": -6.2533968,
+    "lon": 106.7911376
+  },
+  "tags": {
+    "highway": "residential",
+    "lanes": "1",
+    "motorcycle": "yes",
+    "name": "Jalan KRI Harimau",
+    "oneway": "no",
+    "source": "HOT_InAWARESurvey_2017",
+    "surface": "asphalt",
+    "width": "3"
+  }
+},
+{
+  "type": "way",
+  "id": 1240283257,
+  "center": {
+    "lat": -6.3641891,
+    "lon": 106.8752673
+  },
+  "tags": {
+    "alt_name": "Jalan Merpati Putih II",
+    "highway": "residential",
+    "name": "Jalan Merpati Putih 2",
+    "source": "HOT_InAWARESurvey_2017"
+  }
+},
+{
+  "type": "way",
+  "id": 1247346659,
+  "center": {
+    "lat": -6.7483665,
+    "lon": 107.4451169
+  },
+  "tags": {
+    "access": "yes",
+    "bicycle": "yes",
+    "foot": "yes",
+    "highway": "trunk",
+    "name": "Jalan Cikalong",
+    "oneway": "no",
+    "ref": "10",
+    "source": "Yahoo hires / Bing"
+  }
+},
+{
+  "type": "way",
+  "id": 1247346660,
+  "center": {
+    "lat": -6.7242245,
+    "lon": 107.4477106
+  },
+  "tags": {
+    "access": "yes",
+    "bicycle": "yes",
+    "foot": "yes",
+    "highway": "trunk",
+    "name": "Jalan Raya Cikalong Wetan",
+    "oneway": "no",
+    "ref": "10",
+    "source": "Yahoo hires / Bing",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1260639493,
+  "center": {
+    "lat": -7.9923279,
+    "lon": 113.3099424
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Padepokan mbah Citro"
+  }
+},
+{
+  "type": "way",
+  "id": 1280453059,
+  "center": {
+    "lat": -0.5077127,
+    "lon": 117.1552187
+  },
+  "tags": {
+    "addr:city": "Samarinda",
+    "addr:housenumber": "No.2",
+    "addr:postcode": "75115",
+    "addr:province": "East Kalimantan",
+    "addr:street": "Jalan Yos Sudarso",
+    "building": "yes",
+    "description": "Pelabuhan",
+    "government": "yes",
+    "name": "Kantor Kesyahbandaran & Otoritas Pelabuhan Kelas. 1 Samarinda",
+    "name:en": "Samarinda Harbour Master",
+    "office": "government",
+    "short_name": "KSOP Samarinda"
+  }
+},
+{
+  "type": "way",
+  "id": 1282149121,
+  "center": {
+    "lat": -6.6951987,
+    "lon": 106.8241691
+  },
+  "tags": {
+    "layer": "1",
+    "man_made": "bridge",
+    "name": "Jembatan Cimande"
+  }
+},
+{
+  "type": "way",
+  "id": 1290851395,
+  "center": {
+    "lat": -7.3477646,
+    "lon": 108.2209640
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Harimau III"
+  }
+},
+{
+  "type": "way",
+  "id": 1304283092,
+  "center": {
+    "lat": -6.7955632,
+    "lon": 108.5695946
+  },
+  "tags": {
+    "addr:city": "Kabupaten Cirebon",
+    "addr:district": "Mundu",
+    "addr:postcode": "45173",
+    "addr:province": "Jawa Barat",
+    "addr:street": "Pahing, Sinarancang",
+    "building": "yes",
+    "building:levels": "2",
+    "name": "Padepokan Anti Galau Cirebon",
+    "religion": "muslim"
+  }
+},
+{
+  "type": "way",
+  "id": 1307908320,
+  "center": {
+    "lat": -6.9935149,
+    "lon": 110.4448268
+  },
+  "tags": {
+    "highway": "residential",
+    "lanes": "1",
+    "motorcycle": "yes",
+    "name": "Jalan Padepokan Ganesha I",
+    "oneway": "no",
+    "smoothness": "intermediate",
+    "source": "HOT_InAWARESurvey_2018",
+    "surface": "paving_stones",
+    "width": "4"
+  }
+},
+{
+  "type": "way",
+  "id": 1309261738,
+  "center": {
+    "lat": -5.1504178,
+    "lon": 119.4242249
+  },
+  "tags": {
+    "highway": "living_street",
+    "name": "Jalan Harimau",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1312579012,
+  "center": {
+    "lat": -5.3294778,
+    "lon": 105.1677429
+  },
+  "tags": {
+    "highway": "unclassified",
+    "motor_vehicle": "no",
+    "name": "Jalan Silaturrahmi"
+  }
+},
+{
+  "type": "way",
+  "id": 1312579013,
+  "center": {
+    "lat": -5.3290036,
+    "lon": 105.1693674
+  },
+  "tags": {
+    "highway": "unclassified",
+    "motor_vehicle": "no",
+    "name": "Jalan Silaturrahmi"
+  }
+},
+{
+  "type": "way",
+  "id": 1318816312,
+  "center": {
+    "lat": -6.7430969,
+    "lon": 107.4452920
+  },
+  "tags": {
+    "amenity": "hospital",
+    "name": "RSUD Cikalong Wetan"
+  }
+},
+{
+  "type": "way",
+  "id": 1324828157,
+  "center": {
+    "lat": -7.9552558,
+    "lon": 112.5653165
+  },
+  "tags": {
+    "name": "Padepokan Bi`rul Tazkiyah",
+    "office": "educational_institution"
+  }
+},
+{
+  "type": "way",
+  "id": 1349946908,
+  "center": {
+    "lat": -7.1461585,
+    "lon": 107.7845806
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Padepokan Tirta Anyar"
+  }
+},
+{
+  "type": "way",
+  "id": 1366010969,
+  "center": {
+    "lat": -6.1760356,
+    "lon": 107.1887795
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Harimau"
+  }
+},
+{
+  "type": "way",
+  "id": 1366010971,
+  "center": {
+    "lat": -6.1755369,
+    "lon": 107.1867485
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Harimau"
+  }
+},
+{
+  "type": "way",
+  "id": 1377109859,
+  "center": {
+    "lat": -6.2875240,
+    "lon": 107.0170894
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "Jalan Harimau 1",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1385487411,
+  "center": {
+    "lat": -5.1149779,
+    "lon": 119.4134760
+  },
+  "tags": {
+    "building": "yes",
+    "government": "public_safety",
+    "name": "Kantor Kesyahbandaran dan Otoritas Pelabuhan Utama Makassar",
+    "office": "government"
+  }
+},
+{
+  "type": "way",
+  "id": 1395291902,
+  "center": {
+    "lat": -6.5965903,
+    "lon": 106.7748840
+  },
+  "tags": {
+    "access": "destination",
+    "highway": "residential",
+    "name": "Jalan Harimau"
+  }
+},
+{
+  "type": "way",
+  "id": 1411071576,
+  "center": {
+    "lat": 3.2123922,
+    "lon": 97.3566537
+  },
+  "tags": {
+    "addr:city": "aceh selatan",
+    "addr:district": "kluet tengah",
+    "addr:housename": "MASJID SILATURRAHIM",
+    "addr:postcode": "23772",
+    "addr:province": "aceh",
+    "addr:street": "kota fajar-mangganat",
+    "addr:subdistrict": "mersak, dusun pertanian",
+    "addr:unit": "1",
+    "amenity": "place_of_worship",
+    "building": "yes",
+    "name": "SILATURRAHUM",
+    "religion": "muslim",
+    "service_times": "24 jam"
+  }
+},
+{
+  "type": "way",
+  "id": 1416015935,
+  "center": {
+    "lat": -7.1355437,
+    "lon": 107.5524820
+  },
+  "tags": {
+    "name": "Saluran PLTA Cikalong",
+    "usage": "headrace",
+    "waterway": "ditch"
+  }
+},
+{
+  "type": "way",
+  "id": 1416015938,
+  "center": {
+    "lat": -7.1285508,
+    "lon": 107.5477255
+  },
+  "tags": {
+    "layer": "-1",
+    "name": "Saluran PLTA Cikalong",
+    "tunnel": "flooded",
+    "usage": "headrace",
+    "waterway": "ditch"
+  }
+},
+{
+  "type": "way",
+  "id": 1416015939,
+  "center": {
+    "lat": -7.1244522,
+    "lon": 107.5435672
+  },
+  "tags": {
+    "name": "Saluran PLTA Cikalong",
+    "usage": "headrace",
+    "waterway": "ditch"
+  }
+},
+{
+  "type": "way",
+  "id": 1416015940,
+  "center": {
+    "lat": -7.1185653,
+    "lon": 107.5471350
+  },
+  "tags": {
+    "layer": "-1",
+    "location": "underground",
+    "man_made": "pipeline",
+    "name": "Pipa Pesat PLTA Cikalong",
+    "operator": "Indonesia Power",
+    "operator:wikidata": "Q12486500",
+    "substance": "water",
+    "usage": "penstock",
+    "waterway": "pressurised"
+  }
+},
+{
+  "type": "way",
+  "id": 1416015950,
+  "center": {
+    "lat": -7.1150215,
+    "lon": 107.5499379
+  },
+  "tags": {
+    "name": "PLTA Cikalong",
+    "operator": "Indonesia Power",
+    "operator:wikidata": "Q12486500",
+    "plant:method": "water-storage",
+    "plant:output:electricity": "19.2 MW",
+    "plant:source": "hydro",
+    "power": "plant"
+  }
+},
+{
+  "type": "way",
+  "id": 1419755764,
+  "center": {
+    "lat": -0.5224724,
+    "lon": 101.5329328
+  },
+  "tags": {
+    "building": "yes",
+    "hoops": "2",
+    "leisure": "stadium",
+    "name": "GOR B",
+    "sport": "basketball;silat;martial_arts",
+    "surface": "concrete"
+  }
+},
+{
+  "type": "way",
+  "id": 1419755765,
+  "center": {
+    "lat": -0.5230440,
+    "lon": 101.5322504
+  },
+  "tags": {
+    "building": "yes",
+    "hoops": "2",
+    "leisure": "stadium",
+    "name": "GOR A",
+    "sport": "basketball;silat;martial_arts",
+    "surface": "concrete"
+  }
+},
+{
+  "type": "way",
+  "id": 1424965189,
+  "center": {
+    "lat": -6.3140931,
+    "lon": 107.5634797
+  },
+  "tags": {
+    "highway": "primary",
+    "name": "Jalan Raya Cikalong - Cilamaya",
+    "oneway": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 1432474928,
+  "center": {
+    "lat": -6.2668834,
+    "lon": 107.0865505
+  },
+  "tags": {
+    "addr:city": "Kabupaten Bekasi",
+    "addr:district": "Cikarang Barat",
+    "addr:housenumber": "46",
+    "addr:neighbourhood": "06",
+    "addr:postcode": "17530",
+    "addr:province": "Jawa Barat",
+    "addr:street": "Jalan Nona Merah",
+    "addr:subdistrict": "Telaga Asih",
+    "building": "yes",
+    "building:levels": "2",
+    "name": "Majelis Silaturahmi & Dzikir Lillahi Ta'ala Nona Merah Cibitung"
+  }
+},
+{
+  "type": "way",
+  "id": 1462038328,
+  "center": {
+    "lat": -6.7500440,
+    "lon": 108.5530876
+  },
+  "tags": {
+    "name": "Sungai Cikalong",
+    "waterway": "river"
+  }
+},
+{
+  "type": "way",
+  "id": 1466936720,
+  "center": {
+    "lat": 1.1385255,
+    "lon": 103.9502053
+  },
+  "tags": {
+    "landuse": "residential",
+    "name": "Villa Bukit Harimau",
+    "residential": "single_family"
+  }
+},
+{
+  "type": "way",
+  "id": 1473596415,
+  "center": {
+    "lat": 3.6975608,
+    "lon": 98.6427037
+  },
+  "tags": {
+    "denomination": "sunni",
+    "landuse": "religious",
+    "name": "Masjid Silaturahmi",
+    "religion": "muslim"
+  }
+},
+{
+  "type": "way",
+  "id": 1506539991,
+  "center": {
+    "lat": 0.9426349,
+    "lon": 104.5321964
+  },
+  "tags": {
+    "building": "house",
+    "layer": "-1",
+    "name": "Perumahan Bukit Merpati Putih 2"
+  }
+},
+{
+  "type": "relation",
+  "id": 8831135,
+  "center": {
+    "lat": -6.7477533,
+    "lon": 107.4429693
+  },
+  "tags": {
+    "addr:full": "KP BARU RT02 RW04",
+    "amenity": "school",
+    "building:levels": "1",
+    "building:roof": "tile",
+    "building:walls": "brick",
+    "capacity": "1500",
+    "name": "SMA N 1 CIKALONG WETAN",
+    "school:type_idn": "sma",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 10622099,
+  "center": {
+    "lat": 0.3483971,
+    "lon": 111.8191607
+  },
+  "tags": {
+    "admin_level": "6",
+    "boundary": "administrative",
+    "name": "Silat Hilir",
+    "official_name": "Kecamatan Silat Hilir",
+    "type": "boundary",
+    "wikidata": "Q12514774",
+    "wikipedia": "id:Silat Hilir, Kapuas Hulu"
+  }
+},
+{
+  "type": "relation",
+  "id": 10622101,
+  "center": {
+    "lat": 0.2024174,
+    "lon": 112.2337091
+  },
+  "tags": {
+    "admin_level": "6",
+    "boundary": "administrative",
+    "name": "Silat Hulu",
+    "official_name": "Kecamatan Silat Hulu",
+    "type": "boundary",
+    "wikidata": "Q12514763",
+    "wikipedia": "id:Silat Hulu, Kapuas Hulu"
+  }
+},
+{
+  "type": "relation",
+  "id": 16010708,
+  "center": {
+    "lat": -7.7581595,
+    "lon": 108.1774566
+  },
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative",
+    "name": "Cikalong",
+    "type": "boundary",
+    "wikidata": "Q11167934",
+    "wikipedia": "id:Cikalong, Cikalong, Tasikmalaya"
+  }
+},
+{
+  "type": "relation",
+  "id": 16010715,
+  "center": {
+    "lat": -7.7615375,
+    "lon": 108.1823031
+  },
+  "tags": {
+    "admin_level": "8",
+    "boundary": "administrative",
+    "name": "Cikalong",
+    "type": "boundary"
+  }
+},
+{
+  "type": "relation",
+  "id": 17401647,
+  "center": {
+    "lat": -6.1978281,
+    "lon": 106.8174836
+  },
+  "tags": {
+    "colour": "#f79c41",
+    "from": "IRTI",
+    "name": "Bus Wisata 4: Pencakar Langit",
+    "name:en": "Transjakarta Tour Bus 4: Jakarta Skyscrapper",
+    "network": "Transjakarta",
+    "network:wikidata": "Q1671143",
+    "opening_hours": "Mo-Su 10:00-17:00",
+    "operator": "Transjakarta",
+    "public_transport:version": "2",
+    "ref": "BW4",
+    "roundtrip": "yes",
+    "route": "bus",
+    "to": "IRTI",
+    "type": "route",
+    "via": "Thamrin;Bundaran HI;Sudirman;Bundaran Senayan"
+  }
+},
+{
+  "type": "relation",
+  "id": 18793035,
+  "center": {
+    "lat": -6.7927646,
+    "lon": 107.4288987
+  },
+  "tags": {
+    "colour": "#F7ED38",
+    "from": "Padalarang",
+    "name": "Rute Angkot Padalarang-Cikalong Wetan-Cipeundeuy",
+    "network": "Angkot Kabupaten Bandung Barat",
+    "public_transport:version": "2",
+    "ref": "A01",
+    "route": "bus",
+    "to": "Cipeundeuy",
+    "type": "route",
+    "via": "Cikalong Wetan"
+  }
+},
+{
+  "type": "relation",
+  "id": 18793036,
+  "center": {
+    "lat": -6.7877512,
+    "lon": 107.4290350
+  },
+  "tags": {
+    "colour": "#F7ED38",
+    "from": "Cipeundeuy",
+    "name": "Rute Angkot Cipeundeuy-Cikalong Wetan-Padalarang",
+    "network": "Angkot Kabupaten Bandung Barat",
+    "public_transport:version": "2",
+    "ref": "A01",
+    "route": "bus",
+    "to": "Padalarang",
+    "type": "route",
+    "via": "Cikalong Wetan"
+  }
+},
+{
+  "type": "relation",
+  "id": 19957938,
+  "center": {
+    "lat": -6.7390073,
+    "lon": 106.8862440
+  },
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative",
+    "name": "Cimande",
+    "place": "village",
+    "postal_code": "16730",
+    "ref:kemendagri": "32.01.27.2007",
+    "type": "boundary",
+    "wikidata": "Q12479025",
+    "wikipedia": "id:Cimande, Caringin, Bogor"
+  }
+},
+{
+  "type": "relation",
+  "id": 19957939,
+  "center": {
+    "lat": -6.6974487,
+    "lon": 106.8262184
+  },
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative",
+    "name": "Cimande Hilir",
+    "place": "village",
+    "postal_code": "16730",
+    "ref:kemendagri": "32.01.27.2002",
+    "type": "boundary",
+    "wikidata": "Q12479024",
+    "wikipedia": "id:Cimande Hilir, Caringin, Bogor"
+  }
+},
+{
+  "type": "relation",
+  "id": 20206746,
+  "center": {
+    "lat": 3.2943564,
+    "lon": 99.2068890
+  },
+  "tags": {
+    "admin_level": "6",
+    "boundary": "administrative",
+    "name": "Tebing Syahbandar",
+    "ref": "12.18.16",
+    "type": "boundary",
+    "wikidata": "Q10317235",
+    "wikipedia": "id:Tebing Syahbandar, Serdang Bedagai"
+  }
+},
+{
+  "type": "relation",
+  "id": 20972912,
+  "center": {
+    "lat": -7.6608254,
+    "lon": 110.7254183
+  },
+  "tags": {
+    "leisure": "fitness_centre",
+    "name": "PSHT Pajangan Ranting Juwiran",
+    "type": "multipolygon"
+  }
+}
+
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "schema": "silatara.keyframes/v1",
+  "animation_id": "anim.psdp.sikap-tegak.v1",
+  "movement_id": "mv.psdp.sikap-tegak",
+  "animation_status": "generated",
+  "title": "Sikap tegak 1–4",
+  "description": "Karakter berdiri tegak menghadap penonton, tumit rapat, lalu berganti berurutan: sikap tegak 1 (lengan lurus di samping badan), 2 (kepalan di pinggang), 3 (kepalan di depan dada), 4 (tangan bersilang di depan dada).",
+  "view": "front",
+  "source_ids": ["src.nugroho.2005", "src.herdiana.2008"],
+  "keyframes": [
+    {"id": "kf-1", "phase_id": "mv.psdp.sikap-tegak#p1", "label": "Sikap tegak 1", "caption": "Lengan lurus di samping badan",
+     "pose": {"pelvis": [180, 0], "feet": {"L": [187, 0], "R": [173, 0]}, "arms": {"L": [6, 0], "R": [6, 0]}, "hands": {"L": "open", "R": "open"}, "foot_turn": {"L": 45, "R": 45}}},
+    {"id": "kf-2", "phase_id": "mv.psdp.sikap-tegak#p2", "label": "Sikap tegak 2", "caption": "Kedua kepalan di samping pinggang",
+     "pose": {"pelvis": [180, 0], "feet": {"L": [187, 0], "R": [173, 0]}, "arms": {"L": [30, 72], "R": [30, 72]}, "hands": {"L": "fist", "R": "fist"}, "foot_turn": {"L": 45, "R": 45}}},
+    {"id": "kf-3", "phase_id": "mv.psdp.sikap-tegak#p3", "label": "Sikap tegak 3", "caption": "Kedua kepalan di depan dada",
+     "pose": {"pelvis": [180, 0], "feet": {"L": [187, 0], "R": [173, 0]}, "arms": {"L": [16, 146], "R": [16, 146]}, "hands": {"L": "fist", "R": "fist"}, "foot_turn": {"L": 45, "R": 45}}},
+    {"id": "kf-4", "phase_id": "mv.psdp.sikap-tegak#p4", "label": "Sikap tegak 4", "caption": "Kedua tangan bersilang di depan dada",
+     "pose": {"pelvis": [180, 0], "feet": {"L": [187, 0], "R": [173, 0]}, "arms": {"L": [8, 150], "R": [12, 140]}, "hands": {"L": "open", "R": "open"}, "foot_turn": {"L": 45, "R": 45}}}
+  ],
+  "sequence": [
+    {"pose": "kf-1", "hold_ms": 1200},
+    {"pose": "kf-2", "move_ms": 700, "hold_ms": 1200},
+    {"pose": "kf-3", "move_ms": 700, "hold_ms": 1200},
+    {"pose": "kf-4", "move_ms": 700, "hold_ms": 1200}
+  ],
+  "return_ms": 900
+}

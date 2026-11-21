@@ -1,0 +1,69 @@
+{
+  "schema": "silatara.directory.keywords/v1",
+  "updated": "2026-11-21",
+  "note": "Kamus kata kunci discovery. Istilah TIDAK dianggap bersinonim penuh: setiap istilah punya cakupan dan konteks daerah. 'evidence' = kekuatan istilah sebagai bukti aktivitas pencak silat bila muncul pada nama tempat.",
+  "categories": {
+    "jenis_tempat": [
+      {"term": "perguruan pencak silat", "evidence": "strong", "scope": "lembaga pengajaran; juga dipakai untuk kantor pusat"},
+      {"term": "perguruan silat", "evidence": "strong"},
+      {"term": "padepokan pencak silat", "evidence": "strong"},
+      {"term": "padepokan", "evidence": "weak", "scope": "Jawa; juga dipakai untuk pesantren, sanggar seni, penginapan — perlu bukti tambahan"},
+      {"term": "paguron", "evidence": "medium", "scope": "Sunda; tempat berguru penca"},
+      {"term": "paguruan silek", "evidence": "strong", "scope": "Minangkabau"},
+      {"term": "sasaran", "evidence": "weak", "scope": "Minangkabau: tempat belajar silek; kata umum di daerah lain"},
+      {"term": "sanggar pencak silat", "evidence": "strong"},
+      {"term": "sasana silat", "evidence": "strong"},
+      {"term": "gelanggang pencak silat", "evidence": "strong"},
+      {"term": "tempat latihan silat", "evidence": "strong"},
+      {"term": "pusat latihan pencak silat", "evidence": "strong"},
+      {"term": "training center pencak silat", "evidence": "strong"},
+      {"term": "UKM pencak silat", "evidence": "strong", "scope": "unit kegiatan mahasiswa"},
+      {"term": "ekstrakurikuler pencak silat", "evidence": "strong", "scope": "sekolah; biasanya tidak terbuka untuk umum"},
+      {"term": "rayon / ranting / cabang", "evidence": "context", "scope": "struktur wilayah perguruan (mis. PSHT); kuat bila disertai nama perguruan"}
+    ],
+    "organisasi": [
+      {"term": "IPSI", "evidence": "strong", "scope": "Pengurus Besar, Pengprov, Pengkab/Pengkot"},
+      {"term": "Pengprov IPSI", "evidence": "strong"},
+      {"term": "Pengkab IPSI", "evidence": "strong"},
+      {"term": "Pengkot IPSI", "evidence": "strong"},
+      {"term": "PSHT / Setia Hati Terate / SH Terate", "evidence": "strong"},
+      {"term": "IKSPI Kera Sakti", "evidence": "strong", "exclude_context": "klenteng, toponimi"},
+      {"term": "Merpati Putih", "evidence": "strong", "exclude_context": "nama jalan dan perumahan"},
+      {"term": "Tapak Suci", "evidence": "strong", "exclude_context": "klinik pengobatan alternatif"},
+      {"term": "Pagar Nusa", "evidence": "strong", "exclude_context": "masjid, nama perumahan"},
+      {"term": "Perisai Diri", "evidence": "strong"},
+      {"term": "Persinas ASAD", "evidence": "medium"}
+    ],
+    "istilah_lokal": [
+      {"term": "silek", "region": "Sumatera Barat", "evidence": "strong", "exclude_context": "toponimi desa 'Silek'"},
+      {"term": "maen pukulan / main pukulan", "region": "DKI Jakarta", "evidence": "strong"},
+      {"term": "penca / maenpo / ulin", "region": "Jawa Barat", "evidence": "medium"},
+      {"term": "pencé", "region": "Banten", "evidence": "medium"},
+      {"term": "kuntau", "region": "Kalimantan, Lampung", "evidence": "medium"},
+      {"term": "langga", "region": "Gorontalo", "evidence": "medium"},
+      {"term": "amanca / manca'", "region": "Sulawesi Selatan", "evidence": "medium"},
+      {"term": "bepencak", "region": "Kepulauan Bangka Belitung", "evidence": "medium"},
+      {"term": "akeket / okol", "region": "Madura (Jawa Timur)", "evidence": "weak", "scope": "okol juga gulat tradisional; perlu konteks"},
+      {"term": "mencak / kuntuh", "region": "Nusa Tenggara Barat", "evidence": "medium"}
+    ],
+    "aliran_tradisi": [
+      {"term": "Cimande", "evidence": "context", "exclude_context": "nama desa, sekolah, jembatan di Kab. Bogor"},
+      {"term": "Cikalong", "evidence": "context", "exclude_context": "nama kecamatan/desa di Cianjur, Tasikmalaya, Bandung Barat"},
+      {"term": "Syahbandar / Sabandar", "evidence": "context", "exclude_context": "kantor kesyahbandaran pelabuhan"},
+      {"term": "Beksi", "evidence": "medium"},
+      {"term": "Cingkrik", "evidence": "medium"},
+      {"term": "Bandrong", "evidence": "context", "exclude_context": "nama gang/desa"},
+      {"term": "Kumango", "evidence": "context", "exclude_context": "nama nagari, sungai, rumah makan"},
+      {"term": "Harimau", "evidence": "context", "exclude_context": "sangat umum: jalan, satwa, objek wisata"},
+      {"term": "Sera", "evidence": "context"},
+      {"term": "Lintau", "evidence": "context", "exclude_context": "nama kecamatan di Tanah Datar"}
+    ]
+  },
+  "exclusion_patterns": {
+    "description": "Pola yang menandai hasil BUKAN tempat pencak silat walau cocok kata kunci",
+    "name_prefix": ["jalan", "jl.", "gang", "sungai", "terowongan", "jembatan", "perumahan", "masjid", "mesjid", "mushala", "mushola", "musala", "meunasah", "kantor kecamatan", "kantor desa", "sd ", "smp", "sma", "smk"],
+    "name_contains": ["silatur", "wasilatul", "amtsilati", "syahbandar", "kesyahbandaran", "plta"],
+    "osm_tags": ["place", "natural", "boundary", "highway", "waterway", "route", "amenity=place_of_worship", "healthcare", "amenity=school (kecuali bukti latihan)"]
+  },
+  "source_types": ["situs_resmi_perguruan", "situs_ipsi_daerah", "pemerintah_daerah", "dispora", "dinas_kebudayaan", "berita", "kampus_ukm", "direktori_fasilitas_olahraga", "openstreetmap", "google_maps_link_only", "kanal_resmi_organisasi", "kiriman_pengelola"]
+}

@@ -1,0 +1,56 @@
+{
+  "schema": "silatara.animation-manifest/v1",
+  "animation_id": "anim.psdp.kuda-kuda-silang-belakang.v1",
+  "movement_id": "mv.psdp.kuda-kuda-silang-belakang",
+  "animation_status": "generated",
+  "view": "front",
+  "duration_ms": 4500,
+  "loop": true,
+  "fps_sampled": 20,
+  "frames": 91,
+  "playback_rates": [
+    0.5,
+    1.0,
+    1.5
+  ],
+  "playback_note": "SMIL tidak memiliki kontrol kecepatan bawaan; pemutar dapat memakai SVGSVGElement.pauseAnimations()/setCurrentTime() atau merender ulang dengan dur berbeda.",
+  "phase_map": {
+    "kf-1": {
+      "phase_id": "mv.psdp.kuda-kuda-silang-belakang#p1",
+      "label": "Sikap tegak 2",
+      "windows": [
+        0.0,
+        0.3,
+        0.9,
+        1.0
+      ]
+    },
+    "kf-2": {
+      "phase_id": "mv.psdp.kuda-kuda-silang-belakang#p2",
+      "label": "Silang belakang",
+      "windows": [
+        0.3,
+        0.9
+      ]
+    }
+  },
+  "bounds": [
+    105.0,
+    59.8,
+    251.0,
+    416
+  ],
+  "max_ik_error_px": 0.0,
+  "rig_id": "silatara-instruktur-2d",
+  "rig_version": 1,
+  "generator": "tools/animation/silat_anim.py 1.0.0",
+  "keyframes_sha256": "c80e11553f98c1e2f68b96aaf755a5ccc4682fb26bc88020f028ae61247e154d",
+  "svg_sha256": "8b0ee23921aeb1ea8383f0eae0348032bcb0a7cb8a4d2745f2f6479ca4920283",
+  "svg_bytes": 13606,
+  "source_ids": [
+    "src.nugroho.2005",
+    "src.herdiana.2008"
+  ],
+  "authorship": "Interpretasi visual editorial tim SILATARA atas dokumentasi tertulis; bukan rekaman manusia; bukan demonstrasi resmi perguruan.",
+  "instructor_validation": "not_validated"
+}

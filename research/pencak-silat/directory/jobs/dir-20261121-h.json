@@ -1,0 +1,103 @@
+{
+ "job_id": "dir-20261121-h",
+ "pipeline_version": "1.0.0",
+ "started_at": "2026-11-21T10:07:11+00:00",
+ "finished_at": "2026-11-21T10:07:14+00:00",
+ "stages": [
+  {
+   "stage": "discovery",
+   "at": "2026-11-21T10:07:12+00:00",
+   "raw_records": 5663,
+   "google_places": 0,
+   "overture": 5220,
+   "osm": 403,
+   "editorial": 4,
+   "catalog": 20,
+   "user_lists": 16
+  },
+  {
+   "stage": "extraction+classification",
+   "at": "2026-11-21T10:07:12+00:00",
+   "candidates": 828,
+   "review": 1045,
+   "rejected": 3790
+  },
+  {
+   "stage": "deduplication",
+   "at": "2026-11-21T10:07:12+00:00",
+   "before": 828,
+   "after": 823,
+   "merged": 5
+  },
+  {
+   "stage": "geocoding+coordinate_validation",
+   "at": "2026-11-21T10:07:14+00:00",
+   "places": 641
+  },
+  {
+   "stage": "source_verification",
+   "at": "2026-11-21T10:07:14+00:00",
+   "published": 641,
+   "review_total": 1045
+  }
+ ],
+ "errors": [],
+ "warnings": [
+  {
+   "raw_id": "ov:0e4d619c-8e49-4101-b4d1-91dddae0527e",
+   "stage": "coordinate_validation",
+   "message": "titik dekat batas; wilayah mengikuti nama (18.07)"
+  },
+  {
+   "raw_id": "ov:777c7ade-29da-488a-a13a-071ac9810ed3",
+   "stage": "coordinate_validation",
+   "message": "titik dekat batas; wilayah mengikuti nama (18.07)"
+  },
+  {
+   "raw_id": "ov:90e529e7-a89d-4a5d-902f-7f1a0de9804c",
+   "stage": "coordinate_validation",
+   "message": "titik dekat batas; wilayah mengikuti nama (33.19)"
+  }
+ ],
+ "duplicates": [
+  {
+   "kept": "osm:way/1181655940",
+   "merged": "osm:way/1181655941",
+   "reason": "nama+jarak"
+  },
+  {
+   "kept": "osm:way/1181655940",
+   "merged": "osm:way/1181655942",
+   "reason": "nama+jarak"
+  },
+  {
+   "kept": "osm:way/1181655940",
+   "merged": "osm:way/1191061001",
+   "reason": "nama+jarak"
+  },
+  {
+   "kept": "osm:way/258861962",
+   "merged": "editorial:web.padepokan-pencak-silat-indonesia",
+   "reason": "osm-match"
+  },
+  {
+   "kept": "ov:d95ea9a7-2153-4f0f-9299-a2e2c521a7dc",
+   "merged": "ov:43d08a6d-da1f-40c1-bdc1-28e89797dd24",
+   "reason": "nama+jarak"
+  }
+ ],
+ "result": {
+  "places": 641,
+  "review": 1045,
+  "rejected": 3972,
+  "heritage_areas": 15,
+  "organizations": 9,
+  "provinces_with_places": 33,
+  "regencies_with_places": 188,
+  "precision": {
+   "exact": 605,
+   "regency": 36
+  }
+ },
+ "import_status": "built_not_imported"
+}

@@ -1,0 +1,105 @@
+{
+  "schema": "silatara.animation-manifest/v1",
+  "animation_id": "anim.psdp.arah-delapan-penjuru.v1",
+  "movement_id": "mv.psdp.arah-delapan-penjuru",
+  "animation_status": "generated",
+  "view": "top",
+  "duration_ms": 7800,
+  "loop": true,
+  "fps_sampled": null,
+  "frames": 0,
+  "playback_rates": [
+    0.5,
+    1.0,
+    1.5
+  ],
+  "playback_note": "SMIL tidak memiliki kontrol kecepatan bawaan; pemutar dapat memakai SVGSVGElement.pauseAnimations()/setCurrentTime() atau merender ulang dengan dur berbeda.",
+  "phase_map": {
+    "kf-1": {
+      "phase_id": "mv.psdp.arah-delapan-penjuru#p1",
+      "label": "0",
+      "windows": [
+        0.0,
+        1.0
+      ]
+    },
+    "kf-2": {
+      "phase_id": "mv.psdp.arah-delapan-penjuru#p2",
+      "label": "1",
+      "windows": [
+        0.0897,
+        1.0
+      ]
+    },
+    "kf-3": {
+      "phase_id": "mv.psdp.arah-delapan-penjuru#p2",
+      "label": "2",
+      "windows": [
+        0.1795,
+        1.0
+      ]
+    },
+    "kf-4": {
+      "phase_id": "mv.psdp.arah-delapan-penjuru#p2",
+      "label": "3",
+      "windows": [
+        0.2692,
+        1.0
+      ]
+    },
+    "kf-5": {
+      "phase_id": "mv.psdp.arah-delapan-penjuru#p2",
+      "label": "4",
+      "windows": [
+        0.359,
+        1.0
+      ]
+    },
+    "kf-6": {
+      "phase_id": "mv.psdp.arah-delapan-penjuru#p3",
+      "label": "5",
+      "windows": [
+        0.4487,
+        1.0
+      ]
+    },
+    "kf-7": {
+      "phase_id": "mv.psdp.arah-delapan-penjuru#p3",
+      "label": "6",
+      "windows": [
+        0.5385,
+        1.0
+      ]
+    },
+    "kf-8": {
+      "phase_id": "mv.psdp.arah-delapan-penjuru#p3",
+      "label": "7",
+      "windows": [
+        0.6282,
+        1.0
+      ]
+    },
+    "kf-9": {
+      "phase_id": "mv.psdp.arah-delapan-penjuru#p3",
+      "label": "8",
+      "windows": [
+        0.7179,
+        1.0
+      ]
+    }
+  },
+  "bounds": null,
+  "max_ik_error_px": 0.0,
+  "rig_id": "silatara-instruktur-2d",
+  "rig_version": 1,
+  "generator": "tools/animation/silat_anim.py 1.0.0",
+  "keyframes_sha256": "c0903672c0cb5be116d473481b0739e419e7a9565f38856a83acf48de316a807",
+  "svg_sha256": "e0f2ebb892bf6e0ec5d18058d7a7769e5a6c2ffaec7d529b3bc956e3c3441c0f",
+  "svg_bytes": 7295,
+  "source_ids": [
+    "src.nugroho.2005",
+    "src.herdiana.2008"
+  ],
+  "authorship": "Interpretasi visual editorial tim SILATARA atas dokumentasi tertulis; bukan rekaman manusia; bukan demonstrasi resmi perguruan.",
+  "instructor_validation": "not_validated"
+}

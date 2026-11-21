@@ -1,0 +1,1229 @@
+{
+ "job_id": "dir-20261121-f",
+ "pipeline_version": "1.0.0",
+ "started_at": "2026-11-21T10:06:11+00:00",
+ "finished_at": "2026-11-21T10:06:15+00:00",
+ "stages": [
+  {
+   "stage": "discovery",
+   "at": "2026-11-21T10:06:11+00:00",
+   "raw_records": 5663,
+   "google_places": 0,
+   "overture": 5220,
+   "osm": 403,
+   "editorial": 4,
+   "catalog": 20,
+   "user_lists": 16
+  },
+  {
+   "stage": "extraction+classification",
+   "at": "2026-11-21T10:06:11+00:00",
+   "candidates": 1488,
+   "review": 1886,
+   "rejected": 2289
+  },
+  {
+   "stage": "deduplication",
+   "at": "2026-11-21T10:06:12+00:00",
+   "before": 1488,
+   "after": 1480,
+   "merged": 8
+  },
+  {
+   "stage": "geocoding+coordinate_validation",
+   "at": "2026-11-21T10:06:15+00:00",
+   "places": 1258
+  },
+  {
+   "stage": "source_verification",
+   "at": "2026-11-21T10:06:15+00:00",
+   "published": 1258,
+   "review_total": 1886
+  }
+ ],
+ "errors": [
+  {
+   "raw_id": "ov:cfa84a92-23bc-4371-b9e1-ef7e0f8f9d9b",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:d2343e9e-daa6-4c95-a09c-2b41a233089f",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:80e23db6-b74c-426a-8d5a-57ef227c3bd2",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:2bfe42a0-1826-40a5-a364-25ac3ebe91fa",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:1004fdff-492b-42c2-994d-0d55c5f69698",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:21ff2f14-366b-4abd-a859-eb624a9874ce",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:a5c61911-3989-4c9b-903f-9a26c1e0b503",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:ee4db692-b2a9-4850-9a46-9529526774ee",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:d61edddf-b72e-49e8-8657-052cbb439bf7",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:2cc8baaf-e44e-41e2-9f1c-f9ad392facdf",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:7fb0c633-e7f3-47d8-a4bd-60a7b3bf0a98",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:e284526a-b365-4094-8e34-d04037eb0643",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:a817e491-a697-4f0c-99b2-f129e699b64c",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:bf2a1867-63e8-4394-a3dd-d1c6c8c5481e",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:6e2412cf-c843-4db6-9cc5-c35da11ad7b7",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:c03b31c6-f303-4442-898b-6a4f1d5f7e06",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:36cf19ba-5e1b-4bf9-b89c-cb15ad33c16c",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:a63a0a28-1449-4b9a-92da-eb183ec07acf",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:c6a04508-4b0a-4ff5-b3d3-55d1023322c7",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:2eadaa96-1ddb-435f-878b-d0cfe7c54390",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:2a80d00d-3889-473a-9534-4b4ace8323ea",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:d34e0097-d6f8-4472-949b-d1d9b04d2396",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:a1a90ff7-be8b-4abb-baaf-b268dd6cfb58",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:c86c85bc-13a3-42ef-9bd1-a88df6c9aa90",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:2d4ae0aa-acd1-408e-8361-01670efac08e",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:50ec0017-5a9c-41ab-90e6-f907861a3de6",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:aa1f46b5-5258-402d-b08b-5ea4fc0cc951",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:a869c392-7868-4efd-9d25-f47a3a060607",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:ea0e361a-78f0-45bd-ab58-6b8d55779bc0",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:05acfe10-8cc6-4a35-a613-8d2364546403",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:7e28fa7a-c5d0-401c-a324-242053b74779",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:091e887e-afd5-4a49-b8c4-725b0d5b9d36",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:23ca4045-81ca-442a-8838-0e9948f13b03",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:ea72fb57-709e-486f-8f76-d33b90c5cfc7",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:c9a582f8-9af4-482d-8f39-ebc982567881",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:51f5afc0-cc43-49ba-8c3c-a90d8b641309",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:ca8b4ebc-dab8-4d1a-97c4-6ff60bf88642",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:2e708ee0-cf05-4a94-9d07-6118ce61aaf1",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:ebe251ea-2221-425d-abd0-fd22508c4ccd",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:1abb00a9-13b3-4c8d-a36e-47f280704572",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:8e2ad89c-0a87-48ad-9a6f-b60ea94e07d4",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:e08fdab6-adaa-44d9-b67a-70da496e75f2",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:6947a899-4d71-4c1d-80ab-2ce6040af2ff",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:e573624a-693b-4533-8d45-6ce275e7599c",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:84d4a4ca-d61a-4e6b-a847-f722afb61e23",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:b2ec7282-58a2-4884-976a-e4a46b9f1250",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:276b96d7-a820-43fd-b1a7-cc166e7313dd",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:31dd6aec-d9d9-46be-a88a-f0e00188d11d",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:8b2d186d-b9a5-4523-be36-158ff8abada0",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:07eaec11-29a1-44b5-a202-1ac6c1a7cefa",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:828b1d99-df09-492e-bb9a-adec5d7aca21",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:62624e1d-a3b9-4097-a23c-1b526d1e4a7b",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:dd4fa3cf-775f-475b-a316-778f1c96cc13",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:7e1a83f0-f1df-4476-ae28-c7cda5eee6bf",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:40cd2454-4102-4dda-a087-4de2cfd2536e",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:25d3d040-0c8a-460e-96fc-92f369219d99",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:e75454a5-e579-4f35-9b9c-fe8d57b2ea1f",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:e66f818f-1807-4f07-b506-f097c99c0c5f",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:bff10396-fd64-4abb-9c7e-31e767fc381d",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:593abde4-3126-419a-bf77-0b537bfefeba",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:b1ab7fcc-79d4-4b97-aa71-a7e5c292bdb7",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:3bc5e0f7-a0d5-4768-965b-edd980f1aace",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:97574c6e-d701-41ff-95c9-f2fd20b2b7e0",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:c1aea69d-14cb-443f-8717-9b83e9733663",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:73dfb8ea-5043-45ab-ac39-94cfa6ff441d",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:179b0487-9fa7-46ab-bd12-627b13acec02",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:0f91df32-8cbd-4cf1-8ea1-fa36706ce597",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:1f735a6a-7d40-4d5c-bd8b-3fc9d848e037",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:fd7d5b15-1f9b-44ab-9182-83103f3fee21",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:f1382c34-e914-4d2d-a5e9-41252da0ce75",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:dff41e6f-cd6a-4953-ba6a-091fc61d381d",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:aa0700ed-b480-436d-a2cb-a5262a728d39",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:5a06d54b-e39b-445c-b5bc-9cba14e80867",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:adac6827-03de-44b5-b854-ec649201be48",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:43a3d19f-4101-45ff-ac96-3f7fda92e12d",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:d6175939-72b7-4ae0-81a6-171f0222f7f6",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:e37f3181-2b06-4e4f-b939-9c09a0dce7bb",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:0fa274f7-2a98-432e-ba58-f5627e9c6489",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:ddc15c05-388b-4008-a3b9-847c08ee36af",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:ea38d5be-0354-43cf-88c2-eb6085fb3962",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:4cd07d8b-4412-4166-bb8a-d6cda2d63828",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:852ab0bf-4c49-4f0b-b7c6-4422683ae169",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:8d40e576-329c-43f2-89c9-50593dfdea95",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:4cbb4bb8-9967-49c9-9d4e-8bcdfa8fbe11",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:bfe9d154-0fff-4f23-879b-edb44462bf06",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:278ff698-2d2b-4fbe-9e47-13ce0d5ad0fd",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:4c40774f-d51c-457a-b45d-95404956b640",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:b50d0e75-55b5-4a3c-baf8-44889108bd20",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:1bdfcf62-701d-4a3a-802c-31f42ce1d361",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:273e9c75-553d-407c-8be4-2e525aa55bec",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:3ce11ffe-7543-418b-a682-ff6545dc9308",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:d3ec5481-dbfa-4fd8-9a0d-6114ca197b3f",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:d4611e40-9ee4-4424-a88a-f1b3f2bc8f57",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:56d56584-2cf7-406d-b31e-4319d39b0cd6",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:30ef1001-851f-45f9-99fd-8461cf014c05",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:004d6464-cc1d-444c-9c68-255cbbe153c0",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:d1c753c9-f2ff-41ea-91b8-2fb28a0c08fb",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:4b198b8c-1952-45f4-b249-24f8749aff76",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:ff1b0194-b978-4c3f-a7fa-0808710bdd89",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:92d4cf37-5ded-4330-9b39-ac1bb6f6188d",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:f9b96a17-80f9-43cd-a5c9-2816f18f13c0",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:3b3aed0f-79fe-4118-9bbd-d5bc73aa4035",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:1124b239-6008-48e2-b583-a00307ed757c",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:0dac8b61-a48c-4bdc-967e-ace3998bad4f",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:4f4196fc-6794-40d3-b1b0-c536c26501f9",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:7dafb648-6e76-43fd-91bb-2e0ec6e39a86",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:1d6bc608-ce01-4d6d-a893-c9e5e722589d",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:d50c6d6d-79c1-4467-aa2e-aeb633f544ed",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:d2097713-2bcb-4338-a0c7-5acf46971080",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:586da221-68eb-467c-93ba-8330603d0829",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:7cdeae3f-b6f2-4dab-a75b-e24b8c274a4f",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:699e7226-bb13-4616-ba27-130622f91a1e",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:19d0930b-67ef-49be-8cb3-014d750c0bdb",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:1a2cd391-b052-42a3-aeaa-2c68e601ed2b",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:69b7f235-39c1-4121-89f3-5fba88740b1d",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:441b37f5-5cf2-4e18-921b-aab4ca102f6d",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:0dc36fa5-9610-454d-a357-e81b46f61794",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:91a2ea54-f9ad-4819-a83b-441b2b82db0e",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:2c47e1fa-e5ac-4999-a75e-19c0e7840ef0",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:075f5ca4-c6d3-422a-b6d2-a78d53fd783c",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:84ce0da9-7783-4e47-9a65-8e400615da72",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:8b80ce44-41e8-48dd-b0ad-d6a745cb95fa",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:c3fe2f3c-eaa7-45a2-aa4c-fce780b776f7",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:104f0963-5361-4ccb-9fbd-d7bf5c9a3aea",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:153193d8-f5ed-4443-b959-42deb17364f8",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:cf6e7453-2f62-4327-b03b-23f4c57e8cfa",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:660164a2-396c-42ef-8dac-ed7ca36826f3",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:2c857668-5c94-4ca8-a79c-12e9f2bf08cc",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:b6a83091-2642-41cf-ab36-8014ec4665a6",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:47867198-b76a-4cce-b1e0-9b7c574ab58e",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:88aa7930-6960-4a77-8c35-e449d3fb8185",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:6c64e91e-af91-469f-8755-b276618e3955",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:a421936a-7161-44be-b80b-86b663056962",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:94b62ad7-946b-4c64-b815-1c38f703506d",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:b19ebf94-d725-43aa-85a2-1ebc05d443d4",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:a17ae84d-371c-4d30-a5bb-b510e283d9eb",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:e63827f6-d142-4e20-b71b-c9ad386a2235",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:673e53aa-6263-4f5d-9255-77843e8dc18f",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:a81d7ac9-1915-4ed7-98db-928e4602ea66",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:ce3e6304-cc52-4866-a26e-f3968aa1fed3",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:23a68b1d-6a43-4544-afbc-797ea3222337",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:b41c4e20-aa57-4bef-add7-4e2065ff7430",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:4f4fa1d1-6f9b-4a16-9bf2-1739e6932266",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:bd5ba000-186a-4a30-8fad-6e91c60b93b2",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:359c4a56-6d9e-435f-aa00-83447daab2b4",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:b320cd2c-ec9d-4ea6-8810-8d748eda86b3",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:3b4a1727-44c7-4db9-9328-a8cf4af0b987",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:fac32740-73f1-4b33-9b90-f2b6cdc7b2c3",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:d4a6d3b3-7524-4c11-9eba-58f981d6e595",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:e9adc86d-396c-4400-bab2-ccfa758a19ea",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:782b0b48-6e5b-4d4d-8182-475b98a4ab60",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:c7dbe943-ba14-4cbe-a3bb-a3d7f816f436",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:059bf985-c6ca-4205-bfe4-7e2c61a20d2c",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:eb72a003-4a25-41cb-b1f9-2cf20f4714c7",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:cc4a8a73-bf43-4d53-bdc2-7f9537075069",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:4c8dbccc-7968-4058-b7f7-f8d1955c8fe6",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:ac17bc67-4d50-4b01-ad95-7970f8961fef",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:77e9b856-a5fe-4a2d-8c86-a758b5c1a847",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:5a268cd7-d022-4b1b-aadf-7c9235d3a41b",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:f08dfefb-7ecc-4579-8552-0830ff8c00b9",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:a2db5b71-46ec-4f62-8dcb-a53a4e4c751a",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:214a5785-8eb0-49ac-97ad-ade32516463f",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:00e58e77-f328-4531-a665-109b057534d0",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:59907454-fd9a-4cbd-a0a3-416dba510487",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:6122f9b4-fe85-46c8-b764-f2a26f9be060",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:568765c2-bb51-4240-a48c-92667eb4960f",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:9fefd8e5-1abb-4feb-bae3-2782ef559bec",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:d1f9116e-a1ae-49dd-af9f-99a32707f9e3",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:2de3611e-68be-4f96-a0b3-7b83acc8f3f3",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:3c35ecae-bd1e-4e4d-9cb2-1eabd20a1289",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:15309732-8cdb-4816-bf56-be96c61fabef",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:c727bf1b-3b06-45bf-887f-1ce4a1f70769",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:95154b87-13c7-4390-a1a5-1f0bbadd9386",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:861355f0-9ede-40aa-91cf-ef3a94ea96eb",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:10e7393b-93bf-4e6d-8f79-4ea26ecbcbe9",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:a4f922e6-8c03-4c6d-9bd5-8e0fa91fe917",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:7abc328d-4072-450a-9669-4a74a6e84b16",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:5518b275-b324-4441-be14-fdd28beabb78",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:c2c92045-7b23-42a7-8bd7-2277430e46c2",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:465b15ce-18ff-468a-8c2d-470c0ce71770",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:a6e85b6b-9544-4ee7-9c6a-8aadb7c23f1c",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:18122ca2-925f-471a-88de-21c992add5fa",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:cdb083fd-6f3c-4b52-af21-df97b5b7db08",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:146e5d63-9f8f-49e9-87b4-37d9868c5a66",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:4dd48b56-3c5f-40df-8beb-aff10f74cbbb",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:0cca66df-223d-4cd7-9bb4-99e2dceb4f29",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:c05d19cf-8d5b-437c-8144-f22ca5bfaab0",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:6024eb76-0daa-4e54-9d84-afbd0c3c4164",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:d645386e-0a69-474a-8ea6-af632c9e107f",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:95ea6ce5-b304-4501-b6cb-6df3804e248a",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:a913f89f-9012-48ba-a98c-2f555203f67d",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:6c45860f-234d-40a7-a36d-f94b5cc57a7a",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:ab46af94-966f-4e49-b0d0-b7dd9f7f3b72",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:3d17b470-141a-41e8-8842-de66a8c7ac56",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:e3ff42e6-135d-4283-b9b2-051783242cba",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:8de66569-30b6-4130-90a1-f49d5a7031af",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:f1641909-de3c-4c5f-bfb4-f269be52bbb5",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:b85db1fa-d376-41dd-b9b5-7e7c77b085e1",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:e1d8a221-d0dc-4f00-94ba-bc0d2b6abb5f",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:4f39975c-5f52-4abc-9200-e3ed0e5d7369",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:f244af3a-aba6-443f-95dc-14f1f57597ea",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:f9e27870-23a6-4141-a44b-0f64a0c42f3a",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:245ef047-3d62-4f4d-b88a-a5c38bf6f22c",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:e7fc8b77-55d2-4b15-953c-f4b2df6eb39b",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:74579f9f-9610-4836-a30f-4899ed5c9527",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:7fee2afd-8e97-4cb8-9147-3ffc77b1bc79",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:bd7b74f6-9192-4d39-907b-7cdc243fa513",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:b943132c-5080-4c1a-bcab-1701aa822604",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:f554cbe8-4e99-4191-b57e-b4cc5db83b1c",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:ede6fde3-38ea-4135-872c-0d163b811124",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:35f5e7fb-31af-4c07-998c-41f80d403ad0",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:b0d6ce13-a4fb-4b85-b7ff-b637bb8f8634",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:f53e969b-60eb-4c76-9d24-1cf640e079c5",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:f825e8b0-b0aa-4a79-86be-2fa9e05ff675",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:7b299509-57ba-4513-8abd-9378157b204b",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:53724c64-98bf-49d0-bf62-aff77c883991",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:42cc86db-401e-4ace-a0e7-d65b11c4aac3",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:8626343b-c437-4603-8129-c503bcbb6b58",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:9de321a6-6d42-41ba-9dfb-6de0bc8f2585",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:a33a1bc8-3933-466a-9164-c22635a955a6",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:2016aad0-b816-4f77-b73d-cacb08d502a5",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  },
+  {
+   "raw_id": "ov:ef7f0c37-9b75-4209-9743-15fe507e5069",
+   "stage": "coordinate_validation",
+   "message": "titik tidak jatuh di wilayah kabupaten/kota mana pun"
+  }
+ ],
+ "warnings": [
+  {
+   "raw_id": "ov:0e4d619c-8e49-4101-b4d1-91dddae0527e",
+   "stage": "coordinate_validation",
+   "message": "titik dekat batas; wilayah mengikuti nama (18.07)"
+  },
+  {
+   "raw_id": "ov:777c7ade-29da-488a-a13a-071ac9810ed3",
+   "stage": "coordinate_validation",
+   "message": "titik dekat batas; wilayah mengikuti nama (18.07)"
+  },
+  {
+   "raw_id": "ov:90e529e7-a89d-4a5d-902f-7f1a0de9804c",
+   "stage": "coordinate_validation",
+   "message": "titik dekat batas; wilayah mengikuti nama (33.19)"
+  }
+ ],
+ "duplicates": [
+  {
+   "kept": "osm:way/1181655940",
+   "merged": "osm:way/1181655941",
+   "reason": "nama+jarak"
+  },
+  {
+   "kept": "osm:way/1181655940",
+   "merged": "osm:way/1181655942",
+   "reason": "nama+jarak"
+  },
+  {
+   "kept": "osm:way/1181655940",
+   "merged": "osm:way/1191061001",
+   "reason": "nama+jarak"
+  },
+  {
+   "kept": "osm:way/258861962",
+   "merged": "editorial:web.padepokan-pencak-silat-indonesia",
+   "reason": "osm-match"
+  },
+  {
+   "kept": "ov:d95ea9a7-2153-4f0f-9299-a2e2c521a7dc",
+   "merged": "ov:43d08a6d-da1f-40c1-bdc1-28e89797dd24",
+   "reason": "nama+jarak"
+  },
+  {
+   "kept": "ov:6627a1d3-392f-49a9-a562-e379ab8af7de",
+   "merged": "ov:cfc935db-3f24-45a8-9eee-388cd7cdfccc",
+   "reason": "nama+jarak"
+  },
+  {
+   "kept": "ov:931faf5b-0a93-4acb-ae9f-1e4d32ee2fef",
+   "merged": "ov:3873bc79-ae45-4bed-84ed-df7280fbda89",
+   "reason": "nama+jarak"
+  },
+  {
+   "kept": "ov:c55026ee-eab9-4820-a1c5-f0b4c546a772",
+   "merged": "ov:a54d7906-e52c-4456-af76-95a3a4047e69",
+   "reason": "nama+jarak"
+  }
+ ],
+ "result": {
+  "places": 1258,
+  "review": 1886,
+  "rejected": 2289,
+  "heritage_areas": 15,
+  "organizations": 9,
+  "provinces_with_places": 32,
+  "regencies_with_places": 229,
+  "precision": {
+   "exact": 1222,
+   "regency": 36
+  }
+ },
+ "import_status": "built_not_imported"
+}

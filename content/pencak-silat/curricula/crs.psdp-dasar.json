@@ -1,0 +1,78 @@
+{
+  "schema": "silatara.curriculum/v1",
+  "id": "crs.psdp-dasar",
+  "slug": "sikap-dan-gerak-dasar-pencak-silat",
+  "tradition_id": "trd.psdp",
+  "title": "Sikap & Gerak Dasar Pencak Silat",
+  "summary": "Belajar pencak silat selangkah demi selangkah, dari sikap tegak dan kuda-kuda hingga sikap pasang, arah delapan penjuru, cara melangkah, dan pola langkah. Setiap pelajaran dilengkapi animasi, uraian fase demi fase, panduan latihan mandiri, dan rujukan dari literatur kepelatihan pencak silat Indonesia. Cocok sebagai pengantar sebelum bergabung dengan perguruan.",
+  "level": "beginner",
+  "estimated_minutes": 300,
+  "safety_notes": "Latih gerak dasar secara mandiri dengan perlahan. Materi hindaran dan elakan di modul terakhir dipelajari sebagai pengetahuan dan sebaiknya dilatih bersama pelatih. Hentikan latihan bila nyeri, pusing, atau kehilangan keseimbangan.",
+  "content_status": "draft",
+  "evidence_tier": "editorially_prepared",
+  "instructor_validation": "not_validated",
+  "source_ids": [
+    "src.nugroho.2005",
+    "src.herdiana.2008",
+    "src.unesco.ich.01391",
+    "src.unesco.ich.01391.nomination"
+  ],
+  "editorial_note": "Struktur modul mengikuti urutan sumber: sikap dasar, gerak dasar, lalu pola.",
+  "modules": [
+    {
+      "id": "crs.psdp-dasar.m01",
+      "order": 1,
+      "title": "Pengenalan & keselamatan",
+      "summary": "Konteks budaya pencak silat dan cara belajar mandiri yang aman."
+    },
+    {
+      "id": "crs.psdp-dasar.m02",
+      "order": 2,
+      "title": "Sikap dasar berdiri",
+      "summary": "Sikap tegak 1–4 dan sikap istirahat."
+    },
+    {
+      "id": "crs.psdp-dasar.m03",
+      "order": 3,
+      "title": "Kuda-kuda",
+      "summary": "Tujuh kuda-kuda dasar sebagai tumpuan gerak."
+    },
+    {
+      "id": "crs.psdp-dasar.m04",
+      "order": 4,
+      "title": "Sikap duduk",
+      "summary": "Lima sikap duduk dasar untuk permainan bawah."
+    },
+    {
+      "id": "crs.psdp-dasar.m05",
+      "order": 5,
+      "title": "Sikap pasang",
+      "summary": "Delapan sikap pasang menurut penomoran Januarno (1989)."
+    },
+    {
+      "id": "crs.psdp-dasar.m06",
+      "order": 6,
+      "title": "Arah & cara melangkah",
+      "summary": "Arah delapan penjuru dan lima cara melangkah."
+    },
+    {
+      "id": "crs.psdp-dasar.m07",
+      "order": 7,
+      "title": "Pola langkah",
+      "summary": "Pola lurus, zig-zag, dan bentuk pola langkah lainnya."
+    },
+    {
+      "id": "crs.psdp-dasar.m08",
+      "order": 8,
+      "title": "Pengenalan pembelaan tanpa kontak (dengan pengawasan)",
+      "summary": "Pemahaman hindaran dan elakan; bukan untuk latihan mandiri."
+    }
+  ],
+  "goals": [
+    "Memahami pencak silat sebagai warisan budaya yang beragam dan cara berlatih mandiri dengan aman.",
+    "Memperagakan sikap tegak, sikap istirahat, dan tujuh kuda-kuda dasar dengan posisi tubuh yang benar menurut sumber.",
+    "Mengenal lima sikap duduk dan delapan sikap pasang beserta perbedaannya.",
+    "Menggunakan arah delapan penjuru, cara melangkah, dan pola langkah untuk berpindah posisi.",
+    "Membedakan hindaran dan elakan sebagai dasar pembelaan, serta mengetahui kapan perlu didampingi pelatih."
+  ]
+}

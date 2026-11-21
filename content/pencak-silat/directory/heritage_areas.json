@@ -1,0 +1,665 @@
+{
+ "pipeline_version": "1.0.0",
+ "job_id": "dir-20261121-j",
+ "generated_at": "2026-11-21T12:16:13+00:00",
+ "attribution": [
+  "© kontributor OpenStreetMap (ODbL 1.0)",
+  "Wilayah: Kepmendagri No 300.2.2-2138 Tahun 2025 (dataset cahyadsn/wilayah, MIT)"
+ ],
+ "schema": "silatara.directory.heritage-areas/v1",
+ "areas": [
+  {
+   "entity_id": "ent.style.silek-kumango",
+   "name": "Silat Tradisional Kumango",
+   "category": "style",
+   "regency_codes": [
+    "13.04"
+   ],
+   "regencies": [
+    "Kabupaten Tanah Datar"
+   ],
+   "locality_text": "Rao-rao Kumango, Kabupaten Tanah Datar",
+   "points": [
+    {
+     "lat": -0.47436500293745626,
+     "lng": 100.62341833230498,
+     "regency_code": "13.04"
+    }
+   ],
+   "public_note": "Berasal dari Rao-rao Kumango, Tanah Datar. Memiliki dua belas gerak dasar; sebagian tekniknya hanya diajarkan langsung oleh guru tuo.",
+   "sources": [
+    {
+     "source_type": "academic",
+     "source_id": "src.putri-nusri.2022",
+     "url": "https://jurnal.unimed.ac.id/2012/index.php/JIK/article/download/34465/18251",
+     "title": "Analisis Jurus pada Silat Tradisional Kumango",
+     "publisher": "Febby Syafita Putri, Ardi Nusri (FIK Unimed)",
+     "year": 2022,
+     "license": "diparafrasa",
+     "read_status": "full_text",
+     "supports": [
+      "12 gerak dasar Kumango (nama saja)",
+      "beberapa teknik dinyatakan guru tuo tidak boleh didokumentasikan (kuncian kaki, tusukan, patukan)",
+      "asal Rao-rao Kumango, Tanah Datar"
+     ]
+    },
+    {
+     "source_type": "academic",
+     "source_id": "src.ediwar.2023",
+     "url": "https://digitalpress.ugm.ac.id/article/436/download",
+     "title": "The Role Silek as A Source of Science",
+     "publisher": "Ediwar, Roza Muliati, Susasrita Loravianti, Sentot Soleh Sri Widodo, Zuari Abdullah",
+     "year": 2023,
+     "license": "CC BY 4.0",
+     "read_status": "full_text",
+     "supports": [
+      "konsep baraja malangkah",
+      "langkah tigo, langkah ampek, langkah sambilan sebagai konsep",
+      "nama-nama silek menurut nagari/sifat alam"
+     ]
+    }
+   ]
+  },
+  {
+   "entity_id": "ent.style.silek-tuo",
+   "name": "Silek Tuo",
+   "category": "style",
+   "regency_codes": [
+    "14.71"
+   ],
+   "regencies": [
+    "Kota Pekanbaru"
+   ],
+   "locality_text": "Sanggar Seni Silat Nagari Batuah, Kota Pekanbaru",
+   "points": [
+    {
+     "lat": 0.5134188210148788,
+     "lng": 101.44702176089957,
+     "regency_code": "14.71"
+    }
+   ],
+   "public_note": "Diajarkan antara lain di Sanggar Seni Silat Nagari Batuah, Pekanbaru, yang membawanya dari Singiran Maninjau.",
+   "sources": [
+    {
+     "source_type": "academic",
+     "source_id": "src.uir.silek-tuo-nagari-batuah",
+     "url": "https://repository.uir.ac.id/4840/4/bab1.pdf",
+     "title": "Pertunjukan Silek Tuo di Sanggar Nagari Batuah Kota Pekanbaru Provinsi Riau (Bab I)",
+     "publisher": "Universitas Islam Riau (nama penulis tidak terbaca dari teks bab I — needs_verification)",
+     "year": null,
+     "license": "diparafrasa",
+     "read_status": "full_text",
+     "supports": [
+      "Langkah Ampek terdiri atas Tagak Alif, Langkah Luruih, Langkah Sendeng, Langkah Serong (nama saja)",
+      "gerak dipelajari berpasangan di sanggar ini"
+     ]
+    }
+   ]
+  },
+  {
+   "entity_id": "ent.tradition.silat-pangean",
+   "name": "Silat Pangean",
+   "category": "tradition",
+   "regency_codes": [
+    "14.09",
+    "14.02"
+   ],
+   "regencies": [
+    "Kabupaten Kuantan Singingi",
+    "Kabupaten Indragiri Hulu"
+   ],
+   "locality_text": "Kabupaten Kuantan Singingi; Kota Baru, Indragiri Hulu",
+   "points": [
+    {
+     "lat": -0.5053008502336358,
+     "lng": 101.53807726174774,
+     "regency_code": "14.09"
+    },
+    {
+     "lat": -0.39300278228698865,
+     "lng": 102.43757196516648,
+     "regency_code": "14.02"
+    }
+   ],
+   "public_note": null,
+   "sources": [
+    {
+     "source_type": "heritage_record",
+     "source_id": "src.unesco.ich.01391.nomination",
+     "url": "https://ich.unesco.org/doc/src/42930-EN.doc",
+     "title": "Nomination file No. 01391 for inscription in 2019 (form ICH-02, English)",
+     "publisher": "Republik Indonesia (Kemendikbud) via UNESCO",
+     "year": 2018,
+     "license": "dokumen publik UNESCO; data kontak pribadi di dalamnya TIDAK disalin ke repo",
+     "read_status": "full_text",
+     "supports": [
+      "28 nama lokal (B.3)",
+      "17 provinsi sebaran (D)",
+      "sekolah tersebar di 34 provinsi (D)"
+     ]
+    },
+    {
+     "source_type": "academic",
+     "source_id": "src.gesture.pangean",
+     "url": "https://jurnal.unimed.ac.id/2012/index.php/gesture/article/view/73293/29573",
+     "title": "Silat Pangean, Kota Baru, Indragiri Hulu",
+     "publisher": "Gesture: Jurnal Seni Tari, Unimed",
+     "year": 2026,
+     "license": null,
+     "read_status": "search_snippet",
+     "supports": [
+      "Silat Pangean di Riau; regenerasi lemah"
+     ]
+    }
+   ]
+  },
+  {
+   "entity_id": "ent.tradition.bandrong",
+   "name": "Pencak Silat Bandrong",
+   "category": "tradition",
+   "regency_codes": [
+    "36.72"
+   ],
+   "regencies": [
+    "Kota Cilegon"
+   ],
+   "locality_text": "Kota Cilegon",
+   "points": [
+    {
+     "lat": -6.00980901882699,
+     "lng": 106.04212868303857,
+     "regency_code": "36.72"
+    }
+   ],
+   "public_note": null,
+   "sources": [
+    {
+     "source_type": "heritage_record",
+     "source_id": "src.unesco.ich.01391.nomination",
+     "url": "https://ich.unesco.org/doc/src/42930-EN.doc",
+     "title": "Nomination file No. 01391 for inscription in 2019 (form ICH-02, English)",
+     "publisher": "Republik Indonesia (Kemendikbud) via UNESCO",
+     "year": 2018,
+     "license": "dokumen publik UNESCO; data kontak pribadi di dalamnya TIDAK disalin ke repo",
+     "read_status": "full_text",
+     "supports": [
+      "28 nama lokal (B.3)",
+      "17 provinsi sebaran (D)",
+      "sekolah tersebar di 34 provinsi (D)"
+     ]
+    },
+    {
+     "source_type": "heritage_record",
+     "source_id": "src.unesco.ich.01391.inventory",
+     "url": "https://ich.unesco.org/doc/src/39283.pdf",
+     "title": "Copy of inventory extract (EN/ID) — Pencatatan Warisan Budaya Takbenda: Pencak Silat",
+     "publisher": "Kemendikbud RI via UNESCO",
+     "year": 2018,
+     "license": "dokumen publik UNESCO; kontak pribadi tidak disalin",
+     "read_status": "full_text",
+     "supports": [
+      "kode pencatatan Pencak Silat Minangkabau 2010000437, Bandrong 2010000438, Penca Silat 2012002274, Silat Yogya 2014004576, Silat Beksi 2014004894, Ulu Ambek 2014004895, Maenpo Cikalong 2015002",
+      "12 jurus dasar Beksi (nama saja)",
+      "Bandrong: 6 gaya inti, 6 gerak dasar, bentuk serangan jabe/tero (nama saja)"
+     ]
+    }
+   ]
+  },
+  {
+   "entity_id": "ent.style.cingkrik",
+   "name": "Silat Cingkrik",
+   "category": "style",
+   "regency_codes": [
+    "31.73"
+   ],
+   "regencies": [
+    "Kota Administrasi Jakarta Barat"
+   ],
+   "locality_text": "Rawa Belong, Jakarta Barat",
+   "points": [
+    {
+     "lat": -6.184334501192923,
+     "lng": 106.73662053886034,
+     "regency_code": "31.73"
+    }
+   ],
+   "public_note": null,
+   "sources": [
+    {
+     "source_type": "heritage_record",
+     "source_id": "src.unesco.ich.01391.nomination",
+     "url": "https://ich.unesco.org/doc/src/42930-EN.doc",
+     "title": "Nomination file No. 01391 for inscription in 2019 (form ICH-02, English)",
+     "publisher": "Republik Indonesia (Kemendikbud) via UNESCO",
+     "year": 2018,
+     "license": "dokumen publik UNESCO; data kontak pribadi di dalamnya TIDAK disalin ke repo",
+     "read_status": "full_text",
+     "supports": [
+      "28 nama lokal (B.3)",
+      "17 provinsi sebaran (D)",
+      "sekolah tersebar di 34 provinsi (D)"
+     ]
+    },
+    {
+     "source_type": "academic",
+     "source_id": "src.nurali.cingkrik",
+     "url": "https://journal.unj.ac.id/unj/index.php/prosidingfik/article/download/8990/6027/17902",
+     "title": "Pengembangan Pencak Silat Tradisional Betawi Cingkrik",
+     "publisher": "Nur Ali (FIK UNJ)",
+     "year": null,
+     "license": "diparafrasa",
+     "read_status": "full_text",
+     "supports": [
+      "Cingkrik sebagai silat tradisional Betawi",
+      "turunan Cingkrik Goning",
+      "pewarisan tertutup lalu terbuka"
+     ]
+    },
+    {
+     "source_type": "academic",
+     "source_id": "src.wikipedia.cingkrik",
+     "url": "https://en.wikipedia.org/wiki/Cingkrik",
+     "title": "Cingkrik (English Wikipedia, oldid 1332586108)",
+     "publisher": "Wikipedia contributors",
+     "year": 2026,
+     "license": "CC BY-SA 4.0",
+     "read_status": "page",
+     "supports": [
+      "12 jurus dasar & 3 sambut (nama saja; mengutip Nawi 2016, Adi 2010, Prabowo 2016 — belum diverifikasi)"
+     ]
+    }
+   ]
+  },
+  {
+   "entity_id": "ent.style.maenpo-cikalong",
+   "name": "Maenpo Cikalong",
+   "category": "style",
+   "regency_codes": [
+    "32.03"
+   ],
+   "regencies": [
+    "Kabupaten Cianjur"
+   ],
+   "locality_text": "Kabupaten Cianjur",
+   "points": [
+    {
+     "lat": -6.822746173673224,
+     "lng": 107.1394835830441,
+     "regency_code": "32.03"
+    }
+   ],
+   "public_note": null,
+   "sources": [
+    {
+     "source_type": "heritage_record",
+     "source_id": "src.unesco.ich.01391.inventory",
+     "url": "https://ich.unesco.org/doc/src/39283.pdf",
+     "title": "Copy of inventory extract (EN/ID) — Pencatatan Warisan Budaya Takbenda: Pencak Silat",
+     "publisher": "Kemendikbud RI via UNESCO",
+     "year": 2018,
+     "license": "dokumen publik UNESCO; kontak pribadi tidak disalin",
+     "read_status": "full_text",
+     "supports": [
+      "kode pencatatan Pencak Silat Minangkabau 2010000437, Bandrong 2010000438, Penca Silat 2012002274, Silat Yogya 2014004576, Silat Beksi 2014004894, Ulu Ambek 2014004895, Maenpo Cikalong 2015002",
+      "12 jurus dasar Beksi (nama saja)",
+      "Bandrong: 6 gaya inti, 6 gerak dasar, bentuk serangan jabe/tero (nama saja)"
+     ]
+    },
+    {
+     "source_type": "heritage_record",
+     "source_id": "src.unesco.ich.01391.nomination",
+     "url": "https://ich.unesco.org/doc/src/42930-EN.doc",
+     "title": "Nomination file No. 01391 for inscription in 2019 (form ICH-02, English)",
+     "publisher": "Republik Indonesia (Kemendikbud) via UNESCO",
+     "year": 2018,
+     "license": "dokumen publik UNESCO; data kontak pribadi di dalamnya TIDAK disalin ke repo",
+     "read_status": "full_text",
+     "supports": [
+      "28 nama lokal (B.3)",
+      "17 provinsi sebaran (D)",
+      "sekolah tersebar di 34 provinsi (D)"
+     ]
+    }
+   ]
+  },
+  {
+   "entity_id": "ent.style.cimande",
+   "name": "Cimande",
+   "category": "style",
+   "regency_codes": [
+    "32.01"
+   ],
+   "regencies": [
+    "Kabupaten Bogor"
+   ],
+   "locality_text": "Cimande, Caringin, Kabupaten Bogor",
+   "points": [
+    {
+     "lat": -6.479478948089524,
+     "lng": 106.82471731002641,
+     "regency_code": "32.01"
+    }
+   ],
+   "public_note": null,
+   "sources": [
+    {
+     "source_type": "heritage_record",
+     "source_id": "src.unesco.ich.01391.nomination",
+     "url": "https://ich.unesco.org/doc/src/42930-EN.doc",
+     "title": "Nomination file No. 01391 for inscription in 2019 (form ICH-02, English)",
+     "publisher": "Republik Indonesia (Kemendikbud) via UNESCO",
+     "year": 2018,
+     "license": "dokumen publik UNESCO; data kontak pribadi di dalamnya TIDAK disalin ke repo",
+     "read_status": "full_text",
+     "supports": [
+      "28 nama lokal (B.3)",
+      "17 provinsi sebaran (D)",
+      "sekolah tersebar di 34 provinsi (D)"
+     ]
+    }
+   ]
+  },
+  {
+   "entity_id": "ent.tradition.langga",
+   "name": "Langga",
+   "category": "tradition",
+   "regency_codes": [
+    "75.03"
+   ],
+   "regencies": [
+    "Kabupaten Bone Bolango"
+   ],
+   "locality_text": "Kabupaten Bone Bolango",
+   "points": [
+    {
+     "lat": 0.5574113394247833,
+     "lng": 123.14391729846989,
+     "regency_code": "75.03"
+    }
+   ],
+   "public_note": null,
+   "sources": [
+    {
+     "source_type": "heritage_record",
+     "source_id": "src.unesco.ich.01391.nomination",
+     "url": "https://ich.unesco.org/doc/src/42930-EN.doc",
+     "title": "Nomination file No. 01391 for inscription in 2019 (form ICH-02, English)",
+     "publisher": "Republik Indonesia (Kemendikbud) via UNESCO",
+     "year": 2018,
+     "license": "dokumen publik UNESCO; data kontak pribadi di dalamnya TIDAK disalin ke repo",
+     "read_status": "full_text",
+     "supports": [
+      "28 nama lokal (B.3)",
+      "17 provinsi sebaran (D)",
+      "sekolah tersebar di 34 provinsi (D)"
+     ]
+    },
+    {
+     "source_type": "academic",
+     "source_id": "src.jambura.langga",
+     "url": "https://ejurnal.ung.ac.id/index.php/jjsc/article/view/5629",
+     "title": "Traditional Martial Art of Langga",
+     "publisher": "Mopangga, Hadjarati, Kadir — Jambura Journal of Sports Coaching",
+     "year": 2020,
+     "license": null,
+     "read_status": "search_snippet",
+     "supports": [
+      "Langga, Bone Bolango, Gorontalo"
+     ]
+    }
+   ]
+  },
+  {
+   "entity_id": "ent.style.silat-pelintau",
+   "name": "Silat Pelintau",
+   "category": "style",
+   "regency_codes": [
+    "11.16"
+   ],
+   "regencies": [
+    "Kabupaten Aceh Tamiang"
+   ],
+   "locality_text": "Kabupaten Aceh Tamiang",
+   "points": [
+    {
+     "lat": 4.301275755472272,
+     "lng": 98.04571548117825,
+     "regency_code": "11.16"
+    }
+   ],
+   "public_note": null,
+   "sources": [
+    {
+     "source_type": "academic",
+     "source_id": "src.yupa.pelintau",
+     "url": "https://jurnal.fkip.unmul.ac.id/index.php/yupa/article/download/2756/1542",
+     "title": "Silat Pelintau, kesinambungan dan perubahan (Melayu Tamiang)",
+     "publisher": "Elisa, Mauly Purba, Yusnizar Heniwati",
+     "year": 2024,
+     "license": null,
+     "read_status": "search_snippet",
+     "supports": [
+      "Silat Pelintau, Aceh Tamiang"
+     ]
+    }
+   ]
+  },
+  {
+   "entity_id": "ent.style.silat-song-song",
+   "name": "Silat Song-song",
+   "category": "style",
+   "regency_codes": [
+    "11.16"
+   ],
+   "regencies": [
+    "Kabupaten Aceh Tamiang"
+   ],
+   "locality_text": "Kabupaten Aceh Tamiang",
+   "points": [
+    {
+     "lat": 4.301275755472272,
+     "lng": 98.04571548117825,
+     "regency_code": "11.16"
+    }
+   ],
+   "public_note": null,
+   "sources": [
+    {
+     "source_type": "academic",
+     "source_id": "src.gesture.songsong",
+     "url": "https://jurnal.unimed.ac.id/2012/index.php/gesture/article/view/160/55",
+     "title": "Silat Song-song (Aceh Tamiang)",
+     "publisher": "Gesture: Jurnal Seni Tari, Unimed",
+     "year": null,
+     "license": null,
+     "read_status": "search_snippet",
+     "supports": [
+      "Silat Song-song dipakai menyambut tamu/pengantin"
+     ]
+    }
+   ]
+  },
+  {
+   "entity_id": "ent.style.silat-harimau-kumbang",
+   "name": "Silat Harimau Kumbang",
+   "category": "style",
+   "regency_codes": [
+    "15.72"
+   ],
+   "regencies": [
+    "Kota Sungai Penuh"
+   ],
+   "locality_text": "Desa Koto Tuo, Tanah Kampung, Kota Sungai Penuh",
+   "points": [
+    {
+     "lat": -2.070909819809651,
+     "lng": 101.39607811491697,
+     "regency_code": "15.72"
+    }
+   ],
+   "public_note": null,
+   "sources": [
+    {
+     "source_type": "academic",
+     "source_id": "src.iainkerinci.harimau-kumbang",
+     "url": "https://ejournal.iainkerinci.ac.id/index.php/pik/article/download/3971/1273/13589",
+     "title": "Silat Harimau Kumbang, Desa Koto Tuo (Jambi)",
+     "publisher": "e-journal IAIN Kerinci",
+     "year": null,
+     "license": null,
+     "read_status": "search_snippet",
+     "supports": [
+      "Silat Harimau Kumbang dipakai dalam kenduri SKO"
+     ]
+    }
+   ]
+  },
+  {
+   "entity_id": "ent.style.kuntau-semende",
+   "name": "Kuntau Semende",
+   "category": "style",
+   "regency_codes": [
+    "16.03"
+   ],
+   "regencies": [
+    "Kabupaten Muara Enim"
+   ],
+   "locality_text": "Kabupaten Muara Enim",
+   "points": [
+    {
+     "lat": -3.6556303086592794,
+     "lng": 103.77700425898033,
+     "regency_code": "16.03"
+    }
+   ],
+   "public_note": null,
+   "sources": [
+    {
+     "source_type": "academic",
+     "source_id": "src.jess.semende-kuntau",
+     "url": "https://journal.unnes.ac.id/journals/jess/article/view/57560",
+     "title": "The Historical Evolution and Preservation of Semende Kuntau Martial Art in South Sumatra",
+     "publisher": "Journal of Educational Social Studies (UNNES)",
+     "year": null,
+     "license": null,
+     "read_status": "search_snippet",
+     "supports": [
+      "Kuntau Semende, Muara Enim"
+     ]
+    }
+   ]
+  },
+  {
+   "entity_id": "ent.tradition.rejang-pat-petulai",
+   "name": "Pencak silat Rejang Pat Petulai",
+   "category": "tradition",
+   "regency_codes": [
+    "17.03",
+    "17.07"
+   ],
+   "regencies": [
+    "Kabupaten Bengkulu Utara",
+    "Kabupaten Lebong"
+   ],
+   "locality_text": "Kabupaten Bengkulu Utara; Kabupaten Lebong",
+   "points": [
+    {
+     "lat": -3.436858034706668,
+     "lng": 102.2017863093631,
+     "regency_code": "17.03"
+    },
+    {
+     "lat": -3.1574485628093467,
+     "lng": 102.18284672681582,
+     "regency_code": "17.07"
+    }
+   ],
+   "public_note": null,
+   "sources": [
+    {
+     "source_type": "academic",
+     "source_id": "src.kibasp.rejang",
+     "url": "https://journal.ipm2kpe.or.id/index.php/KIBASP/article/view/19066/12345",
+     "title": "Nilai budaya pencak silat Rejang Pat Petulai (Bengkulu Utara)",
+     "publisher": "Jurnal KIBASP",
+     "year": 2026,
+     "license": null,
+     "read_status": "search_snippet",
+     "supports": [
+      "tradisi Rejang Pat Petulai"
+     ]
+    }
+   ]
+  },
+  {
+   "entity_id": "ent.tradition.tengklung",
+   "name": "Tengklung",
+   "category": "tradition",
+   "regency_codes": [
+    "51.08"
+   ],
+   "regencies": [
+    "Kabupaten Buleleng"
+   ],
+   "locality_text": "Desa Gobleg, Kabupaten Buleleng",
+   "points": [
+    {
+     "lat": -8.12516022356895,
+     "lng": 115.09284902538256,
+     "regency_code": "51.08"
+    }
+   ],
+   "public_note": null,
+   "sources": [
+    {
+     "source_type": "academic",
+     "source_id": "src.unmas.tengklung",
+     "url": "https://e-journal.unmas.ac.id/index.php/literates/article/download/8531/6418/20083",
+     "title": "Tengklung Gobleg (Buleleng)",
+     "publisher": "e-journal Unmas Denpasar",
+     "year": null,
+     "license": null,
+     "read_status": "search_snippet",
+     "supports": [
+      "seni bela diri Tengklung, Desa Gobleg, Buleleng"
+     ]
+    }
+   ]
+  },
+  {
+   "entity_id": "ent.style.ewa-wuna",
+   "name": "Ewa Wuna",
+   "category": "style",
+   "regency_codes": [
+    "74.03"
+   ],
+   "regencies": [
+    "Kabupaten Muna"
+   ],
+   "locality_text": "Kabupaten Muna",
+   "points": [
+    {
+     "lat": -4.797870620269443,
+     "lng": 122.71895870272489,
+     "regency_code": "74.03"
+    }
+   ],
+   "public_note": null,
+   "sources": [
+    {
+     "source_type": "academic",
+     "source_id": "src.ensiklopedia.ewa-wuna",
+     "url": "https://p2k.stekom.ac.id/ensiklopedia/Ewa_Wuna",
+     "title": "Ewa Wuna",
+     "publisher": "p2k.stekom.ac.id (ensiklopedia sekunder)",
+     "year": null,
+     "license": null,
+     "read_status": "search_snippet",
+     "supports": [
+      "Ewa Wuna (Muna); klaim WBTb SK 372/M/2021 — PERLU verifikasi ke sumber resmi"
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,65 @@
+{
+  "schema": "silatara.animation-manifest/v1",
+  "animation_id": "anim.psdp.kuda-kuda-menyamping.v1",
+  "movement_id": "mv.psdp.kuda-kuda-menyamping",
+  "animation_status": "generated",
+  "view": "front",
+  "duration_ms": 7800,
+  "loop": true,
+  "fps_sampled": 20,
+  "frames": 157,
+  "playback_rates": [
+    0.5,
+    1.0,
+    1.5
+  ],
+  "playback_note": "SMIL tidak memiliki kontrol kecepatan bawaan; pemutar dapat memakai SVGSVGElement.pauseAnimations()/setCurrentTime() atau merender ulang dengan dur berbeda.",
+  "phase_map": {
+    "kf-1": {
+      "phase_id": "mv.psdp.kuda-kuda-menyamping#p1",
+      "label": "Sikap tegak 2",
+      "windows": [
+        0.0,
+        0.1603,
+        0.4615,
+        0.6474,
+        0.9487,
+        1.0
+      ]
+    },
+    "kf-2": {
+      "phase_id": "mv.psdp.kuda-kuda-menyamping#p2",
+      "label": "Menyamping kiri",
+      "windows": [
+        0.1603,
+        0.4615
+      ]
+    },
+    "kf-3": {
+      "phase_id": "mv.psdp.kuda-kuda-menyamping#p4",
+      "label": "Menyamping kanan",
+      "windows": [
+        0.6474,
+        0.9487
+      ]
+    }
+  },
+  "bounds": [
+    55.0,
+    59.8,
+    305.0,
+    416
+  ],
+  "max_ik_error_px": 0.0,
+  "rig_id": "silatara-instruktur-2d",
+  "rig_version": 1,
+  "generator": "tools/animation/silat_anim.py 1.0.0",
+  "keyframes_sha256": "5e16993ff998c8612181a24127cced4e68fcb1e1dc75b0f59684d360e985f356",
+  "svg_sha256": "73ebe33d74db0d80414961aad37d0f86391c52609a24c9fff7ee3ea1ed6e844a",
+  "svg_bytes": 18873,
+  "source_ids": [
+    "src.nugroho.2005"
+  ],
+  "authorship": "Interpretasi visual editorial tim SILATARA atas dokumentasi tertulis; bukan rekaman manusia; bukan demonstrasi resmi perguruan.",
+  "instructor_validation": "not_validated"
+}

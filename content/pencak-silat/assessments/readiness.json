@@ -1,0 +1,354 @@
+{
+ "schema": "silatara.assessment-readiness/v1",
+ "movements": [
+  {
+   "movement_id": "mv.psdp.arah-delapan-penjuru",
+   "name": "Arah Delapan Penjuru Mata Angin",
+   "category": "arah_langkah",
+   "has_3d": false,
+   "assessment_status": "not_ready",
+   "reason": "Pola/arah langkah diukur di lantai (tampak atas); kamera depan/samping tidak dapat mengukurnya dengan andal."
+  },
+  {
+   "movement_id": "mv.psdp.langkah-angkatan",
+   "name": "Langkah Angkatan (tinggi & rendah)",
+   "category": "cara_melangkah",
+   "has_3d": true,
+   "assessment_status": "active",
+   "reason": "Protokol 1.0.0 aktif (4 kriteria)."
+  },
+  {
+   "movement_id": "mv.psdp.langkah-geseran",
+   "name": "Langkah Geseran",
+   "category": "cara_melangkah",
+   "has_3d": true,
+   "assessment_status": "candidate",
+   "reason": "Peraga 3D tersedia; parameter terukur dari sumber belum disusun menjadi protokol."
+  },
+  {
+   "movement_id": "mv.psdp.langkah-putaran",
+   "name": "Langkah Putaran",
+   "category": "cara_melangkah",
+   "has_3d": false,
+   "assessment_status": "not_ready",
+   "reason": "Belum ada peraga 3D yang lolos pemeriksaan untuk dijadikan referensi."
+  },
+  {
+   "movement_id": "mv.psdp.langkah-lompatan",
+   "name": "Langkah Lompatan / Loncatan",
+   "category": "cara_melangkah",
+   "has_3d": false,
+   "assessment_status": "not_ready",
+   "reason": "Bukan gerak solo tingkat pemula; latihan dengan kamera tidak dibuka (aturan keselamatan)."
+  },
+  {
+   "movement_id": "mv.psdp.langkah-ingsutan",
+   "name": "Langkah Ingsutan",
+   "category": "cara_melangkah",
+   "has_3d": false,
+   "assessment_status": "not_ready",
+   "reason": "Belum ada peraga 3D yang lolos pemeriksaan untuk dijadikan referensi."
+  },
+  {
+   "movement_id": "mv.psdp.hindaran-hadap",
+   "name": "Hindaran Hadap",
+   "category": "pembelaan_tanpa_kontak",
+   "has_3d": true,
+   "assessment_status": "not_ready",
+   "reason": "Bukan gerak solo tingkat pemula; latihan dengan kamera tidak dibuka (aturan keselamatan)."
+  },
+  {
+   "movement_id": "mv.psdp.hindaran-sisi",
+   "name": "Hindaran Sisi",
+   "category": "pembelaan_tanpa_kontak",
+   "has_3d": false,
+   "assessment_status": "not_ready",
+   "reason": "Bukan gerak solo tingkat pemula; latihan dengan kamera tidak dibuka (aturan keselamatan)."
+  },
+  {
+   "movement_id": "mv.psdp.hindaran-angkat-kaki",
+   "name": "Hindaran Angkat Kaki",
+   "category": "pembelaan_tanpa_kontak",
+   "has_3d": false,
+   "assessment_status": "not_ready",
+   "reason": "Bukan gerak solo tingkat pemula; latihan dengan kamera tidak dibuka (aturan keselamatan)."
+  },
+  {
+   "movement_id": "mv.psdp.hindaran-silang",
+   "name": "Hindaran Silang",
+   "category": "pembelaan_tanpa_kontak",
+   "has_3d": false,
+   "assessment_status": "not_ready",
+   "reason": "Bukan gerak solo tingkat pemula; latihan dengan kamera tidak dibuka (aturan keselamatan)."
+  },
+  {
+   "movement_id": "mv.psdp.elak-bawah",
+   "name": "Elak Bawah",
+   "category": "pembelaan_tanpa_kontak",
+   "has_3d": true,
+   "assessment_status": "not_ready",
+   "reason": "Bukan gerak solo tingkat pemula; latihan dengan kamera tidak dibuka (aturan keselamatan)."
+  },
+  {
+   "movement_id": "mv.psdp.elak-atas",
+   "name": "Elak Atas",
+   "category": "pembelaan_tanpa_kontak",
+   "has_3d": false,
+   "assessment_status": "not_ready",
+   "reason": "Bukan gerak solo tingkat pemula; latihan dengan kamera tidak dibuka (aturan keselamatan)."
+  },
+  {
+   "movement_id": "mv.psdp.elak-samping",
+   "name": "Elak Samping",
+   "category": "pembelaan_tanpa_kontak",
+   "has_3d": true,
+   "assessment_status": "not_ready",
+   "reason": "Bukan gerak solo tingkat pemula; latihan dengan kamera tidak dibuka (aturan keselamatan)."
+  },
+  {
+   "movement_id": "mv.psdp.elak-belakang",
+   "name": "Elak Belakang",
+   "category": "pembelaan_tanpa_kontak",
+   "has_3d": true,
+   "assessment_status": "not_ready",
+   "reason": "Bukan gerak solo tingkat pemula; latihan dengan kamera tidak dibuka (aturan keselamatan)."
+  },
+  {
+   "movement_id": "mv.psdp.kuda-kuda-depan",
+   "name": "Kuda-kuda Depan",
+   "category": "kuda_kuda",
+   "has_3d": true,
+   "assessment_status": "active",
+   "reason": "Protokol 1.0.0 aktif (5 kriteria)."
+  },
+  {
+   "movement_id": "mv.psdp.kuda-kuda-belakang",
+   "name": "Kuda-kuda Belakang",
+   "category": "kuda_kuda",
+   "has_3d": true,
+   "assessment_status": "candidate",
+   "reason": "Peraga 3D tersedia; parameter terukur dari sumber belum disusun menjadi protokol."
+  },
+  {
+   "movement_id": "mv.psdp.kuda-kuda-tengah",
+   "name": "Kuda-kuda Tengah",
+   "category": "kuda_kuda",
+   "has_3d": true,
+   "assessment_status": "active",
+   "reason": "Protokol 1.0.0 aktif (5 kriteria)."
+  },
+  {
+   "movement_id": "mv.psdp.kuda-kuda-samping",
+   "name": "Kuda-kuda Samping",
+   "category": "kuda_kuda",
+   "has_3d": true,
+   "assessment_status": "candidate",
+   "reason": "Peraga 3D tersedia; parameter terukur dari sumber belum disusun menjadi protokol."
+  },
+  {
+   "movement_id": "mv.psdp.kuda-kuda-menyamping",
+   "name": "Kuda-kuda Menyamping (kiri/kanan)",
+   "category": "kuda_kuda",
+   "has_3d": true,
+   "assessment_status": "candidate",
+   "reason": "Peraga 3D tersedia; parameter terukur dari sumber belum disusun menjadi protokol."
+  },
+  {
+   "movement_id": "mv.psdp.kuda-kuda-silang-depan",
+   "name": "Kuda-kuda Silang Depan",
+   "category": "kuda_kuda",
+   "has_3d": true,
+   "assessment_status": "candidate",
+   "reason": "Peraga 3D tersedia; parameter terukur dari sumber belum disusun menjadi protokol."
+  },
+  {
+   "movement_id": "mv.psdp.kuda-kuda-silang-belakang",
+   "name": "Kuda-kuda Silang Belakang",
+   "category": "kuda_kuda",
+   "has_3d": true,
+   "assessment_status": "candidate",
+   "reason": "Peraga 3D tersedia; parameter terukur dari sumber belum disusun menjadi protokol."
+  },
+  {
+   "movement_id": "mv.psdp.pola-langkah-lurus",
+   "name": "Pola Langkah Lurus",
+   "category": "pola_langkah",
+   "has_3d": false,
+   "assessment_status": "not_ready",
+   "reason": "Pola/arah langkah diukur di lantai (tampak atas); kamera depan/samping tidak dapat mengukurnya dengan andal."
+  },
+  {
+   "movement_id": "mv.psdp.pola-langkah-zigzag",
+   "name": "Pola Langkah Gergaji / Zig-zag",
+   "category": "pola_langkah",
+   "has_3d": false,
+   "assessment_status": "not_ready",
+   "reason": "Pola/arah langkah diukur di lantai (tampak atas); kamera depan/samping tidak dapat mengukurnya dengan andal."
+  },
+  {
+   "movement_id": "mv.psdp.pola-langkah-ladam",
+   "name": "Pola Langkah Ladam / U",
+   "category": "pola_langkah",
+   "has_3d": false,
+   "assessment_status": "not_ready",
+   "reason": "Pola/arah langkah diukur di lantai (tampak atas); kamera depan/samping tidak dapat mengukurnya dengan andal."
+  },
+  {
+   "movement_id": "mv.psdp.pola-langkah-segitiga",
+   "name": "Pola Langkah Segitiga",
+   "category": "pola_langkah",
+   "has_3d": false,
+   "assessment_status": "not_ready",
+   "reason": "Pola/arah langkah diukur di lantai (tampak atas); kamera depan/samping tidak dapat mengukurnya dengan andal."
+  },
+  {
+   "movement_id": "mv.psdp.pola-langkah-segiempat",
+   "name": "Pola Langkah Segiempat",
+   "category": "pola_langkah",
+   "has_3d": false,
+   "assessment_status": "not_ready",
+   "reason": "Pola/arah langkah diukur di lantai (tampak atas); kamera depan/samping tidak dapat mengukurnya dengan andal."
+  },
+  {
+   "movement_id": "mv.psdp.pola-langkah-huruf-s",
+   "name": "Pola Langkah Huruf S",
+   "category": "pola_langkah",
+   "has_3d": false,
+   "assessment_status": "not_ready",
+   "reason": "Pola/arah langkah diukur di lantai (tampak atas); kamera depan/samping tidak dapat mengukurnya dengan andal."
+  },
+  {
+   "movement_id": "mv.psdp.sikap-tegak",
+   "name": "Sikap Tegak (1–4)",
+   "category": "sikap_dasar",
+   "has_3d": false,
+   "assessment_status": "not_ready",
+   "reason": "Belum ada peraga 3D yang lolos pemeriksaan untuk dijadikan referensi."
+  },
+  {
+   "movement_id": "mv.psdp.sikap-pemusatan-diri",
+   "name": "Sikap Berdoa / Pemusatan Diri",
+   "category": "sikap_dasar",
+   "has_3d": true,
+   "assessment_status": "candidate",
+   "reason": "Peraga 3D tersedia; parameter terukur dari sumber belum disusun menjadi protokol."
+  },
+  {
+   "movement_id": "mv.psdp.sikap-istirahat",
+   "name": "Sikap Istirahat",
+   "category": "sikap_dasar",
+   "has_3d": true,
+   "assessment_status": "candidate",
+   "reason": "Peraga 3D tersedia; parameter terukur dari sumber belum disusun menjadi protokol."
+  },
+  {
+   "movement_id": "mv.psdp.sikap-duduk-sempok",
+   "name": "Sikap Sempok / Depok",
+   "category": "sikap_duduk",
+   "has_3d": false,
+   "assessment_status": "not_ready",
+   "reason": "Belum ada peraga referensi untuk sikap duduk."
+  },
+  {
+   "movement_id": "mv.psdp.sikap-duduk-sila",
+   "name": "Sikap Sila",
+   "category": "sikap_duduk",
+   "has_3d": false,
+   "assessment_status": "not_ready",
+   "reason": "Belum ada peraga referensi untuk sikap duduk."
+  },
+  {
+   "movement_id": "mv.psdp.sikap-duduk-biasa",
+   "name": "Sikap Duduk",
+   "category": "sikap_duduk",
+   "has_3d": false,
+   "assessment_status": "not_ready",
+   "reason": "Belum ada peraga referensi untuk sikap duduk."
+  },
+  {
+   "movement_id": "mv.psdp.sikap-duduk-trapsila",
+   "name": "Sikap Trapsila",
+   "category": "sikap_duduk",
+   "has_3d": false,
+   "assessment_status": "not_ready",
+   "reason": "Belum ada peraga referensi untuk sikap duduk."
+  },
+  {
+   "movement_id": "mv.psdp.sikap-duduk-simpuh",
+   "name": "Sikap Simpuh",
+   "category": "sikap_duduk",
+   "has_3d": false,
+   "assessment_status": "not_ready",
+   "reason": "Belum ada peraga referensi untuk sikap duduk."
+  },
+  {
+   "movement_id": "mv.psdp.sikap-pasang-1",
+   "name": "Sikap Pasang 1",
+   "category": "sikap_pasang",
+   "has_3d": true,
+   "assessment_status": "candidate",
+   "reason": "Peraga 3D tersedia; parameter terukur dari sumber belum disusun menjadi protokol."
+  },
+  {
+   "movement_id": "mv.psdp.sikap-pasang-2",
+   "name": "Sikap Pasang 2",
+   "category": "sikap_pasang",
+   "has_3d": false,
+   "assessment_status": "not_ready",
+   "reason": "Belum ada peraga 3D yang lolos pemeriksaan untuk dijadikan referensi."
+  },
+  {
+   "movement_id": "mv.psdp.sikap-pasang-3",
+   "name": "Sikap Pasang 3",
+   "category": "sikap_pasang",
+   "has_3d": false,
+   "assessment_status": "not_ready",
+   "reason": "Belum ada peraga 3D yang lolos pemeriksaan untuk dijadikan referensi."
+  },
+  {
+   "movement_id": "mv.psdp.sikap-pasang-4",
+   "name": "Sikap Pasang 4",
+   "category": "sikap_pasang",
+   "has_3d": true,
+   "assessment_status": "candidate",
+   "reason": "Peraga 3D tersedia; parameter terukur dari sumber belum disusun menjadi protokol."
+  },
+  {
+   "movement_id": "mv.psdp.sikap-pasang-5",
+   "name": "Sikap Pasang 5",
+   "category": "sikap_pasang",
+   "has_3d": false,
+   "assessment_status": "not_ready",
+   "reason": "Belum ada peraga 3D yang lolos pemeriksaan untuk dijadikan referensi."
+  },
+  {
+   "movement_id": "mv.psdp.sikap-pasang-6",
+   "name": "Sikap Pasang 6",
+   "category": "sikap_pasang",
+   "has_3d": true,
+   "assessment_status": "candidate",
+   "reason": "Peraga 3D tersedia; parameter terukur dari sumber belum disusun menjadi protokol."
+  },
+  {
+   "movement_id": "mv.psdp.sikap-pasang-7",
+   "name": "Sikap Pasang 7",
+   "category": "sikap_pasang",
+   "has_3d": false,
+   "assessment_status": "not_ready",
+   "reason": "Belum ada peraga 3D yang lolos pemeriksaan untuk dijadikan referensi."
+  },
+  {
+   "movement_id": "mv.psdp.sikap-pasang-8",
+   "name": "Sikap Pasang 8",
+   "category": "sikap_pasang",
+   "has_3d": true,
+   "assessment_status": "not_ready",
+   "reason": "Bukan gerak solo tingkat pemula; latihan dengan kamera tidak dibuka (aturan keselamatan)."
+  }
+ ],
+ "summary": {
+  "active": 3,
+  "candidate": 11,
+  "not_ready": 29
+ }
+}

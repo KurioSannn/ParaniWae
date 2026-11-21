@@ -1,0 +1,244 @@
+{
+ "clips": [
+  {
+   "movement_id": "idle",
+   "ok": true,
+   "ankle_err_max_mm": 0.0,
+   "planted_slide_max_mm": 0.0,
+   "floor_min_mm": 15.2,
+   "hand_torso_gap_min_mm": 211.2,
+   "loop_quat_maxdiff": 0.0,
+   "ik_clamps": 0,
+   "keys": 212
+  },
+  {
+   "movement_id": "mv.psdp.elak-bawah",
+   "ok": true,
+   "ankle_err_max_mm": 0.0,
+   "planted_slide_max_mm": 0.0,
+   "floor_min_mm": 15.2,
+   "hand_torso_gap_min_mm": 60.0,
+   "loop_quat_maxdiff": 0.0,
+   "ik_clamps": 0,
+   "keys": 404
+  },
+  {
+   "movement_id": "mv.psdp.elak-belakang",
+   "ok": true,
+   "ankle_err_max_mm": 0.0,
+   "planted_slide_max_mm": 0.0,
+   "floor_min_mm": 15.2,
+   "hand_torso_gap_min_mm": 60.1,
+   "loop_quat_maxdiff": 0.0,
+   "ik_clamps": 0,
+   "keys": 318
+  },
+  {
+   "movement_id": "mv.psdp.elak-samping",
+   "ok": true,
+   "ankle_err_max_mm": 0.0,
+   "planted_slide_max_mm": 0.0,
+   "floor_min_mm": 15.2,
+   "hand_torso_gap_min_mm": 33.3,
+   "loop_quat_maxdiff": 0.0,
+   "ik_clamps": 0,
+   "keys": 305
+  },
+  {
+   "movement_id": "mv.psdp.hindaran-hadap",
+   "ok": true,
+   "ankle_err_max_mm": 0.0,
+   "planted_slide_max_mm": 0.0,
+   "floor_min_mm": 15.2,
+   "hand_torso_gap_min_mm": 181.5,
+   "loop_quat_maxdiff": 0.0,
+   "ik_clamps": 0,
+   "keys": 324
+  },
+  {
+   "movement_id": "mv.psdp.kuda-kuda-belakang",
+   "ok": true,
+   "ankle_err_max_mm": 0.0,
+   "planted_slide_max_mm": 0.0,
+   "floor_min_mm": 15.2,
+   "hand_torso_gap_min_mm": 200.5,
+   "loop_quat_maxdiff": 0.0,
+   "ik_clamps": 0,
+   "keys": 316
+  },
+  {
+   "movement_id": "mv.psdp.kuda-kuda-depan",
+   "ok": true,
+   "ankle_err_max_mm": 5.13,
+   "planted_slide_max_mm": 0.0,
+   "floor_min_mm": 15.2,
+   "hand_torso_gap_min_mm": 200.5,
+   "loop_quat_maxdiff": 0.0,
+   "ik_clamps": 71,
+   "keys": 333
+  },
+  {
+   "movement_id": "mv.psdp.kuda-kuda-menyamping",
+   "ok": true,
+   "ankle_err_max_mm": 0.0,
+   "planted_slide_max_mm": 0.0,
+   "floor_min_mm": 15.2,
+   "hand_torso_gap_min_mm": 200.5,
+   "loop_quat_maxdiff": 0.0,
+   "ik_clamps": 0,
+   "keys": 527
+  },
+  {
+   "movement_id": "mv.psdp.kuda-kuda-samping",
+   "ok": true,
+   "ankle_err_max_mm": 0.0,
+   "planted_slide_max_mm": 0.0,
+   "floor_min_mm": 15.2,
+   "hand_torso_gap_min_mm": 200.5,
+   "loop_quat_maxdiff": 0.0,
+   "ik_clamps": 0,
+   "keys": 356
+  },
+  {
+   "movement_id": "mv.psdp.kuda-kuda-silang-belakang",
+   "ok": true,
+   "ankle_err_max_mm": 0.0,
+   "planted_slide_max_mm": 0.0,
+   "floor_min_mm": 15.2,
+   "hand_torso_gap_min_mm": 200.5,
+   "loop_quat_maxdiff": 0.0,
+   "ik_clamps": 0,
+   "keys": 278
+  },
+  {
+   "movement_id": "mv.psdp.kuda-kuda-silang-depan",
+   "ok": true,
+   "ankle_err_max_mm": 0.0,
+   "planted_slide_max_mm": 0.0,
+   "floor_min_mm": 15.2,
+   "hand_torso_gap_min_mm": 200.5,
+   "loop_quat_maxdiff": 0.0,
+   "ik_clamps": 0,
+   "keys": 278
+  },
+  {
+   "movement_id": "mv.psdp.kuda-kuda-tengah",
+   "ok": true,
+   "ankle_err_max_mm": 0.0,
+   "planted_slide_max_mm": 0.0,
+   "floor_min_mm": 15.2,
+   "hand_torso_gap_min_mm": 200.5,
+   "loop_quat_maxdiff": 0.0,
+   "ik_clamps": 0,
+   "keys": 394
+  },
+  {
+   "movement_id": "mv.psdp.langkah-angkatan",
+   "ok": true,
+   "ankle_err_max_mm": 0.0,
+   "planted_slide_max_mm": 0.0,
+   "floor_min_mm": 15.2,
+   "hand_torso_gap_min_mm": 181.5,
+   "loop_quat_maxdiff": 0.0,
+   "ik_clamps": 0,
+   "keys": 557
+  },
+  {
+   "movement_id": "mv.psdp.langkah-geseran",
+   "ok": true,
+   "ankle_err_max_mm": 9.27,
+   "planted_slide_max_mm": 1.344,
+   "floor_min_mm": 15.2,
+   "hand_torso_gap_min_mm": 182.4,
+   "loop_quat_maxdiff": 0.0,
+   "ik_clamps": 34,
+   "keys": 303
+  },
+  {
+   "movement_id": "mv.psdp.sikap-istirahat",
+   "ok": true,
+   "ankle_err_max_mm": 0.0,
+   "planted_slide_max_mm": 0.0,
+   "floor_min_mm": 15.2,
+   "hand_torso_gap_min_mm": 88.7,
+   "loop_quat_maxdiff": 0.0,
+   "ik_clamps": 0,
+   "keys": 337
+  },
+  {
+   "movement_id": "mv.psdp.sikap-pasang-1",
+   "ok": true,
+   "ankle_err_max_mm": 5.13,
+   "planted_slide_max_mm": 0.0,
+   "floor_min_mm": 15.2,
+   "hand_torso_gap_min_mm": 60.1,
+   "loop_quat_maxdiff": 0.0,
+   "ik_clamps": 77,
+   "keys": 730
+  },
+  {
+   "movement_id": "mv.psdp.sikap-pasang-4",
+   "ok": true,
+   "ankle_err_max_mm": 0.0,
+   "planted_slide_max_mm": 0.0,
+   "floor_min_mm": 15.2,
+   "hand_torso_gap_min_mm": 33.3,
+   "loop_quat_maxdiff": 0.0,
+   "ik_clamps": 0,
+   "keys": 717
+  },
+  {
+   "movement_id": "mv.psdp.sikap-pasang-6",
+   "ok": true,
+   "ankle_err_max_mm": 0.0,
+   "planted_slide_max_mm": 0.0,
+   "floor_min_mm": 15.2,
+   "hand_torso_gap_min_mm": 33.3,
+   "loop_quat_maxdiff": 0.0,
+   "ik_clamps": 0,
+   "keys": 756
+  },
+  {
+   "movement_id": "mv.psdp.sikap-pasang-8",
+   "ok": true,
+   "ankle_err_max_mm": 0.0,
+   "planted_slide_max_mm": 0.0,
+   "floor_min_mm": 15.2,
+   "hand_torso_gap_min_mm": 60.1,
+   "loop_quat_maxdiff": 0.0,
+   "ik_clamps": 0,
+   "keys": 706
+  },
+  {
+   "movement_id": "mv.psdp.sikap-pemusatan-diri",
+   "ok": true,
+   "ankle_err_max_mm": 0.0,
+   "planted_slide_max_mm": 0.0,
+   "floor_min_mm": 15.2,
+   "hand_torso_gap_min_mm": 28.3,
+   "loop_quat_maxdiff": 0.0,
+   "ik_clamps": 0,
+   "keys": 286
+  },
+  {
+   "movement_id": "mv.psdp.sikap-tegak",
+   "ok": true,
+   "ankle_err_max_mm": 0.0,
+   "planted_slide_max_mm": 0.0,
+   "floor_min_mm": 15.2,
+   "hand_torso_gap_min_mm": 41.3,
+   "loop_quat_maxdiff": 0.0,
+   "ik_clamps": 0,
+   "keys": 564
+  }
+ ],
+ "character_version": "2.0.0",
+ "generated_at": "2026-11-21",
+ "summary": {
+  "clips": 21,
+  "ok": 21,
+  "glb_bytes": 3179772,
+  "build_seconds": 125.6
+ },
+ "method": "retarget rotasi delta dunia + IK tungkai; validasi pada rig target"
+}

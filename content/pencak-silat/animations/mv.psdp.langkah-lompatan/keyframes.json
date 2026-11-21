@@ -1,0 +1,11 @@
+{
+  "schema": "silatara.keyframes/v1",
+  "animation_id": "anim.psdp.langkah-lompatan.v1",
+  "movement_id": "mv.psdp.langkah-lompatan",
+  "animation_status": "needs_reference",
+  "title": "Langkah Lompatan / Loncatan",
+  "needs": "Teknik tolakan & pendaratan aman (tekukan lutut saat mendarat, jarak) tidak dijelaskan sumber; tidak dianimasikan agar tidak mendorong latihan lompat tanpa pengawasan.",
+  "source_ids": [
+    "src.herdiana.2008"
+  ]
+}

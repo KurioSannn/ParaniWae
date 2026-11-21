@@ -1,0 +1,279 @@
+{
+  "schema": "silatara.movements/v1",
+  "tradition_id": "trd.psdp",
+  "module_hint": "Kuda-kuda",
+  "shared_context": {
+    "definition": {"text": "Kuda-kuda adalah posisi kaki tertentu sebagai dasar tumpuan untuk melakukan sikap dan gerak bela-serang (Moh. Saleh 1986, dikutip Nugroho). Fungsinya melatih otot kaki dan keseimbangan; badan harus setimbang dan stabil, tetapi tetap mudah bergerak.", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 146"},
+    "herdiana": {"text": "Herdiana menyebut kuda-kuda sebagai sikap waspada sebelum bergerak atau menjalankan jurus, dan menekankan pemahaman arah 8 penjuru mata angin karena titik tengah arah menjadi tempat berdiri dan acuan langkah.", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 12–13"},
+    "variance_note": {"text": "Nugroho dan Herdiana tidak sepenuhnya sama dalam merinci tiap kuda-kuda (lihat 'variants' tiap gerakan). Keduanya bukan standar perguruan tertentu; lebar, tinggi, dan arah kaki dapat berbeda di tiap aliran.", "basis": "editorial"}
+  },
+  "movements": [
+    {
+      "id": "mv.psdp.kuda-kuda-depan",
+      "slug": "kuda-kuda-depan",
+      "names": {"primary": "Kuda-kuda Depan", "local": null, "aliases": [], "pronunciation": null},
+      "category": "kuda_kuda", "level": "beginner", "safety_class": "solo_beginner", "solo_form_status": "documented_solo",
+      "content_status": "draft", "evidence_tier": "research_supported", "instructor_validation": "not_validated",
+      "permission_status": "parafrasa sumber terbit; tanpa media",
+      "cultural_context": {
+        "context": {"ref": "shared_context.definition"},
+        "purpose": {"text": "Dasar tumpuan dengan berat badan di kaki depan; juga menjadi titik awal latihan arah 8 penjuru dan dasar sikap pasang 1.", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 146, 150, 154"},
+        "meaning": {"text": "Tidak dijelaskan sumber.", "basis": "gap"},
+        "terminology": [{"term": "kaki depan / kaki tumpu", "explanation": "kaki yang menerima berat badan"}],
+        "variants": [
+          {"text": "Nugroho: dimulai dari sikap tegak 2, kaki kiri/kanan bergerak (maju), berat badan ditumpukan pada kaki depan.", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 146"},
+          {"text": "Herdiana: dari titik tengah arah mata angin dan sikap awal, geser kaki kiri/kanan sedikit ke depan, berat badan pada kaki depan, badan tegak, pandangan ke depan, lalu kembali ke sikap awal; ilustrasi juga menunjukkan versi mundur.", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 13"}
+        ],
+        "differs_from": [{"movement_id": "mv.psdp.kuda-kuda-belakang", "text": "Pada kuda-kuda belakang berat badan di kaki belakang."}]
+      },
+      "prerequisites": {"abilities": "Sikap tegak 2.", "physical_prep": "Pemanasan tungkai ringan.", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {
+        "head": {"text": "Pandangan ke depan.", "basis": "source", "source_ids": ["src.herdiana.2008"]},
+        "torso": {"text": "Badan tegak.", "basis": "source", "source_ids": ["src.herdiana.2008"]},
+        "arms": {"text": "Dari sikap tegak 2 (kepalan di pinggang); sumber tidak menyebut perubahan posisi tangan.", "basis": "source", "source_ids": ["src.nugroho.2005"]},
+        "legs": {"text": "Satu kaki di depan; lebar langkah 'sedikit' (Herdiana). Angka jarak tidak disebut.", "basis": "source", "source_ids": ["src.herdiana.2008"]},
+        "knees": {"text": "Lutut kaki depan menekuk (tergambar di ilustrasi sumber; tidak disebut sudutnya); tanyakan detailnya kepada pelatih.", "basis": "needs_validation"},
+        "weight": {"text": "Berat badan ditumpukan pada kaki depan.", "basis": "source", "source_ids": ["src.nugroho.2005", "src.herdiana.2008"]},
+        "orientation": {"text": "Menghadap arah depan (arah 5 pada penomoran 8 penjuru).", "basis": "source", "source_ids": ["src.nugroho.2005"]}
+      },
+      "phases": [
+        {"id": "mv.psdp.kuda-kuda-depan#p1", "order": 1, "name": "Sikap tegak 2", "start_position": "Berdiri tegak, kepalan di pinggang.", "change": "—", "body_parts": [], "direction": "—", "end_position": "Siap melangkah.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-1", "basis": "source", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 146"},
+        {"id": "mv.psdp.kuda-kuda-depan#p2", "order": 2, "name": "Kaki maju, berat ke depan", "start_position": "Sikap tegak 2.", "change": "Kaki kiri (atau kanan) digeser/dilangkahkan sedikit ke depan; berat badan dipindahkan ke kaki depan; badan tetap tegak.", "body_parts": ["tungkai", "lutut", "pinggul"], "direction": "ke depan", "end_position": "Kuda-kuda depan: berat di kaki depan, pandangan ke depan.", "mistakes": [], "safety": "Lutut depan jangan dipaksa menekuk dalam bila terasa nyeri.", "tempo": null, "keyframe_ref": "kf-2", "basis": "source", "source_ids": ["src.nugroho.2005", "src.herdiana.2008"], "locator": "Nugroho hlm. 146; Herdiana hlm. 13"},
+        {"id": "mv.psdp.kuda-kuda-depan#p3", "order": 3, "name": "Kembali ke sikap awal", "start_position": "Kuda-kuda depan.", "change": "Kaki depan ditarik kembali; berdiri tegak.", "body_parts": ["tungkai"], "direction": "ke belakang", "end_position": "Sikap tegak 2.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-1", "basis": "source", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 13"}
+      ],
+      "practice": {"start": "Sikap tegak 2 di titik tengah ruang.", "sequence": "Maju ke kuda-kuda depan dengan kaki kiri → kembali → ulangi dengan kaki kanan.", "tempo": {"text": "Pelan, tahan 3–5 hitungan di kuda-kuda.", "basis": "editorial_unvalidated"}, "repetitions": {"text": "5 kali per sisi.", "basis": "editorial_unvalidated"}, "easier": "Langkah lebih pendek dan lutut sedikit saja menekuk.", "progression": "Kuda-kuda belakang; lalu latihan arah 8 penjuru yang dimulai dari kuda-kuda depan.", "stop_when_ref": "common.safety.stop_when", "cooldown": "Luruskan dan goyangkan tungkai ringan."},
+      "common_mistakes": [],
+      "common_mistakes_gap": "Sumber hanya menekankan prinsip umum: badan setimbang, stabil, tetapi mudah bergerak (Nugroho hlm. 146). Kesalahan spesifik tidak disebut.",
+      "references": [
+        {"source_id": "src.nugroho.2005", "locator": "hlm. 146", "supports": "Definisi kuda-kuda depan dan titik mulainya."},
+        {"source_id": "src.herdiana.2008", "locator": "hlm. 12–13", "supports": "Langkah sedikit ke depan, badan tegak, pandangan ke depan, kembali ke sikap awal."}
+      ],
+      "gaps": ["Panjang langkah, sudut lutut, dan arah telapak tidak disebut."],
+      "landmarks": ["lower_body", "upper_body"],
+      "animation": {"animation_id": "anim.psdp.kuda-kuda-depan.v1", "status": "generated"}
+    },
+    {
+      "id": "mv.psdp.kuda-kuda-belakang",
+      "slug": "kuda-kuda-belakang",
+      "names": {"primary": "Kuda-kuda Belakang", "local": null, "aliases": [], "pronunciation": null},
+      "category": "kuda_kuda", "level": "beginner", "safety_class": "solo_beginner", "solo_form_status": "documented_solo",
+      "content_status": "draft", "evidence_tier": "research_supported", "instructor_validation": "not_validated",
+      "permission_status": "parafrasa sumber terbit; tanpa media",
+      "cultural_context": {
+        "context": {"ref": "shared_context.definition"},
+        "purpose": {"text": "Dasar tumpuan dengan berat badan di kaki belakang. Herdiana juga memakai kuda-kuda belakang sebagai hasil 'hindaran hadap'.", "source_ids": ["src.nugroho.2005", "src.herdiana.2008"], "locator": "Nugroho hlm. 146; Herdiana hlm. 27"},
+        "meaning": {"text": "Tidak dijelaskan sumber.", "basis": "gap"},
+        "terminology": [],
+        "variants": [
+          {"text": "Nugroho: dari sikap tegak 2, kaki kiri/kanan bergerak dengan berat badan ditumpukan pada kaki belakang.", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 146"},
+          {"text": "Herdiana: geser kaki kiri atau kanan ke belakang.", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 14"}
+        ],
+        "differs_from": [{"movement_id": "mv.psdp.kuda-kuda-depan", "text": "Berat di kaki depan."}]
+      },
+      "prerequisites": {"abilities": "Sikap tegak 2; kuda-kuda depan.", "physical_prep": "Pemanasan tungkai.", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {
+        "legs": {"text": "Satu kaki digeser ke belakang (Herdiana).", "basis": "source", "source_ids": ["src.herdiana.2008"]},
+        "knees": {"text": "Lutut kaki belakang menekuk (ilustrasi) — sudut tidak disebut; tanyakan detailnya kepada pelatih.", "basis": "needs_validation"},
+        "weight": {"text": "Berat badan pada kaki belakang.", "basis": "source", "source_ids": ["src.nugroho.2005"]},
+        "torso": {"text": "Tidak dirinci sumber; umumnya badan tetap tegak.", "basis": "needs_validation"},
+        "arms": {"text": "Dari sikap tegak 2.", "basis": "source", "source_ids": ["src.nugroho.2005"]}
+      },
+      "phases": [
+        {"id": "mv.psdp.kuda-kuda-belakang#p1", "order": 1, "name": "Sikap tegak 2", "start_position": "Berdiri tegak, kepalan di pinggang.", "change": "—", "body_parts": [], "direction": "—", "end_position": "Siap.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-1", "basis": "source", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 146"},
+        {"id": "mv.psdp.kuda-kuda-belakang#p2", "order": 2, "name": "Kaki mundur, berat ke belakang", "start_position": "Sikap tegak 2.", "change": "Satu kaki digeser ke belakang; berat badan ditumpukan pada kaki belakang.", "body_parts": ["tungkai", "lutut", "pinggul"], "direction": "ke belakang", "end_position": "Kuda-kuda belakang.", "mistakes": [], "safety": "Jangan condong berlebihan ke belakang.", "tempo": null, "keyframe_ref": "kf-2", "basis": "source", "source_ids": ["src.nugroho.2005", "src.herdiana.2008"], "locator": "Nugroho hlm. 146; Herdiana hlm. 14"},
+        {"id": "mv.psdp.kuda-kuda-belakang#p3", "order": 3, "name": "Kembali ke sikap awal", "start_position": "Kuda-kuda belakang.", "change": "Kaki belakang ditarik kembali.", "body_parts": ["tungkai"], "direction": "ke depan", "end_position": "Sikap tegak 2.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-1", "basis": "editorial", "source_ids": []}
+      ],
+      "practice": {"start": "Sikap tegak 2.", "sequence": "Mundur ke kuda-kuda belakang dengan satu kaki → kembali → sisi lain.", "tempo": {"text": "Pelan, tahan 3–5 hitungan.", "basis": "editorial_unvalidated"}, "repetitions": {"text": "5 kali per sisi.", "basis": "editorial_unvalidated"}, "easier": "Langkah mundur pendek.", "progression": "Bergantian kuda-kuda depan ↔ belakang.", "stop_when_ref": "common.safety.stop_when", "cooldown": "—"},
+      "common_mistakes": [],
+      "common_mistakes_gap": "Tidak disebut sumber.",
+      "references": [
+        {"source_id": "src.nugroho.2005", "locator": "hlm. 146–147", "supports": "Definisi; berat di kaki belakang."},
+        {"source_id": "src.herdiana.2008", "locator": "hlm. 14", "supports": "Kaki digeser ke belakang."}
+      ],
+      "gaps": ["Panjang langkah & sudut lutut tidak disebut."],
+      "landmarks": ["lower_body"],
+      "animation": {"animation_id": "anim.psdp.kuda-kuda-belakang.v1", "status": "generated"}
+    },
+    {
+      "id": "mv.psdp.kuda-kuda-tengah",
+      "slug": "kuda-kuda-tengah",
+      "names": {"primary": "Kuda-kuda Tengah", "local": null, "aliases": ["Kuda-kuda kangkang", "Sikap kangkang (dasar)"], "pronunciation": null},
+      "category": "kuda_kuda", "level": "beginner", "safety_class": "solo_beginner", "solo_form_status": "documented_solo",
+      "content_status": "draft", "evidence_tier": "research_supported", "instructor_validation": "not_validated",
+      "permission_status": "parafrasa sumber terbit; tanpa media",
+      "cultural_context": {
+        "context": {"ref": "shared_context.definition"},
+        "purpose": {"text": "Kuda-kuda dengan titik keseimbangan di tengah; juga dasar sikap pasang 4 (kangkang).", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 147, 151"},
+        "meaning": {"text": "Tidak dijelaskan sumber.", "basis": "gap"},
+        "terminology": [{"term": "kangkang", "explanation": "kedua kaki terbuka lebar ke samping"}],
+        "variants": [
+          {"text": "Nugroho: dari sikap tegak 2, kaki dikangkangkan; titik keseimbangan di tengah; badan tegak, pandangan ke depan, kedua lutut sedikit ditekuk segaris tegak lurus dengan ibu jari kaki kiri dan kanan.", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 147"},
+          {"text": "Herdiana: 'sikap kangkang' disebut dasar kuda-kuda dan lanjutan dari sikap tegak 2; untuk kuda-kuda tengah Herdiana menulis 'geser kaki kiri atau kanan ke depan' — berbeda dari Nugroho dan perlu dikonfirmasi instruktur.", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 12, 14"}
+        ],
+        "differs_from": [{"movement_id": "mv.psdp.kuda-kuda-samping", "text": "Kuda-kuda samping (Nugroho) berposisi sama tetapi pandangan menyamping."}]
+      },
+      "prerequisites": {"abilities": "Sikap tegak 2.", "physical_prep": "Pemanasan lutut & pinggul.", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {
+        "head": {"text": "Pandangan ke depan.", "basis": "source", "source_ids": ["src.nugroho.2005"]},
+        "torso": {"text": "Badan tegak.", "basis": "source", "source_ids": ["src.nugroho.2005"]},
+        "legs": {"text": "Kaki dikangkangkan (terbuka ke samping); lebar tidak disebut.", "basis": "source", "source_ids": ["src.nugroho.2005"]},
+        "knees": {"text": "Kedua lutut sedikit ditekuk, segaris tegak lurus dengan ibu jari kaki kiri dan kanan.", "basis": "source", "source_ids": ["src.nugroho.2005"]},
+        "weight": {"text": "Titik keseimbangan di tengah-tengah.", "basis": "source", "source_ids": ["src.nugroho.2005"]},
+        "arms": {"text": "Dari sikap tegak 2.", "basis": "source", "source_ids": ["src.nugroho.2005"]}
+      },
+      "phases": [
+        {"id": "mv.psdp.kuda-kuda-tengah#p1", "order": 1, "name": "Sikap tegak 2", "start_position": "Berdiri tegak, kepalan di pinggang.", "change": "—", "body_parts": [], "direction": "—", "end_position": "Siap.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-1", "basis": "source", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 147"},
+        {"id": "mv.psdp.kuda-kuda-tengah#p2", "order": 2, "name": "Kaki dikangkangkan", "start_position": "Sikap tegak 2.", "change": "Satu kaki digeser ke samping sehingga kedua kaki terbuka (kangkang).", "body_parts": ["tungkai"], "direction": "ke samping", "end_position": "Kaki terbuka, lutut masih lurus.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-2", "basis": "source", "source_ids": ["src.nugroho.2005", "src.herdiana.2008"], "locator": "Nugroho hlm. 147; Herdiana hlm. 12"},
+        {"id": "mv.psdp.kuda-kuda-tengah#p3", "order": 3, "name": "Lutut ditekuk, berat di tengah", "start_position": "Kaki terbuka.", "change": "Kedua lutut ditekuk sedikit hingga segaris tegak lurus dengan ibu jari kaki; badan tegak; pandangan ke depan; keseimbangan di tengah.", "body_parts": ["lutut", "pinggul", "torso"], "direction": "turun", "end_position": "Kuda-kuda tengah.", "mistakes": [], "safety": "Lutut mengikuti arah ibu jari kaki (sesuai sumber); jangan dipaksa rendah.", "tempo": null, "keyframe_ref": "kf-3", "basis": "source", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 147"}
+      ],
+      "practice": {"start": "Sikap tegak 2.", "sequence": "Buka kaki → tekuk lutut sedikit → tahan → luruskan → rapatkan kaki.", "tempo": {"text": "Pelan; tahan 5 hitungan.", "basis": "editorial_unvalidated"}, "repetitions": {"text": "5 kali.", "basis": "editorial_unvalidated"}, "easier": "Bukaan kaki lebih sempit, tekukan lutut lebih sedikit.", "progression": "Kuda-kuda samping; sikap pasang 4.", "stop_when_ref": "common.safety.stop_when", "cooldown": "—"},
+      "common_mistakes": [],
+      "common_mistakes_gap": "Sumber memberi patokan positif (lutut segaris ibu jari kaki) tetapi tidak menyebut kesalahan umum.",
+      "references": [
+        {"source_id": "src.nugroho.2005", "locator": "hlm. 147", "supports": "Rincian kuda-kuda tengah."},
+        {"source_id": "src.herdiana.2008", "locator": "hlm. 12, 14", "supports": "Sikap kangkang sebagai dasar; varian uraian kuda-kuda tengah."}
+      ],
+      "gaps": ["Lebar kangkang tidak disebut.", "Uraian Herdiana tentang kuda-kuda tengah berbeda dari Nugroho — konflik sumber didokumentasikan, tidak direkonsiliasi."],
+      "landmarks": ["lower_body"],
+      "animation": {"animation_id": "anim.psdp.kuda-kuda-tengah.v1", "status": "generated"}
+    },
+    {
+      "id": "mv.psdp.kuda-kuda-samping",
+      "slug": "kuda-kuda-samping",
+      "names": {"primary": "Kuda-kuda Samping", "local": null, "aliases": [], "pronunciation": null},
+      "category": "kuda_kuda", "level": "beginner", "safety_class": "solo_beginner", "solo_form_status": "documented_solo",
+      "content_status": "draft", "evidence_tier": "research_supported", "instructor_validation": "not_validated",
+      "permission_status": "parafrasa sumber terbit; tanpa media",
+      "cultural_context": {
+        "context": {"ref": "shared_context.definition"},
+        "purpose": {"text": "Kuda-kuda dengan perhatian ke arah samping.", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 147"},
+        "meaning": {"text": "Tidak dijelaskan sumber.", "basis": "gap"},
+        "terminology": [],
+        "variants": [
+          {"text": "Nugroho: dari sikap tegak 2; posisi sama dengan kuda-kuda (tengah) tetapi pandangan menyamping.", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 147"},
+          {"text": "Herdiana: menggeser salah satu kaki ke samping kiri atau kanan.", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 15"}
+        ],
+        "differs_from": [{"movement_id": "mv.psdp.kuda-kuda-menyamping", "text": "Kuda-kuda menyamping menumpukan berat pada satu kaki."}]
+      },
+      "prerequisites": {"abilities": "Kuda-kuda tengah.", "physical_prep": "—", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {
+        "head": {"text": "Pandangan menyamping.", "basis": "source", "source_ids": ["src.nugroho.2005"]},
+        "legs": {"text": "Seperti kuda-kuda tengah.", "basis": "source", "source_ids": ["src.nugroho.2005"]},
+        "weight": {"text": "Tidak disebut; mengikuti kuda-kuda tengah (di tengah); tanyakan detailnya kepada pelatih.", "basis": "needs_validation"}
+      },
+      "phases": [
+        {"id": "mv.psdp.kuda-kuda-samping#p1", "order": 1, "name": "Sikap tegak 2", "start_position": "Berdiri tegak.", "change": "—", "body_parts": [], "direction": "—", "end_position": "Siap.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-1", "basis": "source", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 147"},
+        {"id": "mv.psdp.kuda-kuda-samping#p2", "order": 2, "name": "Posisi kuda-kuda", "start_position": "Sikap tegak 2.", "change": "Kaki dibuka seperti kuda-kuda tengah, lutut sedikit ditekuk.", "body_parts": ["tungkai", "lutut"], "direction": "ke samping", "end_position": "Kuda-kuda dengan pandangan ke depan.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-2", "basis": "source", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 147"},
+        {"id": "mv.psdp.kuda-kuda-samping#p3", "order": 3, "name": "Pandangan menyamping", "start_position": "Kuda-kuda.", "change": "Pandangan diarahkan ke samping.", "body_parts": ["kepala", "leher"], "direction": "ke samping", "end_position": "Kuda-kuda samping.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-3", "basis": "source", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 147"}
+      ],
+      "practice": {"start": "Sikap tegak 2.", "sequence": "Kuda-kuda → pandangan ke kiri → kembali → pandangan ke kanan.", "tempo": {"text": "Pelan.", "basis": "editorial_unvalidated"}, "repetitions": {"text": "3 kali per sisi.", "basis": "editorial_unvalidated"}, "easier": "—", "progression": "Kuda-kuda menyamping.", "stop_when_ref": "common.safety.stop_when", "cooldown": "—"},
+      "common_mistakes": [], "common_mistakes_gap": "Tidak disebut sumber.",
+      "references": [{"source_id": "src.nugroho.2005", "locator": "hlm. 147", "supports": "Definisi."}, {"source_id": "src.herdiana.2008", "locator": "hlm. 15", "supports": "Varian: kaki digeser ke samping."}],
+      "gaps": ["Seberapa jauh kepala/badan berputar tidak disebut; tampilan 2D hanya menggeser arah pandang."],
+      "landmarks": ["lower_body", "head"],
+      "animation": {"animation_id": "anim.psdp.kuda-kuda-samping.v1", "status": "generated"}
+    },
+    {
+      "id": "mv.psdp.kuda-kuda-menyamping",
+      "slug": "kuda-kuda-menyamping",
+      "names": {"primary": "Kuda-kuda Menyamping (kiri/kanan)", "local": null, "aliases": [], "pronunciation": null},
+      "category": "kuda_kuda", "level": "beginner", "safety_class": "solo_beginner", "solo_form_status": "documented_solo",
+      "content_status": "draft", "evidence_tier": "research_supported", "instructor_validation": "not_validated",
+      "permission_status": "parafrasa sumber terbit; tanpa media",
+      "cultural_context": {
+        "context": {"ref": "shared_context.definition"},
+        "purpose": {"text": "Memindahkan tumpuan ke satu sisi.", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 148"},
+        "meaning": {"text": "Tidak dijelaskan sumber.", "basis": "gap"},
+        "terminology": [], "variants": [], "differs_from": []
+      },
+      "prerequisites": {"abilities": "Kuda-kuda tengah.", "physical_prep": "Pemanasan pinggul & lutut.", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {
+        "legs": {"text": "Kaki kiri/kanan digeser ke samping kiri/kanan.", "basis": "source", "source_ids": ["src.nugroho.2005"]},
+        "weight": {"text": "Berat badan bertumpu pada kaki yang digeser (kiri bila menyamping kiri, dan sebaliknya).", "basis": "source", "source_ids": ["src.nugroho.2005"]},
+        "knees": {"text": "Lutut kaki tumpu menekuk (ilustrasi) — sudut tidak disebut.", "basis": "needs_validation"}
+      },
+      "phases": [
+        {"id": "mv.psdp.kuda-kuda-menyamping#p1", "order": 1, "name": "Sikap tegak 2", "start_position": "Berdiri tegak.", "change": "—", "body_parts": [], "direction": "—", "end_position": "Siap.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-1", "basis": "source", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 148"},
+        {"id": "mv.psdp.kuda-kuda-menyamping#p2", "order": 2, "name": "Menyamping kiri", "start_position": "Sikap tegak 2.", "change": "Kaki kiri menggeser ke samping kiri; berat bertumpu pada kaki kiri.", "body_parts": ["tungkai", "lutut", "pinggul"], "direction": "ke kiri (karakter)", "end_position": "Kuda-kuda menyamping kiri.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-2", "basis": "source", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 148"},
+        {"id": "mv.psdp.kuda-kuda-menyamping#p3", "order": 3, "name": "Kembali", "start_position": "Menyamping kiri.", "change": "Kembali ke sikap tegak 2.", "body_parts": ["tungkai"], "direction": "—", "end_position": "Sikap tegak 2.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-1", "basis": "editorial", "source_ids": []},
+        {"id": "mv.psdp.kuda-kuda-menyamping#p4", "order": 4, "name": "Menyamping kanan", "start_position": "Sikap tegak 2.", "change": "Kaki kanan menggeser ke samping kanan; berat pada kaki kanan.", "body_parts": ["tungkai", "lutut", "pinggul"], "direction": "ke kanan (karakter)", "end_position": "Kuda-kuda menyamping kanan.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-3", "basis": "source", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 148"}
+      ],
+      "practice": {"start": "Sikap tegak 2.", "sequence": "Menyamping kiri → kembali → menyamping kanan → kembali.", "tempo": {"text": "Pelan.", "basis": "editorial_unvalidated"}, "repetitions": {"text": "5 kali per sisi.", "basis": "editorial_unvalidated"}, "easier": "Geser lebih pendek.", "progression": "—", "stop_when_ref": "common.safety.stop_when", "cooldown": "—"},
+      "common_mistakes": [], "common_mistakes_gap": "Tidak disebut sumber.",
+      "references": [{"source_id": "src.nugroho.2005", "locator": "hlm. 148", "supports": "Definisi kuda-kuda menyamping."}],
+      "gaps": ["Jarak geser & posisi kaki yang tidak menumpu tidak disebut."],
+      "landmarks": ["lower_body"],
+      "animation": {"animation_id": "anim.psdp.kuda-kuda-menyamping.v1", "status": "generated"}
+    },
+    {
+      "id": "mv.psdp.kuda-kuda-silang-depan",
+      "slug": "kuda-kuda-silang-depan",
+      "names": {"primary": "Kuda-kuda Silang Depan", "local": null, "aliases": [], "pronunciation": null},
+      "category": "kuda_kuda", "level": "beginner", "safety_class": "solo_beginner", "solo_form_status": "documented_solo",
+      "content_status": "draft", "evidence_tier": "research_supported", "instructor_validation": "not_validated",
+      "permission_status": "parafrasa sumber terbit; tanpa media",
+      "cultural_context": {
+        "context": {"ref": "shared_context.definition"},
+        "purpose": {"text": "Kuda-kuda dengan satu kaki disilangkan ke depan; dasar sikap pasang 7.", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 148, 152"},
+        "meaning": {"text": "Tidak dijelaskan sumber.", "basis": "gap"},
+        "terminology": [],
+        "variants": [
+          {"text": "Nugroho: dari sikap tegak 2, berat bertumpu pada satu kaki, kaki lain menyentuh ringan dengan ibu jari/ujung jari kaki.", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 148"},
+          {"text": "Herdiana: langkahkan satu kaki ke depan sedikit disilang; telapak kaki yang dipindah sejajar dengan kaki lainnya.", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 16"}
+        ],
+        "differs_from": [{"movement_id": "mv.psdp.kuda-kuda-silang-belakang", "text": "Kaki disilangkan ke belakang."}]
+      },
+      "prerequisites": {"abilities": "Keseimbangan berdiri dengan berat di satu kaki.", "physical_prep": "—", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {
+        "weight": {"text": "Berat bertumpu pada satu kaki.", "basis": "source", "source_ids": ["src.nugroho.2005"]},
+        "feet": {"text": "Kaki yang lain menyentuh ringan dengan ujung jari kaki (Nugroho); telapak yang dipindah sejajar kaki lain (Herdiana).", "basis": "source", "source_ids": ["src.nugroho.2005", "src.herdiana.2008"]},
+        "legs": {"text": "Satu kaki disilangkan ke depan kaki lain.", "basis": "source", "source_ids": ["src.herdiana.2008"]}
+      },
+      "phases": [
+        {"id": "mv.psdp.kuda-kuda-silang-depan#p1", "order": 1, "name": "Sikap tegak 2", "start_position": "Berdiri tegak.", "change": "—", "body_parts": [], "direction": "—", "end_position": "Siap.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-1", "basis": "source", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 148"},
+        {"id": "mv.psdp.kuda-kuda-silang-depan#p2", "order": 2, "name": "Kaki disilang ke depan", "start_position": "Sikap tegak 2.", "change": "Satu kaki dilangkahkan menyilang di depan kaki tumpu; berat tetap pada kaki tumpu; kaki silang menyentuh ringan.", "body_parts": ["tungkai", "telapak kaki"], "direction": "menyilang ke depan", "end_position": "Kuda-kuda silang depan.", "mistakes": [], "safety": "Langkah pendek agar tidak kehilangan keseimbangan.", "tempo": null, "keyframe_ref": "kf-2", "basis": "source", "source_ids": ["src.nugroho.2005", "src.herdiana.2008"], "locator": "Nugroho hlm. 148; Herdiana hlm. 16"}
+      ],
+      "practice": {"start": "Sikap tegak 2.", "sequence": "Silang depan → kembali → sisi lain.", "tempo": {"text": "Pelan.", "basis": "editorial_unvalidated"}, "repetitions": {"text": "5 kali per sisi.", "basis": "editorial_unvalidated"}, "easier": "Berdiri dekat dinding untuk berpegangan.", "progression": "Sikap pasang 7.", "stop_when_ref": "common.safety.stop_when", "cooldown": "—"},
+      "common_mistakes": [], "common_mistakes_gap": "Tidak disebut sumber.",
+      "references": [{"source_id": "src.nugroho.2005", "locator": "hlm. 148", "supports": "Tumpuan satu kaki, kaki lain sentuhan ringan."}, {"source_id": "src.herdiana.2008", "locator": "hlm. 16", "supports": "Langkah sedikit disilang, telapak sejajar."}],
+      "gaps": ["Tampilan depan 2D hanya memperlihatkan silang lewat urutan gambar tungkai; kedalaman tidak tergambar."],
+      "landmarks": ["lower_body"],
+      "animation": {"animation_id": "anim.psdp.kuda-kuda-silang-depan.v1", "status": "generated"}
+    },
+    {
+      "id": "mv.psdp.kuda-kuda-silang-belakang",
+      "slug": "kuda-kuda-silang-belakang",
+      "names": {"primary": "Kuda-kuda Silang Belakang", "local": null, "aliases": [], "pronunciation": null},
+      "category": "kuda_kuda", "level": "beginner", "safety_class": "solo_beginner", "solo_form_status": "documented_solo",
+      "content_status": "draft", "evidence_tier": "research_supported", "instructor_validation": "not_validated",
+      "permission_status": "parafrasa sumber terbit; tanpa media",
+      "cultural_context": {
+        "context": {"ref": "shared_context.definition"},
+        "purpose": {"text": "Kuda-kuda dengan satu kaki disilangkan ke belakang; dasar sikap pasang 5.", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 148, 152"},
+        "meaning": {"text": "Tidak dijelaskan sumber.", "basis": "gap"},
+        "terminology": [],
+        "variants": [
+          {"text": "Nugroho: sama prinsipnya dengan kuda-kuda silang (tumpuan satu kaki, kaki lain sentuhan ringan ujung jari).", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 148"},
+          {"text": "Herdiana: langkahkan satu kaki ke belakang sedikit disilang; telapak yang dipindah sejajar kaki lain.", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 15"}
+        ],
+        "differs_from": [{"movement_id": "mv.psdp.kuda-kuda-silang-depan", "text": "Kaki disilangkan ke depan."}]
+      },
+      "prerequisites": {"abilities": "Kuda-kuda silang depan.", "physical_prep": "—", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {
+        "weight": {"text": "Berat bertumpu pada satu kaki.", "basis": "source", "source_ids": ["src.nugroho.2005"]},
+        "feet": {"text": "Kaki yang menyilang di belakang menyentuh ringan dengan ujung jari kaki.", "basis": "source", "source_ids": ["src.nugroho.2005"]},
+        "legs": {"text": "Satu kaki disilangkan di belakang kaki tumpu.", "basis": "source", "source_ids": ["src.herdiana.2008"]}
+      },
+      "phases": [
+        {"id": "mv.psdp.kuda-kuda-silang-belakang#p1", "order": 1, "name": "Sikap tegak 2", "start_position": "Berdiri tegak.", "change": "—", "body_parts": [], "direction": "—", "end_position": "Siap.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-1", "basis": "source", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 148"},
+        {"id": "mv.psdp.kuda-kuda-silang-belakang#p2", "order": 2, "name": "Kaki disilang ke belakang", "start_position": "Sikap tegak 2.", "change": "Satu kaki dilangkahkan menyilang di belakang kaki tumpu; berat tetap pada kaki tumpu; kaki silang menyentuh ringan.", "body_parts": ["tungkai", "telapak kaki"], "direction": "menyilang ke belakang", "end_position": "Kuda-kuda silang belakang.", "mistakes": [], "safety": "Langkah pendek.", "tempo": null, "keyframe_ref": "kf-2", "basis": "source", "source_ids": ["src.nugroho.2005", "src.herdiana.2008"], "locator": "Nugroho hlm. 148; Herdiana hlm. 15"}
+      ],
+      "practice": {"start": "Sikap tegak 2.", "sequence": "Silang belakang → kembali → sisi lain.", "tempo": {"text": "Pelan.", "basis": "editorial_unvalidated"}, "repetitions": {"text": "5 kali per sisi.", "basis": "editorial_unvalidated"}, "easier": "Berdiri dekat dinding untuk berpegangan.", "progression": "Sikap pasang 5.", "stop_when_ref": "common.safety.stop_when", "cooldown": "—"},
+      "common_mistakes": [], "common_mistakes_gap": "Tidak disebut sumber.",
+      "references": [{"source_id": "src.nugroho.2005", "locator": "hlm. 148", "supports": "Prinsip kuda-kuda silang."}, {"source_id": "src.herdiana.2008", "locator": "hlm. 15", "supports": "Langkah ke belakang sedikit disilang."}],
+      "gaps": ["Kedalaman tidak tergambar pada tampilan depan 2D."],
+      "landmarks": ["lower_body"],
+      "animation": {"animation_id": "anim.psdp.kuda-kuda-silang-belakang.v1", "status": "generated"}
+    }
+  ]
+}

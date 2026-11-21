@@ -1,0 +1,172 @@
+{
+  "schema": "silatara.movements/v1",
+  "tradition_id": "trd.psdp",
+  "module_hint": "Sikap pasang",
+  "shared_context": {
+    "definition": {"text": "Sikap pasang adalah sikap dan gerak siap-siaga untuk melakukan pembelaan atau serangan yang berpola, dilakukan pada awal atau akhir rangkaian gerak; merupakan koordinasi sikap kuda-kuda, sikap tubuh, dan sikap lengan, serta kelanjutan dari kuda-kuda (Januarno 1989, dikutip Nugroho).", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 150"},
+    "numbering": {"text": "Penomoran 1–8 berasal dari Januarno (1989: 70), buku pedoman pembinaan prestasi yang diterbitkan Yayasan Setia Hati Terate, sebagaimana dikutip Nugroho (2005). Penomoran dan bentuk sikap pasang berbeda antarperguruan; ini BUKAN klaim bahwa perguruan mana pun memakainya saat ini.", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 150"},
+    "hands": {"text": "Sikap pasang dapat dimulai dengan kaki kiri atau kanan. Tangan dapat terbuka (untuk memancing lawan) atau tertutup rapat (untuk melindungi badan) (Januarno 1989: 71, dikutip Nugroho).", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 153"}
+  },
+  "movements": [
+    {
+      "id": "mv.psdp.sikap-pasang-1", "slug": "sikap-pasang-1",
+      "names": {"primary": "Sikap Pasang 1", "local": null, "aliases": [], "pronunciation": null},
+      "category": "sikap_pasang", "level": "beginner", "safety_class": "solo_beginner", "solo_form_status": "documented_solo",
+      "content_status": "draft", "evidence_tier": "research_supported", "instructor_validation": "not_validated", "permission_status": "parafrasa sumber terbit; tanpa media",
+      "cultural_context": {"context": {"ref": "shared_context.definition"}, "purpose": {"ref": "shared_context.hands"}, "meaning": {"text": "Tidak dijelaskan sumber.", "basis": "gap"}, "terminology": [{"term": "sikap pasang", "explanation": "sikap siap-siaga gabungan kuda-kuda, tubuh, dan lengan"}], "variants": [{"ref": "shared_context.numbering"}], "differs_from": []},
+      "prerequisites": {"abilities": "Kuda-kuda depan.", "physical_prep": "—", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {
+        "legs": {"text": "Kuda-kuda depan: kaki kiri di depan, ditekuk rileks.", "basis": "source", "source_ids": ["src.nugroho.2005"]},
+        "torso": {"text": "Badan tegak.", "basis": "source", "source_ids": ["src.nugroho.2005"]},
+        "arms": {"text": "Kedua tangan rileks di depan dada.", "basis": "source", "source_ids": ["src.nugroho.2005"]},
+        "head": {"text": "Pandangan lurus ke depan.", "basis": "source", "source_ids": ["src.nugroho.2005"]}
+      },
+      "phases": [
+        {"id": "mv.psdp.sikap-pasang-1#p1", "order": 1, "name": "Sikap tegak 2", "start_position": "Berdiri tegak.", "change": "—", "body_parts": [], "direction": "—", "end_position": "Siap.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-1", "basis": "editorial", "source_ids": []},
+        {"id": "mv.psdp.sikap-pasang-1#p2", "order": 2, "name": "Sikap pasang 1", "start_position": "Sikap tegak 2.", "change": "Kaki kiri maju membentuk kuda-kuda depan dengan lutut depan ditekuk rileks; kedua tangan diangkat rileks di depan dada.", "body_parts": ["tungkai", "lutut", "lengan"], "direction": "ke depan", "end_position": "Kuda-kuda depan, badan tegak, tangan di depan dada, pandangan lurus.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-2", "basis": "source", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 150"}
+      ],
+      "practice": {"start": "Sikap tegak 2.", "sequence": "Masuk sikap pasang 1 → tahan → kembali.", "tempo": {"text": "Pelan; tahan 3–5 hitungan.", "basis": "editorial_unvalidated"}, "repetitions": {"text": "5 kali; ulang dengan kaki kanan di depan.", "basis": "editorial_unvalidated"}, "easier": "Kuda-kuda lebih pendek.", "progression": "Sikap pasang 4.", "stop_when_ref": "common.safety.stop_when", "cooldown": "—"},
+      "common_mistakes": [], "common_mistakes_gap": "Tidak disebut sumber.",
+      "references": [{"source_id": "src.nugroho.2005", "locator": "hlm. 150", "supports": "Uraian sikap pasang 1 (Januarno 1989)."}],
+      "gaps": ["Jarak tangan dari dada dan bentuk tangan (terbuka/tertutup) tidak ditetapkan."],
+      "landmarks": ["lower_body", "upper_body"],
+      "animation": {"animation_id": "anim.psdp.sikap-pasang-1.v1", "status": "generated"}
+    },
+    {
+      "id": "mv.psdp.sikap-pasang-2", "slug": "sikap-pasang-2",
+      "names": {"primary": "Sikap Pasang 2", "local": null, "aliases": [], "pronunciation": null},
+      "category": "sikap_pasang", "level": "beginner", "safety_class": "solo_beginner", "solo_form_status": "documented_solo",
+      "content_status": "draft", "evidence_tier": "research_supported", "instructor_validation": "not_validated", "permission_status": "parafrasa sumber terbit; tanpa media",
+      "cultural_context": {"context": {"ref": "shared_context.definition"}, "purpose": {"ref": "shared_context.hands"}, "meaning": {"text": "Tidak dijelaskan sumber.", "basis": "gap"}, "terminology": [], "variants": [{"ref": "shared_context.numbering"}], "differs_from": [{"movement_id": "mv.psdp.sikap-pasang-1", "text": "Pasang 2 adalah pasang 1 yang badan & kaki tumpunya diputar 45°."}]},
+      "prerequisites": {"abilities": "Sikap pasang 1.", "physical_prep": "—", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {
+        "legs": {"text": "Dari kuda-kuda depan, badan dan kaki tumpu depan diputar 45° ke kiri; kaki belakang sedikit jinjit.", "basis": "source", "source_ids": ["src.nugroho.2005"]},
+        "torso": {"text": "Diputar 45° ke kiri bersama kaki tumpu.", "basis": "source", "source_ids": ["src.nugroho.2005"]}
+      },
+      "phases": [
+        {"id": "mv.psdp.sikap-pasang-2#p1", "order": 1, "name": "Kuda-kuda depan", "start_position": "Sikap pasang 1/kuda-kuda depan.", "change": "—", "body_parts": [], "direction": "—", "end_position": "Kuda-kuda depan.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": null, "basis": "source", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 150"},
+        {"id": "mv.psdp.sikap-pasang-2#p2", "order": 2, "name": "Putar 45°", "start_position": "Kuda-kuda depan.", "change": "Badan dan kaki tumpu depan diputar 45° ke kiri; kaki belakang sedikit jinjit.", "body_parts": ["torso", "pinggul", "telapak kaki"], "direction": "putar ke kiri", "end_position": "Sikap pasang 2.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": null, "basis": "source", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 150"}
+      ],
+      "practice": {"start": "Sikap pasang 1.", "sequence": "Putar 45° → tahan → kembali.", "tempo": {"text": "Pelan.", "basis": "editorial_unvalidated"}, "repetitions": {"text": "5 kali.", "basis": "editorial_unvalidated"}, "easier": "—", "progression": "—", "stop_when_ref": "common.safety.stop_when", "cooldown": "—"},
+      "common_mistakes": [], "common_mistakes_gap": "Tidak disebut sumber.",
+      "references": [{"source_id": "src.nugroho.2005", "locator": "hlm. 150", "supports": "Uraian sikap pasang 2."}],
+      "gaps": ["Posisi tangan tidak disebut untuk pasang 2."],
+      "landmarks": ["lower_body", "upper_body"],
+      "animation": {"animation_id": "anim.psdp.sikap-pasang-2.v1", "status": "needs_reference", "needs": "Rotasi badan 45° adalah gerak tiga dimensi; rig 2D satu sudut tidak dapat memperlihatkannya dengan benar. Butuh rig 3/4 atau dua tampilan + konfirmasi instruktur."}
+    },
+    {
+      "id": "mv.psdp.sikap-pasang-3", "slug": "sikap-pasang-3",
+      "names": {"primary": "Sikap Pasang 3", "local": null, "aliases": [], "pronunciation": null},
+      "category": "sikap_pasang", "level": "beginner", "safety_class": "solo_beginner", "solo_form_status": "documented_solo",
+      "content_status": "draft", "evidence_tier": "research_supported", "instructor_validation": "not_validated", "permission_status": "parafrasa sumber terbit; tanpa media",
+      "cultural_context": {"context": {"ref": "shared_context.definition"}, "purpose": {"ref": "shared_context.hands"}, "meaning": {"text": "Tidak dijelaskan sumber.", "basis": "gap"}, "terminology": [], "variants": [{"ref": "shared_context.numbering"}], "differs_from": []},
+      "prerequisites": {"abilities": "Sikap pasang 1.", "physical_prep": "—", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {"legs": {"text": "Dari kuda-kuda depan, kaki kanan (belakang) ditarik serong ke kanan.", "basis": "source", "source_ids": ["src.nugroho.2005"]}, "arms": {"text": "Kedua tangan rileks di depan dada.", "basis": "source", "source_ids": ["src.nugroho.2005"]}},
+      "phases": [
+        {"id": "mv.psdp.sikap-pasang-3#p1", "order": 1, "name": "Kuda-kuda depan", "start_position": "Kuda-kuda depan.", "change": "—", "body_parts": [], "direction": "—", "end_position": "Kuda-kuda depan.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": null, "basis": "source", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 151"},
+        {"id": "mv.psdp.sikap-pasang-3#p2", "order": 2, "name": "Kaki belakang ditarik serong", "start_position": "Kuda-kuda depan.", "change": "Kaki kanan di belakang ditarik serong ke kanan; tangan rileks di depan dada.", "body_parts": ["tungkai"], "direction": "serong kanan", "end_position": "Sikap pasang 3.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": null, "basis": "source", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 151"}
+      ],
+      "practice": {"start": "Kuda-kuda depan.", "sequence": "Tarik kaki belakang serong → tahan → kembali.", "tempo": {"text": "Pelan.", "basis": "editorial_unvalidated"}, "repetitions": {"text": "5 kali.", "basis": "editorial_unvalidated"}, "easier": "—", "progression": "—", "stop_when_ref": "common.safety.stop_when", "cooldown": "—"},
+      "common_mistakes": [], "common_mistakes_gap": "Tidak disebut sumber.",
+      "references": [{"source_id": "src.nugroho.2005", "locator": "hlm. 151", "supports": "Uraian sikap pasang 3."}],
+      "gaps": ["Besar sudut serong tidak disebut."],
+      "landmarks": ["lower_body", "upper_body"],
+      "animation": {"animation_id": "anim.psdp.sikap-pasang-3.v1", "status": "needs_reference", "needs": "Tarikan 'serong' melibatkan arah diagonal di lantai; butuh tampilan atas atau 3/4 dan sudut yang dikonfirmasi instruktur."}
+    },
+    {
+      "id": "mv.psdp.sikap-pasang-4", "slug": "sikap-pasang-4",
+      "names": {"primary": "Sikap Pasang 4", "local": null, "aliases": [], "pronunciation": null},
+      "category": "sikap_pasang", "level": "beginner", "safety_class": "solo_beginner", "solo_form_status": "documented_solo",
+      "content_status": "draft", "evidence_tier": "research_supported", "instructor_validation": "not_validated", "permission_status": "parafrasa sumber terbit; tanpa media",
+      "cultural_context": {"context": {"ref": "shared_context.definition"}, "purpose": {"ref": "shared_context.hands"}, "meaning": {"text": "Tidak dijelaskan sumber.", "basis": "gap"}, "terminology": [], "variants": [{"ref": "shared_context.numbering"}], "differs_from": []},
+      "prerequisites": {"abilities": "Kuda-kuda tengah.", "physical_prep": "—", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {"legs": {"text": "Kuda-kuda kangkang.", "basis": "source", "source_ids": ["src.nugroho.2005"]}, "weight": {"text": "Berat badan di kedua kaki.", "basis": "source", "source_ids": ["src.nugroho.2005"]}, "torso": {"text": "Badan tegak.", "basis": "source", "source_ids": ["src.nugroho.2005"]}, "head": {"text": "Pandangan lurus ke depan.", "basis": "source", "source_ids": ["src.nugroho.2005"]}, "arms": {"text": "Kedua tangan rileks di depan dada.", "basis": "source", "source_ids": ["src.nugroho.2005"]}},
+      "phases": [
+        {"id": "mv.psdp.sikap-pasang-4#p1", "order": 1, "name": "Sikap tegak 2", "start_position": "Berdiri tegak.", "change": "—", "body_parts": [], "direction": "—", "end_position": "Siap.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-1", "basis": "editorial", "source_ids": []},
+        {"id": "mv.psdp.sikap-pasang-4#p2", "order": 2, "name": "Sikap pasang 4", "start_position": "Sikap tegak 2.", "change": "Kaki dibuka ke kuda-kuda kangkang dengan berat di kedua kaki; tangan diangkat rileks di depan dada.", "body_parts": ["tungkai", "lutut", "lengan"], "direction": "ke samping", "end_position": "Kangkang, badan tegak, pandangan lurus, tangan di depan dada.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-2", "basis": "source", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 151"}
+      ],
+      "practice": {"start": "Sikap tegak 2.", "sequence": "Masuk sikap pasang 4 → tahan → kembali.", "tempo": {"text": "Pelan; tahan 5 hitungan.", "basis": "editorial_unvalidated"}, "repetitions": {"text": "5 kali.", "basis": "editorial_unvalidated"}, "easier": "Kangkang lebih sempit.", "progression": "Sikap pasang 6.", "stop_when_ref": "common.safety.stop_when", "cooldown": "—"},
+      "common_mistakes": [], "common_mistakes_gap": "Tidak disebut sumber.",
+      "references": [{"source_id": "src.nugroho.2005", "locator": "hlm. 151", "supports": "Uraian sikap pasang 4."}],
+      "gaps": ["Kedalaman tekukan lutut tidak disebut."],
+      "landmarks": ["lower_body", "upper_body"],
+      "animation": {"animation_id": "anim.psdp.sikap-pasang-4.v1", "status": "generated"}
+    },
+    {
+      "id": "mv.psdp.sikap-pasang-5", "slug": "sikap-pasang-5",
+      "names": {"primary": "Sikap Pasang 5", "local": null, "aliases": [], "pronunciation": null},
+      "category": "sikap_pasang", "level": "beginner", "safety_class": "solo_beginner", "solo_form_status": "documented_solo",
+      "content_status": "draft", "evidence_tier": "research_supported", "instructor_validation": "not_validated", "permission_status": "parafrasa sumber terbit; tanpa media",
+      "cultural_context": {"context": {"ref": "shared_context.definition"}, "purpose": {"ref": "shared_context.hands"}, "meaning": {"text": "Tidak dijelaskan sumber.", "basis": "gap"}, "terminology": [], "variants": [{"ref": "shared_context.numbering"}], "differs_from": []},
+      "prerequisites": {"abilities": "Kuda-kuda silang belakang.", "physical_prep": "—", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {"legs": {"text": "Kuda-kuda silang belakang: kaki kanan melangkah ke depan, kaki kiri disilangkan di belakang kaki kanan.", "basis": "source", "source_ids": ["src.nugroho.2005"]}, "weight": {"text": "Berat badan di kaki kanan.", "basis": "source", "source_ids": ["src.nugroho.2005"]}, "head": {"text": "Pandangan menyamping.", "basis": "source", "source_ids": ["src.nugroho.2005"]}, "arms": {"text": "Kedua tangan rileks di depan dada.", "basis": "source", "source_ids": ["src.nugroho.2005"]}},
+      "phases": [
+        {"id": "mv.psdp.sikap-pasang-5#p1", "order": 1, "name": "Kaki kanan melangkah", "start_position": "Sikap tegak.", "change": "Kaki kanan melangkah ke depan.", "body_parts": ["tungkai"], "direction": "ke depan", "end_position": "Kaki kanan di depan.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": null, "basis": "source", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 152"},
+        {"id": "mv.psdp.sikap-pasang-5#p2", "order": 2, "name": "Kaki kiri menyilang di belakang", "start_position": "Kaki kanan di depan.", "change": "Kaki kiri disilangkan di belakang kaki kanan; berat di kaki kanan; pandangan menyamping; tangan rileks di depan dada.", "body_parts": ["tungkai", "kepala", "lengan"], "direction": "silang ke belakang", "end_position": "Sikap pasang 5.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": null, "basis": "source", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 152"}
+      ],
+      "practice": {"start": "Sikap tegak.", "sequence": "Langkah kanan → silang kiri di belakang → tahan → kembali.", "tempo": {"text": "Pelan.", "basis": "editorial_unvalidated"}, "repetitions": {"text": "5 kali.", "basis": "editorial_unvalidated"}, "easier": "—", "progression": "—", "stop_when_ref": "common.safety.stop_when", "cooldown": "—"},
+      "common_mistakes": [], "common_mistakes_gap": "Tidak disebut sumber.",
+      "references": [{"source_id": "src.nugroho.2005", "locator": "hlm. 152", "supports": "Uraian sikap pasang 5."}],
+      "gaps": ["Arah pandang 'menyamping' ke sisi mana tidak disebut."],
+      "landmarks": ["lower_body", "upper_body"],
+      "animation": {"animation_id": "anim.psdp.sikap-pasang-5.v1", "status": "needs_reference", "needs": "Kombinasi langkah ke depan, silang belakang, dan pandangan menyamping tidak dapat dibaca dari satu sudut 2D tanpa ambigu; butuh sisi pandang yang dikonfirmasi instruktur."}
+    },
+    {
+      "id": "mv.psdp.sikap-pasang-6", "slug": "sikap-pasang-6",
+      "names": {"primary": "Sikap Pasang 6", "local": null, "aliases": [], "pronunciation": null},
+      "category": "sikap_pasang", "level": "beginner", "safety_class": "solo_beginner", "solo_form_status": "documented_solo",
+      "content_status": "draft", "evidence_tier": "research_supported", "instructor_validation": "not_validated", "permission_status": "parafrasa sumber terbit; tanpa media",
+      "cultural_context": {"context": {"ref": "shared_context.definition"}, "purpose": {"ref": "shared_context.hands"}, "meaning": {"text": "Tidak dijelaskan sumber.", "basis": "gap"}, "terminology": [], "variants": [{"ref": "shared_context.numbering"}], "differs_from": []},
+      "prerequisites": {"abilities": "Kuda-kuda tengah.", "physical_prep": "—", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {"legs": {"text": "Kuda-kuda tengah menyamping.", "basis": "source", "source_ids": ["src.nugroho.2005"]}, "head": {"text": "Pandangan ke arah samping kiri.", "basis": "source", "source_ids": ["src.nugroho.2005"]}, "arms": {"text": "Kedua tangan rileks di depan dada.", "basis": "source", "source_ids": ["src.nugroho.2005"]}},
+      "phases": [
+        {"id": "mv.psdp.sikap-pasang-6#p1", "order": 1, "name": "Sikap tegak 2", "start_position": "Berdiri tegak.", "change": "—", "body_parts": [], "direction": "—", "end_position": "Siap.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-1", "basis": "editorial", "source_ids": []},
+        {"id": "mv.psdp.sikap-pasang-6#p2", "order": 2, "name": "Sikap pasang 6", "start_position": "Sikap tegak 2.", "change": "Kuda-kuda tengah menyamping; pandangan ke samping kiri; tangan rileks di depan dada.", "body_parts": ["tungkai", "kepala", "lengan"], "direction": "pandangan ke kiri (karakter)", "end_position": "Sikap pasang 6.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-2", "basis": "source", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 152"}
+      ],
+      "practice": {"start": "Sikap tegak 2.", "sequence": "Masuk sikap pasang 6 → tahan → kembali.", "tempo": {"text": "Pelan.", "basis": "editorial_unvalidated"}, "repetitions": {"text": "5 kali.", "basis": "editorial_unvalidated"}, "easier": "—", "progression": "Sikap pasang 7.", "stop_when_ref": "common.safety.stop_when", "cooldown": "—"},
+      "common_mistakes": [], "common_mistakes_gap": "Tidak disebut sumber.",
+      "references": [{"source_id": "src.nugroho.2005", "locator": "hlm. 152", "supports": "Uraian sikap pasang 6."}],
+      "gaps": ["'Kuda-kuda tengah menyamping' dapat berarti badan menyamping (3D); animasi depan hanya menunjukkan arah pandang; tanyakan kepada pelatih apakah badan ikut berputar."],
+      "landmarks": ["lower_body", "upper_body", "head"],
+      "animation": {"animation_id": "anim.psdp.sikap-pasang-6.v1", "status": "generated"}
+    },
+    {
+      "id": "mv.psdp.sikap-pasang-7", "slug": "sikap-pasang-7",
+      "names": {"primary": "Sikap Pasang 7", "local": null, "aliases": [], "pronunciation": null},
+      "category": "sikap_pasang", "level": "beginner", "safety_class": "solo_beginner", "solo_form_status": "documented_solo",
+      "content_status": "draft", "evidence_tier": "research_supported", "instructor_validation": "not_validated", "permission_status": "parafrasa sumber terbit; tanpa media",
+      "cultural_context": {"context": {"ref": "shared_context.definition"}, "purpose": {"ref": "shared_context.hands"}, "meaning": {"text": "Tidak dijelaskan sumber.", "basis": "gap"}, "terminology": [], "variants": [{"ref": "shared_context.numbering"}], "differs_from": []},
+      "prerequisites": {"abilities": "Sikap pasang 6; kuda-kuda silang depan.", "physical_prep": "—", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {"legs": {"text": "Dari kuda-kuda tengah menyamping, kaki kanan disilangkan ke depan kaki kiri.", "basis": "source", "source_ids": ["src.nugroho.2005"]}, "head": {"text": "Pandangan ke samping kiri.", "basis": "source", "source_ids": ["src.nugroho.2005"]}, "arms": {"text": "Kedua tangan rileks di depan dada.", "basis": "source", "source_ids": ["src.nugroho.2005"]}},
+      "phases": [
+        {"id": "mv.psdp.sikap-pasang-7#p1", "order": 1, "name": "Kuda-kuda tengah menyamping", "start_position": "Sikap pasang 6.", "change": "—", "body_parts": [], "direction": "—", "end_position": "Kuda-kuda tengah menyamping.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": null, "basis": "source", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 152"},
+        {"id": "mv.psdp.sikap-pasang-7#p2", "order": 2, "name": "Silang depan", "start_position": "Kuda-kuda tengah menyamping.", "change": "Kaki kanan disilangkan ke depan kaki kiri; pandangan ke samping kiri.", "body_parts": ["tungkai"], "direction": "silang", "end_position": "Sikap pasang 7.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": null, "basis": "source", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 152"}
+      ],
+      "practice": {"start": "Sikap pasang 6.", "sequence": "Silangkan kaki kanan ke depan kaki kiri → tahan → kembali.", "tempo": {"text": "Pelan.", "basis": "editorial_unvalidated"}, "repetitions": {"text": "5 kali.", "basis": "editorial_unvalidated"}, "easier": "—", "progression": "—", "stop_when_ref": "common.safety.stop_when", "cooldown": "—"},
+      "common_mistakes": [], "common_mistakes_gap": "Tidak disebut sumber.",
+      "references": [{"source_id": "src.nugroho.2005", "locator": "hlm. 152", "supports": "Uraian sikap pasang 7."}],
+      "gaps": ["Orientasi badan saat menyilang perlu referensi visual."],
+      "landmarks": ["lower_body", "upper_body"],
+      "animation": {"animation_id": "anim.psdp.sikap-pasang-7.v1", "status": "needs_reference", "needs": "Arah silang relatif terhadap badan yang menyamping tidak dapat ditentukan dari teks; butuh sketsa berizin atau demonstrasi."}
+    },
+    {
+      "id": "mv.psdp.sikap-pasang-8", "slug": "sikap-pasang-8",
+      "names": {"primary": "Sikap Pasang 8", "local": null, "aliases": [], "pronunciation": null},
+      "category": "sikap_pasang", "level": "beginner", "safety_class": "solo_intermediate", "solo_form_status": "documented_solo",
+      "content_status": "draft", "evidence_tier": "research_supported", "instructor_validation": "not_validated", "permission_status": "parafrasa sumber terbit; tanpa media",
+      "cultural_context": {"context": {"ref": "shared_context.definition"}, "purpose": {"ref": "shared_context.hands"}, "meaning": {"text": "Tidak dijelaskan sumber.", "basis": "gap"}, "terminology": [], "variants": [{"ref": "shared_context.numbering"}], "differs_from": []},
+      "prerequisites": {"abilities": "Mampu berdiri satu kaki ±10 detik.", "physical_prep": "Pemanasan pergelangan kaki.", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {"legs": {"text": "Kaki kiri diangkat; kaki kanan sebagai tumpuan.", "basis": "source", "source_ids": ["src.nugroho.2005"]}, "head": {"text": "Pandangan lurus ke depan.", "basis": "source", "source_ids": ["src.nugroho.2005"]}, "arms": {"text": "Kedua tangan rileks di depan dada.", "basis": "source", "source_ids": ["src.nugroho.2005"]}, "knees": {"text": "Tinggi angkatan kaki tidak disebut; animasi memakai angkatan sedang.", "basis": "needs_validation"}},
+      "phases": [
+        {"id": "mv.psdp.sikap-pasang-8#p1", "order": 1, "name": "Sikap tegak 2", "start_position": "Berdiri tegak.", "change": "—", "body_parts": [], "direction": "—", "end_position": "Siap.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-1", "basis": "editorial", "source_ids": []},
+        {"id": "mv.psdp.sikap-pasang-8#p2", "order": 2, "name": "Sikap pasang 8", "start_position": "Sikap tegak 2.", "change": "Kaki kiri diangkat; kaki kanan menumpu; tangan rileks di depan dada; pandangan lurus.", "body_parts": ["tungkai", "lutut", "lengan"], "direction": "lutut naik", "end_position": "Berdiri satu kaki.", "mistakes": [], "safety": "Berlatih dekat dinding/sandaran; turunkan kaki bila goyah.", "tempo": null, "keyframe_ref": "kf-2", "basis": "source", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 152"}
+      ],
+      "practice": {"start": "Sikap tegak 2, dekat dinding.", "sequence": "Angkat kaki kiri → tahan → turunkan → ganti sisi.", "tempo": {"text": "Tahan 3–5 hitungan.", "basis": "editorial_unvalidated"}, "repetitions": {"text": "3–5 kali per sisi.", "basis": "editorial_unvalidated"}, "easier": "Angkat kaki lebih rendah; satu tangan menyentuh dinding.", "progression": "—", "stop_when_ref": "common.safety.stop_when", "cooldown": "—"},
+      "common_mistakes": [], "common_mistakes_gap": "Tidak disebut sumber.",
+      "references": [{"source_id": "src.nugroho.2005", "locator": "hlm. 152", "supports": "Uraian sikap pasang 8."}],
+      "gaps": ["Tinggi dan bentuk angkatan kaki tidak disebut."],
+      "landmarks": ["lower_body", "upper_body"],
+      "animation": {"animation_id": "anim.psdp.sikap-pasang-8.v1", "status": "generated"}
+    }
+  ]
+}

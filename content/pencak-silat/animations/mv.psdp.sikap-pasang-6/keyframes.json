@@ -1,0 +1,107 @@
+{
+  "schema": "silatara.keyframes/v1",
+  "animation_id": "anim.psdp.sikap-pasang-6.v1",
+  "movement_id": "mv.psdp.sikap-pasang-6",
+  "animation_status": "generated",
+  "title": "Sikap pasang 6",
+  "description": "Tampak depan: kuda-kuda tengah menyamping, pandangan ke samping kiri, kedua tangan rileks di depan dada.",
+  "view": "front",
+  "source_ids": [
+    "src.nugroho.2005"
+  ],
+  "keyframes": [
+    {
+      "id": "kf-1",
+      "phase_id": "mv.psdp.sikap-pasang-6#p1",
+      "label": "Sikap tegak 2",
+      "caption": "Kepalan di pinggang",
+      "pose": {
+        "pelvis": [
+          180,
+          0
+        ],
+        "feet": {
+          "L": [
+            187,
+            0
+          ],
+          "R": [
+            173,
+            0
+          ]
+        },
+        "foot_turn": {
+          "L": 45,
+          "R": 45
+        },
+        "arms": {
+          "L": [
+            30,
+            72
+          ],
+          "R": [
+            30,
+            72
+          ]
+        },
+        "hands": {
+          "L": "fist",
+          "R": "fist"
+        }
+      }
+    },
+    {
+      "id": "kf-2",
+      "phase_id": "mv.psdp.sikap-pasang-6#p2",
+      "label": "Sikap pasang 6",
+      "caption": "Pandangan ke samping kiri · tangan di depan dada",
+      "pose": {
+        "pelvis": [
+          180,
+          18
+        ],
+        "feet": {
+          "L": [
+            226,
+            0
+          ],
+          "R": [
+            134,
+            0
+          ]
+        },
+        "foot_turn": {
+          "L": 25,
+          "R": 25
+        },
+        "arms": {
+          "L": [
+            18,
+            128
+          ],
+          "R": [
+            18,
+            128
+          ]
+        },
+        "hands": {
+          "L": "open",
+          "R": "open"
+        },
+        "gaze": 1
+      }
+    }
+  ],
+  "sequence": [
+    {
+      "pose": "kf-1",
+      "hold_ms": 900
+    },
+    {
+      "pose": "kf-2",
+      "move_ms": 1000,
+      "hold_ms": 2200
+    }
+  ],
+  "return_ms": 1000
+}

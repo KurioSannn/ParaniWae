@@ -1,0 +1,176 @@
+{
+  "schema": "silatara.keyframes/v1",
+  "animation_id": "anim.psdp.kuda-kuda-menyamping.v1",
+  "movement_id": "mv.psdp.kuda-kuda-menyamping",
+  "animation_status": "generated",
+  "title": "Kuda-kuda menyamping kiri/kanan",
+  "description": "Tampak depan: kaki kiri menggeser ke samping kiri dengan berat di kaki kiri, kembali, lalu kaki kanan menggeser ke samping kanan dengan berat di kaki kanan.",
+  "view": "front",
+  "source_ids": [
+    "src.nugroho.2005"
+  ],
+  "keyframes": [
+    {
+      "id": "kf-1",
+      "phase_id": "mv.psdp.kuda-kuda-menyamping#p1",
+      "label": "Sikap tegak 2",
+      "caption": "Kepalan di pinggang",
+      "pose": {
+        "pelvis": [
+          180,
+          0
+        ],
+        "feet": {
+          "L": [
+            187,
+            0
+          ],
+          "R": [
+            173,
+            0
+          ]
+        },
+        "foot_turn": {
+          "L": 45,
+          "R": 45
+        },
+        "arms": {
+          "L": [
+            30,
+            72
+          ],
+          "R": [
+            30,
+            72
+          ]
+        },
+        "hands": {
+          "L": "fist",
+          "R": "fist"
+        }
+      }
+    },
+    {
+      "id": "kf-2",
+      "phase_id": "mv.psdp.kuda-kuda-menyamping#p2",
+      "label": "Menyamping kiri",
+      "caption": "Berat di kaki kiri",
+      "pose": {
+        "pelvis": [
+          234,
+          6
+        ],
+        "feet": {
+          "L": [
+            252,
+            0
+          ],
+          "R": [
+            173,
+            0
+          ]
+        },
+        "foot_turn": {
+          "L": 30,
+          "R": 30
+        },
+        "arms": {
+          "L": [
+            30,
+            72
+          ],
+          "R": [
+            30,
+            72
+          ]
+        },
+        "hands": {
+          "L": "fist",
+          "R": "fist"
+        }
+      },
+      "arrow": {
+        "from": [
+          196,
+          418
+        ],
+        "to": [
+          262,
+          418
+        ]
+      }
+    },
+    {
+      "id": "kf-3",
+      "phase_id": "mv.psdp.kuda-kuda-menyamping#p4",
+      "label": "Menyamping kanan",
+      "caption": "Berat di kaki kanan",
+      "pose": {
+        "pelvis": [
+          126,
+          6
+        ],
+        "feet": {
+          "L": [
+            187,
+            0
+          ],
+          "R": [
+            108,
+            0
+          ]
+        },
+        "foot_turn": {
+          "L": 30,
+          "R": 30
+        },
+        "arms": {
+          "L": [
+            30,
+            72
+          ],
+          "R": [
+            30,
+            72
+          ]
+        },
+        "hands": {
+          "L": "fist",
+          "R": "fist"
+        }
+      },
+      "arrow": {
+        "from": [
+          164,
+          418
+        ],
+        "to": [
+          98,
+          418
+        ]
+      }
+    }
+  ],
+  "sequence": [
+    {
+      "pose": "kf-1",
+      "hold_ms": 800
+    },
+    {
+      "pose": "kf-2",
+      "move_ms": 900,
+      "hold_ms": 1500
+    },
+    {
+      "pose": "kf-1",
+      "move_ms": 800,
+      "hold_ms": 600
+    },
+    {
+      "pose": "kf-3",
+      "move_ms": 900,
+      "hold_ms": 1500
+    }
+  ],
+  "return_ms": 800
+}

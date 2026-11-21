@@ -1,0 +1,11 @@
+{
+  "schema": "silatara.keyframes/v1",
+  "animation_id": "anim.psdp.hindaran-sisi.v1",
+  "movement_id": "mv.psdp.hindaran-sisi",
+  "animation_status": "needs_reference",
+  "title": "Hindaran Sisi",
+  "needs": "Arah langkah dan perubahan orientasi badan relatif lawan butuh demonstrasi; uraian hanya menyebut hasil akhirnya.",
+  "source_ids": [
+    "src.herdiana.2008"
+  ]
+}

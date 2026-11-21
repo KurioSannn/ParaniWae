@@ -1,0 +1,11 @@
+{
+  "schema": "silatara.keyframes/v1",
+  "animation_id": "anim.psdp.hindaran-angkat-kaki.v1",
+  "movement_id": "mv.psdp.hindaran-angkat-kaki",
+  "animation_status": "needs_reference",
+  "title": "Hindaran Angkat Kaki",
+  "needs": "Tinggi angkatan dan sikap badan tidak dijelaskan; gerakan bergantung pada sapuan lawan.",
+  "source_ids": [
+    "src.herdiana.2008"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "schema": "silatara.curriculum/v1",
+  "id": "crs.silek-pengenalan",
+  "slug": "pengenalan-silek-minangkabau",
+  "tradition_id": "trd.silek",
+  "title": "Pengenalan Silek Minangkabau (teori)",
+  "summary": "Kenali cara orang Minangkabau belajar silek: dimulai dari baraja malangkah—belajar melangkah—lalu memahami langkah tigo, ampek, dan sambilan sebagai kerangka berpikir sekaligus bergerak. Kelas ini membahas teori dan konteks budayanya; pelaksanaan langkah dipelajari langsung dari tuo silek di sasaran.",
+  "level": "beginner",
+  "estimated_minutes": 40,
+  "safety_notes": "Kelas teori tanpa latihan fisik.",
+  "content_status": "draft",
+  "evidence_tier": "editorially_prepared",
+  "instructor_validation": "not_validated",
+  "source_ids": [
+    "src.ediwar.2023",
+    "src.unesco.ich.01391.nomination",
+    "src.putri-nusri.2022"
+  ],
+  "editorial_note": "Kelas teori; pelaksanaan langkah dipelajari langsung dari tuo silek.",
+  "modules": [
+    {
+      "id": "crs.silek-pengenalan.m01",
+      "order": 1,
+      "title": "Silek sebagai pengetahuan",
+      "summary": "Baraja malangkah dan tiga langkah."
+    }
+  ],
+  "goals": [
+    "Mengenal silek sebagai pengetahuan dan tradisi Minangkabau beserta para pengembannya.",
+    "Menjelaskan konsep baraja malangkah serta langkah tigo, ampek, dan sambilan.",
+    "Memahami mengapa setiap silek nagari adalah tradisi tersendiri."
+  ]
+}

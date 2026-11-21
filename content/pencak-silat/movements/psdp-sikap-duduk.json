@@ -1,0 +1,91 @@
+{
+  "schema": "silatara.movements/v1",
+  "tradition_id": "trd.psdp",
+  "module_hint": "Sikap duduk",
+  "shared_context": {
+    "definition": {"text": "Sikap duduk adalah sikap dasar 'permainan bawah'. Menurut Atok Iskandar (1996, dikutip Nugroho) ada lima sikap duduk: duduk biasa, sila, trapsila/mengorak sila, simpuh, dan sempok/depok.", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 148"},
+    "herdiana": {"text": "Herdiana juga mendaftar sikap jengkeng, jongkok, duduk, sila, simpuh, dan depok sebagai sikap yang perlu dikuasai, tanpa uraian pelaksanaan.", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 16–17"}
+  },
+  "movements": [
+    {
+      "id": "mv.psdp.sikap-duduk-sempok", "slug": "sikap-duduk-sempok",
+      "names": {"primary": "Sikap Sempok / Depok", "local": null, "aliases": ["Depok"], "pronunciation": null},
+      "category": "sikap_duduk", "level": "beginner", "safety_class": "solo_beginner", "solo_form_status": "documented_solo",
+      "content_status": "draft", "evidence_tier": "research_supported", "instructor_validation": "not_validated", "permission_status": "parafrasa sumber terbit; tanpa media",
+      "cultural_context": {"context": {"ref": "shared_context.definition"}, "purpose": {"text": "Sikap dasar permainan bawah.", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 148"}, "meaning": {"text": "Tidak dijelaskan sumber.", "basis": "gap"}, "terminology": [], "variants": [], "differs_from": []},
+      "prerequisites": {"abilities": "Mampu duduk di lantai tanpa nyeri lutut/pinggul.", "physical_prep": "Pemanasan pinggul.", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {"legs": {"text": "Kedua kaki dilipat silang.", "basis": "source", "source_ids": ["src.nugroho.2005"]}, "arms": {"text": "Kedua tangan bersatu di depan dada.", "basis": "source", "source_ids": ["src.nugroho.2005"]}, "head": {"text": "Pandangan rileks ke depan.", "basis": "source", "source_ids": ["src.nugroho.2005"]}},
+      "phases": [{"id": "mv.psdp.sikap-duduk-sempok#p1", "order": 1, "name": "Sempok", "start_position": "Duduk di lantai.", "change": "Kedua kaki dilipat silang; kedua tangan bersatu di depan dada.", "body_parts": ["tungkai", "tangan"], "direction": "—", "end_position": "Sikap sempok.", "mistakes": [], "safety": "Jangan memaksa lipatan bila lutut/pinggul nyeri.", "tempo": null, "keyframe_ref": null, "basis": "source", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 148"}],
+      "practice": {"start": "Duduk di lantai beralas.", "sequence": "Ambil posisi, tahan dengan napas tenang.", "tempo": {"text": "Tahan 10–20 detik.", "basis": "editorial_unvalidated"}, "repetitions": {"text": "2–3 kali.", "basis": "editorial_unvalidated"}, "easier": "Duduk di atas bantal tipis.", "progression": "—", "stop_when_ref": "common.safety.stop_when", "cooldown": "—"},
+      "common_mistakes": [], "common_mistakes_gap": "Tidak disebut sumber.",
+      "references": [{"source_id": "src.nugroho.2005", "locator": "hlm. 148", "supports": "Uraian sikap sempok."}],
+      "gaps": ["Cara turun/naik dari posisi berdiri tidak dijelaskan."],
+      "landmarks": ["lower_body", "upper_body"],
+      "animation": {"animation_id": "anim.psdp.sikap-duduk-sempok.v1", "status": "needs_reference", "needs": "Bentuk lipatan kaki pada sempok dan cara masuk/keluar posisi perlu foto/sketsa referensi berizin atau demonstrasi instruktur; tampilan 2D satu sudut tidak cukup."}
+    },
+    {
+      "id": "mv.psdp.sikap-duduk-sila", "slug": "sikap-duduk-sila",
+      "names": {"primary": "Sikap Sila", "local": null, "aliases": [], "pronunciation": null},
+      "category": "sikap_duduk", "level": "beginner", "safety_class": "solo_beginner", "solo_form_status": "documented_solo",
+      "content_status": "draft", "evidence_tier": "research_supported", "instructor_validation": "not_validated", "permission_status": "parafrasa sumber terbit; tanpa media",
+      "cultural_context": {"context": {"ref": "shared_context.definition"}, "purpose": {"text": "Sikap dasar permainan bawah.", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 148"}, "meaning": {"text": "Tidak dijelaskan sumber.", "basis": "gap"}, "terminology": [], "variants": [], "differs_from": []},
+      "prerequisites": {"abilities": "Mampu duduk bersila.", "physical_prep": "—", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {"legs": {"text": "Kedua kaki dilipat.", "basis": "source", "source_ids": ["src.nugroho.2005"]}, "arms": {"text": "Kedua tangan bersatu diletakkan di atas lutut.", "basis": "source", "source_ids": ["src.nugroho.2005"]}, "head": {"text": "Pandangan rileks ke depan.", "basis": "source", "source_ids": ["src.nugroho.2005"]}},
+      "phases": [{"id": "mv.psdp.sikap-duduk-sila#p1", "order": 1, "name": "Sila", "start_position": "Duduk di lantai.", "change": "Kedua kaki dilipat; kedua tangan bersatu di atas lutut.", "body_parts": ["tungkai", "tangan"], "direction": "—", "end_position": "Sikap sila.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": null, "basis": "source", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 149"}],
+      "practice": {"start": "Duduk.", "sequence": "Ambil posisi, tahan.", "tempo": {"text": "Tahan 10–20 detik.", "basis": "editorial_unvalidated"}, "repetitions": {"text": "2–3 kali.", "basis": "editorial_unvalidated"}, "easier": "—", "progression": "—", "stop_when_ref": "common.safety.stop_when", "cooldown": "—"},
+      "common_mistakes": [], "common_mistakes_gap": "Tidak disebut sumber.",
+      "references": [{"source_id": "src.nugroho.2005", "locator": "hlm. 148–149", "supports": "Uraian sikap sila."}],
+      "gaps": ["Perbedaan sila dan sempok hanya pada posisi tangan menurut uraian teks; lipatan kaki perlu klarifikasi."],
+      "landmarks": ["lower_body", "upper_body"],
+      "animation": {"animation_id": "anim.psdp.sikap-duduk-sila.v1", "status": "needs_reference", "needs": "Bentuk lipatan kaki perlu referensi visual berizin; perbedaan dengan sempok harus dikonfirmasi instruktur."}
+    },
+    {
+      "id": "mv.psdp.sikap-duduk-biasa", "slug": "sikap-duduk-biasa",
+      "names": {"primary": "Sikap Duduk", "local": null, "aliases": ["Duduk biasa"], "pronunciation": null},
+      "category": "sikap_duduk", "level": "beginner", "safety_class": "solo_beginner", "solo_form_status": "documented_solo",
+      "content_status": "draft", "evidence_tier": "research_supported", "instructor_validation": "not_validated", "permission_status": "parafrasa sumber terbit; tanpa media",
+      "cultural_context": {"context": {"ref": "shared_context.definition"}, "purpose": {"text": "Sikap dasar permainan bawah.", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 148"}, "meaning": {"text": "Tidak dijelaskan sumber.", "basis": "gap"}, "terminology": [], "variants": [], "differs_from": []},
+      "prerequisites": {"abilities": "—", "physical_prep": "—", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {"legs": {"text": "Kedua kaki ditekuk.", "basis": "source", "source_ids": ["src.nugroho.2005"]}, "arms": {"text": "Tangan bersatu diletakkan di atas lutut.", "basis": "source", "source_ids": ["src.nugroho.2005"]}, "head": {"text": "Pandangan rileks ke depan.", "basis": "source", "source_ids": ["src.nugroho.2005"]}},
+      "phases": [{"id": "mv.psdp.sikap-duduk-biasa#p1", "order": 1, "name": "Duduk", "start_position": "Duduk di lantai.", "change": "Kedua kaki ditekuk; tangan bersatu di atas lutut.", "body_parts": ["tungkai", "tangan"], "direction": "—", "end_position": "Sikap duduk.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": null, "basis": "source", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 149"}],
+      "practice": {"start": "Duduk.", "sequence": "Ambil posisi, tahan.", "tempo": {"text": "Tahan 10–20 detik.", "basis": "editorial_unvalidated"}, "repetitions": {"text": "2–3 kali.", "basis": "editorial_unvalidated"}, "easier": "—", "progression": "—", "stop_when_ref": "common.safety.stop_when", "cooldown": "—"},
+      "common_mistakes": [], "common_mistakes_gap": "Tidak disebut sumber.",
+      "references": [{"source_id": "src.nugroho.2005", "locator": "hlm. 149", "supports": "Uraian sikap duduk."}],
+      "gaps": ["Arah tekukan kaki tidak dijelaskan."],
+      "landmarks": ["lower_body", "upper_body"],
+      "animation": {"animation_id": "anim.psdp.sikap-duduk-biasa.v1", "status": "needs_reference", "needs": "Arah dan bentuk tekukan kaki tidak dijelaskan; butuh referensi visual berizin."}
+    },
+    {
+      "id": "mv.psdp.sikap-duduk-trapsila", "slug": "sikap-duduk-trapsila",
+      "names": {"primary": "Sikap Trapsila", "local": null, "aliases": ["Mengorak sila"], "pronunciation": null},
+      "category": "sikap_duduk", "level": "beginner", "safety_class": "solo_beginner", "solo_form_status": "documented_solo",
+      "content_status": "draft", "evidence_tier": "research_supported", "instructor_validation": "not_validated", "permission_status": "parafrasa sumber terbit; tanpa media",
+      "cultural_context": {"context": {"ref": "shared_context.definition"}, "purpose": {"text": "Sikap dasar permainan bawah.", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 148"}, "meaning": {"text": "Tidak dijelaskan sumber.", "basis": "gap"}, "terminology": [], "variants": [], "differs_from": []},
+      "prerequisites": {"abilities": "—", "physical_prep": "Pemanasan pinggul.", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {"legs": {"text": "Satu kaki dilipat ke dalam, kaki lainnya dilipat ke luar.", "basis": "source", "source_ids": ["src.nugroho.2005"]}, "arms": {"text": "Tangan kiri bertumpu di lantai; tangan kanan siap di depan dada.", "basis": "source", "source_ids": ["src.nugroho.2005"]}, "head": {"text": "Pandangan sedikit menyamping.", "basis": "source", "source_ids": ["src.nugroho.2005"]}},
+      "phases": [{"id": "mv.psdp.sikap-duduk-trapsila#p1", "order": 1, "name": "Trapsila", "start_position": "Duduk di lantai.", "change": "Satu kaki dilipat ke dalam, satu ke luar; tangan kiri menumpu lantai, tangan kanan siap di depan dada; pandangan sedikit menyamping.", "body_parts": ["tungkai", "tangan", "kepala"], "direction": "—", "end_position": "Sikap trapsila.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": null, "basis": "source", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 149"}],
+      "practice": {"start": "Duduk.", "sequence": "Ambil posisi, tahan, ganti sisi.", "tempo": {"text": "Tahan 10 detik per sisi.", "basis": "editorial_unvalidated"}, "repetitions": {"text": "2 kali per sisi.", "basis": "editorial_unvalidated"}, "easier": "—", "progression": "—", "stop_when_ref": "common.safety.stop_when", "cooldown": "—"},
+      "common_mistakes": [], "common_mistakes_gap": "Tidak disebut sumber.",
+      "references": [{"source_id": "src.nugroho.2005", "locator": "hlm. 149", "supports": "Uraian sikap trapsila."}],
+      "gaps": ["Sisi kiri/kanan untuk kaki dalam/luar tidak disebut."],
+      "landmarks": ["lower_body", "upper_body"],
+      "animation": {"animation_id": "anim.psdp.sikap-duduk-trapsila.v1", "status": "needs_reference", "needs": "Posisi kaki dalam/luar butuh referensi tiga dimensi; tampilan 2D tidak memadai tanpa sketsa berizin."}
+    },
+    {
+      "id": "mv.psdp.sikap-duduk-simpuh", "slug": "sikap-duduk-simpuh",
+      "names": {"primary": "Sikap Simpuh", "local": null, "aliases": [], "pronunciation": null},
+      "category": "sikap_duduk", "level": "beginner", "safety_class": "solo_beginner", "solo_form_status": "documented_solo",
+      "content_status": "draft", "evidence_tier": "research_supported", "instructor_validation": "not_validated", "permission_status": "parafrasa sumber terbit; tanpa media",
+      "cultural_context": {"context": {"ref": "shared_context.definition"}, "purpose": {"text": "Sikap dasar permainan bawah.", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 148"}, "meaning": {"text": "Tidak dijelaskan sumber.", "basis": "gap"}, "terminology": [], "variants": [], "differs_from": []},
+      "prerequisites": {"abilities": "Lutut tidak nyeri saat bertumpu di lantai.", "physical_prep": "—", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {"knees": {"text": "Kedua lutut bertumpu di lantai.", "basis": "source", "source_ids": ["src.nugroho.2005"]}, "arms": {"text": "Kedua tangan bersatu diletakkan di atas lutut.", "basis": "source", "source_ids": ["src.nugroho.2005"]}, "head": {"text": "Pandangan rileks ke depan.", "basis": "source", "source_ids": ["src.nugroho.2005"]}},
+      "phases": [{"id": "mv.psdp.sikap-duduk-simpuh#p1", "order": 1, "name": "Simpuh", "start_position": "Berlutut.", "change": "Duduk dengan kedua lutut bertumpu di lantai; tangan bersatu di atas lutut.", "body_parts": ["lutut", "tangan"], "direction": "—", "end_position": "Sikap simpuh.", "mistakes": [], "safety": "Gunakan alas empuk untuk lutut.", "tempo": null, "keyframe_ref": null, "basis": "source", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 149–150"}],
+      "practice": {"start": "Berlutut di alas empuk.", "sequence": "Ambil posisi, tahan.", "tempo": {"text": "Tahan 10–20 detik.", "basis": "editorial_unvalidated"}, "repetitions": {"text": "2 kali.", "basis": "editorial_unvalidated"}, "easier": "Alas lebih tebal.", "progression": "—", "stop_when_ref": "common.safety.stop_when", "cooldown": "—"},
+      "common_mistakes": [], "common_mistakes_gap": "Tidak disebut sumber.",
+      "references": [{"source_id": "src.nugroho.2005", "locator": "hlm. 149–150", "supports": "Uraian sikap simpuh."}],
+      "gaps": ["Apakah duduk di atas tumit atau berlutut tegak tidak dijelaskan."],
+      "landmarks": ["lower_body", "upper_body"],
+      "animation": {"animation_id": "anim.psdp.sikap-duduk-simpuh.v1", "status": "needs_reference", "needs": "Sumber tidak menjelaskan apakah pinggul duduk di atas tumit; animasi akan memaksakan satu tafsir — butuh konfirmasi instruktur."}
+    }
+  ]
+}

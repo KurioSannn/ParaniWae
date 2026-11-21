@@ -1,0 +1,11 @@
+{
+  "schema": "silatara.keyframes/v1",
+  "animation_id": "anim.psdp.sikap-duduk-sempok.v1",
+  "movement_id": "mv.psdp.sikap-duduk-sempok",
+  "animation_status": "needs_reference",
+  "title": "Sikap Sempok / Depok",
+  "needs": "Bentuk lipatan kaki pada sempok dan cara masuk/keluar posisi perlu foto/sketsa referensi berizin atau demonstrasi instruktur; tampilan 2D satu sudut tidak cukup.",
+  "source_ids": [
+    "src.nugroho.2005"
+  ]
+}

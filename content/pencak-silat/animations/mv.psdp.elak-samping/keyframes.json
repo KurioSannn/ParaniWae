@@ -1,0 +1,107 @@
+{
+  "schema": "silatara.keyframes/v1",
+  "animation_id": "anim.psdp.elak-samping.v1",
+  "movement_id": "mv.psdp.elak-samping",
+  "animation_status": "generated",
+  "title": "Elak samping",
+  "description": "Tampak depan: dari kuda-kuda tengah, badan dipindah ke samping dengan mengubah sikap kuda-kuda (berat ke satu kaki), kaki tidak berpindah. Bentuk tanpa lawan — perlu pengawasan.",
+  "view": "front",
+  "source_ids": [
+    "src.herdiana.2008"
+  ],
+  "keyframes": [
+    {
+      "id": "kf-1",
+      "phase_id": "mv.psdp.elak-samping#p1",
+      "label": "Kuda-kuda tengah",
+      "caption": "Tangan siaga",
+      "pose": {
+        "pelvis": [
+          180,
+          18
+        ],
+        "feet": {
+          "L": [
+            226,
+            0
+          ],
+          "R": [
+            134,
+            0
+          ]
+        },
+        "foot_turn": {
+          "L": 25,
+          "R": 25
+        },
+        "arms": {
+          "L": [
+            18,
+            128
+          ],
+          "R": [
+            18,
+            128
+          ]
+        },
+        "hands": {
+          "L": "open",
+          "R": "open"
+        }
+      }
+    },
+    {
+      "id": "kf-2",
+      "phase_id": "mv.psdp.elak-samping#p2",
+      "label": "Elak samping",
+      "caption": "Badan pindah ke samping",
+      "pose": {
+        "pelvis": [
+          200,
+          8
+        ],
+        "feet": {
+          "L": [
+            226,
+            0
+          ],
+          "R": [
+            134,
+            0
+          ]
+        },
+        "foot_turn": {
+          "L": 25,
+          "R": 25
+        },
+        "torso": 8,
+        "arms": {
+          "L": [
+            18,
+            128
+          ],
+          "R": [
+            18,
+            128
+          ]
+        },
+        "hands": {
+          "L": "open",
+          "R": "open"
+        }
+      }
+    }
+  ],
+  "sequence": [
+    {
+      "pose": "kf-1",
+      "hold_ms": 1000
+    },
+    {
+      "pose": "kf-2",
+      "move_ms": 600,
+      "hold_ms": 1400
+    }
+  ],
+  "return_ms": 900
+}

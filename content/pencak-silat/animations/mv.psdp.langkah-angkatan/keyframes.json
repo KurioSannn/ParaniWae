@@ -1,0 +1,186 @@
+{
+  "schema": "silatara.keyframes/v1",
+  "animation_id": "anim.psdp.langkah-angkatan.v1",
+  "movement_id": "mv.psdp.langkah-angkatan",
+  "animation_status": "generated",
+  "title": "Langkah angkatan (tinggi & rendah)",
+  "description": "Tampak samping: angkatan tinggi (paha datar, lutut siku-siku), kaki diletakkan ke depan, kembali; lalu angkatan rendah (lutut ±30°).",
+  "view": "side",
+  "source_ids": [
+    "src.nugroho.2005",
+    "src.herdiana.2008"
+  ],
+  "keyframes": [
+    {
+      "id": "kf-1",
+      "phase_id": "mv.psdp.langkah-angkatan#p1",
+      "label": "Berdiri siap",
+      "caption": "Sikap tegak 2",
+      "pose": {
+        "pelvis": [
+          172,
+          0
+        ],
+        "feet": {
+          "L": [
+            176,
+            0
+          ],
+          "R": [
+            168,
+            0
+          ]
+        },
+        "arms": {
+          "L": [
+            -28,
+            95
+          ],
+          "R": [
+            -24,
+            92
+          ]
+        },
+        "hands": {
+          "L": "fist",
+          "R": "fist"
+        }
+      }
+    },
+    {
+      "id": "kf-2",
+      "phase_id": "mv.psdp.langkah-angkatan#p2",
+      "label": "Angkatan tinggi",
+      "caption": "Paha datar · lutut siku-siku",
+      "pose": {
+        "pelvis": [
+          172,
+          2
+        ],
+        "feet": {
+          "L": [
+            256,
+            79
+          ],
+          "R": [
+            168,
+            0
+          ]
+        },
+        "arms": {
+          "L": [
+            -28,
+            95
+          ],
+          "R": [
+            -24,
+            92
+          ]
+        },
+        "hands": {
+          "L": "fist",
+          "R": "fist"
+        }
+      }
+    },
+    {
+      "id": "kf-3",
+      "phase_id": "mv.psdp.langkah-angkatan#p3",
+      "label": "Kaki diletakkan",
+      "caption": "Ke depan sesuai arah, tetap waspada",
+      "pose": {
+        "pelvis": [
+          190,
+          12
+        ],
+        "feet": {
+          "L": [
+            226,
+            0
+          ],
+          "R": [
+            140,
+            0
+          ]
+        },
+        "arms": {
+          "L": [
+            -28,
+            95
+          ],
+          "R": [
+            -24,
+            92
+          ]
+        },
+        "hands": {
+          "L": "fist",
+          "R": "fist"
+        }
+      }
+    },
+    {
+      "id": "kf-4",
+      "phase_id": "mv.psdp.langkah-angkatan#p4",
+      "label": "Angkatan rendah",
+      "caption": "Lutut ± 30°",
+      "pose": {
+        "pelvis": [
+          172,
+          2
+        ],
+        "feet": {
+          "L": [
+            190,
+            16
+          ],
+          "R": [
+            168,
+            0
+          ]
+        },
+        "arms": {
+          "L": [
+            -28,
+            95
+          ],
+          "R": [
+            -24,
+            92
+          ]
+        },
+        "hands": {
+          "L": "fist",
+          "R": "fist"
+        }
+      }
+    }
+  ],
+  "sequence": [
+    {
+      "pose": "kf-1",
+      "hold_ms": 700
+    },
+    {
+      "pose": "kf-2",
+      "move_ms": 800,
+      "hold_ms": 900
+    },
+    {
+      "pose": "kf-3",
+      "move_ms": 800,
+      "hold_ms": 800
+    },
+    {
+      "pose": "kf-1",
+      "move_ms": 800,
+      "hold_ms": 500
+    },
+    {
+      "pose": "kf-4",
+      "move_ms": 600,
+      "hold_ms": 800
+    }
+  ],
+  "return_ms": 700
+}

@@ -1,0 +1,11 @@
+{
+  "schema": "silatara.keyframes/v1",
+  "animation_id": "anim.psdp.sikap-duduk-trapsila.v1",
+  "movement_id": "mv.psdp.sikap-duduk-trapsila",
+  "animation_status": "needs_reference",
+  "title": "Sikap Trapsila",
+  "needs": "Posisi kaki dalam/luar butuh referensi tiga dimensi; tampilan 2D tidak memadai tanpa sketsa berizin.",
+  "source_ids": [
+    "src.nugroho.2005"
+  ]
+}

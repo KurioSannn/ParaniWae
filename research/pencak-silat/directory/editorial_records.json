@@ -1,0 +1,236 @@
+{
+ "schema": "silatara.directory.editorial-records/v1",
+ "note": "Catatan tempat dari riset web redaksi 2026-11-21. Hanya fakta yang tercantum di sumber. Koordinat TIDAK diisi kecuali dari data geospasial berlisensi; tanpa koordinat, tempat ditampilkan pada tingkat wilayah.",
+ "sources": [
+  {
+   "id": "src.web.timesindonesia.psht-diklat-2025",
+   "type": "news",
+   "title": "SH Terate Pusat Madiun Gelar Diklat Kehumasan 2025",
+   "author_or_publisher": "Times Indonesia",
+   "year": 2025,
+   "url": "https://timesindonesia.co.id/indonesia-positif/539378/sh-terate-pusat-madiun-gelar-diklat-kehumasan-2025-perkuat-komunikasi-organisasi-di-era-digital",
+   "read_status": "search_snippet",
+   "license": "hak cipta penerbit; hanya fakta alamat dikutip",
+   "supports": [
+    "Graha Bina Wira Padma, Padepokan Agung PSHT, Jl. Merak No. 17, Nambangan Kidul, Manguharjo, Kota Madiun"
+   ]
+  },
+  {
+   "id": "src.web.detik.psht-seabad",
+   "type": "news",
+   "title": "Monumen Terate Emas Tandai Seabad Usia PSHT",
+   "author_or_publisher": "detikJatim",
+   "year": 2022,
+   "url": "https://www.detik.com/jatim/berita/d-6270407/monumen-terate-emas-tandai-seabad-usia-psht",
+   "read_status": "search_snippet",
+   "license": "hak cipta penerbit; hanya fakta alamat dikutip",
+   "supports": [
+    "Padepokan Agung SH Terate di Jl. Merak, Nambangan Kidul, Manguharjo, Kota Madiun"
+   ]
+  },
+  {
+   "id": "src.web.cnn.pbipsi-padepokan-2026",
+   "type": "news",
+   "title": "PB IPSI: Kejuaraan Pencak Silat CNN Indonesia Ringankan Kerja Kami",
+   "author_or_publisher": "CNN Indonesia",
+   "year": 2026,
+   "url": "https://www.cnnindonesia.com/olahraga/20260619132602-178-1370821/pb-ipsi-kejuaraan-pencak-silat-cnn-indonesia-ringankan-kerja-kami",
+   "read_status": "search_snippet",
+   "license": "hak cipta penerbit; hanya fakta lokasi dikutip",
+   "supports": [
+    "Padepokan Pencak Silat Indonesia, Jalan Raya Taman Mini I, Jakarta Timur, dipakai untuk kegiatan PB IPSI"
+   ]
+  },
+  {
+   "id": "src.web.ugm.merpati-putih",
+   "type": "official_site",
+   "title": "UKM Merpati Putih UGM — pendaftaran anggota",
+   "author_or_publisher": "UKM Merpati Putih Universitas Gadjah Mada",
+   "year": null,
+   "url": "https://merpatiputih.ukm.ugm.ac.id/?p=96",
+   "read_status": "search_snippet",
+   "license": "laman resmi unit; hanya fakta alamat dan kontak organisasi",
+   "supports": [
+    "Sekretariat MP UGM di Gelanggang Mahasiswa UGM, Jl. Pancasila No. 1 Bulaksumur, Yogyakarta",
+    "Pendaftaran anggota baru saat latihan atau di sekretariat",
+    "Surel organisasi merpatiputih@ugm.ac.id"
+   ]
+  },
+  {
+   "id": "src.web.suaramuhammadiyah.tapak-suci",
+   "type": "news",
+   "title": "Melacak Jejak Tapak Suci",
+   "author_or_publisher": "Suara Muhammadiyah",
+   "year": 2020,
+   "url": "https://web.suaramuhammadiyah.id/2020/07/31/melacak-jejak-tapak-suci",
+   "read_status": "search_snippet",
+   "license": "hak cipta penerbit; hanya fakta lokasi dikutip",
+   "supports": [
+    "Pimpinan Pusat Tapak Suci Putera Muhammadiyah berkedudukan di Kauman, Yogyakarta"
+   ]
+  }
+ ],
+ "records": [
+  {
+   "key": "web.psht-padepokan-agung",
+   "official_name": "Padepokan Agung Persaudaraan Setia Hati Terate",
+   "aliases": [
+    "Padepokan Agung SH Terate",
+    "Graha Bina Wira Padma"
+   ],
+   "place_category": "perguruan_center",
+   "organization_key": "org.psht",
+   "regency_code": "35.77",
+   "district": "Manguharjo",
+   "village": "Nambangan Kidul",
+   "full_address": "Jl. Merak, Nambangan Kidul, Manguharjo, Kota Madiun",
+   "is_training_location": true,
+   "is_organization_office": true,
+   "training_evidence": "Surat edaran pengurus pusat menyebut pelatihan terpusat di Padepokan Agung (cuplikan pencarian).",
+   "source_ids": [
+    "src.web.timesindonesia.psht-diklat-2025",
+    "src.web.detik.psht-seabad"
+   ],
+   "data_conflicts": [
+    "Sumber menyebut nomor 10, 17, atau '10 & 17' untuk kompleks yang sama."
+   ]
+  },
+  {
+   "key": "web.padepokan-pencak-silat-indonesia",
+   "official_name": "Padepokan Pencak Silat Indonesia",
+   "aliases": [
+    "Padepokan Pencak Silat TMII",
+    "Padepokan Pencaksilat Indonesia"
+   ],
+   "place_category": "cultural_center",
+   "organization_key": "org.ipsi",
+   "regency_code": "31.75",
+   "full_address": "Jalan Raya Taman Mini I, Jakarta Timur",
+   "is_training_location": false,
+   "is_organization_office": false,
+   "match_osm": "way/258861962",
+   "source_ids": [
+    "src.web.cnn.pbipsi-padepokan-2026"
+   ]
+  },
+  {
+   "key": "web.merpati-putih-ugm",
+   "official_name": "UKM Merpati Putih Universitas Gadjah Mada",
+   "aliases": [
+    "MP UGM"
+   ],
+   "place_category": "campus_unit",
+   "organization_key": "org.merpati-putih",
+   "regency_code": "34.04",
+   "district": "Depok",
+   "village": "Caturtunggal",
+   "full_address": "Gelanggang Mahasiswa UGM, Jl. Pancasila No. 1, Bulaksumur, Yogyakarta",
+   "is_training_location": true,
+   "is_organization_office": true,
+   "contact_email": "merpatiputih@ugm.ac.id",
+   "contact_source_id": "src.web.ugm.merpati-putih",
+   "official_website": "https://merpatiputih.ukm.ugm.ac.id/",
+   "training_evidence": "Laman resmi: pendaftaran anggota baru saat latihan atau di sekretariat.",
+   "training_categories": [
+    "kelas anggota baru"
+   ],
+   "source_ids": [
+    "src.web.ugm.merpati-putih"
+   ]
+  },
+  {
+   "key": "web.tapak-suci-pusat",
+   "official_name": "Pimpinan Pusat Tapak Suci Putera Muhammadiyah",
+   "aliases": [
+    "PP Tapak Suci"
+   ],
+   "place_category": "organization_office",
+   "organization_key": "org.tapak-suci",
+   "regency_code": "34.71",
+   "district": "Gondomanan",
+   "village": "Ngupasan",
+   "full_address": "Kauman, Yogyakarta",
+   "is_training_location": false,
+   "is_organization_office": true,
+   "source_ids": [
+    "src.web.suaramuhammadiyah.tapak-suci",
+    "src.siswantoyo.2005"
+   ],
+   "entity_id": "ent.perguruan.tapak-suci"
+  }
+ ],
+ "organizations": [
+  {
+   "key": "org.psht",
+   "official_name": "Persaudaraan Setia Hati Terate",
+   "short_name": "PSHT",
+   "organization_type": "perguruan",
+   "entity_id": "ent.perguruan.psht",
+   "match": "psht|setia hati terate|sh terate"
+  },
+  {
+   "key": "org.ikspi",
+   "official_name": "Ikatan Keluarga Silat Putra Indonesia Kera Sakti",
+   "short_name": "IKSPI Kera Sakti",
+   "organization_type": "perguruan",
+   "entity_id": null,
+   "match": "ikspi|kera sakti"
+  },
+  {
+   "key": "org.merpati-putih",
+   "official_name": "Perguruan Pencak Silat Beladiri Tangan Kosong Merpati Putih",
+   "short_name": "Merpati Putih",
+   "organization_type": "perguruan",
+   "entity_id": null,
+   "match": "merpati putih"
+  },
+  {
+   "key": "org.tapak-suci",
+   "official_name": "Tapak Suci Putera Muhammadiyah",
+   "short_name": "Tapak Suci",
+   "organization_type": "perguruan",
+   "entity_id": "ent.perguruan.tapak-suci",
+   "match": "tapak suci"
+  },
+  {
+   "key": "org.pagar-nusa",
+   "official_name": "Pagar Nusa",
+   "short_name": "Pagar Nusa",
+   "organization_type": "perguruan",
+   "entity_id": "ent.perguruan.pagar-nusa",
+   "match": "pagar nusa"
+  },
+  {
+   "key": "org.persinas-asad",
+   "official_name": "Persinas ASAD",
+   "short_name": "ASAD",
+   "organization_type": "perguruan",
+   "entity_id": null,
+   "match": "\\basad\\b"
+  },
+  {
+   "key": "org.ipsi",
+   "official_name": "Ikatan Pencak Silat Indonesia",
+   "short_name": "IPSI",
+   "organization_type": "induk_organisasi",
+   "entity_id": "ent.organization.ipsi",
+   "match": "\\bipsi\\b"
+  },
+  {
+   "key": "org.perisai-diri",
+   "official_name": "Keluarga Silat Nasional Indonesia Perisai Diri",
+   "short_name": "Perisai Diri",
+   "organization_type": "perguruan",
+   "entity_id": "ent.perguruan.perisai-diri",
+   "match": "perisai diri"
+  },
+  {
+   "key": "org.perisai-putih",
+   "official_name": "PSN Perisai Putih",
+   "short_name": "Perisai Putih",
+   "organization_type": "perguruan",
+   "entity_id": "ent.perguruan.perisai-putih",
+   "match": "perisai putih"
+  }
+ ]
+}

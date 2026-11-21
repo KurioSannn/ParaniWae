@@ -1,0 +1,113 @@
+{
+  "schema": "silatara.movements/v1",
+  "tradition_id": "trd.psdp",
+  "module_hint": "Pola langkah",
+  "shared_context": {
+    "definition": {"text": "Pola langkah adalah pengembangan langkah yang berbentuk/berpola dengan tujuan tertentu. Nugroho (mengutip PERSILAT 2001: 40) menyebut pola lurus, gergaji/zig-zag, ladam/U, segitiga, segiempat, dan huruf S. Herdiana menyebut bentuk lurus, zig-zag, U, segitiga, segiempat, dan huruf S, dengan cara bergerak bebas (boleh ingsutan atau cara lain).", "source_ids": ["src.nugroho.2005", "src.herdiana.2008"], "locator": "Nugroho hlm. 156–159; Herdiana hlm. 23–25"},
+    "figure_gap": {"text": "Diagram pola dalam kedua sumber berupa gambar. Teks hasil ekstraksi hanya memuat nomor langkah, bukan posisi telapak kanan/kiri secara pasti; karena itu animasi hanya dibuat untuk pola yang susunannya terbaca dari teks.", "basis": "editorial"}
+  },
+  "movements": [
+    {
+      "id": "mv.psdp.pola-langkah-lurus", "slug": "pola-langkah-lurus",
+      "names": {"primary": "Pola Langkah Lurus", "local": null, "aliases": [], "pronunciation": null},
+      "category": "pola_langkah", "level": "beginner", "safety_class": "solo_beginner", "solo_form_status": "documented_solo",
+      "content_status": "draft", "evidence_tier": "research_supported", "instructor_validation": "not_validated", "permission_status": "parafrasa sumber terbit; tanpa media",
+      "cultural_context": {"context": {"ref": "shared_context.definition"}, "purpose": {"text": "Bergerak mengikuti garis lurus.", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 23"}, "meaning": {"text": "Tidak dijelaskan sumber.", "basis": "gap"}, "terminology": [], "variants": [{"ref": "shared_context.figure_gap"}], "differs_from": []},
+      "prerequisites": {"abilities": "Kuda-kuda depan; cara melangkah.", "physical_prep": "—", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {},
+      "phases": [
+        {"id": "mv.psdp.pola-langkah-lurus#p1", "order": 1, "name": "Titik awal (0)", "start_position": "Di titik 0 garis lurus.", "change": "—", "body_parts": [], "direction": "—", "end_position": "Siap.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-1", "basis": "source", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 156"},
+        {"id": "mv.psdp.pola-langkah-lurus#p2", "order": 2, "name": "Langkah 1–7 sepanjang garis", "start_position": "Titik 0.", "change": "Melangkah berurutan ke titik 1 sampai 7 mengikuti satu garis lurus; kaki kanan dan kiri bergantian (legenda sumber).", "body_parts": ["tungkai"], "direction": "lurus ke depan", "end_position": "Titik 7.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-8", "basis": "source", "source_ids": ["src.nugroho.2005", "src.herdiana.2008"], "locator": "Nugroho hlm. 156; Herdiana hlm. 23–24"}
+      ],
+      "practice": {"start": "Tandai garis lurus di lantai.", "sequence": "Langkah 1–7 lalu kembali.", "tempo": {"text": "Satu langkah per hitungan.", "basis": "editorial_unvalidated"}, "repetitions": {"text": "3 kali.", "basis": "editorial_unvalidated"}, "easier": "Langkah lebih sedikit.", "progression": "Pola zig-zag.", "stop_when_ref": "common.safety.stop_when", "cooldown": "—"},
+      "common_mistakes": [], "common_mistakes_gap": "Tidak disebut sumber.",
+      "references": [{"source_id": "src.nugroho.2005", "locator": "hlm. 156", "supports": "Pola lurus titik 0–7."}, {"source_id": "src.herdiana.2008", "locator": "hlm. 23–24", "supports": "Bentuk lurus, cara gerak bebas."}],
+      "gaps": ["Kaki mana yang menempati tiap nomor tidak terbaca dari teks; diagram memakai penanda netral."],
+      "landmarks": ["lower_body"],
+      "animation": {"animation_id": "anim.psdp.pola-langkah-lurus.v1", "status": "generated"}
+    },
+    {
+      "id": "mv.psdp.pola-langkah-zigzag", "slug": "pola-langkah-zigzag",
+      "names": {"primary": "Pola Langkah Gergaji / Zig-zag", "local": null, "aliases": ["Pola gergaji", "Sig-sag"], "pronunciation": null},
+      "category": "pola_langkah", "level": "beginner", "safety_class": "solo_beginner", "solo_form_status": "documented_solo",
+      "content_status": "draft", "evidence_tier": "research_supported", "instructor_validation": "not_validated", "permission_status": "parafrasa sumber terbit; tanpa media",
+      "cultural_context": {"context": {"ref": "shared_context.definition"}, "purpose": {"text": "Bergerak dengan arah zig-zag.", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 24"}, "meaning": {"text": "Tidak dijelaskan sumber.", "basis": "gap"}, "terminology": [{"term": "gergaji", "explanation": "nama lain pola zig-zag"}], "variants": [{"ref": "shared_context.figure_gap"}], "differs_from": []},
+      "prerequisites": {"abilities": "Pola langkah lurus.", "physical_prep": "—", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {},
+      "phases": [
+        {"id": "mv.psdp.pola-langkah-zigzag#p1", "order": 1, "name": "Titik awal (0)", "start_position": "Titik 0.", "change": "—", "body_parts": [], "direction": "—", "end_position": "Siap.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-1", "basis": "source", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 156"},
+        {"id": "mv.psdp.pola-langkah-zigzag#p2", "order": 2, "name": "Langkah bergantian dua lajur", "start_position": "Titik 0.", "change": "Nomor genap (0, 2, 4, 6, 8) berada pada satu lajur dan nomor ganjil (1, 3, 5, 7) pada lajur lain, sehingga langkah membentuk zig-zag.", "body_parts": ["tungkai"], "direction": "zig-zag maju", "end_position": "Titik 8.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-9", "basis": "source", "source_ids": ["src.nugroho.2005", "src.herdiana.2008"], "locator": "Nugroho hlm. 156; Herdiana hlm. 24"}
+      ],
+      "practice": {"start": "Tandai dua lajur sejajar.", "sequence": "Langkah 1–8 zig-zag.", "tempo": {"text": "Satu langkah per hitungan.", "basis": "editorial_unvalidated"}, "repetitions": {"text": "3 kali.", "basis": "editorial_unvalidated"}, "easier": "Lajur lebih rapat.", "progression": "—", "stop_when_ref": "common.safety.stop_when", "cooldown": "—"},
+      "common_mistakes": [], "common_mistakes_gap": "Tidak disebut sumber.",
+      "references": [{"source_id": "src.nugroho.2005", "locator": "hlm. 156", "supports": "Susunan nomor dua lajur."}, {"source_id": "src.herdiana.2008", "locator": "hlm. 24", "supports": "Bentuk zig-zag."}],
+      "gaps": ["Jarak antarlajur tidak disebut; diagram ilustratif."],
+      "landmarks": ["lower_body"],
+      "animation": {"animation_id": "anim.psdp.pola-langkah-zigzag.v1", "status": "generated"}
+    },
+    {
+      "id": "mv.psdp.pola-langkah-ladam", "slug": "pola-langkah-ladam",
+      "names": {"primary": "Pola Langkah Ladam / U", "local": null, "aliases": ["Ladam tunggal", "Ladam rangkap/ganda"], "pronunciation": null},
+      "category": "pola_langkah", "level": "beginner", "safety_class": "solo_beginner", "solo_form_status": "documented_solo",
+      "content_status": "needs_reference", "evidence_tier": "research_supported", "instructor_validation": "not_validated", "permission_status": "parafrasa sumber terbit; tanpa media",
+      "cultural_context": {"context": {"ref": "shared_context.definition"}, "purpose": {"text": "Arah gerak membentuk huruf U sesuai hitungan; terdapat ladam tunggal dan rangkap.", "source_ids": ["src.nugroho.2005", "src.herdiana.2008"], "locator": "Nugroho hlm. 157; Herdiana hlm. 24"}, "meaning": {"text": "Tidak dijelaskan sumber.", "basis": "gap"}, "terminology": [{"term": "ladam", "explanation": "tapal kuda (bentuk U)"}], "variants": [{"ref": "shared_context.figure_gap"}], "differs_from": []},
+      "prerequisites": {"abilities": "Pola lurus & zig-zag.", "physical_prep": "—", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {},
+      "phases": [{"id": "mv.psdp.pola-langkah-ladam#p1", "order": 1, "name": "Bentuk U", "start_position": "Titik 0.", "change": "Melangkah mengikuti bentuk U sesuai hitungan.", "body_parts": ["tungkai"], "direction": "U", "end_position": "Akhir pola.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": null, "basis": "source", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 24"}],
+      "practice": {"start": "—", "sequence": "Menunggu diagram terverifikasi.", "tempo": {"text": "—", "basis": "gap"}, "repetitions": {"text": "—", "basis": "gap"}, "easier": "—", "progression": "—", "stop_when_ref": "common.safety.stop_when", "cooldown": "—"},
+      "common_mistakes": [], "common_mistakes_gap": "Tidak disebut sumber.",
+      "references": [{"source_id": "src.nugroho.2005", "locator": "hlm. 157", "supports": "Ladam tunggal & rangkap (gambar)."}, {"source_id": "src.herdiana.2008", "locator": "hlm. 24", "supports": "Bentuk U."}],
+      "gaps": ["Urutan nomor pada diagram tidak terbaca dari teks."],
+      "landmarks": ["lower_body"],
+      "animation": {"animation_id": "anim.psdp.pola-langkah-ladam.v1", "status": "needs_reference", "needs": "Diagram nomor langkah ladam tunggal/rangkap harus disalin ulang dari sumber cetak (atau dari instruktur) — teks ekstraksi PDF tidak memuat posisi yang dapat diandalkan."}
+    },
+    {
+      "id": "mv.psdp.pola-langkah-segitiga", "slug": "pola-langkah-segitiga",
+      "names": {"primary": "Pola Langkah Segitiga", "local": null, "aliases": ["Segitiga tunggal", "Segitiga rangkap"], "pronunciation": null},
+      "category": "pola_langkah", "level": "beginner", "safety_class": "solo_beginner", "solo_form_status": "documented_solo",
+      "content_status": "needs_reference", "evidence_tier": "research_supported", "instructor_validation": "not_validated", "permission_status": "parafrasa sumber terbit; tanpa media",
+      "cultural_context": {"context": {"ref": "shared_context.definition"}, "purpose": {"text": "Arah gerak membentuk segitiga sesuai hitungan.", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 24–25"}, "meaning": {"text": "Tidak dijelaskan sumber.", "basis": "gap"}, "terminology": [], "variants": [{"ref": "shared_context.figure_gap"}], "differs_from": []},
+      "prerequisites": {"abilities": "—", "physical_prep": "—", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {},
+      "phases": [{"id": "mv.psdp.pola-langkah-segitiga#p1", "order": 1, "name": "Bentuk segitiga", "start_position": "Titik 0.", "change": "Melangkah membentuk segitiga sesuai hitungan.", "body_parts": ["tungkai"], "direction": "segitiga", "end_position": "Akhir pola.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": null, "basis": "source", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 24–25"}],
+      "practice": {"start": "—", "sequence": "Menunggu diagram terverifikasi.", "tempo": {"text": "—", "basis": "gap"}, "repetitions": {"text": "—", "basis": "gap"}, "easier": "—", "progression": "—", "stop_when_ref": "common.safety.stop_when", "cooldown": "—"},
+      "common_mistakes": [], "common_mistakes_gap": "Tidak disebut sumber.",
+      "references": [{"source_id": "src.nugroho.2005", "locator": "hlm. 157–158", "supports": "Segitiga tunggal & rangkap (gambar)."}, {"source_id": "src.herdiana.2008", "locator": "hlm. 24–25", "supports": "Bentuk segitiga."}],
+      "gaps": ["Urutan langkah tidak terbaca dari teks."],
+      "landmarks": ["lower_body"],
+      "animation": {"animation_id": "anim.psdp.pola-langkah-segitiga.v1", "status": "needs_reference", "needs": "Diagram segitiga tunggal/rangkap perlu disalin ulang dari sumber cetak atau dari instruktur."}
+    },
+    {
+      "id": "mv.psdp.pola-langkah-segiempat", "slug": "pola-langkah-segiempat",
+      "names": {"primary": "Pola Langkah Segiempat", "local": null, "aliases": ["Segiempat lurus", "Segiempat potong"], "pronunciation": null},
+      "category": "pola_langkah", "level": "beginner", "safety_class": "solo_beginner", "solo_form_status": "documented_solo",
+      "content_status": "needs_reference", "evidence_tier": "research_supported", "instructor_validation": "not_validated", "permission_status": "parafrasa sumber terbit; tanpa media",
+      "cultural_context": {"context": {"ref": "shared_context.definition"}, "purpose": {"text": "Arah gerak membentuk segiempat sesuai hitungan.", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 25"}, "meaning": {"text": "Tidak dijelaskan sumber.", "basis": "gap"}, "terminology": [], "variants": [{"ref": "shared_context.figure_gap"}], "differs_from": []},
+      "prerequisites": {"abilities": "—", "physical_prep": "—", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {},
+      "phases": [{"id": "mv.psdp.pola-langkah-segiempat#p1", "order": 1, "name": "Bentuk segiempat", "start_position": "Titik 0.", "change": "Melangkah membentuk segiempat (lurus atau potong) sesuai hitungan.", "body_parts": ["tungkai"], "direction": "segiempat", "end_position": "Akhir pola.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": null, "basis": "source", "source_ids": ["src.nugroho.2005", "src.herdiana.2008"], "locator": "Nugroho hlm. 158; Herdiana hlm. 25"}],
+      "practice": {"start": "—", "sequence": "Menunggu diagram terverifikasi.", "tempo": {"text": "—", "basis": "gap"}, "repetitions": {"text": "—", "basis": "gap"}, "easier": "—", "progression": "—", "stop_when_ref": "common.safety.stop_when", "cooldown": "—"},
+      "common_mistakes": [], "common_mistakes_gap": "Tidak disebut sumber.",
+      "references": [{"source_id": "src.nugroho.2005", "locator": "hlm. 158", "supports": "Segiempat lurus & potong (gambar)."}, {"source_id": "src.herdiana.2008", "locator": "hlm. 25", "supports": "Bentuk segiempat."}],
+      "gaps": ["Urutan langkah tidak terbaca dari teks."],
+      "landmarks": ["lower_body"],
+      "animation": {"animation_id": "anim.psdp.pola-langkah-segiempat.v1", "status": "needs_reference", "needs": "Diagram segiempat lurus/potong perlu disalin ulang dari sumber cetak atau dari instruktur."}
+    },
+    {
+      "id": "mv.psdp.pola-langkah-huruf-s", "slug": "pola-langkah-huruf-s",
+      "names": {"primary": "Pola Langkah Huruf S", "local": null, "aliases": [], "pronunciation": null},
+      "category": "pola_langkah", "level": "beginner", "safety_class": "solo_beginner", "solo_form_status": "documented_solo",
+      "content_status": "needs_reference", "evidence_tier": "research_supported", "instructor_validation": "not_validated", "permission_status": "parafrasa sumber terbit; tanpa media",
+      "cultural_context": {"context": {"ref": "shared_context.definition"}, "purpose": {"text": "Arah gerak membentuk huruf S.", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 25"}, "meaning": {"text": "Tidak dijelaskan sumber.", "basis": "gap"}, "terminology": [], "variants": [{"ref": "shared_context.figure_gap"}], "differs_from": []},
+      "prerequisites": {"abilities": "—", "physical_prep": "—", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {},
+      "phases": [{"id": "mv.psdp.pola-langkah-huruf-s#p1", "order": 1, "name": "Bentuk S", "start_position": "Titik 0.", "change": "Melangkah membentuk huruf S.", "body_parts": ["tungkai"], "direction": "S", "end_position": "Akhir pola.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": null, "basis": "source", "source_ids": ["src.nugroho.2005", "src.herdiana.2008"], "locator": "Nugroho hlm. 159; Herdiana hlm. 25"}],
+      "practice": {"start": "—", "sequence": "Menunggu diagram terverifikasi.", "tempo": {"text": "—", "basis": "gap"}, "repetitions": {"text": "—", "basis": "gap"}, "easier": "—", "progression": "—", "stop_when_ref": "common.safety.stop_when", "cooldown": "—"},
+      "common_mistakes": [], "common_mistakes_gap": "Tidak disebut sumber.",
+      "references": [{"source_id": "src.nugroho.2005", "locator": "hlm. 159", "supports": "Pola huruf S (gambar)."}, {"source_id": "src.herdiana.2008", "locator": "hlm. 25", "supports": "Bentuk S."}],
+      "gaps": ["Urutan langkah tidak terbaca dari teks."],
+      "landmarks": ["lower_body"],
+      "animation": {"animation_id": "anim.psdp.pola-langkah-huruf-s.v1", "status": "needs_reference", "needs": "Diagram huruf S perlu disalin ulang dari sumber cetak atau dari instruktur."}
+    }
+  ]
+}

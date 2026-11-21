@@ -1,0 +1,136 @@
+{
+  "schema": "silatara.keyframes/v1",
+  "animation_id": "anim.psdp.pola-langkah-zigzag.v1",
+  "movement_id": "mv.psdp.pola-langkah-zigzag",
+  "animation_status": "generated",
+  "title": "Pola langkah gergaji / zig-zag",
+  "description": "Tampak atas: nomor genap (0, 2, 4, 6, 8) pada satu lajur dan nomor ganjil (1, 3, 5, 7) pada lajur lain sehingga langkah membentuk zig-zag.",
+  "view": "top",
+  "source_ids": [
+    "src.nugroho.2005",
+    "src.herdiana.2008"
+  ],
+  "markers": [
+    {
+      "id": "kf-1",
+      "phase_id": "mv.psdp.pola-langkah-zigzag#p1",
+      "label": "0",
+      "pos": [
+        44,
+        200
+      ]
+    },
+    {
+      "id": "kf-2",
+      "phase_id": "mv.psdp.pola-langkah-zigzag#p2",
+      "label": "1",
+      "pos": [
+        78,
+        268
+      ]
+    },
+    {
+      "id": "kf-3",
+      "phase_id": "mv.psdp.pola-langkah-zigzag#p2",
+      "label": "2",
+      "pos": [
+        112,
+        200
+      ]
+    },
+    {
+      "id": "kf-4",
+      "phase_id": "mv.psdp.pola-langkah-zigzag#p2",
+      "label": "3",
+      "pos": [
+        146,
+        268
+      ]
+    },
+    {
+      "id": "kf-5",
+      "phase_id": "mv.psdp.pola-langkah-zigzag#p2",
+      "label": "4",
+      "pos": [
+        180,
+        200
+      ]
+    },
+    {
+      "id": "kf-6",
+      "phase_id": "mv.psdp.pola-langkah-zigzag#p2",
+      "label": "5",
+      "pos": [
+        214,
+        268
+      ]
+    },
+    {
+      "id": "kf-7",
+      "phase_id": "mv.psdp.pola-langkah-zigzag#p2",
+      "label": "6",
+      "pos": [
+        248,
+        200
+      ]
+    },
+    {
+      "id": "kf-8",
+      "phase_id": "mv.psdp.pola-langkah-zigzag#p2",
+      "label": "7",
+      "pos": [
+        282,
+        268
+      ]
+    },
+    {
+      "id": "kf-9",
+      "phase_id": "mv.psdp.pola-langkah-zigzag#p2",
+      "label": "8",
+      "pos": [
+        316,
+        200
+      ]
+    }
+  ],
+  "guides": [
+    {
+      "type": "line",
+      "from": [
+        30,
+        200
+      ],
+      "to": [
+        330,
+        200
+      ],
+      "w": 2,
+      "dash": "4 4"
+    },
+    {
+      "type": "line",
+      "from": [
+        30,
+        268
+      ],
+      "to": [
+        330,
+        268
+      ],
+      "w": 2,
+      "dash": "4 4"
+    },
+    {
+      "type": "label",
+      "at": [
+        180,
+        320
+      ],
+      "text": "arah maju →",
+      "size": 11
+    }
+  ],
+  "legend": "Susunan lajur dari diagram sumber",
+  "step_ms": 700,
+  "end_hold_ms": 1500
+}

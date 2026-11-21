@@ -1,0 +1,12 @@
+{
+  "schema": "silatara.keyframes/v1",
+  "animation_id": "anim.psdp.langkah-putaran.v1",
+  "movement_id": "mv.psdp.langkah-putaran",
+  "animation_status": "needs_reference",
+  "title": "Langkah Putaran",
+  "needs": "Besar sudut putar, kaki poros, dan arah 'ke luar' perlu dikonfirmasi dengan demonstrasi instruktur; rotasi kaki terhadap lantai butuh tampilan atas + samping.",
+  "source_ids": [
+    "src.herdiana.2008",
+    "src.nugroho.2005"
+  ]
+}

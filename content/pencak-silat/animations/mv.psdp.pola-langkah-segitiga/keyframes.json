@@ -1,0 +1,12 @@
+{
+  "schema": "silatara.keyframes/v1",
+  "animation_id": "anim.psdp.pola-langkah-segitiga.v1",
+  "movement_id": "mv.psdp.pola-langkah-segitiga",
+  "animation_status": "needs_reference",
+  "title": "Pola Langkah Segitiga",
+  "needs": "Diagram segitiga tunggal/rangkap perlu disalin ulang dari sumber cetak atau dari instruktur.",
+  "source_ids": [
+    "src.herdiana.2008",
+    "src.nugroho.2005"
+  ]
+}

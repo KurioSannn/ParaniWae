@@ -1,0 +1,152 @@
+{
+  "schema": "silatara.movements/v1",
+  "tradition_id": "trd.psdp",
+  "module_hint": "Pembelaan tanpa kontak (hindaran & elakan) — dengan pengawasan",
+  "shared_context": {
+    "hindaran": {"text": "Hindaran adalah pembelaan dengan memindahkan tubuh dari arah sasaran serangan lawan, dilakukan dengan melangkahkan kaki. Pelaksanaannya ditentukan oleh sikap kuda-kuda, sikap tubuh, dan sikap tangan.", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 26–27"},
+    "elakan": {"text": "Elakan adalah pembelaan dengan memindahkan sasaran serangan tanpa memindahkan pijakan kaki; hanya mengandalkan perubahan sikap tubuh.", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 28–29"},
+    "framing": {"text": "Sumber menguraikan hindaran dan elakan sebagai jawaban atas serangan lawan dan tidak menyatakan bentuk latihan tanpa lawan. SILATARA mendokumentasikan perubahan sikap tubuhnya saja; bentuk solo BELUM dinyatakan sah oleh instruktur, sehingga kelas keselamatan = supervised_only dan tidak dibuka untuk Practice Studio.", "basis": "editorial"}
+  },
+  "movements": [
+    {
+      "id": "mv.psdp.hindaran-hadap", "slug": "hindaran-hadap",
+      "names": {"primary": "Hindaran Hadap", "local": null, "aliases": ["Hindar hadap"], "pronunciation": null},
+      "category": "pembelaan_tanpa_kontak", "level": "beginner", "safety_class": "supervised_only", "solo_form_status": "inferred_not_documented",
+      "content_status": "draft", "evidence_tier": "research_supported", "instructor_validation": "not_validated", "permission_status": "parafrasa sumber terbit; tanpa media",
+      "cultural_context": {"context": {"ref": "shared_context.hindaran"}, "purpose": {"text": "Menghindar dengan tubuh tetap menghadap lawan; lawan tetap berada di hadapan.", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 27"}, "meaning": {"text": "Tidak dijelaskan sumber.", "basis": "gap"}, "terminology": [], "variants": [{"ref": "shared_context.framing"}, {"text": "Ilustrasi Herdiana juga memuat 'hindar hadap kuda-kuda depan'.", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 28"}], "differs_from": [{"movement_id": "mv.psdp.elak-belakang", "text": "Elakan tidak memindahkan pijakan kaki."}]},
+      "prerequisites": {"abilities": "Kuda-kuda depan & belakang.", "physical_prep": "—", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {"legs": {"text": "Satu kaki dipindah ke belakang sehingga membentuk kuda-kuda belakang.", "basis": "source", "source_ids": ["src.herdiana.2008"]}, "head": {"text": "Pandangan tetap mengawasi ke depan.", "basis": "source", "source_ids": ["src.herdiana.2008"]}, "orientation": {"text": "Tubuh tetap menghadap ke depan.", "basis": "source", "source_ids": ["src.herdiana.2008"]}},
+      "phases": [
+        {"id": "mv.psdp.hindaran-hadap#p1", "order": 1, "name": "Siap", "start_position": "Sikap tegak 2.", "change": "—", "body_parts": [], "direction": "—", "end_position": "Siap.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-1", "basis": "editorial", "source_ids": []},
+        {"id": "mv.psdp.hindaran-hadap#p2", "order": 2, "name": "Kaki mundur ke kuda-kuda belakang", "start_position": "Siap.", "change": "Salah satu kaki dipindah ke belakang membentuk kuda-kuda belakang; badan tetap menghadap ke depan, pandangan mengawasi.", "body_parts": ["tungkai", "pinggul"], "direction": "ke belakang", "end_position": "Kuda-kuda belakang menghadap depan.", "mistakes": [], "safety": "Dengan pengawasan pelatih.", "tempo": null, "keyframe_ref": "kf-2", "basis": "source", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 27"}
+      ],
+      "practice": {"start": "—", "sequence": "Tidak disusun untuk latihan mandiri (supervised_only).", "tempo": {"text": "—", "basis": "gap"}, "repetitions": {"text": "—", "basis": "gap"}, "easier": "—", "progression": "—", "stop_when_ref": "common.safety.stop_when", "cooldown": "—"},
+      "common_mistakes": [], "common_mistakes_gap": "Tidak disebut sumber.",
+      "references": [{"source_id": "src.herdiana.2008", "locator": "hlm. 26–28", "supports": "Definisi hindaran dan hindaran hadap."}],
+      "gaps": ["Bentuk latihan tanpa lawan tidak dinyatakan sumber."],
+      "landmarks": ["lower_body"],
+      "animation": {"animation_id": "anim.psdp.hindaran-hadap.v1", "status": "generated"}
+    },
+    {
+      "id": "mv.psdp.hindaran-sisi", "slug": "hindaran-sisi",
+      "names": {"primary": "Hindaran Sisi", "local": null, "aliases": [], "pronunciation": null},
+      "category": "pembelaan_tanpa_kontak", "level": "beginner", "safety_class": "supervised_only", "solo_form_status": "inferred_not_documented",
+      "content_status": "needs_reference", "evidence_tier": "research_supported", "instructor_validation": "not_validated", "permission_status": "parafrasa sumber terbit; tanpa media",
+      "cultural_context": {"context": {"ref": "shared_context.hindaran"}, "purpose": {"text": "Memindahkan kaki sehingga serangan dan tubuh lawan berada di samping.", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 27"}, "meaning": {"text": "Tidak dijelaskan sumber.", "basis": "gap"}, "terminology": [], "variants": [{"ref": "shared_context.framing"}], "differs_from": []},
+      "prerequisites": {"abilities": "—", "physical_prep": "—", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {},
+      "phases": [{"id": "mv.psdp.hindaran-sisi#p1", "order": 1, "name": "Pindah ke sisi", "start_position": "Siap.", "change": "Kaki dipindah hingga serangan berada di samping tubuh.", "body_parts": ["tungkai"], "direction": "ke samping", "end_position": "Lawan di samping.", "mistakes": [], "safety": "Dengan pengawasan.", "tempo": null, "keyframe_ref": null, "basis": "source", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 27"}],
+      "practice": {"start": "—", "sequence": "Tidak disusun.", "tempo": {"text": "—", "basis": "gap"}, "repetitions": {"text": "—", "basis": "gap"}, "easier": "—", "progression": "—", "stop_when_ref": "common.safety.stop_when", "cooldown": "—"},
+      "common_mistakes": [], "common_mistakes_gap": "—",
+      "references": [{"source_id": "src.herdiana.2008", "locator": "hlm. 27", "supports": "Definisi."}],
+      "gaps": ["Kaki mana, arah, dan putaran badan tidak dijelaskan."],
+      "landmarks": ["lower_body"],
+      "animation": {"animation_id": "anim.psdp.hindaran-sisi.v1", "status": "needs_reference", "needs": "Arah langkah dan perubahan orientasi badan relatif lawan butuh demonstrasi; uraian hanya menyebut hasil akhirnya."}
+    },
+    {
+      "id": "mv.psdp.hindaran-angkat-kaki", "slug": "hindaran-angkat-kaki",
+      "names": {"primary": "Hindaran Angkat Kaki", "local": null, "aliases": [], "pronunciation": null},
+      "category": "pembelaan_tanpa_kontak", "level": "beginner", "safety_class": "supervised_only", "solo_form_status": "inferred_not_documented",
+      "content_status": "needs_reference", "evidence_tier": "research_supported", "instructor_validation": "not_validated", "permission_status": "parafrasa sumber terbit; tanpa media",
+      "cultural_context": {"context": {"ref": "shared_context.hindaran"}, "purpose": {"text": "Biasanya dipakai saat lawan menyapu kaki: kaki yang menjadi sasaran diangkat.", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 27"}, "meaning": {"text": "Tidak dijelaskan sumber.", "basis": "gap"}, "terminology": [], "variants": [{"ref": "shared_context.framing"}], "differs_from": []},
+      "prerequisites": {"abilities": "—", "physical_prep": "—", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {},
+      "phases": [{"id": "mv.psdp.hindaran-angkat-kaki#p1", "order": 1, "name": "Angkat kaki sasaran", "start_position": "Siap.", "change": "Kaki yang menjadi sasaran sapuan diangkat.", "body_parts": ["tungkai"], "direction": "naik", "end_position": "Kaki terangkat.", "mistakes": [], "safety": "Dengan pengawasan.", "tempo": null, "keyframe_ref": null, "basis": "source", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 27"}],
+      "practice": {"start": "—", "sequence": "Tidak disusun.", "tempo": {"text": "—", "basis": "gap"}, "repetitions": {"text": "—", "basis": "gap"}, "easier": "—", "progression": "—", "stop_when_ref": "common.safety.stop_when", "cooldown": "—"},
+      "common_mistakes": [], "common_mistakes_gap": "—",
+      "references": [{"source_id": "src.herdiana.2008", "locator": "hlm. 27", "supports": "Definisi."}],
+      "gaps": ["Tinggi angkatan & posisi tubuh tidak dijelaskan."],
+      "landmarks": ["lower_body"],
+      "animation": {"animation_id": "anim.psdp.hindaran-angkat-kaki.v1", "status": "needs_reference", "needs": "Tinggi angkatan dan sikap badan tidak dijelaskan; gerakan bergantung pada sapuan lawan."}
+    },
+    {
+      "id": "mv.psdp.hindaran-silang", "slug": "hindaran-silang",
+      "names": {"primary": "Hindaran Silang", "local": null, "aliases": ["Hindar kaki silang"], "pronunciation": null},
+      "category": "pembelaan_tanpa_kontak", "level": "beginner", "safety_class": "supervised_only", "solo_form_status": "inferred_not_documented",
+      "content_status": "needs_reference", "evidence_tier": "research_supported", "instructor_validation": "not_validated", "permission_status": "parafrasa sumber terbit; tanpa media",
+      "cultural_context": {"context": {"ref": "shared_context.hindaran"}, "purpose": {"text": "Memindahkan kaki dari serangan hingga menyilang dengan kaki lainnya.", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 27"}, "meaning": {"text": "Tidak dijelaskan sumber.", "basis": "gap"}, "terminology": [], "variants": [{"ref": "shared_context.framing"}], "differs_from": []},
+      "prerequisites": {"abilities": "Kuda-kuda silang.", "physical_prep": "—", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {},
+      "phases": [{"id": "mv.psdp.hindaran-silang#p1", "order": 1, "name": "Pindah menyilang", "start_position": "Siap.", "change": "Kaki sasaran dipindah menyilang kaki lain.", "body_parts": ["tungkai"], "direction": "silang", "end_position": "Kaki menyilang.", "mistakes": [], "safety": "Dengan pengawasan.", "tempo": null, "keyframe_ref": null, "basis": "source", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 27"}],
+      "practice": {"start": "—", "sequence": "Tidak disusun.", "tempo": {"text": "—", "basis": "gap"}, "repetitions": {"text": "—", "basis": "gap"}, "easier": "—", "progression": "—", "stop_when_ref": "common.safety.stop_when", "cooldown": "—"},
+      "common_mistakes": [], "common_mistakes_gap": "—",
+      "references": [{"source_id": "src.herdiana.2008", "locator": "hlm. 27", "supports": "Definisi."}],
+      "gaps": ["Arah silang (depan/belakang) tidak disebut."],
+      "landmarks": ["lower_body"],
+      "animation": {"animation_id": "anim.psdp.hindaran-silang.v1", "status": "needs_reference", "needs": "Arah silang tidak disebut; butuh demonstrasi."}
+    },
+    {
+      "id": "mv.psdp.elak-bawah", "slug": "elak-bawah",
+      "names": {"primary": "Elak Bawah", "local": null, "aliases": ["Elakan bawah"], "pronunciation": null},
+      "category": "pembelaan_tanpa_kontak", "level": "beginner", "safety_class": "supervised_only", "solo_form_status": "inferred_not_documented",
+      "content_status": "draft", "evidence_tier": "research_supported", "instructor_validation": "not_validated", "permission_status": "parafrasa sumber terbit; tanpa media",
+      "cultural_context": {"context": {"ref": "shared_context.elakan"}, "purpose": {"text": "Dipakai ketika serangan mengarah ke tubuh bagian atas.", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 29"}, "meaning": {"text": "Tidak dijelaskan sumber.", "basis": "gap"}, "terminology": [], "variants": [{"ref": "shared_context.framing"}], "differs_from": []},
+      "prerequisites": {"abilities": "Kuda-kuda tengah.", "physical_prep": "Pemanasan lutut.", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {"knees": {"text": "Tungkai ditekuk untuk merendahkan diri tanpa memindahkan kaki.", "basis": "source", "source_ids": ["src.herdiana.2008"]}, "arms": {"text": "Sikap tubuh dan lengan selalu waspada (posisi tidak dirinci).", "basis": "source", "source_ids": ["src.herdiana.2008"]}},
+      "phases": [
+        {"id": "mv.psdp.elak-bawah#p1", "order": 1, "name": "Siap", "start_position": "Kuda-kuda dengan tangan siaga di depan dada.", "change": "—", "body_parts": [], "direction": "—", "end_position": "Siap.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-1", "basis": "editorial", "source_ids": []},
+        {"id": "mv.psdp.elak-bawah#p2", "order": 2, "name": "Merendah", "start_position": "Siap.", "change": "Merendahkan diri dengan menekuk tungkai tanpa memindahkan kaki; lengan tetap waspada.", "body_parts": ["lutut", "pinggul"], "direction": "turun", "end_position": "Posisi rendah.", "mistakes": [], "safety": "Jangan merendah melebihi kenyamanan lutut; dengan pengawasan.", "tempo": null, "keyframe_ref": "kf-2", "basis": "source", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 29"}
+      ],
+      "practice": {"start": "—", "sequence": "Tidak disusun untuk latihan mandiri.", "tempo": {"text": "—", "basis": "gap"}, "repetitions": {"text": "—", "basis": "gap"}, "easier": "—", "progression": "—", "stop_when_ref": "common.safety.stop_when", "cooldown": "—"},
+      "common_mistakes": [], "common_mistakes_gap": "—",
+      "references": [{"source_id": "src.herdiana.2008", "locator": "hlm. 28–29", "supports": "Definisi elakan & elak bawah."}],
+      "gaps": ["Kedalaman merendah & posisi lengan tidak dirinci."],
+      "landmarks": ["lower_body", "upper_body"],
+      "animation": {"animation_id": "anim.psdp.elak-bawah.v1", "status": "generated"}
+    },
+    {
+      "id": "mv.psdp.elak-atas", "slug": "elak-atas",
+      "names": {"primary": "Elak Atas", "local": null, "aliases": ["Elakan atas"], "pronunciation": null},
+      "category": "pembelaan_tanpa_kontak", "level": "intermediate", "safety_class": "supervised_only", "solo_form_status": "inferred_not_documented",
+      "content_status": "needs_reference", "evidence_tier": "research_supported", "instructor_validation": "not_validated", "permission_status": "parafrasa sumber terbit; tanpa media",
+      "cultural_context": {"context": {"ref": "shared_context.elakan"}, "purpose": {"text": "Dipakai ketika serangan mengarah ke tubuh bagian bawah: mengangkat kedua kaki sambil menolak ke atas, tungkai ditekuk, lengan waspada, mendarat dengan kedua kaki.", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 29–30"}, "meaning": {"text": "Tidak dijelaskan sumber.", "basis": "gap"}, "terminology": [], "variants": [{"ref": "shared_context.framing"}], "differs_from": []},
+      "prerequisites": {"abilities": "—", "physical_prep": "—", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {"legs": {"text": "Kedua kaki menolak ke atas, tungkai ditekuk, mendarat dua kaki.", "basis": "source", "source_ids": ["src.herdiana.2008"]}},
+      "phases": [{"id": "mv.psdp.elak-atas#p1", "order": 1, "name": "Tolak ke atas & mendarat", "start_position": "Siap.", "change": "Menolak ke atas dengan kedua kaki, tungkai ditekuk, lalu mendarat dengan kedua kaki.", "body_parts": ["tungkai"], "direction": "atas", "end_position": "Mendarat.", "mistakes": [], "safety": "Lompatan — hanya dengan pengawasan.", "tempo": null, "keyframe_ref": null, "basis": "source", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 29–30"}],
+      "practice": {"start": "—", "sequence": "Tidak disusun.", "tempo": {"text": "—", "basis": "gap"}, "repetitions": {"text": "—", "basis": "gap"}, "easier": "—", "progression": "—", "stop_when_ref": "common.safety.stop_when", "cooldown": "—"},
+      "common_mistakes": [], "common_mistakes_gap": "—",
+      "references": [{"source_id": "src.herdiana.2008", "locator": "hlm. 29–30", "supports": "Uraian elak atas."}],
+      "gaps": ["Teknik pendaratan aman tidak dijelaskan."],
+      "landmarks": ["lower_body"],
+      "animation": {"animation_id": "anim.psdp.elak-atas.v1", "status": "needs_reference", "needs": "Gerak melompat; tidak dianimasikan sampai teknik pendaratan aman dikonfirmasi instruktur."}
+    },
+    {
+      "id": "mv.psdp.elak-samping", "slug": "elak-samping",
+      "names": {"primary": "Elak Samping", "local": null, "aliases": ["Elakan samping"], "pronunciation": null},
+      "category": "pembelaan_tanpa_kontak", "level": "beginner", "safety_class": "supervised_only", "solo_form_status": "inferred_not_documented",
+      "content_status": "draft", "evidence_tier": "research_supported", "instructor_validation": "not_validated", "permission_status": "parafrasa sumber terbit; tanpa media",
+      "cultural_context": {"context": {"ref": "shared_context.elakan"}, "purpose": {"text": "Mengelak serangan dari depan dan atas dengan memindahkan badan ke samping melalui perubahan sikap kuda-kuda.", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 30"}, "meaning": {"text": "Tidak dijelaskan sumber.", "basis": "gap"}, "terminology": [], "variants": [{"ref": "shared_context.framing"}], "differs_from": []},
+      "prerequisites": {"abilities": "Kuda-kuda tengah & menyamping.", "physical_prep": "—", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {"torso": {"text": "Badan dipindah ke samping dengan mengubah sikap kuda-kuda.", "basis": "source", "source_ids": ["src.herdiana.2008"]}},
+      "phases": [
+        {"id": "mv.psdp.elak-samping#p1", "order": 1, "name": "Kuda-kuda tengah", "start_position": "Kuda-kuda tengah, tangan siaga.", "change": "—", "body_parts": [], "direction": "—", "end_position": "Siap.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-1", "basis": "editorial", "source_ids": []},
+        {"id": "mv.psdp.elak-samping#p2", "order": 2, "name": "Badan pindah ke samping", "start_position": "Kuda-kuda tengah.", "change": "Badan dipindah ke samping dengan mengubah sikap kuda-kuda (berat ke satu kaki).", "body_parts": ["pinggul", "torso", "lutut"], "direction": "ke samping", "end_position": "Badan bergeser ke samping.", "mistakes": [], "safety": "Dengan pengawasan.", "tempo": null, "keyframe_ref": "kf-2", "basis": "source", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 30"}
+      ],
+      "practice": {"start": "—", "sequence": "Tidak disusun untuk latihan mandiri.", "tempo": {"text": "—", "basis": "gap"}, "repetitions": {"text": "—", "basis": "gap"}, "easier": "—", "progression": "—", "stop_when_ref": "common.safety.stop_when", "cooldown": "—"},
+      "common_mistakes": [], "common_mistakes_gap": "—",
+      "references": [{"source_id": "src.herdiana.2008", "locator": "hlm. 30", "supports": "Uraian elak samping."}],
+      "gaps": ["Kuda-kuda tujuan tidak disebut; animasi memakai pergeseran berat ke satu sisi (tafsir)."],
+      "landmarks": ["lower_body", "upper_body"],
+      "animation": {"animation_id": "anim.psdp.elak-samping.v1", "status": "generated"}
+    },
+    {
+      "id": "mv.psdp.elak-belakang", "slug": "elak-belakang",
+      "names": {"primary": "Elak Belakang", "local": null, "aliases": ["Elakan belakang"], "pronunciation": null},
+      "category": "pembelaan_tanpa_kontak", "level": "beginner", "safety_class": "supervised_only", "solo_form_status": "inferred_not_documented",
+      "content_status": "draft", "evidence_tier": "research_supported", "instructor_validation": "not_validated", "permission_status": "parafrasa sumber terbit; tanpa media",
+      "cultural_context": {"context": {"ref": "shared_context.elakan"}, "purpose": {"text": "Mengelak serangan dari depan atau samping: dari kuda-kuda depan, badan dipindah ke belakang; dapat juga sambil berputar.", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 31"}, "meaning": {"text": "Tidak dijelaskan sumber.", "basis": "gap"}, "terminology": [], "variants": [{"ref": "shared_context.framing"}, {"text": "Varian berputar (Herdiana gb. 34) tidak dianimasikan.", "basis": "editorial"}], "differs_from": [{"movement_id": "mv.psdp.hindaran-hadap", "text": "Hindaran hadap memindahkan kaki."}]},
+      "prerequisites": {"abilities": "Kuda-kuda depan.", "physical_prep": "—", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {"torso": {"text": "Badan dipindah ke belakang dari kuda-kuda depan; kaki tidak berpindah (definisi elakan).", "basis": "source", "source_ids": ["src.herdiana.2008"]}},
+      "phases": [
+        {"id": "mv.psdp.elak-belakang#p1", "order": 1, "name": "Kuda-kuda depan", "start_position": "Kuda-kuda depan, tangan siaga.", "change": "—", "body_parts": [], "direction": "—", "end_position": "Siap.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-1", "basis": "source", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 31"},
+        {"id": "mv.psdp.elak-belakang#p2", "order": 2, "name": "Badan pindah ke belakang", "start_position": "Kuda-kuda depan.", "change": "Berat dan badan dipindah ke belakang (kaki tetap), sehingga kaki depan lebih lurus.", "body_parts": ["pinggul", "torso", "lutut"], "direction": "ke belakang", "end_position": "Badan di atas kaki belakang.", "mistakes": [], "safety": "Jangan mencondongkan punggung berlebihan; dengan pengawasan.", "tempo": null, "keyframe_ref": "kf-2", "basis": "source", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 31"}
+      ],
+      "practice": {"start": "—", "sequence": "Tidak disusun untuk latihan mandiri.", "tempo": {"text": "—", "basis": "gap"}, "repetitions": {"text": "—", "basis": "gap"}, "easier": "—", "progression": "—", "stop_when_ref": "common.safety.stop_when", "cooldown": "—"},
+      "common_mistakes": [], "common_mistakes_gap": "—",
+      "references": [{"source_id": "src.herdiana.2008", "locator": "hlm. 31", "supports": "Uraian elak belakang."}],
+      "gaps": ["Seberapa jauh badan bergeser tidak disebut."],
+      "landmarks": ["lower_body", "upper_body"],
+      "animation": {"animation_id": "anim.psdp.elak-belakang.v1", "status": "generated"}
+    }
+  ]
+}

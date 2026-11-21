@@ -1,0 +1,97 @@
+{
+  "schema": "silatara.animation-manifest/v1",
+  "animation_id": "anim.psdp.pola-langkah-lurus.v1",
+  "movement_id": "mv.psdp.pola-langkah-lurus",
+  "animation_status": "generated",
+  "view": "top",
+  "duration_ms": 7100,
+  "loop": true,
+  "fps_sampled": null,
+  "frames": 0,
+  "playback_rates": [
+    0.5,
+    1.0,
+    1.5
+  ],
+  "playback_note": "SMIL tidak memiliki kontrol kecepatan bawaan; pemutar dapat memakai SVGSVGElement.pauseAnimations()/setCurrentTime() atau merender ulang dengan dur berbeda.",
+  "phase_map": {
+    "kf-1": {
+      "phase_id": "mv.psdp.pola-langkah-lurus#p1",
+      "label": "0",
+      "windows": [
+        0.0,
+        1.0
+      ]
+    },
+    "kf-2": {
+      "phase_id": "mv.psdp.pola-langkah-lurus#p2",
+      "label": "1",
+      "windows": [
+        0.0986,
+        1.0
+      ]
+    },
+    "kf-3": {
+      "phase_id": "mv.psdp.pola-langkah-lurus#p2",
+      "label": "2",
+      "windows": [
+        0.1972,
+        1.0
+      ]
+    },
+    "kf-4": {
+      "phase_id": "mv.psdp.pola-langkah-lurus#p2",
+      "label": "3",
+      "windows": [
+        0.2958,
+        1.0
+      ]
+    },
+    "kf-5": {
+      "phase_id": "mv.psdp.pola-langkah-lurus#p2",
+      "label": "4",
+      "windows": [
+        0.3944,
+        1.0
+      ]
+    },
+    "kf-6": {
+      "phase_id": "mv.psdp.pola-langkah-lurus#p2",
+      "label": "5",
+      "windows": [
+        0.493,
+        1.0
+      ]
+    },
+    "kf-7": {
+      "phase_id": "mv.psdp.pola-langkah-lurus#p2",
+      "label": "6",
+      "windows": [
+        0.5915,
+        1.0
+      ]
+    },
+    "kf-8": {
+      "phase_id": "mv.psdp.pola-langkah-lurus#p2",
+      "label": "7",
+      "windows": [
+        0.6901,
+        1.0
+      ]
+    }
+  },
+  "bounds": null,
+  "max_ik_error_px": 0.0,
+  "rig_id": "silatara-instruktur-2d",
+  "rig_version": 1,
+  "generator": "tools/animation/silat_anim.py 1.0.0",
+  "keyframes_sha256": "dcf5c0b5f6b8433e2217eb432c0de7a4866d501ced382c17db31e1c97ddba7df",
+  "svg_sha256": "382cc3955628d31588cda81e61a1460853c939e37baa8cab6cd85c8bde49cc3a",
+  "svg_bytes": 4916,
+  "source_ids": [
+    "src.nugroho.2005",
+    "src.herdiana.2008"
+  ],
+  "authorship": "Interpretasi visual editorial tim SILATARA atas dokumentasi tertulis; bukan rekaman manusia; bukan demonstrasi resmi perguruan.",
+  "instructor_validation": "not_validated"
+}

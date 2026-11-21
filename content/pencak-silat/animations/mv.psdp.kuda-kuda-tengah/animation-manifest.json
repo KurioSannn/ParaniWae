@@ -1,0 +1,63 @@
+{
+  "schema": "silatara.animation-manifest/v1",
+  "animation_id": "anim.psdp.kuda-kuda-tengah.v1",
+  "movement_id": "mv.psdp.kuda-kuda-tengah",
+  "animation_status": "generated",
+  "view": "front",
+  "duration_ms": 6200,
+  "loop": true,
+  "fps_sampled": 20,
+  "frames": 125,
+  "playback_rates": [
+    0.5,
+    1.0,
+    1.5
+  ],
+  "playback_note": "SMIL tidak memiliki kontrol kecepatan bawaan; pemutar dapat memakai SVGSVGElement.pauseAnimations()/setCurrentTime() atau merender ulang dengan dur berbeda.",
+  "phase_map": {
+    "kf-1": {
+      "phase_id": "mv.psdp.kuda-kuda-tengah#p1",
+      "label": "Sikap tegak 2",
+      "windows": [
+        0.0,
+        0.2097,
+        0.9032,
+        1.0
+      ]
+    },
+    "kf-2": {
+      "phase_id": "mv.psdp.kuda-kuda-tengah#p2",
+      "label": "Kaki dikangkangkan",
+      "windows": [
+        0.2097,
+        0.4194
+      ]
+    },
+    "kf-3": {
+      "phase_id": "mv.psdp.kuda-kuda-tengah#p3",
+      "label": "Kuda-kuda tengah",
+      "windows": [
+        0.4194,
+        0.9032
+      ]
+    }
+  },
+  "bounds": [
+    102.1,
+    59.8,
+    257.9,
+    416
+  ],
+  "max_ik_error_px": 0.0,
+  "rig_id": "silatara-instruktur-2d",
+  "rig_version": 1,
+  "generator": "tools/animation/silat_anim.py 1.0.0",
+  "keyframes_sha256": "dd019d3c93b3b0414e98be33092d8d3d6dfd09c9c6db01aa8f471d62f5042fa8",
+  "svg_sha256": "b3ed47532f7e596673f5f6e105dc29554a9b3bb96f6c773ee8ca8ac80ce0da2b",
+  "svg_bytes": 16265,
+  "source_ids": [
+    "src.nugroho.2005"
+  ],
+  "authorship": "Interpretasi visual editorial tim SILATARA atas dokumentasi tertulis; bukan rekaman manusia; bukan demonstrasi resmi perguruan.",
+  "instructor_validation": "not_validated"
+}

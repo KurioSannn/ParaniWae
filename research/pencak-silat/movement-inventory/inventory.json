@@ -1,0 +1,95 @@
+{
+  "schema": "silatara.movement-inventory/v1",
+  "as_of": "2026-11-20",
+  "purpose": "Semua nama gerak yang DITEMUKAN di sumber, termasuk yang hanya berupa nama. Hanya entri dengan doc_ref yang memiliki dokumen gerakan lengkap (content/pencak-silat/movements). Entri lain = research gap; jangan diturunkan menjadi uraian gerak dari tebakan nama.",
+  "safety_legend": ["solo_beginner", "solo_intermediate", "solo_advanced", "supervised_only", "partner_required", "restricted"],
+  "groups": [
+    {
+      "tradition": "trd.psdp",
+      "label": "Teknik dasar pencak silat — kerangka pendidikan/olahraga (Nugroho 2005; Herdiana 2008)",
+      "documented_in": "content/pencak-silat/movements/psdp-*.json",
+      "items": [
+        {"name": "Sikap tegak 1–4", "doc_ref": "mv.psdp.sikap-tegak", "safety": "solo_beginner", "source_ids": ["src.nugroho.2005", "src.herdiana.2008"]},
+        {"name": "Sikap tegak 5 (kepalan kanan menempel telapak kiri di dada)", "doc_ref": "mv.psdp.sikap-tegak", "safety": "solo_beginner", "source_ids": ["src.herdiana.2008"], "note": "Varian penomoran Herdiana; dicatat sebagai catatan varian, bukan fase."},
+        {"name": "Sikap berdoa/pemusatan diri", "doc_ref": "mv.psdp.sikap-pemusatan-diri", "safety": "solo_beginner", "source_ids": ["src.herdiana.2008"]},
+        {"name": "Sikap istirahat", "doc_ref": "mv.psdp.sikap-istirahat", "safety": "solo_beginner", "source_ids": ["src.herdiana.2008"]},
+        {"name": "Sikap kangkang", "doc_ref": "mv.psdp.kuda-kuda-tengah", "safety": "solo_beginner", "source_ids": ["src.herdiana.2008"], "note": "Dasar kuda-kuda; dicatat di dokumen kuda-kuda tengah."},
+        {"name": "Kuda-kuda depan", "doc_ref": "mv.psdp.kuda-kuda-depan", "safety": "solo_beginner", "source_ids": ["src.nugroho.2005", "src.herdiana.2008"]},
+        {"name": "Kuda-kuda belakang", "doc_ref": "mv.psdp.kuda-kuda-belakang", "safety": "solo_beginner", "source_ids": ["src.nugroho.2005", "src.herdiana.2008"]},
+        {"name": "Kuda-kuda tengah (kangkang)", "doc_ref": "mv.psdp.kuda-kuda-tengah", "safety": "solo_beginner", "source_ids": ["src.nugroho.2005", "src.herdiana.2008"]},
+        {"name": "Kuda-kuda samping", "doc_ref": "mv.psdp.kuda-kuda-samping", "safety": "solo_beginner", "source_ids": ["src.nugroho.2005", "src.herdiana.2008"]},
+        {"name": "Kuda-kuda menyamping kiri/kanan", "doc_ref": "mv.psdp.kuda-kuda-menyamping", "safety": "solo_beginner", "source_ids": ["src.nugroho.2005"]},
+        {"name": "Kuda-kuda silang depan", "doc_ref": "mv.psdp.kuda-kuda-silang-depan", "safety": "solo_beginner", "source_ids": ["src.nugroho.2005", "src.herdiana.2008"]},
+        {"name": "Kuda-kuda silang belakang", "doc_ref": "mv.psdp.kuda-kuda-silang-belakang", "safety": "solo_beginner", "source_ids": ["src.nugroho.2005", "src.herdiana.2008"]},
+        {"name": "Sikap duduk: sempok/depok, sila, duduk, trapsila, simpuh", "doc_ref": "mv.psdp.sikap-duduk-*", "safety": "solo_beginner", "source_ids": ["src.nugroho.2005"]},
+        {"name": "Sikap jengkeng, jongkok", "doc_ref": null, "safety": "solo_beginner", "source_ids": ["src.herdiana.2008"], "gap": "Hanya nama + gambar; uraian tidak ada."},
+        {"name": "Sikap pasang 1–8 (penomoran Januarno 1989)", "doc_ref": "mv.psdp.sikap-pasang-1..8", "safety": "solo_beginner", "source_ids": ["src.nugroho.2005"], "note": "Pasang 8 berdiri satu kaki: solo_intermediate."},
+        {"name": "Arah delapan penjuru mata angin", "doc_ref": "mv.psdp.arah-delapan-penjuru", "safety": "solo_beginner", "source_ids": ["src.nugroho.2005", "src.herdiana.2008"]},
+        {"name": "Langkah angkatan (tinggi/rendah)", "doc_ref": "mv.psdp.langkah-angkatan", "safety": "solo_beginner", "source_ids": ["src.nugroho.2005", "src.herdiana.2008"]},
+        {"name": "Langkah geseran", "doc_ref": "mv.psdp.langkah-geseran", "safety": "solo_beginner", "source_ids": ["src.nugroho.2005", "src.herdiana.2008"]},
+        {"name": "Langkah putaran", "doc_ref": "mv.psdp.langkah-putaran", "safety": "solo_beginner", "source_ids": ["src.nugroho.2005", "src.herdiana.2008"]},
+        {"name": "Langkah lompatan / loncatan", "doc_ref": "mv.psdp.langkah-lompatan", "safety": "solo_intermediate", "source_ids": ["src.nugroho.2005", "src.herdiana.2008"]},
+        {"name": "Langkah ingsutan (seseran)", "doc_ref": "mv.psdp.langkah-ingsutan", "safety": "solo_beginner", "source_ids": ["src.nugroho.2005", "src.herdiana.2008"]},
+        {"name": "Pola langkah lurus, gergaji/zig-zag, ladam/U, segitiga, segiempat, huruf S", "doc_ref": "mv.psdp.pola-langkah-*", "safety": "solo_beginner", "source_ids": ["src.nugroho.2005", "src.herdiana.2008"]},
+        {"name": "Hindaran hadap, sisi, angkat kaki, silang", "doc_ref": "mv.psdp.hindaran-*", "safety": "supervised_only", "source_ids": ["src.herdiana.2008"], "note": "Sumber membingkainya sebagai respons terhadap serangan lawan; bentuk solo tidak dinyatakan sumber."},
+        {"name": "Elak bawah, atas, samping, belakang", "doc_ref": "mv.psdp.elak-*", "safety": "supervised_only", "source_ids": ["src.herdiana.2008"], "note": "Sama: bingkai respons lawan; elak atas = lompatan."},
+        {"name": "Tangkisan (satu lengan: dalam/luar/bawah/atas; siku; dua lengan: sejajar, belah tinggi/rendah, silang tinggi/rendah, buang samping; kaki: tutup samping/depan/buang luar, busur luar/dalam)", "doc_ref": null, "safety": "partner_required", "source_ids": ["src.herdiana.2008"], "gap": "Nama + gambar; tidak ada uraian langkah. Tangkisan menurut definisi sumber melibatkan kontak dengan serangan lawan."},
+        {"name": "Pukulan depan (tebak, tinju, dorong, totok, sodok, bandul), bawah (catok, sanggah, tusuk/colok), atas (tumbuk, pedang, ketok, patuk, tebak), samping (pedang, tamper, bandul, kepret), siku (depan, samping, belakang, sorong, atas, bawah)", "doc_ref": null, "safety": "supervised_only", "source_ids": ["src.herdiana.2008"], "gap": "Nama saja. Colokan ke mata dinyatakan Nugroho 2005 terlarang di pertandingan — tidak akan didokumentasikan."},
+        {"name": "Pukulan lurus mengepal, sikutan, pendeta, kepret, tebakan", "doc_ref": null, "safety": "supervised_only", "source_ids": ["src.nugroho.2005"], "gap": "Nama saja."},
+        {"name": "Tendangan depan/lurus, samping/T, sabit, belakang, busur, putar, lutut bawah, lutut samping", "doc_ref": null, "safety": "solo_intermediate", "source_ids": ["src.herdiana.2008", "src.nugroho.2005"], "gap": "Nama + gambar saja; progresi aman tidak dijelaskan sumber."},
+        {"name": "Tangkapan, jatuhan (sapuan, sirkelan, guntingan), lepasan, kuncian", "doc_ref": null, "safety": "partner_required", "source_ids": ["src.herdiana.2008", "src.nugroho.2005"], "gap": "Di luar cakupan (teknik terhadap orang lain)."},
+        {"name": "Jurus tunggal baku IPSI/PERSILAT (tangan kosong)", "doc_ref": null, "safety": "solo_intermediate", "source_ids": [], "gap": "Uraian resmi tidak ditemukan dalam sumber yang dapat dibaca; jangan direkonstruksi dari video."}
+      ]
+    },
+    {
+      "tradition": "ent.style.beksi",
+      "label": "Silat Beksi — 12 jurus dasar (nama saja)",
+      "items": [
+        {"name": "Jurus Beksi"}, {"name": "Jurus Gedig"}, {"name": "Jurus Tancep"}, {"name": "Jurus Ganden"}, {"name": "Jurus Bandut"}, {"name": "Jurus Broneng"}, {"name": "Jurus Tingkes"}, {"name": "Jurus Rusia Pecah Tiga"}, {"name": "Jurus Bolang-baling"}, {"name": "Jurus Gebal"}, {"name": "Jurus Kebut"}, {"name": "Jurus Petir/Tunjang"}
+      ],
+      "defaults": {"doc_ref": null, "safety": "needs_reference", "source_ids": ["src.unesco.ich.01391.inventory"], "gap": "Hanya nama; solo/pasangan tidak dinyatakan; butuh instruktur Beksi."}
+    },
+    {
+      "tradition": "ent.style.cingkrik",
+      "label": "Silat Cingkrik — 12 jurus dasar + 3 sambut (nama dari Wikipedia; sumber primer belum diverifikasi)",
+      "items": [
+        {"name": "Keset bacok"}, {"name": "Keset gedor"}, {"name": "Cingkrik"}, {"name": "Langkah tiga"}, {"name": "Langkah empat"}, {"name": "Buka satu"}, {"name": "Saup"}, {"name": "Macan"}, {"name": "Tiktuk"}, {"name": "Singa"}, {"name": "Lokbe"}, {"name": "Longok"},
+        {"name": "Bongbang (gabungan 12 jurus)"},
+        {"name": "Sambut tujuh muka", "safety": "partner_required"}, {"name": "Sambut gulung", "safety": "partner_required"}, {"name": "Sambut habis/detik", "safety": "partner_required"}
+      ],
+      "defaults": {"doc_ref": null, "safety": "needs_reference", "source_ids": ["src.wikipedia.cingkrik"], "gap": "Sumber tersier; cek Nawi 2016 & instruktur Cingkrik."}
+    },
+    {
+      "tradition": "ent.tradition.bandrong",
+      "label": "Pencak Silat Bandrong — gaya inti, gerak dasar, bentuk serang/tangkis (nama saja)",
+      "items": [
+        {"name": "Gaya inti: pilis, catrok, totog, seliwa, gebrag, kurung (masing-masing 3 bagian = 18)"},
+        {"name": "Gerak dasar: sios, kaleh, telu, papat, lime, nenem", "note": "Ejaan 'telu' & 'papat' dari teks hasil OCR ('te/u', 'papal') — perlu dicek ke dokumen asli."},
+        {"name": "Serangan luar (jabe) & dalam (tero)", "safety": "partner_required"},
+        {"name": "Tangkisan: pilis, catrok, totog, seliwe, gebrog, bendung", "safety": "partner_required"},
+        {"name": "Variasi beset: pilis, catrok, totog, seliwe, gebrag, kurung"}
+      ],
+      "defaults": {"doc_ref": null, "safety": "needs_reference", "source_ids": ["src.unesco.ich.01391.inventory"], "gap": "Hanya nama."}
+    },
+    {
+      "tradition": "ent.style.silek-kumango",
+      "label": "Silat Tradisional Kumango — 12 gerak dasar (nama saja)",
+      "items": [
+        {"name": "Cakak"}, {"name": "Pisau"}, {"name": "Rambah"}, {"name": "Cancang"}, {"name": "Ampang"}, {"name": "Patah Tabu"}, {"name": "Antak Siku"}, {"name": "Sandang"}, {"name": "Kabek"}, {"name": "Tanai"}, {"name": "Ucak Tangguang"}, {"name": "Ucak Lapeh"},
+        {"name": "Teknik kuncian kaki, tusukan, patukan", "safety": "restricted", "note": "Guru tuo menyatakan TIDAK boleh didokumentasikan — tidak akan diuraikan."}
+      ],
+      "defaults": {"doc_ref": null, "safety": "needs_reference", "source_ids": ["src.putri-nusri.2022"], "gap": "Nama saja; 'batang' sebagai gerak dasar disebut tanpa uraian."}
+    },
+    {
+      "tradition": "ent.tradition.silek-minang",
+      "label": "Silek Minangkabau — konsep langkah",
+      "items": [
+        {"name": "Langkah tigo (kiri jaga jarak, kanan cari akal, depan memutus — sebagai konsep)", "source_ids": ["src.ediwar.2023"]},
+        {"name": "Langkah ampek (langkah tigo + belakang 'manyerak umpan')", "source_ids": ["src.ediwar.2023"]},
+        {"name": "Langkah sambilan (silek pertunjukan/pencak, berirama)", "source_ids": ["src.ediwar.2023"]},
+        {"name": "Tagak Alif, Langkah Luruih, Langkah Sendeng, Langkah Serong (unsur langkah ampek pada Silek Tuo Nagari Batuah)", "source_ids": ["src.uir.silek-tuo-nagari-batuah"], "note": "Dipelajari berpasangan di sanggar sumber."}
+      ],
+      "defaults": {"doc_ref": null, "safety": "needs_reference", "gap": "Konsep arah tercatat; teknik kaki, jarak, dan urutan tidak diuraikan. Diajarkan sebagai teori di kursus pengenalan, bukan sebagai gerak latihan."}
+    }
+  ]
+}

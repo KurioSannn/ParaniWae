@@ -1,0 +1,294 @@
+{
+  "schema": "silatara.keyframes/v1",
+  "animation_id": "anim.psdp.arah-delapan-penjuru.v1",
+  "movement_id": "mv.psdp.arah-delapan-penjuru",
+  "animation_status": "generated",
+  "title": "Arah delapan penjuru mata angin",
+  "description": "Tampak atas: penanda bergerak dari titik tengah (0) ke arah 1 sampai 8 berurutan searah jarum jam, sesuai penomoran hitungan Januarno (1989) yang dikutip Nugroho (2005).",
+  "view": "top",
+  "source_ids": [
+    "src.nugroho.2005",
+    "src.herdiana.2008"
+  ],
+  "markers": [
+    {
+      "id": "kf-1",
+      "phase_id": "mv.psdp.arah-delapan-penjuru#p1",
+      "label": "0",
+      "pos": [
+        180,
+        236
+      ]
+    },
+    {
+      "id": "kf-2",
+      "phase_id": "mv.psdp.arah-delapan-penjuru#p2",
+      "label": "1",
+      "pos": [
+        180,
+        340
+      ]
+    },
+    {
+      "id": "kf-3",
+      "phase_id": "mv.psdp.arah-delapan-penjuru#p2",
+      "label": "2",
+      "pos": [
+        106,
+        310
+      ]
+    },
+    {
+      "id": "kf-4",
+      "phase_id": "mv.psdp.arah-delapan-penjuru#p2",
+      "label": "3",
+      "pos": [
+        76,
+        236
+      ]
+    },
+    {
+      "id": "kf-5",
+      "phase_id": "mv.psdp.arah-delapan-penjuru#p2",
+      "label": "4",
+      "pos": [
+        106,
+        162
+      ]
+    },
+    {
+      "id": "kf-6",
+      "phase_id": "mv.psdp.arah-delapan-penjuru#p3",
+      "label": "5",
+      "pos": [
+        180,
+        132
+      ]
+    },
+    {
+      "id": "kf-7",
+      "phase_id": "mv.psdp.arah-delapan-penjuru#p3",
+      "label": "6",
+      "pos": [
+        254,
+        162
+      ]
+    },
+    {
+      "id": "kf-8",
+      "phase_id": "mv.psdp.arah-delapan-penjuru#p3",
+      "label": "7",
+      "pos": [
+        284,
+        236
+      ]
+    },
+    {
+      "id": "kf-9",
+      "phase_id": "mv.psdp.arah-delapan-penjuru#p3",
+      "label": "8",
+      "pos": [
+        254,
+        310
+      ]
+    }
+  ],
+  "guides": [
+    {
+      "type": "circle",
+      "at": [
+        180,
+        236
+      ],
+      "r": 104
+    },
+    {
+      "type": "line",
+      "from": [
+        180,
+        236
+      ],
+      "to": [
+        180,
+        340
+      ],
+      "w": 2,
+      "dash": "4 4"
+    },
+    {
+      "type": "label",
+      "at": [
+        180,
+        368
+      ],
+      "text": "Belakang",
+      "size": 9
+    },
+    {
+      "type": "line",
+      "from": [
+        180,
+        236
+      ],
+      "to": [
+        106,
+        310
+      ],
+      "w": 2,
+      "dash": "4 4"
+    },
+    {
+      "type": "label",
+      "at": [
+        89,
+        331
+      ],
+      "text": "Serong kiri belakang",
+      "size": 9
+    },
+    {
+      "type": "line",
+      "from": [
+        180,
+        236
+      ],
+      "to": [
+        76,
+        236
+      ],
+      "w": 2,
+      "dash": "4 4"
+    },
+    {
+      "type": "label",
+      "at": [
+        52,
+        240
+      ],
+      "text": "Samping kiri",
+      "size": 9
+    },
+    {
+      "type": "line",
+      "from": [
+        180,
+        236
+      ],
+      "to": [
+        106,
+        162
+      ],
+      "w": 2,
+      "dash": "4 4"
+    },
+    {
+      "type": "label",
+      "at": [
+        89,
+        149
+      ],
+      "text": "Serong kiri depan",
+      "size": 9
+    },
+    {
+      "type": "line",
+      "from": [
+        180,
+        236
+      ],
+      "to": [
+        180,
+        132
+      ],
+      "w": 2,
+      "dash": "4 4"
+    },
+    {
+      "type": "label",
+      "at": [
+        180,
+        112
+      ],
+      "text": "Depan",
+      "size": 9
+    },
+    {
+      "type": "line",
+      "from": [
+        180,
+        236
+      ],
+      "to": [
+        254,
+        162
+      ],
+      "w": 2,
+      "dash": "4 4"
+    },
+    {
+      "type": "label",
+      "at": [
+        271,
+        149
+      ],
+      "text": "Serong kanan depan",
+      "size": 9
+    },
+    {
+      "type": "line",
+      "from": [
+        180,
+        236
+      ],
+      "to": [
+        284,
+        236
+      ],
+      "w": 2,
+      "dash": "4 4"
+    },
+    {
+      "type": "label",
+      "at": [
+        308,
+        240
+      ],
+      "text": "Samping kanan",
+      "size": 9
+    },
+    {
+      "type": "line",
+      "from": [
+        180,
+        236
+      ],
+      "to": [
+        254,
+        310
+      ],
+      "w": 2,
+      "dash": "4 4"
+    },
+    {
+      "type": "label",
+      "at": [
+        271,
+        331
+      ],
+      "text": "Serong kanan belakang",
+      "size": 9
+    },
+    {
+      "type": "label",
+      "at": [
+        180,
+        48
+      ],
+      "text": "↑ arah hadap (depan)",
+      "size": 11
+    }
+  ],
+  "legend": "Penomoran Januarno 1989 (via Nugroho 2005)",
+  "step_ms": 700,
+  "end_hold_ms": 1500
+}

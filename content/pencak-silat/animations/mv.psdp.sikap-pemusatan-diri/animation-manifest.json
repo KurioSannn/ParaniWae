@@ -1,0 +1,65 @@
+{
+  "schema": "silatara.animation-manifest/v1",
+  "animation_id": "anim.psdp.sikap-pemusatan-diri.v1",
+  "movement_id": "mv.psdp.sikap-pemusatan-diri",
+  "animation_status": "generated",
+  "view": "side",
+  "duration_ms": 6700,
+  "loop": true,
+  "fps_sampled": 20,
+  "frames": 135,
+  "playback_rates": [
+    0.5,
+    1.0,
+    1.5
+  ],
+  "playback_note": "SMIL tidak memiliki kontrol kecepatan bawaan; pemutar dapat memakai SVGSVGElement.pauseAnimations()/setCurrentTime() atau merender ulang dengan dur berbeda.",
+  "phase_map": {
+    "kf-1": {
+      "phase_id": "mv.psdp.sikap-pemusatan-diri#p1",
+      "label": "Sikap tegak 1",
+      "windows": [
+        0.0,
+        0.2164,
+        0.9328,
+        1.0
+      ]
+    },
+    "kf-2": {
+      "phase_id": "mv.psdp.sikap-pemusatan-diri#p2",
+      "label": "Telapak rapat di dada",
+      "windows": [
+        0.2164,
+        0.4403,
+        0.7761,
+        0.9328
+      ]
+    },
+    "kf-3": {
+      "phase_id": "mv.psdp.sikap-pemusatan-diri#p3",
+      "label": "Menunduk",
+      "windows": [
+        0.4403,
+        0.7761
+      ]
+    }
+  },
+  "bounds": [
+    148.0,
+    59.8,
+    235.3,
+    416.0
+  ],
+  "max_ik_error_px": 0.0,
+  "rig_id": "silatara-instruktur-2d",
+  "rig_version": 1,
+  "generator": "tools/animation/silat_anim.py 1.0.0",
+  "keyframes_sha256": "ae519c5bbe1a220e43d80748b45d194dfbda3d700a89552daa81f2c15c2879a8",
+  "svg_sha256": "f5d02bf5b41dfe2a0a46d49e1db0a55ce485663c666cbf606333fd8d4efde634",
+  "svg_bytes": 16119,
+  "source_ids": [
+    "src.herdiana.2008"
+  ],
+  "authorship": "Interpretasi visual editorial tim SILATARA atas dokumentasi tertulis; bukan rekaman manusia; bukan demonstrasi resmi perguruan.",
+  "instructor_validation": "not_validated"
+}

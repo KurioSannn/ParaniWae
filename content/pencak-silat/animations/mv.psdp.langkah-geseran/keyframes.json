@@ -1,0 +1,160 @@
+{
+  "schema": "silatara.keyframes/v1",
+  "animation_id": "anim.psdp.langkah-geseran.v1",
+  "movement_id": "mv.psdp.langkah-geseran",
+  "animation_status": "generated",
+  "title": "Langkah geseran",
+  "description": "Tampak samping: dari kuda-kuda depan, kaki depan digeser maju dengan telapak menempel lantai, lalu kaki belakang menyusul.",
+  "view": "side",
+  "source_ids": [
+    "src.nugroho.2005",
+    "src.herdiana.2008"
+  ],
+  "keyframes": [
+    {
+      "id": "kf-1",
+      "phase_id": "mv.psdp.langkah-geseran#p1",
+      "label": "Kuda-kuda depan",
+      "caption": "Siap",
+      "pose": {
+        "pelvis": [
+          186,
+          16
+        ],
+        "feet": {
+          "L": [
+            222,
+            0
+          ],
+          "R": [
+            128,
+            0
+          ]
+        },
+        "arms": {
+          "L": [
+            -28,
+            95
+          ],
+          "R": [
+            -24,
+            92
+          ]
+        },
+        "hands": {
+          "L": "fist",
+          "R": "fist"
+        }
+      }
+    },
+    {
+      "id": "kf-2",
+      "phase_id": "mv.psdp.langkah-geseran#p2",
+      "label": "Kaki depan bergeser",
+      "caption": "Telapak tetap menempel",
+      "pose": {
+        "pelvis": [
+          198,
+          16
+        ],
+        "feet": {
+          "L": [
+            252,
+            0
+          ],
+          "R": [
+            128,
+            0
+          ]
+        },
+        "arms": {
+          "L": [
+            -28,
+            95
+          ],
+          "R": [
+            -24,
+            92
+          ]
+        },
+        "hands": {
+          "L": "fist",
+          "R": "fist"
+        }
+      },
+      "arrow": {
+        "from": [
+          226,
+          418
+        ],
+        "to": [
+          262,
+          418
+        ]
+      }
+    },
+    {
+      "id": "kf-3",
+      "phase_id": "mv.psdp.langkah-geseran#p3",
+      "label": "Kaki belakang menyusul",
+      "caption": "Kuda-kuda di tempat baru",
+      "pose": {
+        "pelvis": [
+          220,
+          16
+        ],
+        "feet": {
+          "L": [
+            252,
+            0
+          ],
+          "R": [
+            168,
+            0
+          ]
+        },
+        "arms": {
+          "L": [
+            -28,
+            95
+          ],
+          "R": [
+            -24,
+            92
+          ]
+        },
+        "hands": {
+          "L": "fist",
+          "R": "fist"
+        }
+      },
+      "arrow": {
+        "from": [
+          128,
+          418
+        ],
+        "to": [
+          170,
+          418
+        ]
+      }
+    }
+  ],
+  "sequence": [
+    {
+      "pose": "kf-1",
+      "hold_ms": 800
+    },
+    {
+      "pose": "kf-2",
+      "move_ms": 900,
+      "hold_ms": 500
+    },
+    {
+      "pose": "kf-3",
+      "move_ms": 900,
+      "hold_ms": 900
+    }
+  ],
+  "return_ms": 1400
+}

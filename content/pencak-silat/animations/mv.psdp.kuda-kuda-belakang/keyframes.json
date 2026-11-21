@@ -1,0 +1,109 @@
+{
+  "schema": "silatara.keyframes/v1",
+  "animation_id": "anim.psdp.kuda-kuda-belakang.v1",
+  "movement_id": "mv.psdp.kuda-kuda-belakang",
+  "animation_status": "generated",
+  "title": "Kuda-kuda belakang",
+  "description": "Tampak samping (menghadap kanan): dari sikap tegak 2, satu kaki digeser ke belakang dan berat badan ditumpukan pada kaki belakang.",
+  "view": "side",
+  "source_ids": [
+    "src.nugroho.2005",
+    "src.herdiana.2008"
+  ],
+  "keyframes": [
+    {
+      "id": "kf-1",
+      "phase_id": "mv.psdp.kuda-kuda-belakang#p1",
+      "label": "Sikap tegak 2",
+      "caption": "Kepalan di pinggang",
+      "pose": {
+        "pelvis": [
+          172,
+          0
+        ],
+        "feet": {
+          "L": [
+            176,
+            0
+          ],
+          "R": [
+            168,
+            0
+          ]
+        },
+        "arms": {
+          "L": [
+            -28,
+            95
+          ],
+          "R": [
+            -24,
+            92
+          ]
+        },
+        "hands": {
+          "L": "fist",
+          "R": "fist"
+        }
+      }
+    },
+    {
+      "id": "kf-2",
+      "phase_id": "mv.psdp.kuda-kuda-belakang#p2",
+      "label": "Kuda-kuda belakang",
+      "caption": "Kaki mundur · berat di kaki belakang",
+      "pose": {
+        "pelvis": [
+          150,
+          14
+        ],
+        "feet": {
+          "L": [
+            214,
+            0
+          ],
+          "R": [
+            128,
+            0
+          ]
+        },
+        "arms": {
+          "L": [
+            -28,
+            95
+          ],
+          "R": [
+            -24,
+            92
+          ]
+        },
+        "hands": {
+          "L": "fist",
+          "R": "fist"
+        }
+      },
+      "arrow": {
+        "from": [
+          168,
+          418
+        ],
+        "to": [
+          120,
+          418
+        ]
+      }
+    }
+  ],
+  "sequence": [
+    {
+      "pose": "kf-1",
+      "hold_ms": 1000
+    },
+    {
+      "pose": "kf-2",
+      "move_ms": 1000,
+      "hold_ms": 2000
+    }
+  ],
+  "return_ms": 1000
+}

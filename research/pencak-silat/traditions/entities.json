@@ -1,0 +1,1407 @@
+{
+  "schema": "silatara.entities/v1",
+  "accessed": "2026-11-20",
+  "categories": {
+    "tradition": "Tradisi/warisan budaya (mis. elemen yang dicatat/ditetapkan WBTb)",
+    "style": "Aliran/gaya teknis",
+    "perguruan": "Perguruan/institusi pembelajaran (dapat bercabang)",
+    "training_place": "Padepokan/sasaran/sanggar/tapian (tempat latihan)",
+    "organization": "Organisasi induk/daerah",
+    "community": "Komunitas/lembaga adat",
+    "regional_term": "Sebutan lokal untuk pencak silat di suatu wilayah (bukan aliran)"
+  },
+  "rules": [
+    "Perguruan TIDAK otomatis menjadi aliran; relasi hanya bila sumber menyatakannya.",
+    "Nama pribadi narahubung/kontak dari berkas UNESCO TIDAK dicatat.",
+    "Pendiri/tahun hanya dicatat bila sumber akademik/resmi menyebutnya; selain itu 'needs_verification'.",
+    "permission_status semua entitas = not_requested: belum ada izin memakai materi mereka."
+  ],
+  "entities": [
+    {
+      "id": "ent.tradition.tradisi-pencak-silat",
+      "name": "Tradisi Pencak Silat",
+      "aliases": [
+        "Traditions of Pencak Silat"
+      ],
+      "category": "tradition",
+      "provinces": [
+        "nasional"
+      ],
+      "source_ids": [
+        "src.unesco.ich.01391",
+        "src.unesco.ich.01391.nomination"
+      ],
+      "verification": "research_supported",
+      "notes": "Elemen UNESCO 2019; mencakup banyak tradisi daerah. Bukan satu standar gerak.",
+      "public_note": "Diakui UNESCO pada 2019 sebagai Warisan Budaya Takbenda Kemanusiaan. Elemen ini mencakup banyak tradisi daerah dengan gerak, iringan, dan istilahnya masing-masing."
+    },
+    {
+      "id": "ent.regional_term.silek",
+      "name": "Silek",
+      "aliases": [
+        "Mancak",
+        "Sewah",
+        "Galuik"
+      ],
+      "category": "regional_term",
+      "provinces": [
+        "Sumatera Barat"
+      ],
+      "source_ids": [
+        "src.unesco.ich.01391.nomination"
+      ],
+      "locator": "B.3",
+      "verification": "research_supported"
+    },
+    {
+      "id": "ent.regional_term.bepencak",
+      "name": "Bepencak",
+      "category": "regional_term",
+      "provinces": [
+        "Kepulauan Bangka Belitung"
+      ],
+      "source_ids": [
+        "src.unesco.ich.01391.nomination"
+      ],
+      "locator": "B.3",
+      "verification": "research_supported",
+      "notes": "Nominasi menulis 'Bangka'."
+    },
+    {
+      "id": "ent.regional_term.penca-banten",
+      "name": "Pencé",
+      "category": "regional_term",
+      "provinces": [
+        "Banten"
+      ],
+      "source_ids": [
+        "src.unesco.ich.01391.nomination"
+      ],
+      "locator": "B.3",
+      "verification": "research_supported"
+    },
+    {
+      "id": "ent.regional_term.sunda",
+      "name": "Penca / Amengan / Ulinan / Maénpo / Usik / Heureuy",
+      "category": "regional_term",
+      "provinces": [
+        "Jawa Barat"
+      ],
+      "source_ids": [
+        "src.unesco.ich.01391.nomination"
+      ],
+      "locator": "B.3",
+      "verification": "research_supported"
+    },
+    {
+      "id": "ent.regional_term.maen-pukulan",
+      "name": "Maen Pukulan",
+      "category": "regional_term",
+      "provinces": [
+        "DKI Jakarta"
+      ],
+      "source_ids": [
+        "src.unesco.ich.01391.nomination"
+      ],
+      "locator": "B.3",
+      "verification": "research_supported"
+    },
+    {
+      "id": "ent.regional_term.madura",
+      "name": "Akeket / Okol / Penthengan",
+      "category": "regional_term",
+      "provinces": [
+        "Jawa Timur"
+      ],
+      "localities": [
+        "Madura"
+      ],
+      "source_ids": [
+        "src.unesco.ich.01391.nomination"
+      ],
+      "locator": "B.3",
+      "verification": "research_supported"
+    },
+    {
+      "id": "ent.regional_term.encak",
+      "name": "Encak / Pencakan",
+      "category": "regional_term",
+      "provinces": [
+        "Jawa Timur"
+      ],
+      "source_ids": [
+        "src.unesco.ich.01391.nomination"
+      ],
+      "locator": "B.3",
+      "verification": "research_supported"
+    },
+    {
+      "id": "ent.regional_term.pencak",
+      "name": "Pencak",
+      "category": "regional_term",
+      "provinces": [
+        "DI Yogyakarta",
+        "Jawa Timur",
+        "Bali"
+      ],
+      "source_ids": [
+        "src.unesco.ich.01391.nomination"
+      ],
+      "locator": "B.3",
+      "verification": "research_supported"
+    },
+    {
+      "id": "ent.regional_term.kuntau",
+      "name": "Kuntau",
+      "category": "regional_term",
+      "provinces": [
+        "Kalimantan Barat",
+        "Kalimantan Tengah",
+        "Kalimantan Selatan",
+        "Kalimantan Timur"
+      ],
+      "source_ids": [
+        "src.unesco.ich.01391.nomination"
+      ],
+      "locator": "B.3",
+      "verification": "research_supported",
+      "notes": "Kuntau juga dikaji di Sumatera Selatan (Semende) — lihat ent.style.kuntau-semende.",
+      "public_note": "Sebutan untuk pencak silat di Kalimantan. Istilah kuntau juga dipakai di Semende, Sumatera Selatan."
+    },
+    {
+      "id": "ent.regional_term.langga",
+      "name": "Langga",
+      "category": "regional_term",
+      "provinces": [
+        "Gorontalo"
+      ],
+      "source_ids": [
+        "src.unesco.ich.01391.nomination",
+        "src.jambura.langga"
+      ],
+      "verification": "research_supported"
+    },
+    {
+      "id": "ent.regional_term.amanca",
+      "name": "Amanca / Manca' / A'manca",
+      "aliases": [
+        "Mammencak (Bugis)",
+        "Akmancak (Makassar)"
+      ],
+      "category": "regional_term",
+      "provinces": [
+        "Sulawesi Selatan"
+      ],
+      "source_ids": [
+        "src.unesco.ich.01391.nomination",
+        "src.etnosia.manca"
+      ],
+      "verification": "research_supported"
+    },
+    {
+      "id": "ent.regional_term.pakuttau",
+      "name": "Pakuttau",
+      "category": "regional_term",
+      "provinces": [
+        "Sulawesi Barat"
+      ],
+      "source_ids": [
+        "src.unesco.ich.01391.nomination"
+      ],
+      "locator": "B.3",
+      "verification": "research_supported"
+    },
+    {
+      "id": "ent.regional_term.mencak-kuntuh",
+      "name": "Mencak / Kuntuh",
+      "category": "regional_term",
+      "provinces": [
+        "Nusa Tenggara Barat"
+      ],
+      "source_ids": [
+        "src.unesco.ich.01391.nomination"
+      ],
+      "locator": "B.3",
+      "verification": "research_supported"
+    },
+    {
+      "id": "ent.regional_term.kuttau",
+      "name": "Kuttau",
+      "category": "regional_term",
+      "provinces": [
+        "Lampung"
+      ],
+      "source_ids": [],
+      "verification": "needs_verification",
+      "notes": "Disebut di liputan media & daftar pustaka; belum ada sumber primer yang terbaca."
+    },
+    {
+      "id": "ent.tradition.silek-minang",
+      "name": "Silek Minang / Pencak Silat Minangkabau",
+      "category": "tradition",
+      "provinces": [
+        "Sumatera Barat"
+      ],
+      "wbtb": {
+        "inventory_ref": "20140019",
+        "recorded": "2014-08-19",
+        "pencatatan_code": "2010000437"
+      },
+      "source_ids": [
+        "src.unesco.ich.01391.nomination",
+        "src.unesco.ich.01391.inventory",
+        "src.ediwar.2023"
+      ],
+      "verification": "research_supported",
+      "documented_concepts": [
+        "baraja malangkah",
+        "langkah tigo",
+        "langkah ampek",
+        "langkah sambilan"
+      ],
+      "notes": "Banyak silek dinamai menurut nagari (lintau, sungai patai, pangian, sitaralak, pauh, luncua, koto anau, sungai pagu, sunua, pasisia, bayang, paninjauan, gunuang) atau sifat alam (kumango, harimau campo, unggan, balam, buayo lalok, ulu ambek) — Ediwar dkk. 2023.",
+      "public_note": "Banyak silek dinamai menurut nagari asalnya—lintau, sungai patai, pangian, sitaralak, pauh, luncua, koto anau, sungai pagu, sunua, pasisia, bayang, paninjauan, gunuang—atau menurut sifat alam, seperti kumango, harimau campo, unggan, balam, buayo lalok, dan ulu ambek."
+    },
+    {
+      "id": "ent.tradition.ulu-ambek",
+      "name": "Ulu Ambek",
+      "aliases": [
+        "Alau Ambek"
+      ],
+      "category": "tradition",
+      "provinces": [
+        "Sumatera Barat"
+      ],
+      "wbtb": {
+        "inventory_ref": "20150028",
+        "recorded": "2015-09-22",
+        "pencatatan_code": "2014004895"
+      },
+      "source_ids": [
+        "src.unesco.ich.01391.nomination",
+        "src.unesco.ich.01391.inventory"
+      ],
+      "verification": "research_supported"
+    },
+    {
+      "id": "ent.tradition.randai",
+      "name": "Randai",
+      "category": "tradition",
+      "provinces": [
+        "Sumatera Barat"
+      ],
+      "wbtb": {
+        "inventory_ref": "20170011",
+        "recorded": "2017-09-23"
+      },
+      "source_ids": [
+        "src.unesco.ich.01391.nomination"
+      ],
+      "verification": "research_supported",
+      "notes": "Seni pertunjukan terkait silek; bukan kurikulum gerak solo.",
+      "public_note": "Seni pertunjukan Minangkabau yang memadukan cerita, dendang, dan gerak silek."
+    },
+    {
+      "id": "ent.style.silek-kumango",
+      "name": "Silat Tradisional Kumango",
+      "aliases": [
+        "Silek Kumango"
+      ],
+      "category": "style",
+      "provinces": [
+        "Sumatera Barat"
+      ],
+      "localities": [
+        "Rao-rao Kumango, Kab. Tanah Datar"
+      ],
+      "founder": {
+        "name": "Syekh H. Abdur Rahman Alkhalidi Kumango",
+        "source_ids": [
+          "src.putri-nusri.2022"
+        ]
+      },
+      "source_ids": [
+        "src.putri-nusri.2022",
+        "src.ediwar.2023"
+      ],
+      "verification": "research_supported",
+      "documented_movements": [
+        "inv.kumango.*"
+      ],
+      "notes": "Sumber menyatakan sebagian teknik tidak boleh didokumentasikan — hormati.",
+      "public_note": "Berasal dari Rao-rao Kumango, Tanah Datar. Memiliki dua belas gerak dasar; sebagian tekniknya hanya diajarkan langsung oleh guru tuo."
+    },
+    {
+      "id": "ent.style.silek-tuo",
+      "name": "Silek Tuo",
+      "category": "style",
+      "provinces": [
+        "Sumatera Barat",
+        "Riau"
+      ],
+      "localities": [
+        "Sanggar Seni Silat Nagari Batuah, Kota Pekanbaru (dibawa dari Singiran Maninjau)"
+      ],
+      "source_ids": [
+        "src.uir.silek-tuo-nagari-batuah"
+      ],
+      "verification": "needs_verification",
+      "notes": "Klaim asal-usul dalam sumber adalah wawancara narasumber; tidak dicatat sebagai fakta sejarah.",
+      "public_note": "Diajarkan antara lain di Sanggar Seni Silat Nagari Batuah, Pekanbaru, yang membawanya dari Singiran Maninjau.",
+      "public_localities": [
+        "Sanggar Seni Silat Nagari Batuah, Kota Pekanbaru"
+      ]
+    },
+    {
+      "id": "ent.tradition.silek-tigo-bulan",
+      "name": "Silek Tigo Bulan",
+      "category": "tradition",
+      "provinces": [
+        "Riau"
+      ],
+      "wbtb": {
+        "inventory_ref": "20180039",
+        "recorded": "2018-08-03"
+      },
+      "source_ids": [
+        "src.unesco.ich.01391.nomination"
+      ],
+      "verification": "research_supported"
+    },
+    {
+      "id": "ent.tradition.silat-pangean",
+      "name": "Silat Pangean",
+      "category": "tradition",
+      "provinces": [
+        "Riau"
+      ],
+      "localities": [
+        "Kab. Kuantan Singingi (WBTb)",
+        "Kota Baru, Indragiri Hulu (kajian Gesture)"
+      ],
+      "wbtb": {
+        "inventory_ref": "20180046",
+        "recorded": "2018-08-03"
+      },
+      "source_ids": [
+        "src.unesco.ich.01391.nomination",
+        "src.gesture.pangean"
+      ],
+      "verification": "research_supported",
+      "public_localities": [
+        "Kab. Kuantan Singingi",
+        "Kota Baru, Indragiri Hulu"
+      ]
+    },
+    {
+      "id": "ent.tradition.silat-pengantin",
+      "name": "Silat Pengantin",
+      "category": "tradition",
+      "provinces": [
+        "needs_verification"
+      ],
+      "wbtb": {
+        "inventory_ref": "20180057",
+        "recorded": "2018-08-03"
+      },
+      "source_ids": [
+        "src.unesco.ich.01391.nomination",
+        "src.panggung.kiambang-putih"
+      ],
+      "verification": "needs_verification",
+      "notes": "Provinsi entri WBTb tidak disebut di nominasi; kajian Panggung membahas silat pengantin di Bintan (Kepri). Jangan diasumsikan sama.",
+      "public_note": "Silat yang ditampilkan dalam upacara pernikahan; tercatat dalam inventaris nasional sejak 2018."
+    },
+    {
+      "id": "ent.tradition.silat-tiga-berantai",
+      "name": "Silat Tiga Berantai",
+      "category": "tradition",
+      "provinces": [
+        "needs_verification"
+      ],
+      "wbtb": {
+        "inventory_ref": "20180081",
+        "recorded": "2018-08-03"
+      },
+      "source_ids": [
+        "src.unesco.ich.01391.nomination"
+      ],
+      "verification": "needs_verification"
+    },
+    {
+      "id": "ent.tradition.uncul",
+      "name": "Uncul",
+      "category": "tradition",
+      "provinces": [
+        "needs_verification"
+      ],
+      "wbtb": {
+        "inventory_ref": "20180079",
+        "recorded": "2018-08-03"
+      },
+      "source_ids": [
+        "src.unesco.ich.01391.nomination"
+      ],
+      "verification": "needs_verification"
+    },
+    {
+      "id": "ent.tradition.silat-perisai",
+      "name": "Silat Perisai",
+      "category": "tradition",
+      "provinces": [
+        "needs_verification"
+      ],
+      "wbtb": {
+        "inventory_ref": "20170031",
+        "recorded": "2017-09-23"
+      },
+      "source_ids": [
+        "src.unesco.ich.01391.nomination"
+      ],
+      "verification": "needs_verification",
+      "notes": "Berbeda dari perguruan PSN Perisai Putih/Perisai Diri — jangan digabung.",
+      "public_note": "Tercatat dalam inventaris nasional sejak 2017."
+    },
+    {
+      "id": "ent.tradition.bandrong",
+      "name": "Pencak Silat Bandrong",
+      "category": "tradition",
+      "provinces": [
+        "Banten"
+      ],
+      "localities": [
+        "Cilegon (entri pencatatan)",
+        "Pulo Kali, Desa Ampel (rujukan)"
+      ],
+      "wbtb": {
+        "inventory_ref": "20140042",
+        "recorded": "2014-08-19",
+        "pencatatan_code": "2010000438"
+      },
+      "source_ids": [
+        "src.unesco.ich.01391.nomination",
+        "src.unesco.ich.01391.inventory"
+      ],
+      "verification": "research_supported",
+      "documented_movements": [
+        "inv.bandrong.*"
+      ],
+      "public_localities": [
+        "Cilegon",
+        "Pulo Kali, Desa Ampel"
+      ]
+    },
+    {
+      "id": "ent.tradition.palang-pintu",
+      "name": "(Buka) Palang Pintu",
+      "category": "tradition",
+      "provinces": [
+        "DKI Jakarta"
+      ],
+      "wbtb": {
+        "inventory_ref": "20150049",
+        "recorded": "2015-09-22"
+      },
+      "source_ids": [
+        "src.unesco.ich.01391.nomination"
+      ],
+      "verification": "research_supported",
+      "notes": "Ritual/tradisi Betawi yang memuat peragaan silat; melibatkan pasangan — bukan bahan latihan solo.",
+      "public_note": "Tradisi Betawi menyambut rombongan pengantin, berisi pantun, adu silat, dan pembacaan sike."
+    },
+    {
+      "id": "ent.style.beksi",
+      "name": "Silat Beksi",
+      "aliases": [
+        "Maen Pukulan Beksi"
+      ],
+      "category": "style",
+      "provinces": [
+        "DKI Jakarta",
+        "Banten",
+        "Jawa Barat"
+      ],
+      "localities": [
+        "Jakarta dan kota sekitarnya"
+      ],
+      "wbtb": {
+        "inventory_ref": "20150052",
+        "recorded": "2015-09-22",
+        "pencatatan_code": "2014004894"
+      },
+      "source_ids": [
+        "src.unesco.ich.01391.nomination",
+        "src.unesco.ich.01391.inventory"
+      ],
+      "verification": "research_supported",
+      "documented_movements": [
+        "inv.beksi.*"
+      ]
+    },
+    {
+      "id": "ent.style.cingkrik",
+      "name": "Silat Cingkrik",
+      "aliases": [
+        "Pencak Silat Tradisional Betawi Cingkrik"
+      ],
+      "category": "style",
+      "provinces": [
+        "DKI Jakarta"
+      ],
+      "localities": [
+        "Rawa Belong (menurut Wikipedia — needs_verification)"
+      ],
+      "wbtb": {
+        "inventory_ref": "20170057",
+        "recorded": "2017-09-23"
+      },
+      "source_ids": [
+        "src.unesco.ich.01391.nomination",
+        "src.nurali.cingkrik",
+        "src.wikipedia.cingkrik"
+      ],
+      "verification": "research_supported",
+      "relations": [
+        {
+          "type": "has_derivative",
+          "target": "Cingkrik Goning (Kedoya)",
+          "source_ids": [
+            "src.nurali.cingkrik"
+          ]
+        }
+      ],
+      "documented_movements": [
+        "inv.cingkrik.*"
+      ],
+      "public_localities": [
+        "Rawa Belong"
+      ]
+    },
+    {
+      "id": "ent.tradition.penca-jabar",
+      "name": "Penca (Pencak Silat Jawa Barat)",
+      "category": "tradition",
+      "provinces": [
+        "Jawa Barat"
+      ],
+      "wbtb": {
+        "inventory_ref": "20160058",
+        "recorded": "2016-09-15",
+        "designation": "63378/MPK.E/KB2016"
+      },
+      "source_ids": [
+        "src.unesco.ich.01391.nomination",
+        "src.unesco.ich.01391.inventory"
+      ],
+      "verification": "research_supported",
+      "relations": [
+        {
+          "type": "inventory_renamed_from",
+          "target": "ent.style.maenpo-cikalong",
+          "source_ids": [
+            "src.unesco.ich.01391.inventory"
+          ],
+          "note": "Inventaris menyebut Maenpo Cikalong (kode 2015002) 'ditetapkan dengan perubahan nama Penca'."
+        }
+      ]
+    },
+    {
+      "id": "ent.style.maenpo-cikalong",
+      "name": "Maenpo Cikalong",
+      "aliases": [
+        "Ulin Cikalongan",
+        "Silat Tradisional Cikalong"
+      ],
+      "category": "style",
+      "provinces": [
+        "Jawa Barat"
+      ],
+      "localities": [
+        "Cianjur"
+      ],
+      "source_ids": [
+        "src.unesco.ich.01391.inventory",
+        "src.unesco.ich.01391.nomination"
+      ],
+      "verification": "research_supported"
+    },
+    {
+      "id": "ent.style.cimande",
+      "name": "Cimande",
+      "category": "style",
+      "provinces": [
+        "Jawa Barat"
+      ],
+      "localities": [
+        "Cimande, Caringin, Kab. Bogor"
+      ],
+      "source_ids": [
+        "src.unesco.ich.01391.nomination"
+      ],
+      "verification": "research_supported"
+    },
+    {
+      "id": "ent.tradition.silat-yogya",
+      "name": "Silat Yogya",
+      "category": "tradition",
+      "provinces": [
+        "DI Yogyakarta"
+      ],
+      "wbtb": {
+        "pencatatan_code": "2014004576"
+      },
+      "source_ids": [
+        "src.unesco.ich.01391.inventory"
+      ],
+      "verification": "research_supported"
+    },
+    {
+      "id": "ent.tradition.langga",
+      "name": "Langga",
+      "category": "tradition",
+      "provinces": [
+        "Gorontalo"
+      ],
+      "localities": [
+        "Bone Bolango"
+      ],
+      "wbtb": {
+        "inventory_ref": "20160131",
+        "recorded": "2016-09-15"
+      },
+      "source_ids": [
+        "src.unesco.ich.01391.nomination",
+        "src.jambura.langga"
+      ],
+      "verification": "research_supported"
+    },
+    {
+      "id": "ent.tradition.pencak-dor",
+      "name": "Pencak Dor",
+      "category": "tradition",
+      "provinces": [
+        "Jawa Timur"
+      ],
+      "source_ids": [
+        "src.scitepress.pencak-dor"
+      ],
+      "verification": "needs_verification",
+      "notes": "Tradisi pertandingan bebas — di luar cakupan latihan solo.",
+      "public_note": "Tradisi laga pencak di Jawa Timur yang mengundang banyak penonton."
+    },
+    {
+      "id": "ent.style.silat-pelintau",
+      "name": "Silat Pelintau",
+      "category": "style",
+      "provinces": [
+        "Aceh"
+      ],
+      "localities": [
+        "Aceh Tamiang"
+      ],
+      "source_ids": [
+        "src.yupa.pelintau"
+      ],
+      "verification": "needs_verification"
+    },
+    {
+      "id": "ent.style.silat-song-song",
+      "name": "Silat Song-song",
+      "category": "style",
+      "provinces": [
+        "Aceh"
+      ],
+      "localities": [
+        "Aceh Tamiang"
+      ],
+      "source_ids": [
+        "src.gesture.songsong"
+      ],
+      "verification": "needs_verification"
+    },
+    {
+      "id": "ent.style.silat-harimau-kumbang",
+      "name": "Silat Harimau Kumbang",
+      "category": "style",
+      "provinces": [
+        "Jambi"
+      ],
+      "localities": [
+        "Desa Koto Tuo, Tanah Kampung"
+      ],
+      "source_ids": [
+        "src.iainkerinci.harimau-kumbang"
+      ],
+      "verification": "needs_verification"
+    },
+    {
+      "id": "ent.style.kuntau-semende",
+      "name": "Kuntau Semende",
+      "category": "style",
+      "provinces": [
+        "Sumatera Selatan"
+      ],
+      "localities": [
+        "Kab. Muara Enim"
+      ],
+      "source_ids": [
+        "src.jess.semende-kuntau"
+      ],
+      "verification": "needs_verification"
+    },
+    {
+      "id": "ent.tradition.rejang-pat-petulai",
+      "name": "Pencak silat Rejang Pat Petulai",
+      "category": "tradition",
+      "provinces": [
+        "Bengkulu"
+      ],
+      "localities": [
+        "Bengkulu Utara",
+        "Lebong"
+      ],
+      "source_ids": [
+        "src.kibasp.rejang"
+      ],
+      "verification": "needs_verification"
+    },
+    {
+      "id": "ent.perguruan.sterlak",
+      "name": "Perguruan Tradisional Pencak Silat Sterlak",
+      "category": "perguruan",
+      "provinces": [
+        "Bengkulu"
+      ],
+      "source_ids": [
+        "src.jpkr.sterlak"
+      ],
+      "verification": "needs_verification"
+    },
+    {
+      "id": "ent.style.kuntau-banjar",
+      "name": "Kuntau Banjar",
+      "category": "style",
+      "provinces": [
+        "Kalimantan Selatan"
+      ],
+      "source_ids": [
+        "src.syamil.kuntau-banjar",
+        "src.gesture.silat-banjar"
+      ],
+      "verification": "needs_verification"
+    },
+    {
+      "id": "ent.perguruan.kuntau-pangunraun-pitu",
+      "name": "Perguruan Seni Bela Diri Tradisional Kuntau Pangunraun Pitu",
+      "category": "perguruan",
+      "provinces": [
+        "Kalimantan Tengah"
+      ],
+      "localities": [
+        "Kab. Barito Timur"
+      ],
+      "source_ids": [
+        "src.uny.dayak-bangkui"
+      ],
+      "verification": "needs_verification"
+    },
+    {
+      "id": "ent.style.pusaka-rinjani",
+      "name": "Silat Pusaka Rinjani",
+      "category": "style",
+      "provinces": [
+        "Nusa Tenggara Barat"
+      ],
+      "localities": [
+        "Lombok (Sasak)"
+      ],
+      "source_ids": [
+        "src.porkes.pusaka-rinjani"
+      ],
+      "verification": "needs_verification"
+    },
+    {
+      "id": "ent.tradition.tengklung",
+      "name": "Tengklung",
+      "category": "tradition",
+      "provinces": [
+        "Bali"
+      ],
+      "localities": [
+        "Desa Gobleg, Buleleng"
+      ],
+      "source_ids": [
+        "src.unmas.tengklung"
+      ],
+      "verification": "needs_verification"
+    },
+    {
+      "id": "ent.style.ewa-wuna",
+      "name": "Ewa Wuna",
+      "category": "style",
+      "provinces": [
+        "Sulawesi Tenggara"
+      ],
+      "localities": [
+        "Muna"
+      ],
+      "source_ids": [
+        "src.ensiklopedia.ewa-wuna"
+      ],
+      "verification": "needs_verification",
+      "notes": "Klaim penetapan WBTb 2021 belum diverifikasi ke sumber resmi (portal WBTb tidak dapat diakses)."
+    },
+    {
+      "id": "ent.training_place.kiambang-putih",
+      "name": "Sanggar Kiambang Putih",
+      "category": "training_place",
+      "provinces": [
+        "Kepulauan Riau"
+      ],
+      "localities": [
+        "Bentan Penao, Kab. Bintan"
+      ],
+      "source_ids": [
+        "src.panggung.kiambang-putih"
+      ],
+      "verification": "needs_verification"
+    },
+    {
+      "id": "ent.organization.ipsi",
+      "name": "Ikatan Pencak Silat Indonesia (IPSI)",
+      "category": "organization",
+      "provinces": [
+        "nasional"
+      ],
+      "source_ids": [
+        "src.unesco.ich.01391.nomination",
+        "src.siswantoyo.2005"
+      ],
+      "verification": "research_supported"
+    },
+    {
+      "id": "ent.organization.maspi",
+      "name": "Masyarakat Pencak Silat Indonesia (MASPI)",
+      "category": "organization",
+      "provinces": [
+        "nasional"
+      ],
+      "source_ids": [
+        "src.unesco.ich.01391.nomination"
+      ],
+      "verification": "research_supported"
+    },
+    {
+      "id": "ent.organization.persilat",
+      "name": "PERSILAT (Persekutuan Pencak Silat Antarabangsa)",
+      "category": "organization",
+      "provinces": [
+        "internasional"
+      ],
+      "source_ids": [
+        "src.nugroho.2005"
+      ],
+      "verification": "research_supported",
+      "notes": "Dirujuk Nugroho 2005 sebagai penerbit regulasi kompetisi 2001.",
+      "public_note": "Persekutuan pencak silat antarbangsa yang menyusun regulasi pertandingan internasional."
+    },
+    {
+      "id": "ent.perguruan.persaudaraan-setia-hati",
+      "name": "Persaudaraan Setia Hati",
+      "category": "perguruan",
+      "provinces": [
+        "needs_verification"
+      ],
+      "historic_ipsi": true,
+      "source_ids": [
+        "src.siswantoyo.2005"
+      ],
+      "verification": "research_supported"
+    },
+    {
+      "id": "ent.perguruan.phashadja-mataram",
+      "name": "PS Phashadja Mataram",
+      "category": "perguruan",
+      "provinces": [
+        "DI Yogyakarta"
+      ],
+      "localities": [
+        "Kota Yogyakarta"
+      ],
+      "historic_ipsi": true,
+      "source_ids": [
+        "src.siswantoyo.2005",
+        "src.unesco.ich.01391.nomination"
+      ],
+      "verification": "research_supported"
+    },
+    {
+      "id": "ent.perguruan.perpi-harimurti",
+      "name": "Perguruan Pencak Indonesia (PERPI) Harimurti",
+      "aliases": [
+        "Perpi Harimurti"
+      ],
+      "category": "perguruan",
+      "provinces": [
+        "DI Yogyakarta"
+      ],
+      "localities": [
+        "Kab. Bantul (alamat konsultasi UNESCO)"
+      ],
+      "historic_ipsi": true,
+      "founder": {
+        "name": "RM Harimurti (RM Rio Tedjo Negoro)",
+        "source_ids": [
+          "src.siswantoyo.2005"
+        ]
+      },
+      "source_ids": [
+        "src.siswantoyo.2005",
+        "src.unesco.ich.01391.nomination"
+      ],
+      "verification": "research_supported",
+      "public_localities": [
+        "Kab. Bantul"
+      ]
+    },
+    {
+      "id": "ent.perguruan.psht",
+      "name": "Persaudaraan Setia Hati Terate (PSHT)",
+      "category": "perguruan",
+      "provinces": [
+        "needs_verification"
+      ],
+      "historic_ipsi": true,
+      "source_ids": [
+        "src.siswantoyo.2005"
+      ],
+      "verification": "research_supported",
+      "notes": "Nugroho 2005 mengutip Januarno 1989 (Yayasan Setia Hati Terate) untuk penomoran sikap pasang & arah 8 penjuru; itu BUKAN bukti kurikulum resmi PSHT saat ini."
+    },
+    {
+      "id": "ent.perguruan.ppsi",
+      "name": "Persatuan Pencak Seluruh Indonesia (PPSI)",
+      "category": "perguruan",
+      "provinces": [
+        "needs_verification"
+      ],
+      "historic_ipsi": true,
+      "source_ids": [
+        "src.siswantoyo.2005"
+      ],
+      "verification": "research_supported"
+    },
+    {
+      "id": "ent.perguruan.perisai-putih",
+      "name": "PSN Perisai Putih",
+      "category": "perguruan",
+      "provinces": [
+        "needs_verification"
+      ],
+      "historic_ipsi": true,
+      "source_ids": [
+        "src.siswantoyo.2005"
+      ],
+      "verification": "research_supported"
+    },
+    {
+      "id": "ent.perguruan.perisai-diri",
+      "name": "Keluarga Silat Nasional Indonesia Perisai Diri",
+      "aliases": [
+        "Kelatnas Perisai Diri"
+      ],
+      "category": "perguruan",
+      "provinces": [
+        "Jawa Timur"
+      ],
+      "localities": [
+        "Kota Surabaya (alamat konsultasi UNESCO)"
+      ],
+      "historic_ipsi": true,
+      "source_ids": [
+        "src.siswantoyo.2005",
+        "src.unesco.ich.01391.nomination"
+      ],
+      "verification": "research_supported",
+      "public_localities": [
+        "Kota Surabaya"
+      ]
+    },
+    {
+      "id": "ent.perguruan.tapak-suci",
+      "name": "Tapak Suci Putera Muhammadiyah",
+      "aliases": [
+        "PS Tapak Suci",
+        "Perguruan Seni Beladiri Indonesia Tapak Suci Putra Muhammadiyah"
+      ],
+      "category": "perguruan",
+      "provinces": [
+        "DI Yogyakarta",
+        "Jawa Timur"
+      ],
+      "localities": [
+        "Kota Yogyakarta (pusat)",
+        "Kota Surabaya (cabang, konsultasi UNESCO)"
+      ],
+      "historic_ipsi": true,
+      "source_ids": [
+        "src.siswantoyo.2005",
+        "src.unesco.ich.01391.nomination"
+      ],
+      "verification": "research_supported",
+      "notes": "Dua alamat di berkas UNESCO = satu perguruan (pusat + cabang), bukan dua entitas.",
+      "public_note": "Berpusat di Kota Yogyakarta dengan cabang di berbagai daerah, termasuk Surabaya."
+    },
+    {
+      "id": "ent.perguruan.kps-nusantara",
+      "name": "Keluarga Pencak Silat (KPS) Nusantara",
+      "category": "perguruan",
+      "provinces": [
+        "Jawa Tengah"
+      ],
+      "localities": [
+        "Muntilan (alamat konsultasi UNESCO)"
+      ],
+      "historic_ipsi": true,
+      "source_ids": [
+        "src.siswantoyo.2005",
+        "src.unesco.ich.01391.nomination"
+      ],
+      "verification": "research_supported",
+      "public_localities": [
+        "Muntilan"
+      ]
+    },
+    {
+      "id": "ent.perguruan.putra-betawi",
+      "name": "PS Putra Betawi",
+      "category": "perguruan",
+      "provinces": [
+        "DKI Jakarta"
+      ],
+      "historic_ipsi": true,
+      "source_ids": [
+        "src.siswantoyo.2005",
+        "src.nurali.cingkrik"
+      ],
+      "verification": "research_supported"
+    },
+    {
+      "id": "ent.perguruan.pagar-nusa",
+      "name": "Pagar Nusa",
+      "category": "perguruan",
+      "provinces": [
+        "Jawa Timur"
+      ],
+      "localities": [
+        "Kota Malang (alamat konsultasi UNESCO)"
+      ],
+      "source_ids": [
+        "src.unesco.ich.01391.nomination"
+      ],
+      "verification": "research_supported",
+      "public_localities": [
+        "Kota Malang"
+      ]
+    },
+    {
+      "id": "ent.perguruan.krida-yudha-sinalika",
+      "name": "Perguruan Krida Yudha Sinalika",
+      "category": "perguruan",
+      "provinces": [
+        "Jawa Tengah"
+      ],
+      "localities": [
+        "Kab. Wonosobo"
+      ],
+      "source_ids": [
+        "src.unesco.ich.01391.nomination"
+      ],
+      "verification": "research_supported"
+    },
+    {
+      "id": "ent.perguruan.satria-nusantara",
+      "name": "Lembaga Seni Pernafasan Satria Nusantara",
+      "category": "perguruan",
+      "provinces": [
+        "DI Yogyakarta"
+      ],
+      "source_ids": [
+        "src.unesco.ich.01391.nomination"
+      ],
+      "verification": "research_supported"
+    },
+    {
+      "id": "ent.perguruan.wijaya-kusuma",
+      "name": "Perguruan Pencak Nasional Wijaya Kusuma",
+      "category": "perguruan",
+      "provinces": [
+        "DI Yogyakarta"
+      ],
+      "localities": [
+        "Kompleks Taman Siswa, Kota Yogyakarta"
+      ],
+      "source_ids": [
+        "src.unesco.ich.01391.nomination"
+      ],
+      "verification": "research_supported"
+    },
+    {
+      "id": "ent.community.paseduluran-angkringan-silat",
+      "name": "Paseduluran Angkringan Silat (PAS)",
+      "category": "community",
+      "provinces": [
+        "DI Yogyakarta"
+      ],
+      "localities": [
+        "Turi, Kab. Sleman"
+      ],
+      "source_ids": [
+        "src.unesco.ich.01391.nomination"
+      ],
+      "verification": "research_supported"
+    },
+    {
+      "id": "ent.community.paku-bumi",
+      "name": "Komunitas Silat Paku Bumi",
+      "category": "community",
+      "provinces": [
+        "Jawa Barat"
+      ],
+      "localities": [
+        "Cipayung, Kab. Bogor"
+      ],
+      "source_ids": [
+        "src.unesco.ich.01391.nomination"
+      ],
+      "verification": "research_supported"
+    },
+    {
+      "id": "ent.perguruan.maenpo-cikalong",
+      "name": "Perguruan Maenpo Cikalong",
+      "category": "perguruan",
+      "provinces": [
+        "Jawa Barat"
+      ],
+      "localities": [
+        "Cianjur"
+      ],
+      "relations": [
+        {
+          "type": "teaches_style",
+          "target": "ent.style.maenpo-cikalong",
+          "source_ids": [
+            "src.unesco.ich.01391.nomination"
+          ]
+        }
+      ],
+      "source_ids": [
+        "src.unesco.ich.01391.nomination"
+      ],
+      "verification": "research_supported"
+    },
+    {
+      "id": "ent.perguruan.garis-paksi",
+      "name": "Perguruan Garis Paksi",
+      "category": "perguruan",
+      "provinces": [
+        "Jawa Barat"
+      ],
+      "localities": [
+        "Kota Bandung"
+      ],
+      "source_ids": [
+        "src.unesco.ich.01391.nomination"
+      ],
+      "verification": "research_supported"
+    },
+    {
+      "id": "ent.perguruan.silat-cimande",
+      "name": "Perguruan Silat Cimande",
+      "category": "perguruan",
+      "provinces": [
+        "Jawa Barat"
+      ],
+      "localities": [
+        "Caringin, Kab. Bogor"
+      ],
+      "relations": [
+        {
+          "type": "teaches_style",
+          "target": "ent.style.cimande",
+          "source_ids": [
+            "src.unesco.ich.01391.nomination"
+          ]
+        }
+      ],
+      "source_ids": [
+        "src.unesco.ich.01391.nomination"
+      ],
+      "verification": "research_supported"
+    },
+    {
+      "id": "ent.perguruan.sanalika",
+      "name": "Perguruan Silat Sanalika",
+      "category": "perguruan",
+      "provinces": [
+        "DKI Jakarta"
+      ],
+      "source_ids": [
+        "src.unesco.ich.01391.nomination"
+      ],
+      "verification": "research_supported"
+    },
+    {
+      "id": "ent.perguruan.beru-sakti",
+      "name": "Perguruan Beru Sakti",
+      "category": "perguruan",
+      "provinces": [
+        "Banten"
+      ],
+      "localities": [
+        "Cilegon"
+      ],
+      "source_ids": [
+        "src.unesco.ich.01391.nomination"
+      ],
+      "verification": "research_supported"
+    },
+    {
+      "id": "ent.perguruan.silat-terumbu",
+      "name": "Perguruan Silat Terumbu",
+      "category": "perguruan",
+      "provinces": [
+        "Banten"
+      ],
+      "source_ids": [
+        "src.unesco.ich.01391.nomination"
+      ],
+      "verification": "research_supported"
+    },
+    {
+      "id": "ent.perguruan.silat-bandrong",
+      "name": "Perguruan Silat Bandrong",
+      "category": "perguruan",
+      "provinces": [
+        "Banten"
+      ],
+      "relations": [
+        {
+          "type": "teaches_style",
+          "target": "ent.tradition.bandrong",
+          "source_ids": [
+            "src.unesco.ich.01391.nomination"
+          ]
+        }
+      ],
+      "source_ids": [
+        "src.unesco.ich.01391.nomination"
+      ],
+      "verification": "research_supported"
+    },
+    {
+      "id": "ent.perguruan.pamur",
+      "name": "Pamur",
+      "aliases": [
+        "Pencak Silat Angkatan Muda Rasio (judul pustaka — needs_verification)"
+      ],
+      "category": "perguruan",
+      "provinces": [
+        "Jawa Timur"
+      ],
+      "localities": [
+        "Kota Malang"
+      ],
+      "source_ids": [
+        "src.unesco.ich.01391.nomination"
+      ],
+      "verification": "research_supported",
+      "public_aliases": []
+    },
+    {
+      "id": "ent.perguruan.chakra-v",
+      "name": "Chakra V",
+      "category": "perguruan",
+      "provinces": [
+        "Jawa Timur"
+      ],
+      "localities": [
+        "Kota Surabaya"
+      ],
+      "source_ids": [
+        "src.unesco.ich.01391.nomination"
+      ],
+      "verification": "research_supported"
+    },
+    {
+      "id": "ent.training_place.padepokan-jokotole",
+      "name": "Padepokan Jokotole",
+      "category": "training_place",
+      "provinces": [
+        "Jawa Timur"
+      ],
+      "localities": [
+        "Kamal, Bangkalan, Madura"
+      ],
+      "source_ids": [
+        "src.unesco.ich.01391.nomination"
+      ],
+      "verification": "research_supported"
+    },
+    {
+      "id": "ent.training_place.sasaran-sumbar",
+      "name": "Sasaran silek peserta konsultasi UNESCO (Sumatera Barat)",
+      "category": "training_place",
+      "provinces": [
+        "Sumatera Barat"
+      ],
+      "members": [
+        "Sasaran Camar Putih (Kota Padang)",
+        "Sasaran Palito Nyalo (Nanggalo, Kota Padang)",
+        "Sasaran Durian Tapak (Kuranji, Kota Padang)",
+        "Sasaran Batang Sibaraso (Maninjau, Kab. Agam)",
+        "Sasaran Satria Haidar (Matur, Kab. Agam)",
+        "Sasaran Tangan Mas (Lubuk Basung, Kab. Agam)",
+        "Sasaran Harimau Singgalang (Kota Bukittinggi)",
+        "Perguruan Silek Sungai Patai (Kota Padang)",
+        "Lembaga Silek Pauh (Kota Padang)"
+      ],
+      "source_ids": [
+        "src.unesco.ich.01391.nomination"
+      ],
+      "verification": "research_supported",
+      "notes": "Dikelompokkan untuk keringkasan; masing-masing entitas tersendiri dan perlu ID sendiri saat ada kerja sama.",
+      "public_note": "Sasaran adalah tempat belajar silek. Sasaran-sasaran berikut ikut dalam konsultasi berkas nominasi UNESCO:"
+    },
+    {
+      "id": "ent.community.nagari-gunung",
+      "name": "Nagari Gunung",
+      "category": "community",
+      "provinces": [
+        "Sumatera Barat"
+      ],
+      "localities": [
+        "Kota Padang Panjang"
+      ],
+      "source_ids": [
+        "src.unesco.ich.01391.nomination"
+      ],
+      "verification": "research_supported"
+    },
+    {
+      "id": "ent.community.istano-silinduang-bulan",
+      "name": "Badan Pengelola Istano Si Linduang Bulan Pagaruyung",
+      "category": "community",
+      "provinces": [
+        "Sumatera Barat"
+      ],
+      "localities": [
+        "Pagaruyung, Kab. Tanah Datar"
+      ],
+      "source_ids": [
+        "src.unesco.ich.01391.nomination"
+      ],
+      "verification": "research_supported"
+    }
+  ]
+}

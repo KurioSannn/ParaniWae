@@ -1,0 +1,11 @@
+{
+  "schema": "silatara.keyframes/v1",
+  "animation_id": "anim.psdp.sikap-duduk-sila.v1",
+  "movement_id": "mv.psdp.sikap-duduk-sila",
+  "animation_status": "needs_reference",
+  "title": "Sikap Sila",
+  "needs": "Bentuk lipatan kaki perlu referensi visual berizin; perbedaan dengan sempok harus dikonfirmasi instruktur.",
+  "source_ids": [
+    "src.nugroho.2005"
+  ]
+}

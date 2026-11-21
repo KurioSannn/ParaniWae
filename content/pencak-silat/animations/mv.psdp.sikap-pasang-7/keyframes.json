@@ -1,0 +1,11 @@
+{
+  "schema": "silatara.keyframes/v1",
+  "animation_id": "anim.psdp.sikap-pasang-7.v1",
+  "movement_id": "mv.psdp.sikap-pasang-7",
+  "animation_status": "needs_reference",
+  "title": "Sikap Pasang 7",
+  "needs": "Arah silang relatif terhadap badan yang menyamping tidak dapat ditentukan dari teks; butuh sketsa berizin atau demonstrasi.",
+  "source_ids": [
+    "src.nugroho.2005"
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "schema": "silatara.keyframes/v1",
+  "animation_id": "anim.psdp.kuda-kuda-silang-depan.v1",
+  "movement_id": "mv.psdp.kuda-kuda-silang-depan",
+  "animation_status": "generated",
+  "title": "Kuda-kuda silang depan",
+  "description": "Tampak depan: berat bertumpu pada kaki kanan; kaki kiri disilangkan di depan kaki kanan dan menyentuh ringan dengan ujung jari.",
+  "view": "front",
+  "source_ids": [
+    "src.nugroho.2005",
+    "src.herdiana.2008"
+  ],
+  "keyframes": [
+    {
+      "id": "kf-1",
+      "phase_id": "mv.psdp.kuda-kuda-silang-depan#p1",
+      "label": "Sikap tegak 2",
+      "caption": "Kepalan di pinggang",
+      "pose": {
+        "pelvis": [
+          180,
+          0
+        ],
+        "feet": {
+          "L": [
+            187,
+            0
+          ],
+          "R": [
+            173,
+            0
+          ]
+        },
+        "foot_turn": {
+          "L": 45,
+          "R": 45
+        },
+        "arms": {
+          "L": [
+            30,
+            72
+          ],
+          "R": [
+            30,
+            72
+          ]
+        },
+        "hands": {
+          "L": "fist",
+          "R": "fist"
+        }
+      }
+    },
+    {
+      "id": "kf-2",
+      "phase_id": "mv.psdp.kuda-kuda-silang-depan#p2",
+      "label": "Silang depan",
+      "caption": "Kaki kiri menyilang di depan · sentuhan ringan",
+      "pose": {
+        "pelvis": [
+          176,
+          6
+        ],
+        "feet": {
+          "L": [
+            156,
+            3
+          ],
+          "R": [
+            173,
+            0
+          ]
+        },
+        "foot_turn": {
+          "L": 10,
+          "R": 40
+        },
+        "arms": {
+          "L": [
+            30,
+            72
+          ],
+          "R": [
+            30,
+            72
+          ]
+        },
+        "hands": {
+          "L": "fist",
+          "R": "fist"
+        }
+      }
+    }
+  ],
+  "sequence": [
+    {
+      "pose": "kf-1",
+      "hold_ms": 900
+    },
+    {
+      "pose": "kf-2",
+      "move_ms": 900,
+      "hold_ms": 1800
+    }
+  ],
+  "return_ms": 900,
+  "leg_order": [
+    "R",
+    "L"
+  ]
+}

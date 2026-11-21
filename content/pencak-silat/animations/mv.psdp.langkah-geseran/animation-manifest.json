@@ -1,0 +1,64 @@
+{
+  "schema": "silatara.animation-manifest/v1",
+  "animation_id": "anim.psdp.langkah-geseran.v1",
+  "movement_id": "mv.psdp.langkah-geseran",
+  "animation_status": "generated",
+  "view": "side",
+  "duration_ms": 5400,
+  "loop": true,
+  "fps_sampled": 20,
+  "frames": 109,
+  "playback_rates": [
+    0.5,
+    1.0,
+    1.5
+  ],
+  "playback_note": "SMIL tidak memiliki kontrol kecepatan bawaan; pemutar dapat memakai SVGSVGElement.pauseAnimations()/setCurrentTime() atau merender ulang dengan dur berbeda.",
+  "phase_map": {
+    "kf-1": {
+      "phase_id": "mv.psdp.langkah-geseran#p1",
+      "label": "Kuda-kuda depan",
+      "windows": [
+        0.0,
+        0.2315,
+        0.8704,
+        1.0
+      ]
+    },
+    "kf-2": {
+      "phase_id": "mv.psdp.langkah-geseran#p2",
+      "label": "Kaki depan bergeser",
+      "windows": [
+        0.2315,
+        0.4907
+      ]
+    },
+    "kf-3": {
+      "phase_id": "mv.psdp.langkah-geseran#p3",
+      "label": "Kaki belakang menyusul",
+      "windows": [
+        0.4907,
+        0.8704
+      ]
+    }
+  },
+  "bounds": [
+    108.0,
+    75.8,
+    294.0,
+    416.0
+  ],
+  "max_ik_error_px": 0.0,
+  "rig_id": "silatara-instruktur-2d",
+  "rig_version": 1,
+  "generator": "tools/animation/silat_anim.py 1.0.0",
+  "keyframes_sha256": "258d52582d66a7a36bfe74669472debccf6ccbd4d6a0c894d315e2cd2d54768b",
+  "svg_sha256": "750e0ba605d1dac6b1ab6a5b6be0c0bf302ad4ae0be29aefd8f4c4e6b19c6778",
+  "svg_bytes": 15425,
+  "source_ids": [
+    "src.nugroho.2005",
+    "src.herdiana.2008"
+  ],
+  "authorship": "Interpretasi visual editorial tim SILATARA atas dokumentasi tertulis; bukan rekaman manusia; bukan demonstrasi resmi perguruan.",
+  "instructor_validation": "not_validated"
+}

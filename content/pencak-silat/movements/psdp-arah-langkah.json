@@ -1,0 +1,129 @@
+{
+  "schema": "silatara.movements/v1",
+  "tradition_id": "trd.psdp",
+  "module_hint": "Arah dan cara melangkah",
+  "shared_context": {
+    "gerak_dasar": {"text": "Gerak dasar adalah gerak yang dilatih setelah sikap dasar dikuasai, meliputi arah delapan penjuru mata angin, langkah, dan pola langkah; menjadi modal untuk menyerang maupun membela.", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 153"},
+    "langkah": {"text": "Langkah adalah teknik memindahkan/mengubah posisi mendekati atau menjauhi lawan untuk memperoleh posisi yang lebih menguntungkan. Fungsinya: dasar tumpuan berdiri yang kuat, tumpuan saat membela dan menyerang, serta mencari posisi menguntungkan (Atok Iskandar 1992, dikutip Nugroho).", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 155–156"}
+  },
+  "movements": [
+    {
+      "id": "mv.psdp.arah-delapan-penjuru", "slug": "arah-delapan-penjuru",
+      "names": {"primary": "Arah Delapan Penjuru Mata Angin", "local": null, "aliases": ["A8MA"], "pronunciation": null},
+      "category": "arah_langkah", "level": "beginner", "safety_class": "solo_beginner", "solo_form_status": "documented_solo",
+      "content_status": "draft", "evidence_tier": "research_supported", "instructor_validation": "not_validated", "permission_status": "parafrasa sumber terbit; tanpa media",
+      "cultural_context": {
+        "context": {"ref": "shared_context.gerak_dasar"},
+        "purpose": {"text": "Arah delapan penjuru dan cara melangkah berkaitan dengan penempatan kaki serta upaya mengelak/menghindar. Herdiana: pusat arah mata angin adalah tempat berdiri dan acuan langkah.", "source_ids": ["src.nugroho.2005", "src.herdiana.2008"], "locator": "Nugroho hlm. 153; Herdiana hlm. 12–13, 18"},
+        "meaning": {"text": "Tidak dijelaskan sumber.", "basis": "gap"},
+        "terminology": [{"term": "penjuru mata angin", "explanation": "delapan arah gerak dari titik tengah"}],
+        "variants": [{"text": "Penomoran hitungan Januarno (1989: 69): 1 belakang, 2 serong kiri belakang, 3 samping kiri, 4 serong kiri depan, 5 depan, 6 serong kanan depan, 7 samping kanan, 8 serong kanan belakang. Herdiana memberi nama arah tanpa nomor.", "source_ids": ["src.nugroho.2005", "src.herdiana.2008"]}],
+        "differs_from": []
+      },
+      "prerequisites": {"abilities": "Kuda-kuda depan.", "physical_prep": "—", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {"orientation": {"text": "Badan tetap menghadap arah depan (5) sebagai acuan; langkah diarahkan ke tiap penjuru.", "basis": "needs_validation"}},
+      "phases": [
+        {"id": "mv.psdp.arah-delapan-penjuru#p1", "order": 1, "name": "Titik tengah (0)", "start_position": "Kuda-kuda depan di titik tengah.", "change": "—", "body_parts": [], "direction": "—", "end_position": "Siap.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-1", "basis": "source", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 154"},
+        {"id": "mv.psdp.arah-delapan-penjuru#p2", "order": 2, "name": "Arah 1–4", "start_position": "Titik tengah.", "change": "Bergerak berurutan ke arah 1 (belakang), 2 (serong kiri belakang), 3 (samping kiri), 4 (serong kiri depan).", "body_parts": ["tungkai"], "direction": "1 → 4", "end_position": "Arah 4.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-2", "basis": "source", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 154–155"},
+        {"id": "mv.psdp.arah-delapan-penjuru#p3", "order": 3, "name": "Arah 5–8", "start_position": "Arah 4.", "change": "Lanjut ke arah 5 (depan), 6 (serong kanan depan), 7 (samping kanan), 8 (serong kanan belakang); latihan berputar searah jarum jam.", "body_parts": ["tungkai"], "direction": "5 → 8", "end_position": "Arah 8.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-6", "basis": "source", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 155"}
+      ],
+      "practice": {"start": "Kuda-kuda depan di titik tengah; tandai 8 arah di lantai.", "sequence": "Arah 1 → 8 searah jarum jam, kembali ke tengah setiap kali (kembali ke tengah adalah saran kami; sumber tidak menyebutnya).", "tempo": {"text": "Satu arah per 2 hitungan.", "basis": "editorial_unvalidated"}, "repetitions": {"text": "2 putaran.", "basis": "editorial_unvalidated"}, "easier": "Hanya arah 1, 3, 5, 7.", "progression": "Lakukan dengan sikap pasang dan variasi pembelaan (tangkisan, elakan, hindaran, tangkapan) — tahap lanjut, dengan pelatih.", "stop_when_ref": "common.safety.stop_when", "cooldown": "—"},
+      "common_mistakes": [], "common_mistakes_gap": "Tidak disebut sumber.",
+      "references": [{"source_id": "src.nugroho.2005", "locator": "hlm. 153–155", "supports": "Penomoran arah dan urutan latihan."}, {"source_id": "src.herdiana.2008", "locator": "hlm. 12–13, 18–19", "supports": "Nama arah, pusat sebagai tempat berdiri."}],
+      "gaps": ["Panjang langkah ke tiap arah dan apakah kembali ke tengah tidak disebut."],
+      "landmarks": ["lower_body"],
+      "animation": {"animation_id": "anim.psdp.arah-delapan-penjuru.v1", "status": "generated"}
+    },
+    {
+      "id": "mv.psdp.langkah-angkatan", "slug": "langkah-angkatan",
+      "names": {"primary": "Langkah Angkatan (tinggi & rendah)", "local": null, "aliases": ["Angkatan"], "pronunciation": null},
+      "category": "cara_melangkah", "level": "beginner", "safety_class": "solo_beginner", "solo_form_status": "documented_solo",
+      "content_status": "draft", "evidence_tier": "research_supported", "instructor_validation": "not_validated", "permission_status": "parafrasa sumber terbit; tanpa media",
+      "cultural_context": {"context": {"ref": "shared_context.langkah"}, "purpose": {"text": "Berpindah/mengubah posisi dengan mengangkat kaki.", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 155"}, "meaning": {"text": "Tidak dijelaskan sumber.", "basis": "gap"}, "terminology": [],
+        "variants": [{"text": "Nugroho: angkatan tinggi = paha datar, lutut siku-siku; angkatan rendah = lutut kira-kira bersudut 30°.", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 155"}, {"text": "Herdiana: angkat kaki sampai paha datar, letakkan di tempat sesuai arah mata angin dengan sikap waspada; versi rendah: kaki diangkat tidak terlalu tinggi.", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 19"}], "differs_from": [{"movement_id": "mv.psdp.langkah-geseran", "text": "Geseran tidak mengangkat telapak."}]},
+      "prerequisites": {"abilities": "Berdiri satu kaki sebentar.", "physical_prep": "Pemanasan pinggul.", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {"knees": {"text": "Angkatan tinggi: paha datar, lutut siku-siku (90°). Angkatan rendah: lutut kira-kira 30°.", "basis": "source", "source_ids": ["src.nugroho.2005"]}, "head": {"text": "Sikap selalu waspada.", "basis": "source", "source_ids": ["src.herdiana.2008"]}},
+      "phases": [
+        {"id": "mv.psdp.langkah-angkatan#p1", "order": 1, "name": "Berdiri siap", "start_position": "Sikap tegak 2.", "change": "—", "body_parts": [], "direction": "—", "end_position": "Siap.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-1", "basis": "editorial", "source_ids": []},
+        {"id": "mv.psdp.langkah-angkatan#p2", "order": 2, "name": "Angkatan tinggi", "start_position": "Berdiri.", "change": "Satu kaki diangkat hingga paha datar dan lutut siku-siku.", "body_parts": ["paha", "lutut"], "direction": "naik", "end_position": "Paha datar.", "mistakes": [], "safety": "Turunkan bila goyah.", "tempo": null, "keyframe_ref": "kf-2", "basis": "source", "source_ids": ["src.nugroho.2005", "src.herdiana.2008"], "locator": "Nugroho hlm. 155; Herdiana hlm. 19"},
+        {"id": "mv.psdp.langkah-angkatan#p3", "order": 3, "name": "Meletakkan kaki ke arah tujuan", "start_position": "Paha datar.", "change": "Kaki diletakkan ke depan (sesuai arah mata angin) dengan sikap waspada.", "body_parts": ["tungkai"], "direction": "ke depan", "end_position": "Kaki menapak di posisi baru.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-3", "basis": "source", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 19"},
+        {"id": "mv.psdp.langkah-angkatan#p4", "order": 4, "name": "Angkatan rendah", "start_position": "Berdiri.", "change": "Kaki diangkat rendah, lutut kira-kira 30°, lalu diletakkan.", "body_parts": ["lutut"], "direction": "naik sedikit", "end_position": "Kaki terangkat rendah.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-4", "basis": "source", "source_ids": ["src.nugroho.2005", "src.herdiana.2008"], "locator": "Nugroho hlm. 155; Herdiana hlm. 19"}
+      ],
+      "practice": {"start": "Sikap tegak 2.", "sequence": "Angkatan tinggi → letakkan ke depan → kembali; lalu angkatan rendah.", "tempo": {"text": "Pelan; tahan sejenak di puncak angkatan.", "basis": "editorial_unvalidated"}, "repetitions": {"text": "5 kali per kaki.", "basis": "editorial_unvalidated"}, "easier": "Hanya angkatan rendah.", "progression": "Angkatan ke 8 arah.", "stop_when_ref": "common.safety.stop_when", "cooldown": "—"},
+      "common_mistakes": [], "common_mistakes_gap": "Tidak disebut sumber.",
+      "references": [{"source_id": "src.nugroho.2005", "locator": "hlm. 155", "supports": "Sudut angkatan tinggi & rendah."}, {"source_id": "src.herdiana.2008", "locator": "hlm. 19", "supports": "Peletakan kaki sesuai arah, sikap waspada."}],
+      "gaps": ["Posisi lengan selama angkatan tidak disebut (animasi memakai sikap tegak 2)."],
+      "landmarks": ["lower_body"],
+      "animation": {"animation_id": "anim.psdp.langkah-angkatan.v1", "status": "generated"}
+    },
+    {
+      "id": "mv.psdp.langkah-geseran", "slug": "langkah-geseran",
+      "names": {"primary": "Langkah Geseran", "local": null, "aliases": ["Geseran"], "pronunciation": null},
+      "category": "cara_melangkah", "level": "beginner", "safety_class": "solo_beginner", "solo_form_status": "documented_solo",
+      "content_status": "draft", "evidence_tier": "research_supported", "instructor_validation": "not_validated", "permission_status": "parafrasa sumber terbit; tanpa media",
+      "cultural_context": {"context": {"ref": "shared_context.langkah"}, "purpose": {"text": "Berpindah dengan menggeser kaki.", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 155"}, "meaning": {"text": "Tidak dijelaskan sumber.", "basis": "gap"}, "terminology": [], "variants": [{"text": "Herdiana: telapak kaki tetap menempel pada tanah saat bergerak.", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 20"}], "differs_from": [{"movement_id": "mv.psdp.langkah-ingsutan", "text": "Ingsutan menggeser tumit/telapak ke luar-dalam tanpa mengangkat."}]},
+      "prerequisites": {"abilities": "Kuda-kuda depan.", "physical_prep": "—", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {"feet": {"text": "Telapak tetap menempel lantai selama bergeser.", "basis": "source", "source_ids": ["src.herdiana.2008"]}},
+      "phases": [
+        {"id": "mv.psdp.langkah-geseran#p1", "order": 1, "name": "Kuda-kuda depan", "start_position": "Kuda-kuda depan.", "change": "—", "body_parts": [], "direction": "—", "end_position": "Siap.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-1", "basis": "editorial", "source_ids": []},
+        {"id": "mv.psdp.langkah-geseran#p2", "order": 2, "name": "Kaki depan bergeser", "start_position": "Kuda-kuda depan.", "change": "Kaki depan digeser maju dengan telapak tetap menempel lantai.", "body_parts": ["telapak kaki", "tungkai"], "direction": "ke depan", "end_position": "Kuda-kuda lebih panjang.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-2", "basis": "source", "source_ids": ["src.nugroho.2005", "src.herdiana.2008"], "locator": "Nugroho hlm. 155; Herdiana hlm. 20"},
+        {"id": "mv.psdp.langkah-geseran#p3", "order": 3, "name": "Kaki belakang menyusul", "start_position": "Kuda-kuda panjang.", "change": "Kaki belakang digeser menyusul sehingga kembali ke kuda-kuda semula, berpindah tempat ke depan.", "body_parts": ["telapak kaki", "tungkai"], "direction": "ke depan", "end_position": "Kuda-kuda depan di tempat baru.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-3", "basis": "editorial", "source_ids": []}
+      ],
+      "practice": {"start": "Kuda-kuda depan.", "sequence": "Geser maju beberapa kali, lalu mundur dengan cara yang sama.", "tempo": {"text": "Perlahan dan rata.", "basis": "editorial_unvalidated"}, "repetitions": {"text": "4 geseran maju + 4 mundur.", "basis": "editorial_unvalidated"}, "easier": "Geseran pendek.", "progression": "Geseran ke 8 arah.", "stop_when_ref": "common.safety.stop_when", "cooldown": "—"},
+      "common_mistakes": [], "common_mistakes_gap": "Tidak disebut sumber.",
+      "references": [{"source_id": "src.nugroho.2005", "locator": "hlm. 155", "supports": "Definisi langkah geseran."}, {"source_id": "src.herdiana.2008", "locator": "hlm. 20", "supports": "Telapak tetap menempel."}],
+      "gaps": ["Urutan kaki depan/belakang saat menggeser tidak disebut sumber; fase 3 adalah tafsir editorial."],
+      "landmarks": ["lower_body"],
+      "animation": {"animation_id": "anim.psdp.langkah-geseran.v1", "status": "generated"}
+    },
+    {
+      "id": "mv.psdp.langkah-putaran", "slug": "langkah-putaran",
+      "names": {"primary": "Langkah Putaran", "local": null, "aliases": ["Putaran"], "pronunciation": null},
+      "category": "cara_melangkah", "level": "beginner", "safety_class": "solo_beginner", "solo_form_status": "documented_solo",
+      "content_status": "needs_reference", "evidence_tier": "research_supported", "instructor_validation": "not_validated", "permission_status": "parafrasa sumber terbit; tanpa media",
+      "cultural_context": {"context": {"ref": "shared_context.langkah"}, "purpose": {"text": "Berpindah dengan memutar kaki.", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 155"}, "meaning": {"text": "Tidak dijelaskan sumber.", "basis": "gap"}, "terminology": [], "variants": [{"text": "Herdiana: angkat kaki, putar ke luar, letakkan di depan/arah mata angin dengan telapak menghadap ke luar.", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 20"}], "differs_from": []},
+      "prerequisites": {"abilities": "Langkah angkatan.", "physical_prep": "—", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {"feet": {"text": "Telapak diletakkan menghadap ke luar.", "basis": "source", "source_ids": ["src.herdiana.2008"]}},
+      "phases": [{"id": "mv.psdp.langkah-putaran#p1", "order": 1, "name": "Angkat & putar keluar", "start_position": "Berdiri.", "change": "Kaki diangkat, diputar ke luar, diletakkan dengan telapak menghadap keluar.", "body_parts": ["tungkai", "pinggul", "telapak kaki"], "direction": "keluar", "end_position": "Kaki di posisi baru, telapak ke luar.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": null, "basis": "source", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 20"}],
+      "practice": {"start": "Berdiri.", "sequence": "Belum disusun — menunggu referensi.", "tempo": {"text": "—", "basis": "gap"}, "repetitions": {"text": "—", "basis": "gap"}, "easier": "—", "progression": "—", "stop_when_ref": "common.safety.stop_when", "cooldown": "—"},
+      "common_mistakes": [], "common_mistakes_gap": "Tidak disebut sumber.",
+      "references": [{"source_id": "src.nugroho.2005", "locator": "hlm. 155", "supports": "Definisi."}, {"source_id": "src.herdiana.2008", "locator": "hlm. 20", "supports": "Uraian singkat."}],
+      "gaps": ["Besar putaran, poros, dan arah tidak jelas."],
+      "landmarks": ["lower_body"],
+      "animation": {"animation_id": "anim.psdp.langkah-putaran.v1", "status": "needs_reference", "needs": "Besar sudut putar, kaki poros, dan arah 'ke luar' perlu dikonfirmasi dengan demonstrasi instruktur; rotasi kaki terhadap lantai butuh tampilan atas + samping."}
+    },
+    {
+      "id": "mv.psdp.langkah-lompatan", "slug": "langkah-lompatan",
+      "names": {"primary": "Langkah Lompatan / Loncatan", "local": null, "aliases": ["Lompatan", "Loncatan"], "pronunciation": null},
+      "category": "cara_melangkah", "level": "intermediate", "safety_class": "solo_intermediate", "solo_form_status": "documented_solo",
+      "content_status": "needs_reference", "evidence_tier": "research_supported", "instructor_validation": "not_validated", "permission_status": "parafrasa sumber terbit; tanpa media",
+      "cultural_context": {"context": {"ref": "shared_context.langkah"}, "purpose": {"text": "Berpindah dengan melompat/meloncat.", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 155"}, "meaning": {"text": "Tidak dijelaskan sumber.", "basis": "gap"}, "terminology": [],
+        "variants": [{"text": "Herdiana membedakan: lompatan = satu kaki tolak lalu disusul kaki lain, mendarat bersamaan; loncatan = kedua kaki bertolak, mendarat bersama atau satu kaki disusul kaki lain.", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 21–22"}, {"text": "Nugroho menyebut 'lompatan/loncatan' sebagai satu cara.", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 155"}], "differs_from": []},
+      "prerequisites": {"abilities": "Kuda-kuda stabil; tanpa riwayat cedera lutut/pergelangan.", "physical_prep": "Pemanasan menyeluruh.", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {"legs": {"text": "Tolakan satu/dua kaki; pendaratan sesuai varian.", "basis": "source", "source_ids": ["src.herdiana.2008"]}},
+      "phases": [{"id": "mv.psdp.langkah-lompatan#p1", "order": 1, "name": "Tolak & mendarat", "start_position": "Berdiri.", "change": "Bertolak (satu atau dua kaki) lalu mendarat di tempat sesuai arah mata angin.", "body_parts": ["tungkai"], "direction": "sesuai arah", "end_position": "Mendarat.", "mistakes": [], "safety": "Hanya dengan pengawasan sampai teknik pendaratan aman dikonfirmasi instruktur.", "tempo": null, "keyframe_ref": null, "basis": "source", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 21–22"}],
+      "practice": {"start": "—", "sequence": "Tidak disusun untuk latihan mandiri.", "tempo": {"text": "—", "basis": "gap"}, "repetitions": {"text": "—", "basis": "gap"}, "easier": "—", "progression": "—", "stop_when_ref": "common.safety.stop_when", "cooldown": "—"},
+      "common_mistakes": [], "common_mistakes_gap": "Tidak disebut sumber.",
+      "references": [{"source_id": "src.herdiana.2008", "locator": "hlm. 21–22", "supports": "Perbedaan lompatan dan loncatan."}],
+      "gaps": ["Tinggi/jarak lompatan dan teknik pendaratan aman tidak dijelaskan."],
+      "landmarks": ["lower_body"],
+      "animation": {"animation_id": "anim.psdp.langkah-lompatan.v1", "status": "needs_reference", "needs": "Teknik tolakan & pendaratan aman (tekukan lutut saat mendarat, jarak) tidak dijelaskan sumber; tidak dianimasikan agar tidak mendorong latihan lompat tanpa pengawasan."}
+    },
+    {
+      "id": "mv.psdp.langkah-ingsutan", "slug": "langkah-ingsutan",
+      "names": {"primary": "Langkah Ingsutan", "local": null, "aliases": ["Seseran", "Ingsutan"], "pronunciation": null},
+      "category": "cara_melangkah", "level": "beginner", "safety_class": "solo_beginner", "solo_form_status": "documented_solo",
+      "content_status": "needs_reference", "evidence_tier": "research_supported", "instructor_validation": "not_validated", "permission_status": "parafrasa sumber terbit; tanpa media",
+      "cultural_context": {"context": {"ref": "shared_context.langkah"}, "purpose": {"text": "Berpindah dengan mengingsut/menyeser kaki tanpa mengangkat telapak.", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 155"}, "meaning": {"text": "Tidak dijelaskan sumber.", "basis": "gap"}, "terminology": [], "variants": [{"text": "Herdiana: menggeser telapak tanpa mengangkatnya, dengan menggeser tumit/telapak ke luar dan ke dalam.", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 22"}], "differs_from": [{"movement_id": "mv.psdp.langkah-geseran", "text": "Geseran menggeser seluruh kaki maju; ingsutan bertumpu pada gerak tumit/telapak ke luar-dalam."}]},
+      "prerequisites": {"abilities": "—", "physical_prep": "—", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {"feet": {"text": "Gerakan tumit atau telapak tanpa mengangkat telapak dari lantai.", "basis": "source", "source_ids": ["src.nugroho.2005", "src.herdiana.2008"]}},
+      "phases": [{"id": "mv.psdp.langkah-ingsutan#p1", "order": 1, "name": "Ingsut tumit/telapak", "start_position": "Berdiri.", "change": "Tumit/telapak digeser ke luar dan ke dalam bergantian sehingga kaki berpindah.", "body_parts": ["telapak kaki", "tumit"], "direction": "menyamping", "end_position": "Posisi baru.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": null, "basis": "source", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 22"}],
+      "practice": {"start": "—", "sequence": "Menunggu referensi.", "tempo": {"text": "—", "basis": "gap"}, "repetitions": {"text": "—", "basis": "gap"}, "easier": "—", "progression": "—", "stop_when_ref": "common.safety.stop_when", "cooldown": "—"},
+      "common_mistakes": [], "common_mistakes_gap": "Tidak disebut sumber.",
+      "references": [{"source_id": "src.nugroho.2005", "locator": "hlm. 155", "supports": "Definisi."}, {"source_id": "src.herdiana.2008", "locator": "hlm. 22", "supports": "Tumit/telapak ke luar-dalam."}],
+      "gaps": ["Urutan tumit-ujung kaki dan arah perpindahan tidak jelas."],
+      "landmarks": ["lower_body"],
+      "animation": {"animation_id": "anim.psdp.langkah-ingsutan.v1", "status": "needs_reference", "needs": "Urutan poros tumit/ujung kaki dan arah perpindahan perlu diperagakan instruktur; menebak pola akan mengarang koreografi."}
+    }
+  ]
+}

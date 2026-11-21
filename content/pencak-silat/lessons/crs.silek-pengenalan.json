@@ -1,0 +1,39 @@
+{
+  "schema": "silatara.lessons/v1",
+  "course_id": "crs.silek-pengenalan",
+  "lessons": [
+    {
+      "id": "crs.silek-pengenalan.l01", "module_id": "crs.silek-pengenalan.m01", "order": 1, "slug": "silek-dan-sasaran",
+      "title": "Silek, sasaran, dan pewarisnya",
+      "description": "Siapa yang menjaga silek, di mana ia diajarkan, dan mengapa namanya beragam.",
+      "objectives": ["Menyebut istilah pengemban silek dalam berkas UNESCO.", "Menjelaskan mengapa nama silek mengikuti nagari atau sifat alam."],
+      "prior_competence": "Tidak ada.", "duration_min": 15, "equipment": "—", "space": "—",
+      "safety_briefing": "Pelajaran teori.",
+      "theory": "Berkas nominasi UNESCO menyebut para pengemban tradisi: sesepuh/tuo silek, guru besar/guru gadang/pandeka, guru/guru tuo, pelatih/palampeh, dan murid/anak sasian. Tempat belajarnya antara lain sasaran. Dahulu tuo silek mengajar di halaman surau atau sasaran. Surau adalah pusat pendidikan tradisional tempat anak laki-laki belajar Al-Qur'an, adat, silek, dan kesenian (Ediwar dkk. 2023).",
+      "cultural_explanation": "Nama silek sering mengikuti tempat (silek lintau, sungai patai, pauh, bayang, koto anau, dan lainnya) atau sifat alam (silek kumango, harimau campo, buayo lalok, ulu ambek). Masing-masing adalah tradisi tersendiri, sehingga tidak boleh disatukan menjadi satu gerak baku (Ediwar dkk. 2023).",
+      "movement_ids": [], "primary_movement_id": null, "practice_steps": [],
+      "summary": "Silek diwariskan lewat tuo silek di sasaran/surau dan sangat beragam menurut nagari.",
+      "reflection": ["Apa arti pentingnya tuo silek bagi pewarisan?"],
+      "quiz": [{"q": "Istilah murid dalam berkas UNESCO untuk silek adalah…", "options": ["Anak sasian", "Pandeka", "Palampeh", "Tuo silek"], "answer_index": 0, "source_id": "src.unesco.ich.01391.nomination"}],
+      "references": [{"source_id": "src.unesco.ich.01391.nomination", "locator": "item 1 (bearers)"}, {"source_id": "src.ediwar.2023", "locator": "§1"}]
+    },
+    {
+      "id": "crs.silek-pengenalan.l02", "module_id": "crs.silek-pengenalan.m01", "order": 2, "slug": "baraja-malangkah",
+      "title": "Baraja malangkah: belajar melangkah",
+      "description": "Konsep awal belajar silek menurut kajian Ediwar dkk. (2023).",
+      "objectives": ["Menjelaskan arti baraja malangkah.", "Menyebut tiga langkah silek dan makna konseptualnya menurut sumber."],
+      "prior_competence": "Pelajaran 1.", "duration_min": 20, "equipment": "—", "space": "—",
+      "safety_briefing": "Pelajaran teori. Langkah tidak diperagakan karena teknik pelaksanaannya belum terdokumentasi dalam sumber terbuka.",
+      "theory": "Belajar silek disamakan dengan baraja malangkah (belajar melangkah). Kajian Ediwar dkk. (2023) menjelaskan silek sebagai sumber pengetahuan melalui tiga langkah. Langkah tigo menjadi kerangka silek: ke kiri menjaga jarak, ke kanan mencari akal, ke depan memutus. Langkah ampek melengkapinya dengan langkah ke belakang ('manyerak umpan') untuk menyusun siasat. Langkah sambilan adalah kesatuan langkah tigo dan ampek dengan jasmani dan rohani; ia disebut juga silek pertunjukan atau pencak, dan dilakukan dengan gerak berirama.",
+      "cultural_explanation": "Kajian lain (sanggar Silek Tuo di Pekanbaru) menyebut unsur langkah ampek seperti Tagak Alif, Langkah Luruih, Langkah Sendeng, dan Langkah Serong, yang dipelajari berpasangan. Pelaksanaan teknisnya tidak diuraikan dan harus dipelajari dari tuo silek.",
+      "movement_ids": [], "primary_movement_id": null, "practice_steps": [],
+      "summary": "Baraja malangkah: langkah adalah dasar silek sekaligus cara berpikir.",
+      "reflection": ["Bagaimana konsep 'ke kiri menjaga jarak, ke kanan mencari akal' bisa dimaknai dalam kehidupan sehari-hari?"],
+      "quiz": [
+        {"q": "Langkah yang disebut sebagai kerangka silek adalah…", "options": ["Langkah tigo", "Langkah ampek", "Langkah sambilan", "Langkah lurus"], "answer_index": 0, "source_id": "src.ediwar.2023"},
+        {"q": "Langkah sambilan juga disebut…", "options": ["Silek pertunjukan / pencak", "Silek tanding", "Galuik", "Randai"], "answer_index": 0, "source_id": "src.ediwar.2023"}
+      ],
+      "references": [{"source_id": "src.ediwar.2023", "locator": "§3.1"}, {"source_id": "src.uir.silek-tuo-nagari-batuah", "locator": "Bab I hlm. 6–7"}]
+    }
+  ]
+}

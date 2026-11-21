@@ -1,0 +1,12 @@
+{
+  "schema": "silatara.keyframes/v1",
+  "animation_id": "anim.psdp.pola-langkah-ladam.v1",
+  "movement_id": "mv.psdp.pola-langkah-ladam",
+  "animation_status": "needs_reference",
+  "title": "Pola Langkah Ladam / U",
+  "needs": "Diagram nomor langkah ladam tunggal/rangkap harus disalin ulang dari sumber cetak (atau dari instruktur) — teks ekstraksi PDF tidak memuat posisi yang dapat diandalkan.",
+  "source_ids": [
+    "src.herdiana.2008",
+    "src.nugroho.2005"
+  ]
+}

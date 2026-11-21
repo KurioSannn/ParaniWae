@@ -1,0 +1,11 @@
+{
+  "schema": "silatara.keyframes/v1",
+  "animation_id": "anim.psdp.sikap-duduk-biasa.v1",
+  "movement_id": "mv.psdp.sikap-duduk-biasa",
+  "animation_status": "needs_reference",
+  "title": "Sikap Duduk",
+  "needs": "Arah dan bentuk tekukan kaki tidak dijelaskan; butuh referensi visual berizin.",
+  "source_ids": [
+    "src.nugroho.2005"
+  ]
+}

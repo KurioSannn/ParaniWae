@@ -1,0 +1,152 @@
+{
+  "schema": "silatara.movements/v1",
+  "tradition_id": "trd.psdp",
+  "module_hint": "Sikap dasar berdiri",
+  "movements": [
+    {
+      "id": "mv.psdp.sikap-tegak",
+      "slug": "sikap-tegak",
+      "names": {"primary": "Sikap Tegak (1–4)", "local": null, "aliases": ["Sikap berdiri tegak", "Sikap awal"], "pronunciation": null},
+      "category": "sikap_dasar",
+      "level": "beginner",
+      "safety_class": "solo_beginner",
+      "solo_form_status": "documented_solo",
+      "content_status": "draft",
+      "evidence_tier": "research_supported",
+      "instructor_validation": "not_validated",
+      "permission_status": "parafrasa sumber terbit; tanpa media; belum ada izin pemilik kurikulum",
+      "cultural_context": {
+        "context": {"text": "Sikap tegak adalah sikap statis paling awal yang dipakai untuk menyiapkan pesilat secara fisik dan mental sebelum rangkaian gerak. Nugroho (2005) menempatkannya sebagai bagian 'sikap dasar' yang dilatih sebelum pukulan, tendangan, dan jatuhan agar pemula tidak cedera.", "source_ids": ["src.nugroho.2005"], "locator": "hlm. 143–145"},
+        "purpose": {"text": "Membentuk kesiapan jasmani (siap bergerak dengan teknik yang baik) dan rohani (waspada, siaga). Sikap tegak 4 dan 5 menurut Herdiana dipakai sebagai sikap awal rangkaian teknik dan sikap awal bertanding.", "source_ids": ["src.nugroho.2005", "src.herdiana.2008"], "locator": "Nugroho hlm. 145; Herdiana hlm. 9"},
+        "meaning": {"text": "Sumber tidak menjelaskan makna filosofis tiap sikap tegak.", "basis": "gap"},
+        "terminology": [{"term": "sikap tegak", "explanation": "berdiri lurus dengan pandangan ke depan; diberi nomor 1–4 (Nugroho) atau 1–5 (Herdiana) menurut posisi tangan"}],
+        "variants": [
+          {"text": "Herdiana (2008, hlm. 9) memakai penomoran 1–5: tegak 1–4 serupa Nugroho, ditambah tegak 5 (kepalan kanan menempel pada telapak kiri di depan dada). Herdiana juga merinci posisi kaki: tumit rapat, kedua telapak membentuk sudut 90°.", "source_ids": ["src.herdiana.2008"]},
+          {"text": "Perguruan dapat memakai penomoran, posisi tangan, dan salam pembuka sendiri; dokumen ini tidak mewakili perguruan mana pun.", "basis": "editorial"}
+        ],
+        "differs_from": []
+      },
+      "prerequisites": {"abilities": "Tidak ada.", "physical_prep": "Pemanasan ringan (lihat common.safety.warmup).", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {
+        "head": {"text": "Badan tegak, pandangan ke depan.", "basis": "source", "source_ids": ["src.herdiana.2008"]},
+        "torso": {"text": "Tubuh tegak.", "basis": "source", "source_ids": ["src.herdiana.2008"]},
+        "arms": {"text": "Berbeda per nomor: (1) lengan dan tangan lurus di samping badan; (2) kedua tangan mengepal di samping pinggang; (3) kedua tangan mengepal di depan dada; (4) kedua tangan bersilang di depan dada.", "basis": "source", "source_ids": ["src.nugroho.2005"]},
+        "feet": {"text": "Tumit rapat; telapak kaki membentuk sudut 90°.", "basis": "source", "source_ids": ["src.herdiana.2008"]},
+        "weight": {"text": "Tidak dirinci sumber; seumumnya merata pada kedua kaki; tanyakan detailnya kepada pelatih.", "basis": "needs_validation"},
+        "orientation": {"text": "Menghadap ke depan.", "basis": "source", "source_ids": ["src.herdiana.2008"]}
+      },
+      "phases": [
+        {"id": "mv.psdp.sikap-tegak#p1", "order": 1, "name": "Sikap tegak 1", "start_position": "Berdiri tegak, tumit rapat, telapak membentuk sudut 90°.", "change": "Kedua lengan dan tangan lurus di samping badan.", "body_parts": ["lengan", "tangan"], "direction": "—", "end_position": "Lengan lurus di sisi badan, pandangan ke depan.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-1", "basis": "source", "source_ids": ["src.nugroho.2005", "src.herdiana.2008"], "locator": "Nugroho hlm. 145; Herdiana hlm. 9"},
+        {"id": "mv.psdp.sikap-tegak#p2", "order": 2, "name": "Sikap tegak 2", "start_position": "Sikap tegak 1.", "change": "Kedua tangan dikepalkan dan diletakkan di samping pinggang.", "body_parts": ["lengan", "tangan", "siku"], "direction": "tangan bergerak ke pinggang", "end_position": "Kepalan di samping pinggang.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-2", "basis": "source", "source_ids": ["src.nugroho.2005", "src.herdiana.2008"], "locator": "Nugroho hlm. 145; Herdiana hlm. 9"},
+        {"id": "mv.psdp.sikap-tegak#p3", "order": 3, "name": "Sikap tegak 3", "start_position": "Sikap tegak 2.", "change": "Kedua kepalan dipindahkan ke depan dada.", "body_parts": ["lengan", "tangan", "siku"], "direction": "kepalan naik ke depan dada", "end_position": "Kepalan di depan dada.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-3", "basis": "source", "source_ids": ["src.nugroho.2005", "src.herdiana.2008"], "locator": "Nugroho hlm. 145; Herdiana hlm. 9"},
+        {"id": "mv.psdp.sikap-tegak#p4", "order": 4, "name": "Sikap tegak 4", "start_position": "Sikap tegak 3.", "change": "Kedua tangan disilangkan di depan dada.", "body_parts": ["lengan", "tangan"], "direction": "—", "end_position": "Tangan bersilang di depan dada.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-4", "basis": "source", "source_ids": ["src.nugroho.2005", "src.herdiana.2008"], "locator": "Nugroho hlm. 145; Herdiana hlm. 9"}
+      ],
+      "practice": {
+        "start": "Mulai dari berdiri tenang, tumit rapat, pandangan ke depan.",
+        "sequence": "Berpindah berurutan dari sikap tegak 1 ke 4, tahan sebentar di setiap sikap, lalu kembali ke sikap tegak 1.",
+        "tempo": {"text": "Pelan; tahan ±2–3 hitungan per sikap.", "basis": "editorial_unvalidated"},
+        "repetitions": {"text": "3–5 putaran per sesi.", "basis": "editorial_unvalidated"},
+        "easier": "Latih satu sikap saja sampai posisi tangan hafal.",
+        "progression": "Lanjut ke sikap pemusatan diri dan kuda-kuda (kuda-kuda dimulai dari sikap tegak 2 menurut Nugroho).",
+        "stop_when_ref": "common.safety.stop_when",
+        "cooldown": "Tidak diperlukan khusus; tarik napas tenang. "
+      },
+      "common_mistakes": [],
+      "common_mistakes_gap": "Sumber tidak menyebut kesalahan umum untuk sikap tegak.",
+      "references": [
+        {"source_id": "src.nugroho.2005", "locator": "hlm. 145", "supports": "Empat sikap tegak dan posisi tangan masing-masing."},
+        {"source_id": "src.herdiana.2008", "locator": "hlm. 9–10", "supports": "Tumit rapat & telapak 90°; tegak 5; fungsi sikap tegak 4–5 sebagai sikap awal."}
+      ],
+      "gaps": ["Posisi kepala/pandangan per nomor tidak dibedakan sumber.", "Distribusi berat badan tidak disebut."],
+      "landmarks": ["upper_body", "head"],
+      "animation": {"animation_id": "anim.psdp.sikap-tegak.v1", "status": "generated"}
+    },
+    {
+      "id": "mv.psdp.sikap-pemusatan-diri",
+      "slug": "sikap-pemusatan-diri",
+      "names": {"primary": "Sikap Berdoa / Pemusatan Diri", "local": null, "aliases": ["Sikap berdoa", "Sikap bersyukur"], "pronunciation": null},
+      "category": "sikap_dasar",
+      "level": "beginner",
+      "safety_class": "solo_beginner",
+      "solo_form_status": "documented_solo",
+      "content_status": "draft",
+      "evidence_tier": "research_supported",
+      "instructor_validation": "not_validated",
+      "permission_status": "parafrasa sumber terbit; tanpa media",
+      "cultural_context": {
+        "context": {"text": "Herdiana (2008) menganjurkan sikap salam dan pemusatan diri dengan doa untuk keselamatan pada setiap awal dan akhir latihan, juga sebagai penghormatan kepada guru/pelatih, lawan tanding, atau penonton.", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 10"},
+        "purpose": {"text": "Pemusatan diri dan berdoa/bersyukur dengan khidmat sebelum dan sesudah berlatih.", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 10"},
+        "meaning": {"text": "Sumber mengaitkannya dengan doa memohon perlindungan Tuhan Yang Maha Esa. Bentuk salam dan doa berbeda antarperguruan; SILATARA tidak menetapkan salam tertentu.", "source_ids": ["src.herdiana.2008"], "basis": "source+editorial"},
+        "terminology": [{"term": "pemusatan diri", "explanation": "memusatkan perhatian/batin sebelum bergerak"}],
+        "variants": [{"text": "Salam perguruan (sikap hormat) memiliki bentuk khas masing-masing dan tidak didokumentasikan di sini.", "basis": "editorial"}],
+        "differs_from": []
+      },
+      "prerequisites": {"abilities": "Sikap tegak 1.", "physical_prep": "—", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {
+        "head": {"text": "Kepala ditundukkan saat tangan berada di dada, lalu kembali tegak.", "basis": "source", "source_ids": ["src.herdiana.2008"]},
+        "arms": {"text": "Kedua tangan ditarik, telapak dirapatkan, disimpan di depan dada.", "basis": "source", "source_ids": ["src.herdiana.2008"]},
+        "feet": {"text": "Seperti sikap tegak 1.", "basis": "source", "source_ids": ["src.herdiana.2008"]}
+      },
+      "phases": [
+        {"id": "mv.psdp.sikap-pemusatan-diri#p1", "order": 1, "name": "Sikap tegak 1", "start_position": "Berdiri tegak, lengan lurus di samping.", "change": "—", "body_parts": [], "direction": "—", "end_position": "Sikap tegak 1.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-1", "basis": "source", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 10"},
+        {"id": "mv.psdp.sikap-pemusatan-diri#p2", "order": 2, "name": "Telapak dirapatkan di dada", "start_position": "Sikap tegak 1.", "change": "Kedua tangan ditarik dengan telapak dirapatkan dan disimpan di depan dada.", "body_parts": ["lengan", "telapak tangan"], "direction": "tangan naik ke dada", "end_position": "Telapak rapat di depan dada.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-2", "basis": "source", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 10"},
+        {"id": "mv.psdp.sikap-pemusatan-diri#p3", "order": 3, "name": "Menunduk", "start_position": "Telapak rapat di dada.", "change": "Kepala ditundukkan; berdoa dalam hati dengan khidmat.", "body_parts": ["kepala", "leher"], "direction": "kepala menunduk", "end_position": "Kepala tertunduk.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-3", "basis": "source", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 10"},
+        {"id": "mv.psdp.sikap-pemusatan-diri#p4", "order": 4, "name": "Kembali ke sikap tegak 1", "start_position": "Kepala tertunduk.", "change": "Kepala diangkat dan tangan kembali lurus di samping.", "body_parts": ["kepala", "lengan"], "direction": "—", "end_position": "Sikap tegak 1.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-1", "basis": "source", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 10"}
+      ],
+      "practice": {
+        "start": "Sikap tegak 1.",
+        "sequence": "Rapatkan telapak di dada → tundukkan kepala → kembali tegak.",
+        "tempo": {"text": "Tenang; tidak tergesa.", "basis": "source", "source_ids": ["src.herdiana.2008"]},
+        "repetitions": {"text": "Sekali pada awal dan sekali pada akhir latihan.", "basis": "source", "source_ids": ["src.herdiana.2008"]},
+        "easier": "—",
+        "progression": "—",
+        "stop_when_ref": "common.safety.stop_when",
+        "cooldown": "—"
+      },
+      "common_mistakes": [],
+      "common_mistakes_gap": "Tidak ada.",
+      "references": [{"source_id": "src.herdiana.2008", "locator": "hlm. 10", "supports": "Urutan sikap berdoa/pemusatan diri dan waktu pelaksanaannya."}],
+      "gaps": ["Bentuk salam perguruan tidak tercakup."],
+      "landmarks": ["upper_body", "head"],
+      "animation": {"animation_id": "anim.psdp.sikap-pemusatan-diri.v1", "status": "generated"}
+    },
+    {
+      "id": "mv.psdp.sikap-istirahat",
+      "slug": "sikap-istirahat",
+      "names": {"primary": "Sikap Istirahat", "local": null, "aliases": [], "pronunciation": null},
+      "category": "sikap_dasar",
+      "level": "beginner",
+      "safety_class": "solo_beginner",
+      "solo_form_status": "documented_solo",
+      "content_status": "draft",
+      "evidence_tier": "research_supported",
+      "instructor_validation": "not_validated",
+      "permission_status": "parafrasa sumber terbit; tanpa media",
+      "cultural_context": {
+        "context": {"text": "Sikap yang biasanya dilakukan saat mendengarkan nasihat atau petunjuk pelatih/guru.", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 11–12"},
+        "purpose": {"text": "Sikap tenang saat menerima arahan.", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 12"},
+        "meaning": {"text": "Tidak dijelaskan sumber.", "basis": "gap"},
+        "terminology": [],
+        "variants": [],
+        "differs_from": []
+      },
+      "prerequisites": {"abilities": "Sikap tegak.", "physical_prep": "—", "space_ref": "common.safety.space", "surface_ref": "common.safety.surface", "equipment_ref": "common.safety.equipment", "limits_ref": "common.safety.general_limits"},
+      "anatomy": {
+        "feet": {"text": "Kaki dibuka dengan memindahkan kaki kiri atau kanan ke samping.", "basis": "source", "source_ids": ["src.herdiana.2008"]},
+        "arms": {"text": "Tangan disilangkan di depan dengan pergelangan tangan kiri dipegang tangan kanan.", "basis": "source", "source_ids": ["src.herdiana.2008"]},
+        "head": {"text": "Tidak dirinci sumber; umumnya pandangan ke depan atau ke arah pelatih.", "basis": "needs_validation"}
+      },
+      "phases": [
+        {"id": "mv.psdp.sikap-istirahat#p1", "order": 1, "name": "Sikap tegak", "start_position": "Berdiri tegak.", "change": "—", "body_parts": [], "direction": "—", "end_position": "Sikap tegak.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-1", "basis": "source", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 11"},
+        {"id": "mv.psdp.sikap-istirahat#p2", "order": 2, "name": "Membuka kaki & menyilangkan tangan", "start_position": "Sikap tegak.", "change": "Satu kaki dipindah ke samping; tangan disilangkan di depan, tangan kanan memegang pergelangan kiri.", "body_parts": ["kaki", "lengan", "tangan"], "direction": "kaki ke samping", "end_position": "Sikap istirahat.", "mistakes": [], "safety": null, "tempo": null, "keyframe_ref": "kf-2", "basis": "source", "source_ids": ["src.herdiana.2008"], "locator": "hlm. 11"}
+      ],
+      "practice": {"start": "Sikap tegak.", "sequence": "Buka kaki ke samping sambil menyilangkan tangan; kembali ke sikap tegak.", "tempo": {"text": "Biasa.", "basis": "editorial_unvalidated"}, "repetitions": {"text": "Dipakai saat mendengarkan arahan; tidak perlu diulang-ulang.", "basis": "editorial_unvalidated"}, "easier": "—", "progression": "—", "stop_when_ref": "common.safety.stop_when", "cooldown": "—"},
+      "common_mistakes": [],
+      "common_mistakes_gap": "Tidak ada.",
+      "references": [{"source_id": "src.herdiana.2008", "locator": "hlm. 11–12", "supports": "Posisi kaki & tangan sikap istirahat dan fungsinya."}],
+      "gaps": ["Lebar bukaan kaki tidak disebut."],
+      "landmarks": ["upper_body", "lower_body"],
+      "animation": {"animation_id": "anim.psdp.sikap-istirahat.v1", "status": "generated"}
+    }
+  ]
+}

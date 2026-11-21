@@ -1,0 +1,43 @@
+{
+  "schema": "silatara.directory.entity-localities/v1",
+  "note": "Pemetaan lokalitas yang disebut sumber (research/pencak-silat/traditions/entities.json) ke kode kabupaten/kota Kepmendagri. Hanya tingkat kabupaten/kota; tidak ada titik alamat. 'role' menjelaskan apa yang dinyatakan sumber.",
+  "places": [
+    {"entity_id": "ent.perguruan.perpi-harimurti", "regency_code": "34.02", "locality_text": "Kabupaten Bantul", "role": "Komunitas yang ikut konsultasi berkas nominasi UNESCO 2019"},
+    {"entity_id": "ent.perguruan.perisai-diri", "regency_code": "35.78", "locality_text": "Kota Surabaya", "role": "Komunitas yang ikut konsultasi berkas nominasi UNESCO 2019"},
+    {"entity_id": "ent.perguruan.kps-nusantara", "regency_code": "33.08", "locality_text": "Muntilan, Kabupaten Magelang", "role": "Komunitas yang ikut konsultasi berkas nominasi UNESCO 2019"},
+    {"entity_id": "ent.perguruan.pagar-nusa", "regency_code": "35.73", "locality_text": "Kota Malang", "role": "Komunitas yang ikut konsultasi berkas nominasi UNESCO 2019"},
+    {"entity_id": "ent.perguruan.krida-yudha-sinalika", "regency_code": "33.07", "locality_text": "Kabupaten Wonosobo", "role": "Komunitas yang ikut konsultasi berkas nominasi UNESCO 2019"},
+    {"entity_id": "ent.perguruan.wijaya-kusuma", "regency_code": "34.71", "locality_text": "Kompleks Taman Siswa, Kota Yogyakarta", "role": "Komunitas yang ikut konsultasi berkas nominasi UNESCO 2019"},
+    {"entity_id": "ent.community.paseduluran-angkringan-silat", "regency_code": "34.04", "locality_text": "Turi, Kabupaten Sleman", "role": "Komunitas yang ikut konsultasi berkas nominasi UNESCO 2019"},
+    {"entity_id": "ent.community.paku-bumi", "regency_code": "32.01", "locality_text": "Cipayung, Kabupaten Bogor", "role": "Komunitas yang ikut konsultasi berkas nominasi UNESCO 2019"},
+    {"entity_id": "ent.perguruan.maenpo-cikalong", "regency_code": "32.03", "locality_text": "Kabupaten Cianjur", "role": "Komunitas yang ikut konsultasi berkas nominasi UNESCO 2019"},
+    {"entity_id": "ent.perguruan.garis-paksi", "regency_code": "32.73", "locality_text": "Kota Bandung", "role": "Komunitas yang ikut konsultasi berkas nominasi UNESCO 2019"},
+    {"entity_id": "ent.perguruan.silat-cimande", "regency_code": "32.01", "locality_text": "Caringin, Kabupaten Bogor", "role": "Komunitas yang ikut konsultasi berkas nominasi UNESCO 2019"},
+    {"entity_id": "ent.perguruan.beru-sakti", "regency_code": "36.72", "locality_text": "Kota Cilegon", "role": "Komunitas yang ikut konsultasi berkas nominasi UNESCO 2019"},
+    {"entity_id": "ent.perguruan.pamur", "regency_code": "35.73", "locality_text": "Kota Malang", "role": "Komunitas yang ikut konsultasi berkas nominasi UNESCO 2019"},
+    {"entity_id": "ent.perguruan.chakra-v", "regency_code": "35.78", "locality_text": "Kota Surabaya", "role": "Komunitas yang ikut konsultasi berkas nominasi UNESCO 2019"},
+    {"entity_id": "ent.training_place.padepokan-jokotole", "regency_code": "35.26", "locality_text": "Kamal, Kabupaten Bangkalan", "role": "Padepokan yang ikut konsultasi berkas nominasi UNESCO 2019"},
+    {"entity_id": "ent.community.nagari-gunung", "regency_code": "13.74", "locality_text": "Kota Padang Panjang", "role": "Komunitas yang ikut konsultasi berkas nominasi UNESCO 2019"},
+    {"entity_id": "ent.community.istano-silinduang-bulan", "regency_code": "13.04", "locality_text": "Pagaruyung, Kabupaten Tanah Datar", "role": "Lembaga adat yang ikut konsultasi berkas nominasi UNESCO 2019"},
+    {"entity_id": "ent.perguruan.kuntau-pangunraun-pitu", "regency_code": "62.13", "locality_text": "Kabupaten Barito Timur", "role": "Perguruan yang dikaji dalam publikasi akademik"},
+    {"entity_id": "ent.training_place.kiambang-putih", "regency_code": "21.01", "locality_text": "Bentan Penao, Kabupaten Bintan", "role": "Sanggar yang disebut dalam publikasi"},
+    {"entity_id": "ent.perguruan.phashadja-mataram", "regency_code": "34.71", "locality_text": "Kota Yogyakarta", "role": "Perguruan yang disebut dalam publikasi akademik dan berkas UNESCO"}
+  ],
+  "heritage_areas": [
+    {"entity_id": "ent.style.silek-kumango", "regency_codes": ["13.04"], "locality_text": "Rao-rao Kumango, Kabupaten Tanah Datar"},
+    {"entity_id": "ent.style.silek-tuo", "regency_codes": ["14.71"], "locality_text": "Sanggar Seni Silat Nagari Batuah, Kota Pekanbaru"},
+    {"entity_id": "ent.tradition.silat-pangean", "regency_codes": ["14.09", "14.02"], "locality_text": "Kabupaten Kuantan Singingi; Kota Baru, Indragiri Hulu"},
+    {"entity_id": "ent.tradition.bandrong", "regency_codes": ["36.72"], "locality_text": "Kota Cilegon"},
+    {"entity_id": "ent.style.cingkrik", "regency_codes": ["31.73"], "locality_text": "Rawa Belong, Jakarta Barat"},
+    {"entity_id": "ent.style.maenpo-cikalong", "regency_codes": ["32.03"], "locality_text": "Kabupaten Cianjur"},
+    {"entity_id": "ent.style.cimande", "regency_codes": ["32.01"], "locality_text": "Cimande, Caringin, Kabupaten Bogor"},
+    {"entity_id": "ent.tradition.langga", "regency_codes": ["75.03"], "locality_text": "Kabupaten Bone Bolango"},
+    {"entity_id": "ent.style.silat-pelintau", "regency_codes": ["11.16"], "locality_text": "Kabupaten Aceh Tamiang"},
+    {"entity_id": "ent.style.silat-song-song", "regency_codes": ["11.16"], "locality_text": "Kabupaten Aceh Tamiang"},
+    {"entity_id": "ent.style.silat-harimau-kumbang", "regency_codes": ["15.72"], "locality_text": "Desa Koto Tuo, Tanah Kampung, Kota Sungai Penuh"},
+    {"entity_id": "ent.style.kuntau-semende", "regency_codes": ["16.03"], "locality_text": "Kabupaten Muara Enim"},
+    {"entity_id": "ent.tradition.rejang-pat-petulai", "regency_codes": ["17.03", "17.07"], "locality_text": "Kabupaten Bengkulu Utara; Kabupaten Lebong"},
+    {"entity_id": "ent.tradition.tengklung", "regency_codes": ["51.08"], "locality_text": "Desa Gobleg, Kabupaten Buleleng"},
+    {"entity_id": "ent.style.ewa-wuna", "regency_codes": ["74.03"], "locality_text": "Kabupaten Muna"}
+  ]
+}

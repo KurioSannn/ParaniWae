@@ -1,0 +1,11 @@
+{
+  "schema": "silatara.keyframes/v1",
+  "animation_id": "anim.psdp.sikap-pasang-3.v1",
+  "movement_id": "mv.psdp.sikap-pasang-3",
+  "animation_status": "needs_reference",
+  "title": "Sikap Pasang 3",
+  "needs": "Tarikan 'serong' melibatkan arah diagonal di lantai; butuh tampilan atas atau 3/4 dan sudut yang dikonfirmasi instruktur.",
+  "source_ids": [
+    "src.nugroho.2005"
+  ]
+}

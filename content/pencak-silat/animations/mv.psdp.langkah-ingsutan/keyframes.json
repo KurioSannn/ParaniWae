@@ -1,0 +1,12 @@
+{
+  "schema": "silatara.keyframes/v1",
+  "animation_id": "anim.psdp.langkah-ingsutan.v1",
+  "movement_id": "mv.psdp.langkah-ingsutan",
+  "animation_status": "needs_reference",
+  "title": "Langkah Ingsutan",
+  "needs": "Urutan poros tumit/ujung kaki dan arah perpindahan perlu diperagakan instruktur; menebak pola akan mengarang koreografi.",
+  "source_ids": [
+    "src.herdiana.2008",
+    "src.nugroho.2005"
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "schema": "silatara.animation-manifest/v1",
+  "animation_id": "anim.psdp.sikap-istirahat.v1",
+  "movement_id": "mv.psdp.sikap-istirahat",
+  "animation_status": "generated",
+  "view": "front",
+  "duration_ms": 5000,
+  "loop": true,
+  "fps_sampled": 20,
+  "frames": 101,
+  "playback_rates": [
+    0.5,
+    1.0,
+    1.5
+  ],
+  "playback_note": "SMIL tidak memiliki kontrol kecepatan bawaan; pemutar dapat memakai SVGSVGElement.pauseAnimations()/setCurrentTime() atau merender ulang dengan dur berbeda.",
+  "phase_map": {
+    "kf-1": {
+      "phase_id": "mv.psdp.sikap-istirahat#p1",
+      "label": "Sikap tegak",
+      "windows": [
+        0.0,
+        0.33,
+        0.91,
+        1.0
+      ]
+    },
+    "kf-2": {
+      "phase_id": "mv.psdp.sikap-istirahat#p2",
+      "label": "Sikap istirahat",
+      "windows": [
+        0.33,
+        0.91
+      ]
+    }
+  },
+  "bounds": [
+    125.9,
+    59.8,
+    237.0,
+    416
+  ],
+  "max_ik_error_px": 0.0,
+  "rig_id": "silatara-instruktur-2d",
+  "rig_version": 1,
+  "generator": "tools/animation/silat_anim.py 1.0.0",
+  "keyframes_sha256": "b2d0cbf4ac06c6473e2f51abac99dfddaa5861bce1e02b79c0a2f9a1e9069825",
+  "svg_sha256": "478393a28259f7f0e11c108a9cf882d223db1efe22872da0bc8b2bc38710c364",
+  "svg_bytes": 14283,
+  "source_ids": [
+    "src.herdiana.2008"
+  ],
+  "authorship": "Interpretasi visual editorial tim SILATARA atas dokumentasi tertulis; bukan rekaman manusia; bukan demonstrasi resmi perguruan.",
+  "instructor_validation": "not_validated"
+}

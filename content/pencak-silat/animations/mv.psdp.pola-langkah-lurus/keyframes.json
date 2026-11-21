@@ -1,0 +1,113 @@
+{
+  "schema": "silatara.keyframes/v1",
+  "animation_id": "anim.psdp.pola-langkah-lurus.v1",
+  "movement_id": "mv.psdp.pola-langkah-lurus",
+  "animation_status": "generated",
+  "title": "Pola langkah lurus",
+  "description": "Tampak atas: langkah berurutan 0 sampai 7 sepanjang satu garis lurus ke depan.",
+  "view": "top",
+  "source_ids": [
+    "src.nugroho.2005",
+    "src.herdiana.2008"
+  ],
+  "markers": [
+    {
+      "id": "kf-1",
+      "phase_id": "mv.psdp.pola-langkah-lurus#p1",
+      "label": "0",
+      "pos": [
+        180,
+        372
+      ]
+    },
+    {
+      "id": "kf-2",
+      "phase_id": "mv.psdp.pola-langkah-lurus#p2",
+      "label": "1",
+      "pos": [
+        180,
+        332
+      ]
+    },
+    {
+      "id": "kf-3",
+      "phase_id": "mv.psdp.pola-langkah-lurus#p2",
+      "label": "2",
+      "pos": [
+        180,
+        292
+      ]
+    },
+    {
+      "id": "kf-4",
+      "phase_id": "mv.psdp.pola-langkah-lurus#p2",
+      "label": "3",
+      "pos": [
+        180,
+        252
+      ]
+    },
+    {
+      "id": "kf-5",
+      "phase_id": "mv.psdp.pola-langkah-lurus#p2",
+      "label": "4",
+      "pos": [
+        180,
+        212
+      ]
+    },
+    {
+      "id": "kf-6",
+      "phase_id": "mv.psdp.pola-langkah-lurus#p2",
+      "label": "5",
+      "pos": [
+        180,
+        172
+      ]
+    },
+    {
+      "id": "kf-7",
+      "phase_id": "mv.psdp.pola-langkah-lurus#p2",
+      "label": "6",
+      "pos": [
+        180,
+        132
+      ]
+    },
+    {
+      "id": "kf-8",
+      "phase_id": "mv.psdp.pola-langkah-lurus#p2",
+      "label": "7",
+      "pos": [
+        180,
+        92
+      ]
+    }
+  ],
+  "guides": [
+    {
+      "type": "line",
+      "from": [
+        180,
+        392
+      ],
+      "to": [
+        180,
+        74
+      ],
+      "w": 3
+    },
+    {
+      "type": "label",
+      "at": [
+        180,
+        62
+      ],
+      "text": "↑ depan",
+      "size": 11
+    }
+  ],
+  "legend": "Nomor dari diagram sumber · kaki kanan/kiri tidak ditandai",
+  "step_ms": 700,
+  "end_hold_ms": 1500
+}

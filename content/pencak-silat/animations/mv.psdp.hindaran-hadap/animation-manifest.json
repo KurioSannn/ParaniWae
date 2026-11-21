@@ -1,0 +1,55 @@
+{
+  "schema": "silatara.animation-manifest/v1",
+  "animation_id": "anim.psdp.hindaran-hadap.v1",
+  "movement_id": "mv.psdp.hindaran-hadap",
+  "animation_status": "generated",
+  "view": "side",
+  "duration_ms": 4500,
+  "loop": true,
+  "fps_sampled": 20,
+  "frames": 91,
+  "playback_rates": [
+    0.5,
+    1.0,
+    1.5
+  ],
+  "playback_note": "SMIL tidak memiliki kontrol kecepatan bawaan; pemutar dapat memakai SVGSVGElement.pauseAnimations()/setCurrentTime() atau merender ulang dengan dur berbeda.",
+  "phase_map": {
+    "kf-1": {
+      "phase_id": "mv.psdp.hindaran-hadap#p1",
+      "label": "Siap",
+      "windows": [
+        0.0,
+        0.3,
+        0.8889,
+        1.0
+      ]
+    },
+    "kf-2": {
+      "phase_id": "mv.psdp.hindaran-hadap#p2",
+      "label": "Hindaran hadap",
+      "windows": [
+        0.3,
+        0.8889
+      ]
+    }
+  },
+  "bounds": [
+    85.7,
+    59.8,
+    218.0,
+    416.0
+  ],
+  "max_ik_error_px": 0.0,
+  "rig_id": "silatara-instruktur-2d",
+  "rig_version": 1,
+  "generator": "tools/animation/silat_anim.py 1.0.0",
+  "keyframes_sha256": "20982066514ac802d2471b28cac77add2817bf80b2fec041f9c5951588ca82eb",
+  "svg_sha256": "75e011bc286d84a159825cdde0845f0331bb81891d897be708201cd17c5b28af",
+  "svg_bytes": 13348,
+  "source_ids": [
+    "src.herdiana.2008"
+  ],
+  "authorship": "Interpretasi visual editorial tim SILATARA atas dokumentasi tertulis; bukan rekaman manusia; bukan demonstrasi resmi perguruan.",
+  "instructor_validation": "not_validated"
+}

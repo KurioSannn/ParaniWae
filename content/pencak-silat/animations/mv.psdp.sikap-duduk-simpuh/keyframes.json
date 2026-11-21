@@ -1,0 +1,11 @@
+{
+  "schema": "silatara.keyframes/v1",
+  "animation_id": "anim.psdp.sikap-duduk-simpuh.v1",
+  "movement_id": "mv.psdp.sikap-duduk-simpuh",
+  "animation_status": "needs_reference",
+  "title": "Sikap Simpuh",
+  "needs": "Sumber tidak menjelaskan apakah pinggul duduk di atas tumit; animasi akan memaksakan satu tafsir — butuh konfirmasi instruktur.",
+  "source_ids": [
+    "src.nugroho.2005"
+  ]
+}

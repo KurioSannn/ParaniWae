@@ -1,0 +1,11 @@
+{
+  "schema": "silatara.keyframes/v1",
+  "animation_id": "anim.psdp.sikap-pasang-5.v1",
+  "movement_id": "mv.psdp.sikap-pasang-5",
+  "animation_status": "needs_reference",
+  "title": "Sikap Pasang 5",
+  "needs": "Kombinasi langkah ke depan, silang belakang, dan pandangan menyamping tidak dapat dibaca dari satu sudut 2D tanpa ambigu; butuh sisi pandang yang dikonfirmasi instruktur.",
+  "source_ids": [
+    "src.nugroho.2005"
+  ]
+}

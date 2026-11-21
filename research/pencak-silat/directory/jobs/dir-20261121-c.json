@@ -1,0 +1,79 @@
+{
+ "job_id": "dir-20261121-c",
+ "pipeline_version": "1.0.0",
+ "started_at": "2026-11-21T07:59:55+00:00",
+ "finished_at": "2026-11-21T07:59:55+00:00",
+ "stages": [
+  {
+   "stage": "discovery",
+   "at": "2026-11-21T07:59:55+00:00",
+   "raw_records": 427,
+   "osm": 403,
+   "editorial": 4,
+   "catalog": 20
+  },
+  {
+   "stage": "extraction+classification",
+   "at": "2026-11-21T07:59:55+00:00",
+   "candidates": 57,
+   "review": 8,
+   "rejected": 362
+  },
+  {
+   "stage": "deduplication",
+   "at": "2026-11-21T07:59:55+00:00",
+   "before": 57,
+   "after": 53,
+   "merged": 4
+  },
+  {
+   "stage": "geocoding+coordinate_validation",
+   "at": "2026-11-21T07:59:55+00:00",
+   "places": 53
+  },
+  {
+   "stage": "source_verification",
+   "at": "2026-11-21T07:59:55+00:00",
+   "published": 53,
+   "review_total": 8
+  }
+ ],
+ "errors": [],
+ "warnings": [],
+ "duplicates": [
+  {
+   "kept": "osm:way/1181655940",
+   "merged": "osm:way/1181655941",
+   "reason": "nama+jarak"
+  },
+  {
+   "kept": "osm:way/1181655940",
+   "merged": "osm:way/1181655942",
+   "reason": "nama+jarak"
+  },
+  {
+   "kept": "osm:way/1181655940",
+   "merged": "osm:way/1191061001",
+   "reason": "nama+jarak"
+  },
+  {
+   "kept": "osm:way/258861962",
+   "merged": "editorial:web.padepokan-pencak-silat-indonesia",
+   "reason": "osm-match"
+  }
+ ],
+ "result": {
+  "places": 53,
+  "review": 8,
+  "rejected": 362,
+  "heritage_areas": 15,
+  "organizations": 8,
+  "provinces_with_places": 16,
+  "regencies_with_places": 43,
+  "precision": {
+   "exact": 30,
+   "regency": 23
+  }
+ },
+ "import_status": "built_not_imported"
+}

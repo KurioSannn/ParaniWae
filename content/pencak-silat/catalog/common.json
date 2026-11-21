@@ -1,0 +1,101 @@
+{
+  "schema": "silatara.common/v1",
+  "traditions": [
+    {
+      "id": "trd.psdp",
+      "slug": "pencak-silat-dasar-pendidikan",
+      "name": "Teknik Dasar Pencak Silat",
+      "local_name": null,
+      "region": "Nasional",
+      "public_summary": "Sikap dan gerak dasar pencak silat sebagaimana diajarkan dalam pendidikan jasmani dan kepelatihan di Indonesia: sikap tegak, kuda-kuda, sikap pasang, arah delapan penjuru, cara melangkah, hingga pola langkah. Materi ini disusun dari literatur kepelatihan (Nugroho 2005, yang merujuk Januarno 1989 dan Atok Iskandar 1992; serta Herdiana 2008). Setiap perguruan dapat memiliki nama, penomoran, dan cara pelaksanaan sendiri, sehingga materi ini menjadi pengantar umum, bukan kurikulum perguruan tertentu.",
+      "access_scope": "restricted",
+      "source_ids": [
+        "src.nugroho.2005",
+        "src.herdiana.2008"
+      ],
+      "content_status": "draft",
+      "related_entities": [
+        "ent.tradition.tradisi-pencak-silat",
+        "ent.organization.ipsi",
+        "ent.organization.persilat",
+        "ent.organization.maspi"
+      ],
+      "provinces": []
+    },
+    {
+      "id": "trd.silek",
+      "slug": "silek-minangkabau",
+      "name": "Silek Minangkabau",
+      "local_name": "Silek",
+      "region": "Sumatera Barat",
+      "public_summary": "Silek adalah sebutan pencak silat di Sumatera Barat. Ia diajarkan di sasaran dan surau oleh tuo silek, dan namanya sering mengikuti nagari asalnya: silek lintau, pauh, bayang, sungai patai, kumango, dan banyak lagi. Belajar silek dimulai dari baraja malangkah—belajar melangkah—dengan tiga konsep langkah: tigo, ampek, dan sambilan (Ediwar dkk. 2023).",
+      "access_scope": "restricted",
+      "source_ids": [
+        "src.ediwar.2023",
+        "src.unesco.ich.01391.nomination"
+      ],
+      "content_status": "draft",
+      "related_entities": [
+        "ent.tradition.silek-minang",
+        "ent.regional_term.silek",
+        "ent.tradition.ulu-ambek",
+        "ent.tradition.randai",
+        "ent.style.silek-kumango",
+        "ent.style.silek-tuo",
+        "ent.training_place.sasaran-sumbar",
+        "ent.community.nagari-gunung",
+        "ent.community.istano-silinduang-bulan"
+      ],
+      "provinces": [
+        "Sumatera Barat",
+        "Riau"
+      ]
+    }
+  ],
+  "editorial_partner": {
+    "slug": "silatara-tim-editorial-internal",
+    "name": "Tim Editorial SILATARA (internal — bukan mitra budaya)",
+    "partner_type": "institution",
+    "official_description": "Akun pemilik teknis untuk draf konten riset yang BELUM memiliki mitra budaya. Bukan perguruan, bukan pemegang tradisi, tidak tampil publik. Setiap draf wajib dipindahkan ke mitra/instruktur nyata sebelum dapat diverifikasi.",
+    "decision_ref": "docs/adr/0006-research-content-editorial-owner.md"
+  },
+  "safety": {
+    "space": "Ruang kosong sekitar 2 × 2 meter, tanpa perabot atau benda tajam di dekat Anda, dengan lantai rata yang tidak licin.",
+    "surface": "Lantai rata dan tidak licin. Berlatihlah tanpa alas kaki atau dengan alas yang tidak selip.",
+    "equipment": "Tidak memerlukan peralatan.",
+    "stop_when": [
+      "Nyeri pada lutut, pinggul, pergelangan kaki, atau punggung bawah.",
+      "Pusing, sesak, atau kehilangan keseimbangan berulang.",
+      "Gerakan tidak lagi terkendali karena lelah."
+    ],
+    "stop_basis": "saran keselamatan redaksi",
+    "general_limits": "Materi ini membantu Anda mengenal dan melatih gerak dasar secara mandiri. Untuk menguasai teknik dan menempuh jenjang perguruan, belajarlah bersama pelatih.",
+    "warmup": "Lakukan pemanasan ringan sebelum berlatih dan pendinginan sesudahnya."
+  },
+  "landmark_groups": {
+    "lower_body": [
+      "left_hip",
+      "right_hip",
+      "left_knee",
+      "right_knee",
+      "left_ankle",
+      "right_ankle",
+      "left_heel",
+      "right_heel",
+      "left_foot_index",
+      "right_foot_index"
+    ],
+    "upper_body": [
+      "left_shoulder",
+      "right_shoulder",
+      "left_elbow",
+      "right_elbow",
+      "left_wrist",
+      "right_wrist"
+    ],
+    "head": [
+      "nose"
+    ]
+  },
+  "anatomy_missing_text": "Tidak dirinci dalam sumber."
+}

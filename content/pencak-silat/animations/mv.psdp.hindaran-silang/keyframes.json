@@ -1,0 +1,11 @@
+{
+  "schema": "silatara.keyframes/v1",
+  "animation_id": "anim.psdp.hindaran-silang.v1",
+  "movement_id": "mv.psdp.hindaran-silang",
+  "animation_status": "needs_reference",
+  "title": "Hindaran Silang",
+  "needs": "Arah silang tidak disebut; butuh demonstrasi.",
+  "source_ids": [
+    "src.herdiana.2008"
+  ]
+}

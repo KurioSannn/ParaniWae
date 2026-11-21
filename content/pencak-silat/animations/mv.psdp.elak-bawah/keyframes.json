@@ -1,0 +1,99 @@
+{
+  "schema": "silatara.keyframes/v1",
+  "animation_id": "anim.psdp.elak-bawah.v1",
+  "movement_id": "mv.psdp.elak-bawah",
+  "animation_status": "generated",
+  "title": "Elak bawah",
+  "description": "Tampak samping: merendahkan diri dengan menekuk tungkai tanpa memindahkan kaki, lengan tetap waspada. Bentuk tanpa lawan — perlu pengawasan.",
+  "view": "side",
+  "source_ids": [
+    "src.herdiana.2008"
+  ],
+  "keyframes": [
+    {
+      "id": "kf-1",
+      "phase_id": "mv.psdp.elak-bawah#p1",
+      "label": "Siap",
+      "caption": "Tangan siaga di depan dada",
+      "pose": {
+        "pelvis": [
+          172,
+          8
+        ],
+        "feet": {
+          "L": [
+            186,
+            0
+          ],
+          "R": [
+            158,
+            0
+          ]
+        },
+        "arms": {
+          "L": [
+            8,
+            140
+          ],
+          "R": [
+            4,
+            144
+          ]
+        },
+        "hands": {
+          "L": "open",
+          "R": "open"
+        }
+      }
+    },
+    {
+      "id": "kf-2",
+      "phase_id": "mv.psdp.elak-bawah#p2",
+      "label": "Elak bawah",
+      "caption": "Tungkai ditekuk · kaki tidak berpindah",
+      "pose": {
+        "pelvis": [
+          168,
+          58
+        ],
+        "feet": {
+          "L": [
+            186,
+            0
+          ],
+          "R": [
+            158,
+            0
+          ]
+        },
+        "torso": 10,
+        "arms": {
+          "L": [
+            8,
+            140
+          ],
+          "R": [
+            4,
+            144
+          ]
+        },
+        "hands": {
+          "L": "open",
+          "R": "open"
+        }
+      }
+    }
+  ],
+  "sequence": [
+    {
+      "pose": "kf-1",
+      "hold_ms": 1000
+    },
+    {
+      "pose": "kf-2",
+      "move_ms": 600,
+      "hold_ms": 1400
+    }
+  ],
+  "return_ms": 900
+}

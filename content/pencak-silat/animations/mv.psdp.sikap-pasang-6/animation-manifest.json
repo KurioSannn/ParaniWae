@@ -1,0 +1,55 @@
+{
+  "schema": "silatara.animation-manifest/v1",
+  "animation_id": "anim.psdp.sikap-pasang-6.v1",
+  "movement_id": "mv.psdp.sikap-pasang-6",
+  "animation_status": "generated",
+  "view": "front",
+  "duration_ms": 5100,
+  "loop": true,
+  "fps_sampled": 20,
+  "frames": 103,
+  "playback_rates": [
+    0.5,
+    1.0,
+    1.5
+  ],
+  "playback_note": "SMIL tidak memiliki kontrol kecepatan bawaan; pemutar dapat memakai SVGSVGElement.pauseAnimations()/setCurrentTime() atau merender ulang dengan dur berbeda.",
+  "phase_map": {
+    "kf-1": {
+      "phase_id": "mv.psdp.sikap-pasang-6#p1",
+      "label": "Sikap tegak 2",
+      "windows": [
+        0.0,
+        0.2745,
+        0.902,
+        1.0
+      ]
+    },
+    "kf-2": {
+      "phase_id": "mv.psdp.sikap-pasang-6#p2",
+      "label": "Sikap pasang 6",
+      "windows": [
+        0.2745,
+        0.902
+      ]
+    }
+  },
+  "bounds": [
+    102.1,
+    59.8,
+    257.9,
+    416
+  ],
+  "max_ik_error_px": 0.0,
+  "rig_id": "silatara-instruktur-2d",
+  "rig_version": 1,
+  "generator": "tools/animation/silat_anim.py 1.0.0",
+  "keyframes_sha256": "365271748f367bae6046df6d77c24502bdcf6f8da8711fc1b9d371286e7fa9d4",
+  "svg_sha256": "626a545559c708958544f26bca3d1a4a6c230771b1bb99a0f3a24685253e39b0",
+  "svg_bytes": 15562,
+  "source_ids": [
+    "src.nugroho.2005"
+  ],
+  "authorship": "Interpretasi visual editorial tim SILATARA atas dokumentasi tertulis; bukan rekaman manusia; bukan demonstrasi resmi perguruan.",
+  "instructor_validation": "not_validated"
+}

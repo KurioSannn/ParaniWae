@@ -1,0 +1,32 @@
+{
+  "schema": "silatara.directory.user-list/v1",
+  "list_id": "ul.surabaya-sidoarjo.2026-11-21",
+  "description": "Daftar tempat latihan pencak silat yang dicatat manual oleh anggota tim dari pencarian peta untuk Surabaya dan sekitarnya. Hanya nama, jenis, dan alamat yang dipakai; peringkat, ulasan, jam buka, dan nomor telepon sengaja TIDAK disimpan. Entri toko (perlengkapan/pakaian) dikeluarkan.",
+  "recorded_at": "2026-11-21",
+  "recorded_by": "tim SILATARA (manual)",
+  "reference_point": {"lat": -7.2575, "lng": 112.7521, "note": "pusat Kota Surabaya; dipakai hanya untuk melengkapi Plus Code pendek"},
+  "excluded": [
+    {"name": "Naryo galery silat", "reason": "toko perlengkapan, bukan tempat latihan"},
+    {"name": "Petarung store", "reason": "toko perlengkapan, bukan tempat latihan"},
+    {"name": "GRIYA SILAT", "reason": "toko seragam, bukan tempat latihan"},
+    {"name": "JANKSH CLOTH COMPANY", "reason": "toko pakaian, bukan tempat latihan"}
+  ],
+  "places": [
+    {"name": "Perisai Diri Tenggilis", "regency_code": "35.78", "address": "Jl. Tenggilis Lama IV No.54, Surabaya", "category": "perguruan_branch", "org": "org.perisai-diri"},
+    {"name": "Latihan Pencak Silat Pagar Nusa (Nginden)", "regency_code": "35.78", "address": "Jl. Jangkungan, Nginden, Surabaya", "category": "perguruan_branch", "org": "org.pagar-nusa"},
+    {"name": "Latihan Pencak Silat NU Pagar Nusa Ranting Gundih", "regency_code": "35.78", "address": "Jl. Babat No.8-20, Surabaya", "category": "perguruan_branch", "org": "org.pagar-nusa"},
+    {"name": "Latihan Pencak Silat NU Pagar Nusa Ranting Tembok Dukuh", "regency_code": "35.78", "address": "Masjid At-Taqwa wal Istiqomah, Jl. Asembagus 5 Belakang No.7, Surabaya", "category": "perguruan_branch", "org": "org.pagar-nusa"},
+    {"name": "Pencak Silat Perisai Putih (Balai RW V Dupak Bangunrejo)", "regency_code": "35.78", "address": "Balai RW V Dupak Bangunrejo, Surabaya", "category": "perguruan_branch", "org": "org.perisai-putih"},
+    {"name": "Perguruan Pencak Beladiri Tangan Kosong Silat Merpati Putih Cabang Surabaya", "regency_code": "35.78", "address": "Jl. Semarang No.128, Surabaya", "category": "perguruan_branch", "org": "org.merpati-putih"},
+    {"name": "PSNU Pagar Nusa Ranting Gunungsari Sawunggaling", "regency_code": "35.78", "address": "Masjid Da'watul Ikhsan, Jl. Gunungsari 2, RT.001/RW.008, Surabaya", "category": "perguruan_branch", "org": "org.pagar-nusa"},
+    {"name": "Perisai Diri Surabaya", "regency_code": "35.78", "address": "Jl. Bagong Karimata No.16, Surabaya", "category": "perguruan_branch", "org": "org.perisai-diri"},
+    {"name": "PSHT Ranting Sawahan Surabaya", "regency_code": "35.78", "address": "Jl. Pakis Tirtosari, Surabaya", "category": "perguruan_branch", "org": "org.psht"},
+    {"name": "Pagar Nusa Kalilom Lor Indah", "regency_code": "35.78", "address": "Jl. Kalilom Lor Indah, Surabaya", "plus_code": "QQCH+FW2", "category": "perguruan_branch", "org": "org.pagar-nusa"},
+    {"name": "Padepokan Pencak Silat PSN Perisai Putih (Karangan Jaya)", "regency_code": "35.78", "address": "Jl. Karangan Jaya II, Surabaya", "plus_code": "MMRQ+96G", "category": "padepokan", "org": "org.perisai-putih"},
+    {"name": "Pagar Nusa Ketintang", "regency_code": "35.78", "address": "Jl. Ketintang Barat III, Surabaya", "plus_code": "MPQC+RWR", "category": "perguruan_branch", "org": "org.pagar-nusa"},
+    {"name": "Latihan Pencak Silat NU Pagar Nusa Ranting Bubutan", "regency_code": "35.78", "address": "Jl. Tembok Lor III No.8a, Surabaya", "category": "perguruan_branch", "org": "org.pagar-nusa"},
+    {"name": "PSHT Rayon Medaeng", "regency_code": "35.15", "address": "Kabupaten Sidoarjo, Jawa Timur", "category": "perguruan_branch", "org": "org.psht"},
+    {"name": "Pagar Nusa Ranting Sepanjang", "regency_code": "35.15", "address": "Kabupaten Sidoarjo, Jawa Timur", "category": "perguruan_branch", "org": "org.pagar-nusa"},
+    {"name": "Tempat Latihan IKSPI Kera Sakti Sub Wedi, Ranting Gedangan, Cabang Sidoarjo", "regency_code": "35.15", "address": "Kabupaten Sidoarjo, Jawa Timur", "category": "perguruan_branch", "org": "org.ikspi"}
+  ]
+}

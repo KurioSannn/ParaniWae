@@ -1,0 +1,208 @@
+{
+ "schema": "silatara.assessment-protocol/v1",
+ "protocol_id": "ap.psdp.kuda-kuda-tengah",
+ "movement_id": "mv.psdp.kuda-kuda-tengah",
+ "protocol_version": "1.0.0",
+ "status": "active",
+ "calibration": "editorial_v1_belum_dikalibrasi_instruktur",
+ "title": "Kuda-kuda tengah",
+ "summary": "Mengukur kesegarisan lutut dengan ujung kaki, tekukan lutut, sikap badan, keseimbangan di tengah, posisi kepalan, dan kelengkapan fase.",
+ "reference_id": "ref.mv.psdp.kuda-kuda-tengah.3d.v1",
+ "reference_animation_id": "anim.psdp.kuda-kuda-tengah.3d.v1",
+ "required_view": "front",
+ "required_landmarks": [
+  0,
+  11,
+  12,
+  23,
+  24,
+  25,
+  26,
+  27,
+  28,
+  31,
+  32,
+  15,
+  16
+ ],
+ "min_visibility": 0.55,
+ "body_positioning": [
+  "Hadapkan badan ke kamera (tampak depan).",
+  "Seluruh tubuh dari kepala sampai telapak kaki terlihat; mundur 2–3 meter dari kamera.",
+  "Sisakan ruang selebar dua langkah ke samping."
+ ],
+ "phases": [
+  {
+   "keyframe": "kf-1",
+   "label": "Sikap tegak 2",
+   "required": false
+  },
+  {
+   "keyframe": "kf-2",
+   "label": "Kaki dikangkangkan",
+   "required": true
+  },
+  {
+   "keyframe": "kf-3",
+   "label": "Kuda-kuda tengah",
+   "required": true
+  }
+ ],
+ "phase_completion_weight": 10,
+ "criteria": [
+  {
+   "id": "knee_over_toe",
+   "label": "Lutut segaris dengan ibu jari kaki",
+   "feature": "knee_over_toe",
+   "side": "both_mean",
+   "phase_keyframe": "kf-3",
+   "aggregate": "median",
+   "target": 0,
+   "tolerance": 0.06,
+   "falloff": 0.15,
+   "weight": 25,
+   "min_confidence": 0.5,
+   "unit": "ratio",
+   "rationale": "Kedua lutut ditekuk hingga segaris tegak lurus dengan ibu jari kaki kiri dan kanan.",
+   "basis": "source",
+   "source_ids": [
+    "src.nugroho.2005"
+   ],
+   "locator": "hlm. 147",
+   "feedback": {
+    "below": "Lutut sudah segaris dengan ujung kaki.",
+    "above": "Lutut belum segaris dengan ibu jari kaki. Arahkan lutut tegak lurus di atas ibu jari kaki, jangan masuk ke dalam atau keluar.",
+    "ok": "Lutut segaris dengan ibu jari kaki."
+   }
+  },
+  {
+   "id": "knee_bend",
+   "label": "Lutut ditekuk sedikit",
+   "feature": "knee_flexion",
+   "side": "both_mean",
+   "phase_keyframe": "kf-3",
+   "aggregate": "median",
+   "target_range": [
+    10,
+    45
+   ],
+   "tolerance": 5,
+   "falloff": 25,
+   "weight": 15,
+   "min_confidence": 0.45,
+   "requires_world": true,
+   "unit": "deg",
+   "rationale": "Kedua lutut sedikit ditekuk. Sumber tidak memberi sudut; rentang mengikuti peraga referensi.",
+   "basis": "reference_illustration",
+   "source_ids": [
+    "src.nugroho.2005",
+    "src.herdiana.2008"
+   ],
+   "locator": "Nugroho hlm. 147; Herdiana hlm. 12",
+   "feedback": {
+    "below": "Lutut belum ditekuk. Turunkan badan sedikit dengan menekuk kedua lutut.",
+    "above": "Lutut terlalu dalam ditekuk. Panduan meminta lutut ditekuk sedikit saja.",
+    "ok": "Tekukan lutut sesuai panduan.",
+    "unmeasured": "Tekukan lutut dari depan memerlukan pengukuran kedalaman yang belum cukup yakin pada rekaman ini."
+   }
+  },
+  {
+   "id": "torso_upright",
+   "label": "Badan tegak",
+   "feature": "torso_incline",
+   "side": "both_mean",
+   "phase_keyframe": "kf-3",
+   "aggregate": "median",
+   "target": 0,
+   "tolerance": 8,
+   "falloff": 20,
+   "weight": 15,
+   "min_confidence": 0.5,
+   "unit": "deg",
+   "rationale": "Badan tegak.",
+   "basis": "source",
+   "source_ids": [
+    "src.nugroho.2005"
+   ],
+   "locator": "hlm. 147",
+   "feedback": {
+    "below": "Badan tegak.",
+    "above": "Badan masih condong ke samping. Tegakkan badan dengan bahu sejajar di atas pinggul.",
+    "ok": "Badan tegak."
+   }
+  },
+  {
+   "id": "balance",
+   "label": "Keseimbangan di tengah",
+   "feature": "balance_center",
+   "side": "both_mean",
+   "phase_keyframe": "kf-3",
+   "aggregate": "median",
+   "target": 0,
+   "tolerance": 0.1,
+   "falloff": 0.3,
+   "weight": 20,
+   "min_confidence": 0.5,
+   "unit": "ratio",
+   "rationale": "Titik keseimbangan berada di tengah-tengah kedua kaki.",
+   "basis": "source",
+   "source_ids": [
+    "src.nugroho.2005"
+   ],
+   "locator": "hlm. 147",
+   "feedback": {
+    "below": "Keseimbangan sudah di tengah.",
+    "above": "Berat badan masih condong ke salah satu kaki. Bagi berat badan sama rata sehingga pinggul berada di tengah kedua kaki.",
+    "ok": "Keseimbangan di tengah."
+   }
+  },
+  {
+   "id": "fists_waist",
+   "label": "Kepalan di pinggang",
+   "feature": "wrist_hip_height",
+   "side": "both_mean",
+   "phase_keyframe": "kf-3",
+   "aggregate": "median",
+   "target_range": [
+    -0.1,
+    0.3
+   ],
+   "tolerance": 0.05,
+   "falloff": 0.3,
+   "weight": 15,
+   "min_confidence": 0.45,
+   "unit": "ratio",
+   "rationale": "Lengan dari sikap tegak 2: kepalan di pinggang.",
+   "basis": "source",
+   "source_ids": [
+    "src.nugroho.2005"
+   ],
+   "locator": "hlm. 147",
+   "feedback": {
+    "below": "Kepalan berada di bawah pinggang. Tarik kepalan ke samping pinggang.",
+    "above": "Kepalan terlalu tinggi. Letakkan kepalan di samping pinggang.",
+    "ok": "Kepalan di pinggang."
+   }
+  }
+ ],
+ "alignment_features": [
+  "stance_width_ratio",
+  "knee_flexion",
+  "balance_center"
+ ],
+ "confidence_requirements": {
+  "min_valid_frame_ratio": 0.6,
+  "min_frames": 30,
+  "max_unmeasured_weight_ratio": 0.4
+ },
+ "scoring_formula": "total = round( (Σ skor_kriteria×bobot + skor_fase×bobot_fase) / (Σ bobot kriteria terukur + bobot_fase) ); skor_kriteria = 100 di dalam toleransi, turun linier hingga 0 pada toleransi+falloff; skor_fase = % fase wajib yang terdeteksi.",
+ "interpretation_notes": [
+  "Lebar kangkang tidak disebut sumber; hanya keterbukaan kaki yang dideteksi (fase), tanpa skor lebar.",
+  "Kesegarisan lutut diukur pada bidang depan (2D)."
+ ],
+ "source_ids": [
+  "src.nugroho.2005",
+  "src.herdiana.2008"
+ ],
+ "disclaimer": "Skor menunjukkan kesesuaian dengan panduan gerak SILATARA yang disusun dari sumber, bukan penilaian resmi perguruan. Mintalah pelatih memeriksa teknik Anda."
+}

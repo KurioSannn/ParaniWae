@@ -1,0 +1,8 @@
+{
+  "schema": "silatara.directory.review-decisions/v1",
+  "note": "Keputusan peninjau redaksi atas kandidat. Setiap keputusan wajib beralasan. 'accept' tetap melewati validasi koordinat & sumber.",
+  "decisions": {
+    "osm:way/1419755765": {"decision": "reject", "reason": "Gedung di dalam kompleks Sport Centre Kuantan Singingi (±200 m) yang sudah tercatat; bukan tempat terpisah.", "reviewed_at": "2026-11-21"},
+    "osm:way/1419755764": {"decision": "reject", "reason": "Gedung di dalam kompleks Sport Centre Kuantan Singingi (±150 m) yang sudah tercatat; bukan tempat terpisah.", "reviewed_at": "2026-11-21"}
+  }
+}

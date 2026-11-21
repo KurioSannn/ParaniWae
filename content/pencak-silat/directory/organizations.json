@@ -1,0 +1,234 @@
+{
+ "pipeline_version": "1.0.0",
+ "job_id": "dir-20261121-j",
+ "generated_at": "2026-11-21T12:16:13+00:00",
+ "attribution": [
+  "© kontributor OpenStreetMap (ODbL 1.0)",
+  "Wilayah: Kepmendagri No 300.2.2-2138 Tahun 2025 (dataset cahyadsn/wilayah, MIT)"
+ ],
+ "schema": "silatara.directory.organizations/v1",
+ "organizations": [
+  {
+   "key": "org.psht",
+   "official_name": "Persaudaraan Setia Hati Terate",
+   "short_name": "PSHT",
+   "organization_type": "perguruan",
+   "entity_id": "ent.perguruan.psht",
+   "place_count": 162,
+   "sources": [
+    {
+     "source_type": "academic",
+     "source_id": "src.siswantoyo.2005",
+     "url": "https://journal.uny.ac.id/index.php/jorpres/article/download/6859/5892",
+     "title": "Mengenal Makna Lambang 3 Anggota Perguruan Historis yang Berpusat di Yogyakarta",
+     "publisher": "Siswantoyo (FIK UNY)",
+     "year": 2005,
+     "license": "diparafrasa; lambang perguruan TIDAK direproduksi",
+     "read_status": "full_text",
+     "supports": [
+      "daftar 10 perguruan historis/khusus IPSI (mengutip Noto Suyitno 2003)",
+      "penetapan pada Kongres/Munas IPSI IV 1973",
+      "PERPI Harimurti, Phashadja Mataram, Tapak Suci berpusat di Yogyakarta"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "org.ikspi",
+   "official_name": "Ikatan Keluarga Silat Putra Indonesia Kera Sakti",
+   "short_name": "IKSPI Kera Sakti",
+   "organization_type": "perguruan",
+   "entity_id": null,
+   "place_count": 44,
+   "sources": []
+  },
+  {
+   "key": "org.merpati-putih",
+   "official_name": "Perguruan Pencak Silat Beladiri Tangan Kosong Merpati Putih",
+   "short_name": "Merpati Putih",
+   "organization_type": "perguruan",
+   "entity_id": null,
+   "place_count": 29,
+   "sources": []
+  },
+  {
+   "key": "org.tapak-suci",
+   "official_name": "Tapak Suci Putera Muhammadiyah",
+   "short_name": "Tapak Suci",
+   "organization_type": "perguruan",
+   "entity_id": "ent.perguruan.tapak-suci",
+   "place_count": 18,
+   "sources": [
+    {
+     "source_type": "academic",
+     "source_id": "src.siswantoyo.2005",
+     "url": "https://journal.uny.ac.id/index.php/jorpres/article/download/6859/5892",
+     "title": "Mengenal Makna Lambang 3 Anggota Perguruan Historis yang Berpusat di Yogyakarta",
+     "publisher": "Siswantoyo (FIK UNY)",
+     "year": 2005,
+     "license": "diparafrasa; lambang perguruan TIDAK direproduksi",
+     "read_status": "full_text",
+     "supports": [
+      "daftar 10 perguruan historis/khusus IPSI (mengutip Noto Suyitno 2003)",
+      "penetapan pada Kongres/Munas IPSI IV 1973",
+      "PERPI Harimurti, Phashadja Mataram, Tapak Suci berpusat di Yogyakarta"
+     ]
+    },
+    {
+     "source_type": "heritage_record",
+     "source_id": "src.unesco.ich.01391.nomination",
+     "url": "https://ich.unesco.org/doc/src/42930-EN.doc",
+     "title": "Nomination file No. 01391 for inscription in 2019 (form ICH-02, English)",
+     "publisher": "Republik Indonesia (Kemendikbud) via UNESCO",
+     "year": 2018,
+     "license": "dokumen publik UNESCO; data kontak pribadi di dalamnya TIDAK disalin ke repo",
+     "read_status": "full_text",
+     "supports": [
+      "28 nama lokal (B.3)",
+      "17 provinsi sebaran (D)",
+      "sekolah tersebar di 34 provinsi (D)"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "org.pagar-nusa",
+   "official_name": "Pagar Nusa",
+   "short_name": "Pagar Nusa",
+   "organization_type": "perguruan",
+   "entity_id": "ent.perguruan.pagar-nusa",
+   "place_count": 55,
+   "sources": [
+    {
+     "source_type": "heritage_record",
+     "source_id": "src.unesco.ich.01391.nomination",
+     "url": "https://ich.unesco.org/doc/src/42930-EN.doc",
+     "title": "Nomination file No. 01391 for inscription in 2019 (form ICH-02, English)",
+     "publisher": "Republik Indonesia (Kemendikbud) via UNESCO",
+     "year": 2018,
+     "license": "dokumen publik UNESCO; data kontak pribadi di dalamnya TIDAK disalin ke repo",
+     "read_status": "full_text",
+     "supports": [
+      "28 nama lokal (B.3)",
+      "17 provinsi sebaran (D)",
+      "sekolah tersebar di 34 provinsi (D)"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "org.persinas-asad",
+   "official_name": "Persinas ASAD",
+   "short_name": "ASAD",
+   "organization_type": "perguruan",
+   "entity_id": null,
+   "place_count": 7,
+   "sources": []
+  },
+  {
+   "key": "org.ipsi",
+   "official_name": "Ikatan Pencak Silat Indonesia",
+   "short_name": "IPSI",
+   "organization_type": "induk_organisasi",
+   "entity_id": "ent.organization.ipsi",
+   "place_count": 15,
+   "sources": [
+    {
+     "source_type": "heritage_record",
+     "source_id": "src.unesco.ich.01391.nomination",
+     "url": "https://ich.unesco.org/doc/src/42930-EN.doc",
+     "title": "Nomination file No. 01391 for inscription in 2019 (form ICH-02, English)",
+     "publisher": "Republik Indonesia (Kemendikbud) via UNESCO",
+     "year": 2018,
+     "license": "dokumen publik UNESCO; data kontak pribadi di dalamnya TIDAK disalin ke repo",
+     "read_status": "full_text",
+     "supports": [
+      "28 nama lokal (B.3)",
+      "17 provinsi sebaran (D)",
+      "sekolah tersebar di 34 provinsi (D)"
+     ]
+    },
+    {
+     "source_type": "academic",
+     "source_id": "src.siswantoyo.2005",
+     "url": "https://journal.uny.ac.id/index.php/jorpres/article/download/6859/5892",
+     "title": "Mengenal Makna Lambang 3 Anggota Perguruan Historis yang Berpusat di Yogyakarta",
+     "publisher": "Siswantoyo (FIK UNY)",
+     "year": 2005,
+     "license": "diparafrasa; lambang perguruan TIDAK direproduksi",
+     "read_status": "full_text",
+     "supports": [
+      "daftar 10 perguruan historis/khusus IPSI (mengutip Noto Suyitno 2003)",
+      "penetapan pada Kongres/Munas IPSI IV 1973",
+      "PERPI Harimurti, Phashadja Mataram, Tapak Suci berpusat di Yogyakarta"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "org.perisai-diri",
+   "official_name": "Keluarga Silat Nasional Indonesia Perisai Diri",
+   "short_name": "Perisai Diri",
+   "organization_type": "perguruan",
+   "entity_id": "ent.perguruan.perisai-diri",
+   "place_count": 14,
+   "sources": [
+    {
+     "source_type": "academic",
+     "source_id": "src.siswantoyo.2005",
+     "url": "https://journal.uny.ac.id/index.php/jorpres/article/download/6859/5892",
+     "title": "Mengenal Makna Lambang 3 Anggota Perguruan Historis yang Berpusat di Yogyakarta",
+     "publisher": "Siswantoyo (FIK UNY)",
+     "year": 2005,
+     "license": "diparafrasa; lambang perguruan TIDAK direproduksi",
+     "read_status": "full_text",
+     "supports": [
+      "daftar 10 perguruan historis/khusus IPSI (mengutip Noto Suyitno 2003)",
+      "penetapan pada Kongres/Munas IPSI IV 1973",
+      "PERPI Harimurti, Phashadja Mataram, Tapak Suci berpusat di Yogyakarta"
+     ]
+    },
+    {
+     "source_type": "heritage_record",
+     "source_id": "src.unesco.ich.01391.nomination",
+     "url": "https://ich.unesco.org/doc/src/42930-EN.doc",
+     "title": "Nomination file No. 01391 for inscription in 2019 (form ICH-02, English)",
+     "publisher": "Republik Indonesia (Kemendikbud) via UNESCO",
+     "year": 2018,
+     "license": "dokumen publik UNESCO; data kontak pribadi di dalamnya TIDAK disalin ke repo",
+     "read_status": "full_text",
+     "supports": [
+      "28 nama lokal (B.3)",
+      "17 provinsi sebaran (D)",
+      "sekolah tersebar di 34 provinsi (D)"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "org.perisai-putih",
+   "official_name": "PSN Perisai Putih",
+   "short_name": "Perisai Putih",
+   "organization_type": "perguruan",
+   "entity_id": "ent.perguruan.perisai-putih",
+   "place_count": 4,
+   "sources": [
+    {
+     "source_type": "academic",
+     "source_id": "src.siswantoyo.2005",
+     "url": "https://journal.uny.ac.id/index.php/jorpres/article/download/6859/5892",
+     "title": "Mengenal Makna Lambang 3 Anggota Perguruan Historis yang Berpusat di Yogyakarta",
+     "publisher": "Siswantoyo (FIK UNY)",
+     "year": 2005,
+     "license": "diparafrasa; lambang perguruan TIDAK direproduksi",
+     "read_status": "full_text",
+     "supports": [
+      "daftar 10 perguruan historis/khusus IPSI (mengutip Noto Suyitno 2003)",
+      "penetapan pada Kongres/Munas IPSI IV 1973",
+      "PERPI Harimurti, Phashadja Mataram, Tapak Suci berpusat di Yogyakarta"
+     ]
+    }
+   ]
+  }
+ ]
+}

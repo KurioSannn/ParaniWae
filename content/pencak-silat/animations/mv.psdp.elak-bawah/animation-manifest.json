@@ -1,0 +1,55 @@
+{
+  "schema": "silatara.animation-manifest/v1",
+  "animation_id": "anim.psdp.elak-bawah.v1",
+  "movement_id": "mv.psdp.elak-bawah",
+  "animation_status": "generated",
+  "view": "side",
+  "duration_ms": 3900,
+  "loop": true,
+  "fps_sampled": 20,
+  "frames": 79,
+  "playback_rates": [
+    0.5,
+    1.0,
+    1.5
+  ],
+  "playback_note": "SMIL tidak memiliki kontrol kecepatan bawaan; pemutar dapat memakai SVGSVGElement.pauseAnimations()/setCurrentTime() atau merender ulang dengan dur berbeda.",
+  "phase_map": {
+    "kf-1": {
+      "phase_id": "mv.psdp.elak-bawah#p1",
+      "label": "Siap",
+      "windows": [
+        0.0,
+        0.3333,
+        0.8846,
+        1.0
+      ]
+    },
+    "kf-2": {
+      "phase_id": "mv.psdp.elak-bawah#p2",
+      "label": "Elak bawah",
+      "windows": [
+        0.3333,
+        0.8846
+      ]
+    }
+  },
+  "bounds": [
+    138.0,
+    67.8,
+    251.1,
+    416.0
+  ],
+  "max_ik_error_px": 0.0,
+  "rig_id": "silatara-instruktur-2d",
+  "rig_version": 1,
+  "generator": "tools/animation/silat_anim.py 1.0.0",
+  "keyframes_sha256": "075d321d2d2f0a8d498e5c4c22c9ac043f9986103a9e0298ced6cdc7d279a415",
+  "svg_sha256": "e0868d307306a2469d3ce9af9b67f2f55b0bc2717fdf540728e7876de7de72cf",
+  "svg_bytes": 12573,
+  "source_ids": [
+    "src.herdiana.2008"
+  ],
+  "authorship": "Interpretasi visual editorial tim SILATARA atas dokumentasi tertulis; bukan rekaman manusia; bukan demonstrasi resmi perguruan.",
+  "instructor_validation": "not_validated"
+}

@@ -1,0 +1,108 @@
+{
+  "schema": "silatara.keyframes/v1",
+  "animation_id": "anim.psdp.hindaran-hadap.v1",
+  "movement_id": "mv.psdp.hindaran-hadap",
+  "animation_status": "generated",
+  "title": "Hindaran hadap",
+  "description": "Tampak samping: satu kaki dipindah ke belakang membentuk kuda-kuda belakang, badan tetap menghadap ke depan. Bentuk tanpa lawan — perlu pengawasan.",
+  "view": "side",
+  "source_ids": [
+    "src.herdiana.2008"
+  ],
+  "keyframes": [
+    {
+      "id": "kf-1",
+      "phase_id": "mv.psdp.hindaran-hadap#p1",
+      "label": "Siap",
+      "caption": "Sikap tegak 2",
+      "pose": {
+        "pelvis": [
+          172,
+          0
+        ],
+        "feet": {
+          "L": [
+            176,
+            0
+          ],
+          "R": [
+            168,
+            0
+          ]
+        },
+        "arms": {
+          "L": [
+            -28,
+            95
+          ],
+          "R": [
+            -24,
+            92
+          ]
+        },
+        "hands": {
+          "L": "fist",
+          "R": "fist"
+        }
+      }
+    },
+    {
+      "id": "kf-2",
+      "phase_id": "mv.psdp.hindaran-hadap#p2",
+      "label": "Hindaran hadap",
+      "caption": "Kaki ke belakang · tetap menghadap depan",
+      "pose": {
+        "pelvis": [
+          124,
+          12
+        ],
+        "feet": {
+          "L": [
+            172,
+            0
+          ],
+          "R": [
+            110,
+            0
+          ]
+        },
+        "arms": {
+          "L": [
+            -28,
+            95
+          ],
+          "R": [
+            -24,
+            92
+          ]
+        },
+        "hands": {
+          "L": "fist",
+          "R": "fist"
+        }
+      },
+      "arrow": {
+        "from": [
+          160,
+          418
+        ],
+        "to": [
+          104,
+          418
+        ]
+      }
+    }
+  ],
+  "sequence": [
+    {
+      "pose": "kf-1",
+      "hold_ms": 1000
+    },
+    {
+      "pose": "kf-2",
+      "move_ms": 700,
+      "hold_ms": 1800
+    }
+  ],
+  "return_ms": 1000
+}
