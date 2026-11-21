@@ -25,7 +25,7 @@ from sqlalchemy.orm import Mapped, mapped_column
 
 from app.core.db import Base
 from app.models._mixins import IdMixin, TimestampMixin
-from app.models._workflow import WorkflowMixin, workflow_constraints
+from app.models._workflow import ContentBasisMixin, WorkflowMixin, content_basis_check, workflow_constraints
 
 LEVELS = ("beginner", "intermediate", "advanced")
 SAFETY_CATEGORIES = ("solo_beginner", "supervised_practice", "contact_practice", "weapon_related", "restricted")
@@ -59,7 +59,10 @@ class PartnerDocument(IdMixin, TimestampMixin, Base):
     """Dokumen persetujuan/identitas organisasi. PRIVAT: hanya lewat endpoint terotorisasi."""
 
     __tablename__ = "partner_documents"
-    __table_args__ = (CheckConstraint("kind IN ('approval_letter','identity','other')", name="ck_partner_docs_kind"),)
+    __table_args__ = (
+        CheckConstraint("kind IN ('approval_letter','identity','other')", name="ck_partner_docs_kind"),
+        CheckConstraint("scan_status IN ('pending','clean','infected','error','not_scanned')", name="ck_partner_docs_scan"),
+    )
     partner_id: Mapped[uuid.UUID] = mapped_column(
         UUID(as_uuid=True), ForeignKey("partners.id", ondelete="CASCADE"), nullable=False, index=True
     )
@@ -70,6 +73,11 @@ class PartnerDocument(IdMixin, TimestampMixin, Base):
     mime: Mapped[str] = mapped_column(String(100), nullable=False)
     size_bytes: Mapped[int] = mapped_column(BigInteger, nullable=False)
     sha256: Mapped[str] = mapped_column(String(64), nullable=False)
+    scan_status: Mapped[str] = mapped_column(String(12), nullable=False, server_default="not_scanned")
+    scanned_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    scan_detail: Mapped[str | None] = mapped_column(String(300))
+    scan_attempts: Mapped[int] = mapped_column(Integer, nullable=False, server_default="0")
+    scan_next_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
     uploaded_by_user_id: Mapped[uuid.UUID | None] = mapped_column(
         UUID(as_uuid=True), ForeignKey("users.id", ondelete="SET NULL")
     )
@@ -90,12 +98,13 @@ class PartnerVerificationEvent(IdMixin, TimestampMixin, Base):
     evidence_ref: Mapped[str | None] = mapped_column(Text)
 
 
-class MovementDocument(WorkflowMixin, IdMixin, TimestampMixin, Base):
+class MovementDocument(ContentBasisMixin, WorkflowMixin, IdMixin, TimestampMixin, Base):
     """Satu baris = satu VERSI dokumentasi gerakan. Versi `published`/`archived`/`pending_review`/`verified` immutable
     (trigger DB `movement_documents_immutable`)."""
 
     __tablename__ = "movement_documents"
     __table_args__ = (
+        content_basis_check("movement_documents"),
         UniqueConstraint("movement_id", "version_no", name="uq_movement_doc_version"),
         CheckConstraint("version_no >= 1", name="ck_movement_doc_version_pos"),
         CheckConstraint(
@@ -114,9 +123,9 @@ class MovementDocument(WorkflowMixin, IdMixin, TimestampMixin, Base):
         # verified/published non-demo wajib sudah ditinjau kurator dan dikonfirmasi mitra (jejak identitas + waktu)
         CheckConstraint(
             "is_demo OR legacy_import OR status NOT IN ('verified','published') OR "
-            "(curator_reviewed_by_user_id IS NOT NULL AND curator_reviewed_at IS NOT NULL "
-            "AND partner_confirmed_by_user_id IS NOT NULL AND partner_confirmed_at IS NOT NULL "
-            "AND approval_evidence_ref IS NOT NULL)",
+            "(curator_reviewed_by_user_id IS NOT NULL AND curator_reviewed_at IS NOT NULL AND approval_evidence_ref IS NOT NULL "
+            "AND (content_basis = 'source_backed' OR "
+            "(partner_confirmed_by_user_id IS NOT NULL AND partner_confirmed_at IS NOT NULL)))",
             name="ck_movement_doc_verified_has_reviews",
         ),
         *workflow_constraints("movement_documents"),
@@ -185,9 +194,17 @@ class ReferenceMedia(IdMixin, TimestampMixin, Base):
     __tablename__ = "reference_media"
     __table_args__ = (
         CheckConstraint("kind IN ('video','image')", name="ck_media_kind"),
+        CheckConstraint("scan_status IN ('pending','clean','infected','error','not_scanned')", name="ck_media_scan"),
+        # media publik wajib sudah dipindai bersih
+        CheckConstraint("access_level <> 'public' OR scan_status = 'clean'", name="ck_media_public_clean"),
         CheckConstraint("declaration_confirmed", name="ck_media_declared"),
         CheckConstraint("consent_status IN ('declared','verified','rejected','revoked')", name="ck_media_consent"),
-        CheckConstraint("access_level IN ('private','reviewers','public')", name="ck_media_access"),
+        CheckConstraint("access_level IN ('private','reviewers','pilot_cohort','public')", name="ck_media_access"),
+        # media untuk peserta cohort pilot wajib izin terverifikasi + lolos pindai
+        CheckConstraint(
+            "access_level <> 'pilot_cohort' OR (consent_status = 'verified' AND scan_status = 'clean')",
+            name="ck_media_cohort_verified_clean",
+        ),
         CheckConstraint(
             "license_type IN ('instructor_owned','partner_permission','other_written_permission')",
             name="ck_media_license",
@@ -215,13 +232,19 @@ class ReferenceMedia(IdMixin, TimestampMixin, Base):
     declaration_confirmed: Mapped[bool] = mapped_column(Boolean, nullable=False)
     permission_evidence_ref: Mapped[str | None] = mapped_column(Text)
     consent_status: Mapped[str] = mapped_column(String(10), nullable=False, server_default="declared")
-    access_level: Mapped[str] = mapped_column(String(10), nullable=False, server_default="private")
+    access_level: Mapped[str] = mapped_column(String(14), nullable=False, server_default="private")
     retention_until: Mapped[date | None] = mapped_column(Date)
     decided_by_user_id: Mapped[uuid.UUID | None] = mapped_column(
         UUID(as_uuid=True), ForeignKey("users.id", ondelete="SET NULL")
     )
     decided_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
     is_demo: Mapped[bool] = mapped_column(Boolean, nullable=False, server_default=text("false"))
+    # pending=menunggu pemindai (file di karantina) | clean | infected (file dihapus) | error | not_scanned (pemindai tidak aktif/legacy)
+    scan_status: Mapped[str] = mapped_column(String(12), nullable=False, server_default="not_scanned")
+    scanned_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    scan_detail: Mapped[str | None] = mapped_column(String(300))
+    scan_attempts: Mapped[int] = mapped_column(Integer, nullable=False, server_default="0")
+    scan_next_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
 
 
 class MovementAnnotation(IdMixin, TimestampMixin, Base):

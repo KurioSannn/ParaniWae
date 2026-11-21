@@ -17,14 +17,15 @@ from sqlalchemy.orm import Mapped, mapped_column
 
 from app.core.db import Base
 from app.models._mixins import IdMixin, TimestampMixin
-from app.models._workflow import WorkflowMixin, workflow_constraints
+from app.models._workflow import ContentBasisMixin, WorkflowMixin, content_basis_check, workflow_constraints
 
 
-class CulturalTradition(WorkflowMixin, IdMixin, TimestampMixin, Base):
+class CulturalTradition(ContentBasisMixin, WorkflowMixin, IdMixin, TimestampMixin, Base):
     """Tradisi/aliran. Tidak diratakan menjadi satu standar universal (CLAUDE.md aturan 4)."""
 
     __tablename__ = "cultural_traditions"
     __table_args__ = (
+        content_basis_check("cultural_traditions"),
         CheckConstraint(
             "access_scope IN ('public','community','restricted')", name="ck_traditions_access"
         ),
@@ -95,11 +96,12 @@ class TraditionPartner(IdMixin, TimestampMixin, Base):
     )
 
 
-class Movement(WorkflowMixin, IdMixin, TimestampMixin, Base):
+class Movement(ContentBasisMixin, WorkflowMixin, IdMixin, TimestampMixin, Base):
     """Gerakan. Hanya `solo_beginner` yang boleh untuk latihan AI tanpa pengawasan."""
 
     __tablename__ = "movements"
     __table_args__ = (
+        content_basis_check("movements"),
         UniqueConstraint("tradition_id", "slug", name="uq_movements_tradition_slug"),
         CheckConstraint(
             "practice_mode IN ('solo_beginner','supervised_only','not_for_practice')",

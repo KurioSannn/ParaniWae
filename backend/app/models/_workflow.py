@@ -33,9 +33,7 @@ def workflow_constraints(prefix: str) -> list[CheckConstraint]:
 
 
 class WorkflowMixin:
-    status: Mapped[str] = mapped_column(
-        String(16), nullable=False, server_default="draft", index=True
-    )
+    status: Mapped[str] = mapped_column(String(16), nullable=False, server_default="draft", index=True)
     is_demo: Mapped[bool] = mapped_column(Boolean, nullable=False, server_default=text("false"))
     source_citation: Mapped[str | None] = mapped_column(Text)
     source_url: Mapped[str | None] = mapped_column(String(500))
@@ -50,3 +48,19 @@ class WorkflowMixin:
     approval_evidence_ref: Mapped[str | None] = mapped_column(Text)
     published_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
     deleted_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+
+
+#: Dasar konten (ADR-0008): membedakan pengetahuan umum berbasis sumber, kurikulum resmi mitra, dan materi terbatas.
+CONTENT_BASES = ("source_backed", "official_curriculum", "partner_restricted")
+
+
+def content_basis_check(table: str) -> CheckConstraint:
+    return CheckConstraint(
+        "content_basis IN (" + ",".join(f"'{b}'" for b in CONTENT_BASES) + ")", name=f"ck_{table}_content_basis"
+    )
+
+
+class ContentBasisMixin:
+    content_basis: Mapped[str] = mapped_column(
+        String(24), nullable=False, server_default="official_curriculum", index=True
+    )

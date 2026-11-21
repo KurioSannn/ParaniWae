@@ -1,5 +1,16 @@
+from app.models.assessment import AssessmentAttempt
 from app.models.audit import AuditLog
 from app.models.auth import AuthToken, OutboxEmail, RateLimit, Session
+from app.models.directory import (
+    DirectoryHeritageArea,
+    DirectoryImportJob,
+    DirectoryOrganization,
+    DirectoryPlace,
+    DirectoryPlaceHistory,
+    DirectoryPlaceSource,
+    DirectoryRegion,
+    DirectorySubmission,
+)
 from app.models.heritage import (
     CulturalTradition,
     Instructor,
@@ -16,6 +27,20 @@ from app.models.learning import (
     LessonProgress,
 )
 from app.models.partner import Partner
+from app.models.pilot import (
+    CohortInvitation,
+    CohortMember,
+    CohortSession,
+    InstructorNote,
+    JobRun,
+    NotificationOutbox,
+    PilotAnnouncement,
+    PilotCohort,
+    PilotConsent,
+    PilotProgram,
+    PilotSurvey,
+    SurveyResponse,
+)
 from app.models.practice import PracticeSession
 from app.models.studio import (
     MovementAnnotation,
@@ -29,6 +54,27 @@ from app.models.studio import (
 from app.models.user import User
 
 __all__ = [
+    "AssessmentAttempt",
+    "DirectoryHeritageArea",
+    "DirectoryImportJob",
+    "DirectoryOrganization",
+    "DirectoryPlace",
+    "DirectoryPlaceHistory",
+    "DirectoryPlaceSource",
+    "DirectoryRegion",
+    "DirectorySubmission",
+    "CohortInvitation",
+    "CohortMember",
+    "CohortSession",
+    "InstructorNote",
+    "JobRun",
+    "NotificationOutbox",
+    "PilotAnnouncement",
+    "PilotCohort",
+    "PilotConsent",
+    "PilotProgram",
+    "PilotSurvey",
+    "SurveyResponse",
     "AuditLog",
     "AuthToken",
     "Course",

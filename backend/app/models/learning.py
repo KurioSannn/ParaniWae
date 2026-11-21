@@ -16,17 +16,20 @@ from sqlalchemy.orm import Mapped, mapped_column
 
 from app.core.db import Base
 from app.models._mixins import IdMixin, TimestampMixin
-from app.models._workflow import WorkflowMixin, workflow_constraints
+from app.models._workflow import ContentBasisMixin, WorkflowMixin, content_basis_check, workflow_constraints
 
 LEVELS = ("beginner", "intermediate", "advanced")
 
 
-class Course(WorkflowMixin, IdMixin, TimestampMixin, Base):
+class Course(ContentBasisMixin, WorkflowMixin, IdMixin, TimestampMixin, Base):
     """Kurikulum / kelas. Terikat ke satu tradisi dan mitra (tidak diratakan lintas aliran)."""
 
     __tablename__ = "courses"
     __table_args__ = (
+        content_basis_check("courses"),
         CheckConstraint("level IN ('beginner','intermediate','advanced')", name="ck_courses_level"),
+        # Cakupan distribusi: `public` (katalog publik) | `pilot_private` (hanya peserta cohort program pilot yang sah).
+        CheckConstraint("distribution_scope IN ('public','pilot_private')", name="ck_courses_distribution_scope"),
         *workflow_constraints("courses"),
     )
 
@@ -51,6 +54,7 @@ class Course(WorkflowMixin, IdMixin, TimestampMixin, Base):
     level: Mapped[str] = mapped_column(String(16), nullable=False, server_default="beginner")
     estimated_minutes: Mapped[int | None] = mapped_column(Integer)
     safety_notes: Mapped[str | None] = mapped_column(Text)
+    distribution_scope: Mapped[str] = mapped_column(String(16), nullable=False, server_default="public", index=True)
 
 
 class CourseModule(IdMixin, TimestampMixin, Base):
@@ -70,11 +74,12 @@ class CourseModule(IdMixin, TimestampMixin, Base):
     order_index: Mapped[int] = mapped_column(Integer, nullable=False)
 
 
-class Lesson(WorkflowMixin, IdMixin, TimestampMixin, Base):
+class Lesson(ContentBasisMixin, WorkflowMixin, IdMixin, TimestampMixin, Base):
     """Pelajaran. Modul dan kursus dijamin konsisten lewat FK komposit."""
 
     __tablename__ = "lessons"
     __table_args__ = (
+        content_basis_check("lessons"),
         UniqueConstraint("id", "course_id", name="uq_lessons_id_course"),
         UniqueConstraint("course_id", "slug", name="uq_lessons_course_slug"),
         ForeignKeyConstraint(
