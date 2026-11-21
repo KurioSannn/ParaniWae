@@ -9,12 +9,19 @@ from sqlalchemy.orm import Session
 from app.core.errors import ApiError
 from app.models import Movement, MovementAnnotation, MovementDocument, MovementPhase, ReferenceMedia, User
 from app.schemas import studio as sc
-from app.services import audit, storage
+from app.services import audit, scanner, storage
 from app.services import studio_perm as perm
 from app.services import visibility as vis
 from app.services.auth import now
 
 LICENSES = {"instructor_owned", "partner_permission", "other_written_permission"}
+SCAN_LABEL = {
+    "pending": "Di karantina, menunggu pemindaian",
+    "clean": "Lolos pemindaian",
+    "infected": "Terinfeksi (dihapus)",
+    "error": "Pemindaian gagal",
+    "not_scanned": "Belum dipindai (pemindai tidak aktif)",
+}
 CONSENT_LABEL = {
     "declared": "Dideklarasikan (belum diverifikasi)",
     "verified": "Izin terverifikasi",
@@ -55,7 +62,7 @@ def upload(db: Session, user: User, m: Movement, file: UploadFile, f: dict, rid)
             "Deklarasi media belum lengkap.",
             [{"field": k, "message": v} for k, v in errs.items()],
         )
-    st = storage.save_upload(file, storage.MEDIA_TYPES)
+    st = storage.save_upload(file, storage.MEDIA_TYPES, quarantine=scanner.enabled())
     row = ReferenceMedia(
         movement_id=m.id,
         uploader_user_id=user.id,
@@ -75,6 +82,7 @@ def upload(db: Session, user: User, m: Movement, file: UploadFile, f: dict, rid)
         access_level="private",
         retention_until=retention,
         is_demo=False,
+        scan_status=scanner.initial_status(),
     )
     db.add(row)
     db.flush()
@@ -102,20 +110,47 @@ def get_for_studio(db: Session, user: User, media_id) -> tuple[ReferenceMedia, M
     return r, perm.get_movement(db, user, r.movement_id)  # 404 lintas organisasi
 
 
+def _cohort_entitled(db: Session, user: User, movement_id) -> bool:
+    """Peserta AKTIF cohort (program approved/active/completed) yang kursusnya memuat pelajaran terbit bertaut gerakan ini."""
+    from app.models import Lesson
+    from app.services import access
+
+    return bool(
+        db.scalar(
+            select(Lesson.id).where(
+                Lesson.movement_id == movement_id,
+                Lesson.status == "published",
+                Lesson.deleted_at.is_(None),
+                Lesson.course_id.in_(access.member_course_ids(user)),
+            )
+        )
+    )
+
+
 def can_read_file(db: Session, user: User | None, r: ReferenceMedia) -> bool:
+    """Otorisasi berkas media. FAIL-CLOSED: karantina/terinfeksi/error dan izin ditolak/dicabut tertutup untuk SEMUA orang
+    (termasuk staf) — pencabutan izin berlaku seketika. Media publik wajib `clean` + izin terverifikasi + gerakan tayang."""
     if r.retention_until and r.retention_until < now().date():
         return False
     m = db.get(Movement, r.movement_id)
     if not m or m.deleted_at:
         return False
+    if r.scan_status in {"pending", "infected", "error"}:
+        return False
+    if r.consent_status in {"rejected", "revoked"}:
+        return False
     if (
         r.access_level == "public"
         and r.consent_status == "verified"
+        and r.scan_status == "clean"
         and db.scalar(select(Movement.id).where(Movement.id == m.id, vis.movement_ok()))
     ):
         return True
-    if user is None or r.consent_status in {"rejected", "revoked"} and not perm.is_staff(user):
+    if user is None:
         return False
+    if r.access_level == "pilot_cohort" and r.consent_status == "verified" and r.scan_status == "clean":
+        if _cohort_entitled(db, user, m.id):
+            return True
     if perm.is_staff(user):
         return True
     role = perm.member_role(db, user, m.partner_id)
@@ -123,7 +158,7 @@ def can_read_file(db: Session, user: User | None, r: ReferenceMedia) -> bool:
         return True
     if not role:
         return False
-    return r.access_level == "reviewers" or r.uploader_user_id == user.id
+    return r.access_level in {"reviewers", "pilot_cohort"} or r.uploader_user_id == user.id
 
 
 def patch(db: Session, user: User, r: ReferenceMedia, m: Movement, body: sc.MediaPatch, rid) -> ReferenceMedia:
@@ -157,8 +192,10 @@ def patch(db: Session, user: User, r: ReferenceMedia, m: Movement, body: sc.Medi
     elif "permission_evidence_ref" in ch:
         r.permission_evidence_ref = ch["permission_evidence_ref"]
     if "access_level" in ch and ch["access_level"]:
-        if ch["access_level"] == "public" and r.consent_status != "verified":
-            raise ApiError(409, "CONSENT_NOT_VERIFIED", "Media hanya dapat dibuat publik setelah izin terverifikasi.")
+        if ch["access_level"] in {"public", "pilot_cohort"} and r.scan_status != "clean":
+            raise ApiError(409, "NOT_SCANNED", "Media hanya dapat dibagikan setelah lolos pemindaian malware.")
+        if ch["access_level"] in {"public", "pilot_cohort"} and r.consent_status != "verified":
+            raise ApiError(409, "CONSENT_NOT_VERIFIED", "Media hanya dapat dibagikan setelah izin terverifikasi.")
         r.access_level = ch["access_level"]
     db.flush()
     audit.record(
@@ -212,6 +249,8 @@ def out(db: Session, user: User, r: ReferenceMedia, m: Movement) -> dict:
         "access_level": r.access_level,
         "retention_until": r.retention_until,
         "uploader": up.display_name if up else None,
+        "scan_status": r.scan_status,
+        "scan_label": SCAN_LABEL[r.scan_status],
         "is_demo": r.is_demo,
         "created_at": r.created_at,
         "url": f"/api/v1/media/{r.id}/file",
@@ -229,14 +268,48 @@ def list_for(db: Session, user: User, m: Movement) -> list[dict]:
     ]
 
 
-def purge_expired(db: Session) -> int:
-    """Hapus media yang melewati retensi (file + baris). Dipanggil terjadwal/manual; mengembalikan jumlah."""
+def purge_expired(db: Session, *, dry_run: bool = False, actor=None) -> int | dict:
+    """Hapus media yang melewati `retention_until` (berkas + baris). Aman karena:
+    - hanya yang retensinya BENAR-BENAR habis (tanggal diisi pemilik, tidak ditebak);
+    - tidak pernah menghapus berkas yatim/tanpa referensi (itu hanya DILAPORKAN: `orphan_report`);
+    - dry_run melaporkan jumlah+rincian tanpa menghapus; eksekusi dicatat di audit (jumlah saja).
+    Mengembalikan jumlah (eksekusi) atau laporan (dry_run) — kompatibel dengan pemanggil lama."""
+    from app.core.config import get_settings
+
+    today = now().date()
+    rows = list(db.scalars(select(ReferenceMedia).where(ReferenceMedia.retention_until < today)))
+    if dry_run:
+        by_access: dict[str, int] = {}
+        for r in rows:
+            by_access[r.access_level] = by_access.get(r.access_level, 0) + 1
+        return {"dry_run": True, "eligible": len(rows), "by_access_level": by_access, "bytes": sum(r.size_bytes for r in rows)}
+    if not get_settings().media_purge_enabled:
+        return 0
     n = 0
-    for r in db.scalars(select(ReferenceMedia).where(ReferenceMedia.retention_until < now().date())):
+    for r in rows:
         storage.remove(r.storage_key)
         db.delete(r)
         n += 1
+    if n:
+        audit.record(db, actor=actor, action="media.purge_expired", entity_type="reference_media", entity_id=None,
+                     detail={"deleted": n}, request_id=None)
     return n
+
+
+def orphan_report(db: Session) -> dict:
+    """Berkas di penyimpanan tanpa baris DB (dan sebaliknya). HANYA melaporkan — tidak pernah menghapus otomatis."""
+    from pathlib import Path
+
+    from app.core.config import get_settings
+    root = Path(get_settings().media_dir)
+    known = {k for (k,) in db.execute(select(ReferenceMedia.storage_key))}
+    from app.models import PartnerDocument
+    known |= {k for (k,) in db.execute(select(PartnerDocument.storage_key))}
+    files = [p for p in root.glob("*/*") if p.is_file() and not p.name.endswith(".part")] if root.exists() else []
+    qfiles = [p for p in (root / ".quarantine").glob("*") if p.is_file()] if (root / ".quarantine").exists() else []
+    orphans = [p.name for p in files + qfiles if p.name not in known and p.parent.name != ".quarantine" or (p.parent.name == ".quarantine" and p.name not in known)]
+    missing = [k for k in known if not (root / k[:2] / k).exists() and not (root / ".quarantine" / k).exists()]
+    return {"files": len(files) + len(qfiles), "orphan_files": len(orphans), "rows_without_file": len(missing)}
 
 
 # ---------- anotasi referensi instruktur ----------

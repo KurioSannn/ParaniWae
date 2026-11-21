@@ -28,7 +28,6 @@ from app.models import (
 from app.schemas import studio as sc
 from app.services import audit
 from app.services import studio_perm as perm
-from app.services import visibility as vis
 from app.services.auth import now
 from app.services.manage import map_integrity, slugify
 
@@ -371,13 +370,24 @@ def _check_parents_publishable(db, m):
         if not ok:
             raise ApiError(409, "PARENT_NOT_PUBLISHED", f"{what} harus berstatus published terlebih dahulu.")
 
+    # Penerbitan gerakan TIDAK memaksa profil mitra tampil publik (pilot privat). Tampil di Pustaka publik tetap
+    # ditentukan `vis.movement_ok()` (butuh mitra + tradisi publik), sehingga mitra privat tidak bocor ke katalog umum.
     need(
-        bool(db.scalar(select(CulturalTradition.id).where(CulturalTradition.id == m.tradition_id, vis.tradition_ok()))),
+        bool(
+            db.scalar(
+                select(CulturalTradition.id).where(
+                    CulturalTradition.id == m.tradition_id,
+                    CulturalTradition.status == "published",
+                    CulturalTradition.deleted_at.is_(None),
+                )
+            )
+        ),
         "Tradisi",
     )
+    partner = db.get(Partner, m.partner_id)
     need(
-        bool(db.scalar(select(Partner.id).where(Partner.id == m.partner_id, vis.partner_ok()))),
-        "Mitra (terverifikasi + dicantumkan di direktori)",
+        bool(partner and not partner.deleted_at and (partner.is_demo or partner.verification_status == "verified")),
+        "Mitra (terverifikasi)",
     )
 
 
@@ -448,6 +458,17 @@ def transition(db: Session, user: User, d: MovementDocument, m: Movement, body: 
         new = "archived"
     d.status = new
     _flush(db)
+    if action == "submit":
+        from app.services import notify
+
+        notify.notify_review_queue(
+            db,
+            doc_id=d.id,
+            title=d.name_id,
+            version=d.version_no,
+            partner_id=m.partner_id,
+            action=f"submit{d.version_no}",
+        )
     if action == "publish":
         _sync_published(m, d, t)
     elif action == "archive" and m.published_document_id == d.id:

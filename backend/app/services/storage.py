@@ -64,6 +64,26 @@ def path_for(key: str) -> Path:
     return _root() / key[:2] / key
 
 
+def quarantine_path(key: str) -> Path:
+    if not KEY_RE.match(key):
+        raise ApiError(404, "NOT_FOUND", "File tidak ditemukan.")
+    return _root() / ".quarantine" / key
+
+
+def release(key: str) -> None:
+    """Pindahkan berkas dari karantina ke penyimpanan utama (hanya setelah dinyatakan bersih)."""
+    src, dst = quarantine_path(key), path_for(key)
+    dst.parent.mkdir(parents=True, exist_ok=True)
+    os.replace(src, dst)
+
+
+def locate(key: str) -> Path | None:
+    for p in (path_for(key), quarantine_path(key)):
+        if p.exists():
+            return p
+    return None
+
+
 def max_bytes(mime: str) -> int:
     s = get_settings()
     if mime.startswith("video/"):
@@ -71,10 +91,10 @@ def max_bytes(mime: str) -> int:
     return (s.media_max_image_mb if mime.startswith("image/") else s.partner_doc_max_mb) * 1024 * 1024
 
 
-def save_upload(upload: UploadFile, allowed: set[str]) -> Stored:
+def save_upload(upload: UploadFile, allowed: set[str], quarantine: bool = False) -> Stored:
     """Streaming + validasi. Melempar ApiError 415/413/422; tidak meninggalkan file parsial."""
     key = uuid.uuid4().hex
-    final = path_for(key)
+    final = quarantine_path(key) if quarantine else path_for(key)
     final.parent.mkdir(parents=True, exist_ok=True)
     tmp = final.with_suffix(".part")
     h, size, mime = hashlib.sha256(), 0, None
@@ -105,7 +125,8 @@ def save_upload(upload: UploadFile, allowed: set[str]) -> Stored:
 
 
 def remove(key: str) -> None:
-    try:
-        path_for(key).unlink(missing_ok=True)
-    except ApiError:
-        pass
+    for fn in (path_for, quarantine_path):
+        try:
+            fn(key).unlink(missing_ok=True)
+        except ApiError:
+            pass

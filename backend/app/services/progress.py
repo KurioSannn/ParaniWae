@@ -1,12 +1,12 @@
 """Enrollment & progres belajar. Aturan persentase tunggal:
 
-    persen = round(100 * selesai / total), dengan total = jumlah pelajaran PUBLISHED yang
-    terlihat publik di kursus itu, dan selesai = jumlah di antaranya yang status progresnya
-    `completed`. Pelajaran yang di-unpublish tidak dihitung (baik pembilang maupun penyebut).
-    Total 0 -> 0%.
+persen = round(100 * selesai / total), dengan total = jumlah pelajaran PUBLISHED yang
+terlihat publik di kursus itu, dan selesai = jumlah di antaranya yang status progresnya
+`completed`. Pelajaran yang di-unpublish tidak dihitung (baik pembilang maupun penyebut).
+Total 0 -> 0%.
 """
 
-from sqlalchemy import select
+from sqlalchemy import and_, select
 from sqlalchemy.orm import Session
 
 from app.core.errors import ApiError
@@ -18,25 +18,40 @@ from app.models import (
     LessonProgress,
     User,
 )
-from app.services import audit
+from app.services import access, audit
 from app.services import visibility as vis
 from app.services.auth import now
 
 
-def visible_lessons(db: Session, course_id) -> list[tuple[Lesson, CourseModule]]:
+def visible_lessons(
+    db: Session, course_id, viewer: User | None = None, *, system: bool = False
+) -> list[tuple[Lesson, CourseModule]]:
+    """Pelajaran terbit pada kursus yang boleh dilihat `viewer`. `system=True` = perhitungan internal (analytics/cohort):
+    pelajaran terbit pada kursus terbit apa pun cakupannya, TANPA otorisasi viewer — jangan dipakai untuk respons ke pengguna."""
+    cond = (
+        and_(vis._published(Lesson), Lesson.course_id.in_(select(Course.id).where(vis._published(Course))))
+        if system
+        else vis.lesson_ok(viewer)
+    )
     stmt = (
         select(Lesson, CourseModule)
         .join(CourseModule, CourseModule.id == Lesson.module_id)
-        .where(Lesson.course_id == course_id, vis.lesson_ok())
+        .where(Lesson.course_id == course_id, cond)
         .order_by(CourseModule.order_index, Lesson.order_index, Lesson.title)
     )
     return [(row[0], row[1]) for row in db.execute(stmt)]
 
 
 def completed_ids(db: Session, user_id, course_id) -> set:
-    return set(db.scalars(select(LessonProgress.lesson_id).where(
-        LessonProgress.user_id == user_id, LessonProgress.course_id == course_id,
-        LessonProgress.status == "completed")))
+    return set(
+        db.scalars(
+            select(LessonProgress.lesson_id).where(
+                LessonProgress.user_id == user_id,
+                LessonProgress.course_id == course_id,
+                LessonProgress.status == "completed",
+            )
+        )
+    )
 
 
 def compute_progress(lessons: list, done: set) -> dict:
@@ -47,17 +62,18 @@ def compute_progress(lessons: list, done: set) -> dict:
 
 
 def get_enrollment(db: Session, user_id, course_id) -> Enrollment | None:
-    return db.scalar(select(Enrollment).where(Enrollment.user_id == user_id,
-                                              Enrollment.course_id == course_id))
+    return db.scalar(select(Enrollment).where(Enrollment.user_id == user_id, Enrollment.course_id == course_id))
 
 
 def enrollment_state(db: Session, enr: Enrollment) -> dict:
-    lessons = visible_lessons(db, enr.course_id)
+    lessons = visible_lessons(db, enr.course_id, db.get(User, enr.user_id))
     done = completed_ids(db, enr.user_id, enr.course_id)
     nxt = next((lesson for lesson, _ in lessons if lesson.id not in done), None)
     last = db.get(Lesson, enr.last_lesson_id) if enr.last_lesson_id else None
     return {
-        "status": enr.status, "enrolled_at": enr.enrolled_at, "completed_at": enr.completed_at,
+        "status": enr.status,
+        "enrolled_at": enr.enrolled_at,
+        "completed_at": enr.completed_at,
         "progress": compute_progress(lessons, done),
         "last_lesson_slug": last.slug if last else None,
         "next_lesson_slug": nxt.slug if nxt else None,
@@ -65,7 +81,7 @@ def enrollment_state(db: Session, enr: Enrollment) -> dict:
 
 
 def _sync_completion(db: Session, enr: Enrollment) -> None:
-    lessons = visible_lessons(db, enr.course_id)
+    lessons = visible_lessons(db, enr.course_id, db.get(User, enr.user_id))
     prog = compute_progress(lessons, completed_ids(db, enr.user_id, enr.course_id))
     full = prog["total"] > 0 and prog["completed"] == prog["total"]
     if enr.status == "active" and full:
@@ -80,12 +96,14 @@ def enroll(db: Session, user: User, course: Course, rid: str | None) -> Enrollme
         enr = Enrollment(user_id=user.id, course_id=course.id, status="active", enrolled_at=now())
         db.add(enr)
         db.flush()
-        audit.record(db, actor=user, action="enrollment.create", entity_type="course",
-                     entity_id=course.id, request_id=rid)
+        audit.record(
+            db, actor=user, action="enrollment.create", entity_type="course", entity_id=course.id, request_id=rid
+        )
     elif enr.status == "dropped":
         enr.status = "active"
-        audit.record(db, actor=user, action="enrollment.reactivate", entity_type="course",
-                     entity_id=course.id, request_id=rid)
+        audit.record(
+            db, actor=user, action="enrollment.reactivate", entity_type="course", entity_id=course.id, request_id=rid
+        )
     _sync_completion(db, enr)
     return enr
 
@@ -95,24 +113,37 @@ def drop(db: Session, user: User, course: Course, rid: str | None) -> None:
     if enr is None or enr.status == "dropped":
         raise ApiError(404, "NOT_ENROLLED", "Anda belum terdaftar di kurikulum ini.")
     enr.status, enr.completed_at = "dropped", None
-    audit.record(db, actor=user, action="enrollment.drop", entity_type="course",
-                 entity_id=course.id, request_id=rid)
+    audit.record(db, actor=user, action="enrollment.drop", entity_type="course", entity_id=course.id, request_id=rid)
 
 
 def set_lesson_progress(db: Session, user: User, lesson_id, status: str) -> dict:
-    lesson = db.scalar(select(Lesson).where(Lesson.id == lesson_id, vis.lesson_ok()))
+    lesson = db.scalar(select(Lesson).where(Lesson.id == lesson_id, vis.lesson_ok(user, write=True)))
     if not lesson:
+        # Bisa dibaca tetapi tidak boleh ditulis: peserta program `completed` (baca-saja historis) atau pengelola yang
+        # hanya pratinjau. Selain itu 404 (tidak membocorkan keberadaan materi privat).
+        readable = db.scalar(select(Lesson).where(Lesson.id == lesson_id, vis.lesson_ok(user)))
+        if readable:
+            is_member = db.scalar(select(Lesson.id).where(Lesson.id == lesson_id, Lesson.course_id.in_(access.member_course_ids(user))))
+            if is_member:
+                raise ApiError(403, "PROGRAM_READ_ONLY", "Program ini sudah selesai: materi hanya dapat dibaca, progres tidak dapat diubah.")
+            raise ApiError(403, "PREVIEW_ONLY", "Anda melihat materi ini sebagai pengelola (pratinjau); progres hanya untuk peserta.")
         raise ApiError(404, "NOT_FOUND", "Pelajaran tidak ditemukan.")
     enr = get_enrollment(db, user.id, lesson.course_id)
     if enr is None or enr.status == "dropped":
-        raise ApiError(403, "NOT_ENROLLED",
-                       "Daftar ke kurikulum ini terlebih dahulu untuk mencatat progres.")
+        raise ApiError(403, "NOT_ENROLLED", "Daftar ke kurikulum ini terlebih dahulu untuk mencatat progres.")
     t = now()
-    row = db.scalar(select(LessonProgress).where(LessonProgress.user_id == user.id,
-                                                 LessonProgress.lesson_id == lesson.id))
+    row = db.scalar(
+        select(LessonProgress).where(LessonProgress.user_id == user.id, LessonProgress.lesson_id == lesson.id)
+    )
     if row is None:
-        row = LessonProgress(user_id=user.id, enrollment_id=enr.id, course_id=lesson.course_id,
-                             lesson_id=lesson.id, status="in_progress", started_at=t)
+        row = LessonProgress(
+            user_id=user.id,
+            enrollment_id=enr.id,
+            course_id=lesson.course_id,
+            lesson_id=lesson.id,
+            status="in_progress",
+            started_at=t,
+        )
         db.add(row)
     if status == "completed":
         if row.status != "completed":
@@ -123,5 +154,9 @@ def set_lesson_progress(db: Session, user: User, lesson_id, status: str) -> dict
     enr.last_lesson_id = lesson.id
     db.flush()
     _sync_completion(db, enr)
-    return {"lesson_id": lesson.id, "status": row.status, "completed_at": row.completed_at,
-            "enrollment": enrollment_state(db, enr)}
+    return {
+        "lesson_id": lesson.id,
+        "status": row.status,
+        "completed_at": row.completed_at,
+        "enrollment": enrollment_state(db, enr),
+    }

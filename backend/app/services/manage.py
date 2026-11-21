@@ -43,16 +43,11 @@ class Kind:
 KINDS: dict[str, Kind] = {
     k.key: k
     for k in [
-        Kind("traditions", "Tradisi", CulturalTradition, sc.TraditionIn,
-             sc.make_patch(sc.TraditionIn), "name", False),
-        Kind("partners", "Perguruan", Partner, sc.PartnerIn, sc.make_patch(sc.PartnerIn),
-             "name", False),
-        Kind("instructors", "Instruktur", Instructor, sc.InstructorIn,
-             sc.make_patch(sc.InstructorIn), "name", False),
-        Kind("courses", "Kurikulum", Course, sc.CourseIn, sc.make_patch(sc.CourseIn),
-             "title", True),
-        Kind("lessons", "Pelajaran", Lesson, sc.LessonIn, sc.make_patch(sc.LessonIn),
-             "title", True),
+        Kind("traditions", "Tradisi", CulturalTradition, sc.TraditionIn, sc.make_patch(sc.TraditionIn), "name", False),
+        Kind("partners", "Perguruan", Partner, sc.PartnerIn, sc.make_patch(sc.PartnerIn), "name", False),
+        Kind("instructors", "Instruktur", Instructor, sc.InstructorIn, sc.make_patch(sc.InstructorIn), "name", False),
+        Kind("courses", "Kurikulum", Course, sc.CourseIn, sc.make_patch(sc.CourseIn), "title", True),
+        Kind("lessons", "Pelajaran", Lesson, sc.LessonIn, sc.make_patch(sc.LessonIn), "title", True),
     ]
 }
 
@@ -80,8 +75,7 @@ def load(db: Session, kind: Kind, obj_id: uuid.UUID | str, user: User):
         raise ApiError(404, "NOT_FOUND", "Konten tidak ditemukan.") from exc
     if not can_use_kind(user, kind):
         raise ApiError(403, "FORBIDDEN", "Anda tidak memiliki izin untuk jenis konten ini.")
-    obj = db.scalar(select(kind.model).where(kind.model.id == oid,
-                                             kind.model.deleted_at.is_(None)))
+    obj = db.scalar(select(kind.model).where(kind.model.id == oid, kind.model.deleted_at.is_(None)))
     if not obj or (user.role not in STAFF and not is_owner(user, obj)):
         raise ApiError(404, "NOT_FOUND", "Konten tidak ditemukan.")
     return obj
@@ -96,9 +90,9 @@ def slugify(text: str) -> str:
 
 def unique_slug(db: Session, kind: Kind, base: str, scope: dict) -> str:
     slug, n = base, 1
-    while db.scalar(select(kind.model.id).where(kind.model.slug == slug,
-                                                *[getattr(kind.model, k) == v
-                                                  for k, v in scope.items()])):
+    while db.scalar(
+        select(kind.model.id).where(kind.model.slug == slug, *[getattr(kind.model, k) == v for k, v in scope.items()])
+    ):
         n += 1
         slug = f"{base}-{n}"
     return slug
@@ -117,10 +111,12 @@ def map_integrity(exc: IntegrityError) -> ApiError:
     if sqlstate == "23503":
         return ApiError(422, "INVALID_REFERENCE", "Referensi (tradisi/mitra/kursus/modul) tidak valid.")
     if sqlstate == "23514":
-        return ApiError(422, "CONSTRAINT_VIOLATION",
-                        "Data melanggar aturan integritas konten.",
-                        {"constraint": getattr(getattr(exc.orig, "diag", None),
-                                               "constraint_name", None)})
+        return ApiError(
+            422,
+            "CONSTRAINT_VIOLATION",
+            "Data melanggar aturan integritas konten.",
+            {"constraint": getattr(getattr(exc.orig, "diag", None), "constraint_name", None)},
+        )
     return ApiError(422, "INVALID_DATA", "Data tidak dapat disimpan.")
 
 
@@ -156,15 +152,21 @@ def create(db: Session, user: User, kind: Kind, body, rid: str | None):
     except IntegrityError as exc:
         db.rollback()
         raise map_integrity(exc) from exc
-    audit.record(db, actor=user, action="content.create", entity_type=kind.key,
-                 entity_id=obj.id, detail={"title": title_of(kind, obj)}, request_id=rid)
+    audit.record(
+        db,
+        actor=user,
+        action="content.create",
+        entity_type=kind.key,
+        entity_id=obj.id,
+        detail={"title": title_of(kind, obj)},
+        request_id=rid,
+    )
     return obj
 
 
 def update(db: Session, user: User, kind: Kind, obj, body, rid: str | None):
     if obj.status not in EDITABLE:
-        raise ApiError(409, "NOT_EDITABLE",
-                       "Konten hanya dapat diedit saat berstatus draft atau ditolak.")
+        raise ApiError(409, "NOT_EDITABLE", "Konten hanya dapat diedit saat berstatus draft atau ditolak.")
     changes = body.model_dump(exclude_unset=True)
     if kind.key == "lessons" and "course_id" in changes:
         _check_lesson_parent(db, user, changes["course_id"])
@@ -178,18 +180,31 @@ def update(db: Session, user: User, kind: Kind, obj, body, rid: str | None):
     except IntegrityError as exc:
         db.rollback()
         raise map_integrity(exc) from exc
-    audit.record(db, actor=user, action="content.update", entity_type=kind.key,
-                 entity_id=obj.id, detail={"fields": sorted(changes)}, request_id=rid)
+    audit.record(
+        db,
+        actor=user,
+        action="content.update",
+        entity_type=kind.key,
+        entity_id=obj.id,
+        detail={"fields": sorted(changes)},
+        request_id=rid,
+    )
     return obj
 
 
 def soft_delete(db: Session, user: User, kind: Kind, obj, rid: str | None) -> None:
     if obj.status not in EDITABLE | {"archived"}:
-        raise ApiError(409, "NOT_DELETABLE",
-                       "Hanya konten draft/ditolak/diarsipkan yang dapat dihapus.")
+        raise ApiError(409, "NOT_DELETABLE", "Hanya konten draft/ditolak/diarsipkan yang dapat dihapus.")
     obj.deleted_at = now()
-    audit.record(db, actor=user, action="content.delete", entity_type=kind.key,
-                 entity_id=obj.id, detail={"title": title_of(kind, obj)}, request_id=rid)
+    audit.record(
+        db,
+        actor=user,
+        action="content.delete",
+        entity_type=kind.key,
+        entity_id=obj.id,
+        detail={"title": title_of(kind, obj)},
+        request_id=rid,
+    )
 
 
 # ---------- workflow ----------
@@ -228,25 +243,38 @@ def _published(db: Session, model, obj_id) -> bool:
 def _check_publish(db: Session, kind: Kind, obj) -> None:
     def need(ok: bool, what: str):
         if not ok:
-            raise ApiError(409, "PARENT_NOT_PUBLISHED",
-                           f"{what} harus berstatus published terlebih dahulu.")
+            raise ApiError(409, "PARENT_NOT_PUBLISHED", f"{what} harus berstatus published terlebih dahulu.")
 
     k = kind.key
     if k == "traditions" and not obj.is_demo and obj.access_scope != "public":
-        raise ApiError(409, "NOT_PUBLIC_SCOPE",
-                       "Hanya tradisi dengan access_scope=public yang dapat dipublikasikan.")
-    if k == "partners" and not obj.is_demo and not (
-        obj.verification_status == "verified" and obj.public_listing_consent
+        raise ApiError(409, "NOT_PUBLIC_SCOPE", "Hanya tradisi dengan access_scope=public yang dapat dipublikasikan.")
+    if (
+        k == "partners"
+        and not obj.is_demo
+        and not (obj.verification_status == "verified" and obj.public_listing_consent)
     ):
-        raise ApiError(409, "PARTNER_NOT_VERIFIED",
-                       "Mitra harus terverifikasi dan menyetujui listing publik sebelum dipublikasikan.")
+        raise ApiError(
+            409,
+            "PARTNER_NOT_VERIFIED",
+            "Mitra harus terverifikasi dan menyetujui listing publik sebelum dipublikasikan.",
+        )
     if k == "instructors":
         need(_published(db, Partner, obj.partner_id), "Mitra")
     if k == "courses":
         need(_published(db, CulturalTradition, obj.tradition_id), "Tradisi")
-        need(_published(db, Partner, obj.partner_id), "Mitra")
-        if obj.instructor_id:
-            need(_published(db, Instructor, obj.instructor_id), "Instruktur")
+        if obj.distribution_scope == "pilot_private":
+            # Kursus privat TIDAK mensyaratkan profil mitra tampil publik; cukup mitra terverifikasi (atau demo).
+            partner = db.get(Partner, obj.partner_id)
+            if not partner or partner.deleted_at or not (partner.is_demo or partner.verification_status == "verified"):
+                raise ApiError(
+                    409,
+                    "PARTNER_NOT_VERIFIED",
+                    "Kursus privat hanya dapat terbit untuk mitra yang sudah terverifikasi.",
+                )
+        else:
+            need(_published(db, Partner, obj.partner_id), "Mitra")
+            if obj.instructor_id:
+                need(_published(db, Instructor, obj.instructor_id), "Instruktur")
     if k == "lessons":
         need(_published(db, Course, obj.course_id), "Kurikulum")
         if obj.movement_id:
@@ -259,21 +287,22 @@ def transition(db: Session, user: User, kind: Kind, obj, body: sc.TransitionIn, 
     if not actor_may(user, action, obj):  # izin dicek lebih dulu agar respons konsisten
         raise ApiError(403, "FORBIDDEN", "Anda tidak memiliki izin untuk aksi ini.")
     if obj.status not in sources:
-        raise ApiError(409, "INVALID_TRANSITION",
-                       f"Aksi '{action}' tidak dapat dilakukan dari status '{obj.status}'.")
+        raise ApiError(409, "INVALID_TRANSITION", f"Aksi '{action}' tidak dapat dilakukan dari status '{obj.status}'.")
     before = obj.status
     t = now()
     if action == "submit":
         if not (obj.source_citation or "").strip():
-            raise ApiError(422, "SOURCE_REQUIRED",
-                           "Sumber/atribusi (source_citation) wajib diisi sebelum diajukan.")
+            raise ApiError(422, "SOURCE_REQUIRED", "Sumber/atribusi (source_citation) wajib diisi sebelum diajukan.")
     elif action == "approve":
         if is_owner(user, obj) and user.role != "admin":
             raise ApiError(403, "SELF_APPROVAL", "Anda tidak dapat menyetujui konten buatan sendiri.")
         evidence = body.approval_evidence_ref or obj.approval_evidence_ref
         if not obj.is_demo and not (evidence or "").strip():
-            raise ApiError(422, "EVIDENCE_REQUIRED",
-                           "Rujukan bukti persetujuan (approval_evidence_ref) wajib untuk konten non-demo.")
+            raise ApiError(
+                422,
+                "EVIDENCE_REQUIRED",
+                "Rujukan bukti persetujuan (approval_evidence_ref) wajib untuk konten non-demo.",
+            )
         obj.approval_evidence_ref = evidence
         obj.approved_by_user_id, obj.approved_at = user.id, t
     elif action == "reject":
@@ -292,19 +321,30 @@ def transition(db: Session, user: User, kind: Kind, obj, body: sc.TransitionIn, 
     except IntegrityError as exc:
         db.rollback()
         raise map_integrity(exc) from exc
-    audit.record(db, actor=user, action=f"content.{action}", entity_type=kind.key,
-                 entity_id=obj.id, detail={"from": before, "to": target, "note": body.note},
-                 request_id=rid)
+    audit.record(
+        db,
+        actor=user,
+        action=f"content.{action}",
+        entity_type=kind.key,
+        entity_id=obj.id,
+        detail={"from": before, "to": target, "note": body.note},
+        request_id=rid,
+    )
     return obj
 
 
 def history(db: Session, kind: Kind, obj_id) -> list[dict]:
-    rows = db.scalars(select(AuditLog).where(AuditLog.entity_type == kind.key,
-                                             AuditLog.entity_id == str(obj_id))
-                      .order_by(AuditLog.created_at.desc()).limit(50))
+    rows = db.scalars(
+        select(AuditLog)
+        .where(AuditLog.entity_type == kind.key, AuditLog.entity_id == str(obj_id))
+        .order_by(AuditLog.created_at.desc())
+        .limit(50)
+    )
     names = {u.id: u.display_name for u in db.scalars(select(User))}  # kecil di MVP
-    return [{"action": r.action, "actor": names.get(r.actor_user_id), "detail": r.detail,
-             "created_at": r.created_at} for r in rows]
+    return [
+        {"action": r.action, "actor": names.get(r.actor_user_id), "detail": r.detail, "created_at": r.created_at}
+        for r in rows
+    ]
 
 
 # ---------- modul & materi ----------
@@ -323,9 +363,7 @@ def editable_lesson_parent(db: Session, user: User, lesson_id) -> Lesson:
     lesson = db.get(Lesson, lesson_id)
     if not lesson or lesson.deleted_at:
         raise ApiError(422, "INVALID_REFERENCE", "Pelajaran tidak ditemukan.")
-    if not can_use_kind(user, KINDS["lessons"]) or (
-        user.role not in STAFF and not is_owner(user, lesson)
-    ):
+    if not can_use_kind(user, KINDS["lessons"]) or (user.role not in STAFF and not is_owner(user, lesson)):
         raise ApiError(403, "FORBIDDEN", "Anda tidak berwenang atas pelajaran ini.")
     if lesson.status not in EDITABLE:
         raise ApiError(409, "NOT_EDITABLE", "Pelajaran hanya dapat diedit saat draft/ditolak.")

@@ -30,12 +30,14 @@ class DevSinkProvider:
 
 
 class SmtpProvider:
-    def send(self, to: str, subject: str, body: str) -> None:
+    def send(self, to: str, subject: str, body: str, message_id: str | None = None) -> None:
         s = get_settings()
         msg = EmailMessage()
         msg["From"], msg["To"], msg["Subject"] = s.mail_from, to, subject
+        if message_id:  # deterministik per baris outbox -> penerima/MTA dapat mendeduplikasi bila terjadi kirim ulang
+            msg["Message-ID"] = f"<{message_id}@silatara.outbox>"
         msg.set_content(body)
-        with smtplib.SMTP(s.smtp_host, s.smtp_port, timeout=15) as smtp:
+        with smtplib.SMTP(s.smtp_host, s.smtp_port, timeout=s.smtp_timeout_s) as smtp:
             if s.smtp_starttls:
                 smtp.starttls()
             if s.smtp_user:
@@ -50,8 +52,9 @@ def mail_available() -> bool:
 def get_mailer(db: Session) -> MailProvider:
     s = get_settings()
     if not s.mail_configured:
-        raise ApiError(503, "FEATURE_UNAVAILABLE",
-                       "Fitur email belum dikonfigurasi pada server ini, sehingga tidak tersedia.")
+        raise ApiError(
+            503, "FEATURE_UNAVAILABLE", "Fitur email belum dikonfigurasi pada server ini, sehingga tidak tersedia."
+        )
     return DevSinkProvider(db) if s.mail_provider == "dev_sink" else SmtpProvider()
 
 

@@ -8,6 +8,7 @@ from sqlalchemy import func, select
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
+from app.core.config import get_settings
 from app.core.errors import ApiError
 from app.models import (
     AuditLog,
@@ -20,7 +21,7 @@ from app.models import (
     User,
 )
 from app.schemas import studio as sc
-from app.services import audit, storage
+from app.services import audit, scanner, storage
 from app.services import studio_perm as perm
 from app.services import visibility as vis
 from app.services.auth import now
@@ -234,7 +235,7 @@ def add_document(db: Session, actor: User, p: Partner, upload: UploadFile, kind:
         raise ApiError(422, "VALIDATION_ERROR", "Jenis dokumen tidak valid.")
     if p.verification_status == "suspended":
         raise ApiError(409, "NOT_EDITABLE", "Mitra yang ditangguhkan tidak dapat menambah dokumen.")
-    st = storage.save_upload(upload, storage.DOC_TYPES)
+    st = storage.save_upload(upload, storage.DOC_TYPES, quarantine=scanner.enabled())
     d = PartnerDocument(
         partner_id=p.id,
         kind=kind,
@@ -245,6 +246,7 @@ def add_document(db: Session, actor: User, p: Partner, upload: UploadFile, kind:
         size_bytes=st.size,
         sha256=st.sha256,
         uploaded_by_user_id=actor.id,
+        scan_status=scanner.initial_status(),
     )
     db.add(d)
     db.flush()
@@ -295,7 +297,8 @@ def delete_document(db: Session, user: User, d: PartnerDocument, rid) -> None:
 
 # ---------- verifikasi ----------
 def _doc_count(db, p) -> int:
-    return db.scalar(select(func.count()).select_from(PartnerDocument).where(PartnerDocument.partner_id == p.id)) or 0
+    return db.scalar(select(func.count()).select_from(PartnerDocument).where(
+        PartnerDocument.partner_id == p.id, PartnerDocument.scan_status.notin_(["infected", "error"]))) or 0
 
 
 def readiness(db: Session, p: Partner) -> list[dict]:
@@ -387,6 +390,13 @@ def act(db: Session, user: User, p: Partner, body: sc.PartnerAction, rid) -> Par
     elif action == "unlist":
         p.status, p.published_at = "draft", None
     p.verification_status = new
+    if action == "submit":
+        from app.services import notify
+        base = get_settings().public_base_url.rstrip("/")
+        for email in [e for (e,) in db.execute(select(User.email).where(User.role == "admin", User.status == "active"))]:
+            notify.enqueue(db, kind="partner_verification", to_email=email, dedupe_key=f"partner-submit:{p.id}:{t.isoformat()}:{email}",
+                           subject=f"[SILATARA] Mitra menunggu verifikasi: {p.name}",
+                           body=f"Profil mitra \"{p.name}\" diajukan untuk verifikasi.\n\nBuka: {base}/app/studio/partners/{p.id}\n")
     _event(db, p, action, st, new, user, note, body.evidence_ref)
     try:
         db.flush()
@@ -476,6 +486,7 @@ def detail(db: Session, user: User, p: Partner) -> dict:
                 "description": d.description,
                 "filename": d.original_filename,
                 "mime": d.mime,
+                "scan_status": d.scan_status,
                 "size_bytes": d.size_bytes,
                 "sha256": d.sha256,
                 "created_at": d.created_at,

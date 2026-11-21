@@ -4,7 +4,7 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.core.config import get_settings
-from app.models import Instructor, Movement, MovementDocument, MovementPhase, Partner, ReferenceMedia
+from app.models import Course, Instructor, Movement, MovementDocument, MovementPhase, Partner, ReferenceMedia
 from app.services import visibility as vis
 
 
@@ -22,11 +22,12 @@ def _authors(db, d) -> list[str]:
     return [i.preferred_attribution or i.name for i in rows]
 
 
-def _media(db, m) -> list[dict]:
+def _media(db, m, include_cohort: bool = False) -> list[dict]:
     stmt = select(ReferenceMedia).where(
         ReferenceMedia.movement_id == m.id,
-        ReferenceMedia.access_level == "public",
+        ReferenceMedia.access_level.in_(["public", "pilot_cohort"] if include_cohort else ["public"]),
         ReferenceMedia.consent_status == "verified",
+        ReferenceMedia.scan_status == "clean",
     )
     if not get_settings().expose_demo_data:
         stmt = stmt.where(ReferenceMedia.is_demo.is_(False))
@@ -45,7 +46,18 @@ def _media(db, m) -> list[dict]:
     ]
 
 
-def document_out(db: Session, m: Movement) -> dict | None:
+def _cohort_member(db, viewer, course) -> bool:
+    """Peserta AKTIF cohort yang memakai kursus ini (program approved/active/completed) -> boleh media `pilot_cohort`."""
+    if viewer is None or course is None:
+        return False
+    from app.services import access
+
+    return bool(
+        db.scalar(select(Course.id).where(Course.id == course.id, Course.id.in_(access.member_course_ids(viewer))))
+    )
+
+
+def document_out(db: Session, m: Movement, viewer=None, course=None) -> dict | None:
     d = published_doc(db, m)
     if not d:
         return None
@@ -88,7 +100,7 @@ def document_out(db: Session, m: Movement) -> dict | None:
             }
             for p in ph
         ],
-        "media": _media(db, m),
+        "media": _media(db, m, include_cohort=_cohort_member(db, viewer, course)),
         "authors": _authors(db, d),
     }
 
