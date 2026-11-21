@@ -84,7 +84,7 @@ def login(email):
 def main():
     # 1. Halaman publik, berisi data dari API+DB
     anon = Session()
-    for path, needle in [("/", "Pelajari Gerak"), ("/heritage", "[DEMO] Tradisi Contoh A"),
+    for path, needle in [("/", "Warisan Gerak"), ("/heritage", "[DEMO] Tradisi Contoh A"),
                          ("/heritage/demo-tradisi", "belum diverifikasi mitra"),
                          ("/community", "[DEMO] Perguruan Contoh A"),
                          ("/academy", "[DEMO] Kurikulum Contoh A"),

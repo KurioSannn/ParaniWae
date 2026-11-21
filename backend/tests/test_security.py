@@ -246,14 +246,14 @@ def test_sessions_revoked_when_user_suspended_or_password_reset(client, db):
 
 
 def test_production_config_fails_closed():
-    bad = Settings(app_env="production")
+    bad = Settings(app_env="production", expose_demo_data=True)  # isolasi dari env container dev
     with pytest.raises(RuntimeError) as e:
         bad.validate_runtime()
     msg = str(e.value)
-    assert "EXPOSE_DEMO_DATA" in msg and "POSTGRES_PASSWORD" in msg and "dev_sink" in msg
+    assert "EXPOSE_DEMO_DATA" in msg and "POSTGRES_PASSWORD" in msg and "dev_sink" in msg and "SCAN_PROVIDER" in msg
     good = Settings(app_env="production", expose_demo_data=False, postgres_password="x" * 24,
-                    mail_provider="smtp", smtp_host="smtp.example.test", cookie_secure=True,
-                    demo_user_password=None, seed_demo_data=False)  # isolasi dari env container dev
+                    mail_provider="smtp", smtp_host="smtp.example.test", cookie_secure=True, scan_provider="clamav",
+                    demo_user_password=None, seed_demo_data=False, demo_login_enabled=False)  # isolasi dari env container dev
     good.validate_runtime()  # tidak melempar
     assert good.mail_configured and good.use_secure_cookies
 
@@ -276,10 +276,11 @@ def test_demo_users_not_created_in_staging_even_with_content_seed(db, monkeypatc
 
 def test_production_refuses_demo_credentials_and_demo_seed():
     base = dict(app_env="production", expose_demo_data=False, postgres_password="x" * 24,
-                mail_provider="smtp", smtp_host="smtp.example.test", cookie_secure=True)
-    clean = dict(demo_user_password=None, seed_demo_data=False)
-    for extra in ({"demo_user_password": "demo-sandi-12345", "seed_demo_data": False},
-                  {"demo_user_password": None, "seed_demo_data": True}):
+                mail_provider="smtp", smtp_host="smtp.example.test", cookie_secure=True, scan_provider="clamav")
+    clean = dict(demo_user_password=None, seed_demo_data=False, demo_login_enabled=False)
+    for extra in ({"demo_user_password": "demo-sandi-12345", "seed_demo_data": False, "demo_login_enabled": False},
+                  {"demo_user_password": None, "seed_demo_data": True, "demo_login_enabled": False},
+                  {"demo_user_password": None, "seed_demo_data": False, "demo_login_enabled": True}):
         with pytest.raises(RuntimeError) as e:
             Settings(**base, **extra).validate_runtime()
         assert "DEMO" in str(e.value).upper()

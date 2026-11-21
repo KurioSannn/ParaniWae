@@ -25,8 +25,12 @@ def _test_database():
     s = get_settings()
     assert s.postgres_db.endswith("_test"), "Tes hanya boleh berjalan pada database *_test"
     admin = psycopg.connect(
-        host=s.postgres_host, port=s.postgres_port, user=s.postgres_user,
-        password=s.postgres_password, dbname="postgres", autocommit=True,
+        host=s.postgres_host,
+        port=s.postgres_port,
+        user=s.postgres_user,
+        password=s.postgres_password,
+        dbname="postgres",
+        autocommit=True,
     )
     with admin.cursor() as cur:
         cur.execute("SELECT 1 FROM pg_database WHERE datname = %s", (s.postgres_db,))
@@ -35,6 +39,7 @@ def _test_database():
     admin.close()
     command.upgrade(Config("alembic.ini"), "head")
     yield
+
 
 @pytest.fixture
 def db():
@@ -55,6 +60,13 @@ def client(db):
     app.dependency_overrides[get_db] = lambda: db
     yield TestClient(app)
     app.dependency_overrides.clear()
+
+
+@pytest.fixture(autouse=True)
+def _demo_fixtures_visible(monkeypatch):
+    """Fixture tes memakai data contoh (is_demo) — tetapkan eksplisit agar tidak bergantung pada env container dev
+    (dev menyembunyikan data contoh dari halaman publik; ADR-0008). Tes yang menguji penyembunyian menimpanya sendiri."""
+    monkeypatch.setattr(get_settings(), "expose_demo_data", True)
 
 
 @pytest.fixture(autouse=True)

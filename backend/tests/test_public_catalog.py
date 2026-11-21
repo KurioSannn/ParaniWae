@@ -84,7 +84,7 @@ def test_non_demo_without_evidence_is_labelled_unverified(client, db):
     db.add(t)
     db.flush()
     p = client.get(f"/api/v1/traditions/{t.slug}").json()["provenance"]
-    assert p["verification_label"] == "Belum diverifikasi mitra" and not p["partner_verified"]
+    assert p["verification_label"] == "Belum dikonfirmasi mitra" and not p["partner_verified"]
 
 
 def test_restricted_scope_tradition_not_public(client, db):
@@ -123,10 +123,13 @@ def test_movement_visibility_and_lookup(client, db):
     assert client.get(f"/api/v1/movements/{shown.id}").json()["assessment_enabled"] is False
 
 
-def test_lesson_body_requires_login(client, db):
+def test_public_lesson_readable_without_login_and_login_adds_personal_state(client, db):
+    """ADR-0008 public-first: isi pelajaran kursus publik terbaca anonim; login hanya menambah status pribadi."""
     w = make_world(db)
     url = f"/api/v1/courses/{w['course'].slug}/lessons/{w['lessons'][0].slug}"
-    assert client.get(url).status_code == 401
+    anon = client.get(url)
+    assert anon.status_code == 200 and anon.json()["body"] == "isi" and anon.json()["enrolled"] is False
+    assert anon.json()["lesson_status"] is None
     login(client, make_user(db))
     r = client.get(url)
     assert r.status_code == 200 and r.json()["body"] == "isi" and r.json()["enrolled"] is False

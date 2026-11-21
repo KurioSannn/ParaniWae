@@ -697,6 +697,15 @@ def test_media_public_requires_verified_consent_by_non_uploader_and_published_mo
         )
     )
     assert r["consent_status"] == "verified"
+    # izin terverifikasi TIDAK cukup: file yang belum lolos pindai tidak boleh publik
+    r = api(client, "patch", f"/studio/media/{mid}", json={"access_level": "public"})
+    assert r.status_code == 409 and r.json()["error"]["code"] == "NOT_SCANNED"
+    import uuid
+
+    from app.models import ReferenceMedia
+
+    db.get(ReferenceMedia, uuid.UUID(mid)).scan_status = "clean"  # simulasi hasil pemindai (nyata: test_ops)
+    db.flush()
     ok(api(client, "patch", f"/studio/media/{mid}", json={"access_level": "public"}))
     client.cookies.clear()
     assert client.get(f"/api/v1/media/{mid}/file").status_code == 404  # gerakan belum terbit
