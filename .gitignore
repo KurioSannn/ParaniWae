@@ -46,9 +46,6 @@ pgdata/
 /Lampiran*.docx
 
 # Aset MediaPipe (diunduh/di-copy oleh skrip; bukan sumber)
-frontend/public/mediapipe/models/*.task
-frontend/public/mediapipe/wasm/
-frontend/public/mediapipe/worker/
 
 # Hasil uji browser (screenshot, laporan, trace) dan dependensi runner e2e
 artifacts/
